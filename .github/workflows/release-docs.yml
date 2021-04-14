@@ -1,0 +1,45 @@
+name: release-docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - docs/**
+
+jobs:
+  setup:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [15]
+
+    steps:
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: Install
+        if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
+        run: yarn --chec
+
+      - name: Build
+        run: yarn build:docs
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist

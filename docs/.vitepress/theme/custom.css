@@ -1,0 +1,17 @@
+.nav-bar .logo {
+  height: 30px;
+  margin-right: 6px;
+}
+
+:root {
+  --c-brand: rgb(16, 49, 70);
+  --c-brand-light: rgb(20, 61, 87);
+}
+
+.custom-block.tip {
+  border-color: var(--c-brand-light);
+}
+
+.DocSearch {
+  --docsearch-primary-color: var(--c-brand) !important;
+}
