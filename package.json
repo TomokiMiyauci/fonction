@@ -1,5 +1,6 @@
 {
   "name": "fonction",
+  "description": "A modern practical functional library",
   "version": "1.0.0-beta.1",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -20,7 +21,7 @@
     "build": "rollup -c rollup.config.ts",
     "build:docs": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "test": "echo test",
+    "test": "jest",
     "release": "semantic-release"
   },
   "devDependencies": {
