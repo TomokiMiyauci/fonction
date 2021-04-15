@@ -7,7 +7,7 @@ import { add as _add } from 'arithmetic4'
  *
  * @param a - The first input number
  * @param b - The second input number
- * @returns The result of `a` + `b`
+ * @returns The result of `a + b`
  *
  * @example
  * Basic

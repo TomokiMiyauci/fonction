@@ -7,7 +7,7 @@ import { divide as _divide } from 'arithmetic4'
  *
  * @param a - The first input number
  * @param b - The second input number
- * @returns The result of a / b
+ * @returns The result of `a / b`
 
  * @remarks Note that when use curry, divide second argument from first argument.
 
