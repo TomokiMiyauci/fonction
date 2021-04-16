@@ -13,3 +13,4 @@ export type Primitive =
   | symbol
   | undefined
   | null
+export type InferArray<T> = T extends (infer R)[] ? R : never
