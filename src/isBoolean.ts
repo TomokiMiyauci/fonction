@@ -17,8 +17,7 @@ type IsBoolean<T extends unknown> = T extends boolean ? true : false
  * isBoolean(true) // true
  * isBoolean('hello') // false
  */
-const isBoolean = <T extends unknown>(val: T): IsBoolean<T> =>
-  (typeof val === BOOLEAN) as IsBoolean<T>
+const isBoolean = (val: unknown): val is boolean => typeof val === BOOLEAN
 
 export { isBoolean }
 export type { IsBoolean }

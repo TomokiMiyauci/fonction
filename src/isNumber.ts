@@ -17,8 +17,7 @@ type IsNumber<T extends unknown> = T extends number ? true : false
  * isNumber(0) // true
  * isNumber('hello') // false
  */
-const isNumber = <T extends unknown>(val: T): IsNumber<T> =>
-  (typeof val === NUMBER) as IsNumber<T>
+const isNumber = (val: unknown): val is number => typeof val === NUMBER
 
 export { isNumber }
 export type { IsNumber }

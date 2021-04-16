@@ -17,8 +17,7 @@ type IsUndefined<T extends unknown> = T extends undefined ? true : false
  * isUndefined(undefined) // true
  * isUndefined('hello') // false
  */
-const isUndefined = <T extends unknown>(val: T): IsUndefined<T> =>
-  (typeof val === UNDEFINED) as IsUndefined<T>
+const isUndefined = (val: unknown): val is undefined => typeof val === UNDEFINED
 
 export { isUndefined }
 export type { IsUndefined }

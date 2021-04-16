@@ -22,8 +22,8 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
  * isNumber(0) // true
  * isNumber('hello') // false
  */
-const isNill = <T extends unknown>(val: T): IsNill<T> =>
-  ((isUndefined(val) || isNull(val)) as unknown) as IsNill<T>
+const isNill = (val: unknown): val is null | undefined =>
+  isUndefined(val) || isNull(val)
 
 export { isNill }
 export type { IsNill }

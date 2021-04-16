@@ -5,3 +5,11 @@
  * @typeParam T - argument types
  */
 export type AnyFn<T = any> = (...args: T[]) => unknown
+export type Primitive =
+  | string
+  | number
+  | bigint
+  | boolean
+  | symbol
+  | undefined
+  | null

@@ -17,8 +17,7 @@ type IsSymbol<T extends unknown> = T extends symbol ? true : false
  * isSymbol(Symbol('hello')) // true
  * isSymbol('hello') // false
  */
-const isSymbol = <T extends unknown>(val: T): IsSymbol<T> =>
-  (typeof val === SYMBOL) as IsSymbol<T>
+const isSymbol = (val: unknown): val is symbol => typeof val === SYMBOL
 
 export { isSymbol }
 export type { IsSymbol }

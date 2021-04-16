@@ -4,6 +4,7 @@ import { IsNill, isNill } from '@/isNill'
 import { IsNumber, isNumber } from '@/isNumber'
 import { IsString, isString } from '@/isString'
 import { IsSymbol, isSymbol } from '@/isSymbol'
+import { Primitive } from '@/types'
 
 /**
  * Primitive or not
@@ -44,10 +45,10 @@ type IsPrimitive<T extends unknown> = IsBigint<T> extends true
  * isPrimitive(true) // true
  * isPrimitive([]) // false
  */
-const isPrimitive = <T extends unknown>(val: T): IsPrimitive<T> =>
+const isPrimitive = (val: unknown): val is Primitive =>
   [isNill, isBoolean, isNumber, isString, isBigint, isSymbol].some((is) =>
     is(val)
-  ) as IsPrimitive<T>
+  )
 
 export { isPrimitive }
 export type { IsPrimitive }

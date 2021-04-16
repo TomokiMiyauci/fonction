@@ -17,8 +17,7 @@ type IsBigint<T extends unknown> = T extends bigint ? true : false
  * isBigint(1n) // true
  * isBigint(1000) // false
  */
-const isBigint = <T extends unknown>(val: T): IsBigint<T> =>
-  (typeof val === BIGINT) as IsBigint<T>
+const isBigint = (val: unknown): val is bigint => typeof val === BIGINT
 
 export { isBigint }
 export type { IsBigint }

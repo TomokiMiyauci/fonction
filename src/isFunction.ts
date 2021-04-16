@@ -18,8 +18,7 @@ type IsFunction<T extends unknown> = T extends AnyFn ? true : false
  * isFunction(function) // true
  * isFunction('hello') // false
  */
-const isFunction = <T extends unknown>(val: T): IsFunction<T> =>
-  (typeof val === FUNCTION) as IsFunction<T>
+const isFunction = (val: unknown): val is AnyFn => typeof val === FUNCTION
 
 export { isFunction }
 export type { IsFunction }

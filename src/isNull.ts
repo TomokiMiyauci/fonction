@@ -17,8 +17,7 @@ type IsNull<T extends unknown> = T extends null ? true : false
  * isNull(null) // true
  * isNull(undefined) // false
  */
-const isNull = <T extends unknown>(val: T): IsNull<T> =>
-  (val === NULL) as IsNull<T>
+const isNull = (val: unknown): val is null => val === NULL
 
 export { isNull }
 export type { IsNull }

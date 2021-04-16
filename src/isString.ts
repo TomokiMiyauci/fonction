@@ -17,8 +17,7 @@ type IsString<T extends unknown> = T extends string ? true : false
  * isString('hello world') // true
  * isString(1000) // false
  */
-const isString = <T extends unknown>(val: T): IsString<T> =>
-  (typeof val === STRING) as IsString<T>
+const isString = (val: unknown): val is string => typeof val === STRING
 
 export { isString }
 export type { IsString }

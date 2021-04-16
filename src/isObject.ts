@@ -33,7 +33,7 @@ type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
  * isObject([]) // true
  * isObject('hello') // false
  */
-const isObject = <T extends unknown>(val: unknown): IsObject<T> =>
+const isObject = <T extends unknown>(val: T): val is T =>
   !isPrimitive(val) as IsObject<T>
 
 export { isObject }
