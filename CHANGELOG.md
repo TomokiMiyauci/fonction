@@ -1,3 +1,8 @@
+# [v1.0.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-04-16)
+
+## ✨ New Features
+- [`816c978`](https://github.com/TomokiMiyauci/fonction/commit/816c978)   Add first and last functions
+
 # [v1.0.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2021-04-16)
 
 ## ✨ New Features
