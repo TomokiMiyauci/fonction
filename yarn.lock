@@ -2202,9 +2202,9 @@ argv-formatter@~1.0.0:
   integrity sha1-oMoMvCmltz6Dbuvhy/bF4OTrgvk=
 
 arithmetic4@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/arithmetic4/-/arithmetic4-1.0.6.tgz#778fdc8395dc8313a5ffd32c89ca96d37c35280e"
-  integrity sha512-32UYhKefcumoL6Yt839tw4n0zgo6d7djb9Yjxw9PJdX65cxppOQfXDqQFD6thkDGiutXEfKfal2uuT/g2fDsqA==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/arithmetic4/-/arithmetic4-1.1.0.tgz#afde0fe75b181c37799b45f8656a5e1317a873d0"
+  integrity sha512-wlCHBIiwDv2Fm2knltldqtQ1HYRz1+ywCQ9CBMOXuFh3Ah6vHZwui5fxaYaiFZde2ocizf/3NziOp0piQSgjuw==
 
 arr-diff@^4.0.0:
   version "4.0.0"

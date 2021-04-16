@@ -14,6 +14,10 @@ import { subtract as _subtract } from 'arithmetic4'
  * subtract(2, 1) // 1
  *
  * @example
+ * Bigint
+ * subtract(2n, 1n) // 1n
+ *
+ * @example
  * Curry
  * const minus5 = subtract(5)
  * minus5(10) // 5

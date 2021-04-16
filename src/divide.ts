@@ -16,6 +16,10 @@ import { divide as _divide } from 'arithmetic4'
  * divide(10, 100) // 0.1
  *
  * @example
+ * Bigint
+ * divide(100n, 100n) // 1n
+ *
+ * @example
  * Curry
  * const half = divide(2)
  * half(20) // 10

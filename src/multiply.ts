@@ -12,6 +12,11 @@ import { multiply as _multiply } from 'arithmetic4'
  * @example
  * Basic
  * multiply(2, 3) // 6
+ *
+ * @example
+ * Bigint
+ * multiply(2n, 3n) // 6n
+ *
  * @example
  * Curry
  * const double = multiply(2)
