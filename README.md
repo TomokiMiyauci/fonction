@@ -1,5 +1,3 @@
-# fonction
-
 <div align="center">
 
 ![logo image](docs/public/icon.gif)
@@ -16,8 +14,44 @@
 
 </div>
 
+# fonction
+
 > A modern practical functional library
 
-## License
+## :sparkles: Feature
+
+- Friendly type definition
+- Providing ESM and UMD
+- Optimized, Super Slim size
+- Kind TSDoc-style comments
+- Bigint support
+
+[📝 Read the Docs to Learn More.](https://tomokimiyauci.github.io/fonction/)
+
+## :truck: Install
+
+```bash
+npm i fonction
+or
+yarn add fonction
+```
+
+## :world_map: Loadmap
+
+For the time being, my goal is to implement the functions implemented in the great starting projects ([lodash](https://github.com/lodash/lodash), [ramda](https://github.com/ramda/ramda), [rambda](https://github.com/ramda/ramda), ... etc).
+
+The release will be a public release when it is fully tested in the `beta` release and then merged into the main branch.
+
+You can check the implementation status of all functions [here](https://tomokimiyauci.github.io/fonction/api/).
+
+You can also try all the features including the `beta` version with the following command.
+
+```bash
+npm i fonction@beta
+or
+yarn add fonction@beta
+```
+
+## :bulb: License
 
 [MIT](./LICENSE)
