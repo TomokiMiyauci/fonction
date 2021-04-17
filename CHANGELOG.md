@@ -1,3 +1,8 @@
+# [v1.0.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-04-17)
+
+## ✨ New Features
+- [`5f41a49`](https://github.com/TomokiMiyauci/fonction/commit/5f41a49)   Add sum function
+
 # [v1.0.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-04-16)
 
 ## ✨ New Features
