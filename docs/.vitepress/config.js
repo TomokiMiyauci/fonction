@@ -1,5 +1,5 @@
-const title = ''
-const description = ''
+const title = 'fonction'
+const description = 'A modern practical functional library'
 const name = 'TomokiMiyauci'
 const baseUrl = `https://tomokimiyauci.github.io/${title}`
 const baseHead = [
@@ -55,6 +55,7 @@ module.exports = {
         selectText: 'Languages',
         nav: [
           { text: 'Guide', link: '/guide/', activeMatch: '^/guide' },
+          { text: 'API', link: '/api/', activeMatch: '^/api' },
           {
             text: 'Release Notes',
             link: `https://github.com/${name}/${title}/blob/main/CHANGELOG.md`
