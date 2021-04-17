@@ -26,6 +26,9 @@
 - Kind TSDoc-style comments
 - Bigint support
 
+Fonction (French word for "function", not typo:sweat_smile:) is modern practical functional library.
+Special attention is paid to bundle size and strict type definitions. Therefore, you can take out and use only what you want to use without worrying about the size.
+
 [📝 Read the Docs to Learn More.](https://tomokimiyauci.github.io/fonction/)
 
 ## :truck: Install
