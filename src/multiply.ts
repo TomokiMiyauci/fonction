@@ -5,8 +5,6 @@ import { multiply as _multiply } from 'arithmetic4'
 /**
  * Multiplies first argument and second argument.
  *
- * @public
- *
  * @param a - The first input number
  * @param b - The second input number
  * @returns The result of `a * b`
@@ -29,5 +27,7 @@ import { multiply as _multiply } from 'arithmetic4'
  * const double = multiply(2)
  * double(4) // 8
  * ```
+ *
+ * @public
  */
 export const multiply = _multiply

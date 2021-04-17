@@ -15,8 +15,6 @@ type StartsWith<T extends string | undefined = undefined> = StringWith<
 /**
  * Checks if a string starts with the provided substring.
  *
- * @public
- *
  * @param val - search string
  * @param target - target string
  * @returns The result of `target.startsWith(val)`
@@ -34,6 +32,8 @@ type StartsWith<T extends string | undefined = undefined> = StringWith<
  * const startWithSlash = startsWith('/')
  * startWithSlash('/path/to') // true
  * ```
+ *
+ * @public
  */
 const startsWith = <T extends string, U extends string | undefined = undefined>(
   val: T,

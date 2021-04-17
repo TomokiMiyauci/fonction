@@ -1,8 +1,6 @@
 /**
  * Return lowercase string
  *
- * @public
- *
  * @param val - input string value
  * @returns lowercase string
  *
@@ -10,6 +8,8 @@
  * ```ts
  * toLower('Hello') // hello
  * ```
+ *
+ * @public
  */
 const lowerCase = <T extends string>(val: T): Lowercase<T> =>
   val.toLowerCase() as Lowercase<T>

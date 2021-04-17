@@ -4,9 +4,9 @@ import { IsUndefined, isUndefined } from '@/isUndefined'
 /**
  * Undefiled or null, or not
  *
- * @public
- *
  * @typeParam T - any value
+ *
+ * @public
  */
 type IsNill<T extends unknown> = IsUndefined<T> extends true
   ? true
@@ -17,8 +17,6 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
 /**
  * Whatever argument is type of undefined or null.
  *
- * @public
- *
  * @param val - input any value
  * @returns The result of type of `val` is undefined or null
  *
@@ -27,6 +25,9 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
  * isNumber(0) // true
  * isNumber('hello') // false
  * ```
+ *
+ * @public
+ *
  */
 const isNill = (val: unknown): val is null | undefined =>
   isUndefined(val) || isNull(val)

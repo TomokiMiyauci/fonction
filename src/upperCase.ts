@@ -1,8 +1,6 @@
 /**
  * Return uppercase string
  *
- * @public
- *
  * @param val - input string value
  * @returns uppercase string
  *
@@ -10,6 +8,8 @@
  * ```ts
  * toUpper('Hello') // HELLO
  * ```
+ *
+ * @public
  */
 const upperCase = <T extends string>(val: T): Uppercase<T> =>
   val.toUpperCase() as Uppercase<T>

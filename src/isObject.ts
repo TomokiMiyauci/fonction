@@ -3,16 +3,14 @@ import { IsPrimitive, isPrimitive } from '@/isPrimitive'
 /**
  * Object or not
  *
- * @public
- *
  * @typeParam T - any value
+ *
+ * @public
  */
 type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
 
 /**
  * Whatever argument is type of object or not.
- *
- * @public
  *
  * @param val - input any value
  * @returns The result of object or not
@@ -38,6 +36,8 @@ type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
  * isObject([]) // true
  * isObject('hello') // false
  * ```
+ *
+ * @public
  */
 const isObject = <T extends unknown>(val: T): val is T =>
   !isPrimitive(val) as IsObject<T>

@@ -3,16 +3,14 @@ import { SYMBOL } from '@/constants'
 /**
  * Symbol or not
  *
- * @public
- *
  * @typeParam T - any value
+ *
+ * @public
  */
 type IsSymbol<T extends unknown> = T extends symbol ? true : false
 
 /**
  * Whatever argument is type of symbol or not.
- *
- * @public
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'symbol'`
@@ -22,6 +20,8 @@ type IsSymbol<T extends unknown> = T extends symbol ? true : false
  * isSymbol(Symbol('hello')) // true
  * isSymbol('hello') // false
  * ```
+ *
+ * @public
  */
 const isSymbol = (val: unknown): val is symbol => typeof val === SYMBOL
 

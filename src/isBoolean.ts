@@ -3,16 +3,14 @@ import { BOOLEAN } from '@/constants'
 /**
  * Boolean or not
  *
- * @public
- *
  * @typeParam T - any value
+ *
+ * @public
  */
 type IsBoolean<T extends unknown> = T extends boolean ? true : false
 
 /**
  * Whatever argument is type of boolean or not.
- *
- * @public
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'boolean'`
@@ -22,6 +20,8 @@ type IsBoolean<T extends unknown> = T extends boolean ? true : false
  * isBoolean(true) // true
  * isBoolean('hello') // false
  * ```
+ *
+ * @public
  */
 const isBoolean = (val: unknown): val is boolean => typeof val === BOOLEAN
 

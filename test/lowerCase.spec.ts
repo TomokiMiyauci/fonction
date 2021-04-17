@@ -1,6 +1,6 @@
-import { toLower } from '@/toLower'
+import { lowerCase } from '@/lowerCase'
 
-describe('toLower', () => {
+describe('lowerCase', () => {
   const table: [string, string][] = [
     ['', ''],
     ['Hello', 'hello'],
@@ -9,7 +9,7 @@ describe('toLower', () => {
     ['Hello World', 'hello world']
   ]
 
-  it.each(table)('toLower(%s) -> %s', (val, expected) => {
-    expect(toLower(val)).toBe(expected)
+  it.each(table)('lowerCase(%s) -> %s', (val, expected) => {
+    expect(lowerCase(val)).toBe(expected)
   })
 })
