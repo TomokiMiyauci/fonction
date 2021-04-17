@@ -25,6 +25,7 @@
 |  [isUndefined](./isundefined/) | <b><i>(BETA)</i></b> Whatever argument is type of undefined or not. |
 |  [last](./last/) | <b><i>(BETA)</i></b> Returns the last element of the given list or string. |
 |  [multiply](./multiply/) | <b><i>(BETA)</i></b> Multiplies first argument and second argument. |
+|  [reverse](./reverse/) | <b><i>(BETA)</i></b> Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | <b><i>(BETA)</i></b> Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | <b><i>(BETA)</i></b> Subtracts second argument from first argument. |
 |  [sum](./sum/) | <b><i>(BETA)</i></b> Adds together all the elements of a list. |
