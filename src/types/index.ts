@@ -2,9 +2,18 @@
 /**
  * Type of any function
  *
+ * @beta
+ *
  * @typeParam T - argument types
  */
 export type AnyFn<T = any> = (...args: T[]) => unknown
+
+/**
+ * Alias for Primitive values types
+ *
+ * @beta
+ *
+ */
 export type Primitive =
   | string
   | number

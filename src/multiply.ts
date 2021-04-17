@@ -5,21 +5,29 @@ import { multiply as _multiply } from 'arithmetic4'
 /**
  * Multiplies first argument and second argument.
  *
+ * @beta
+ *
  * @param a - The first input number
  * @param b - The second input number
  * @returns The result of `a * b`
  *
  * @example
- * Basic
+ * ```ts
+ * // Basic
  * multiply(2, 3) // 6
+ * ```
  *
  * @example
- * Bigint
+ * ```ts
+ * // Bigint
  * multiply(2n, 3n) // 6n
+ * ```
  *
  * @example
- * Curry
+ * ```ts
+ * // Curry
  * const double = multiply(2)
  * double(4) // 8
+ * ```
  */
 export const multiply = _multiply

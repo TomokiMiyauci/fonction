@@ -10,18 +10,24 @@ type Last<T extends string | unknown[]> = IsString<T> extends true
 /**
  * Returns the last element of the given list or string.
  *
+ * @beta
+ *
  * @param val - string or any array object
  * @returns The last element of the `val`
  *
  * @example
- * String
+ * ```ts
+ * // String
  * last('hello') // 'o'
+ * ```
  *
  * @example
- * Array
+ * ```ts
+ * // Array
  * last('hello', 'new', 'world') // 'world'
  * last([]) // undefined
  * last(['one', 2, 3, 4]) // 4
+ * ```
  */
 const last = <T extends string | unknown[]>(val: T): Last<T> => {
   if (Array.isArray(val)) {

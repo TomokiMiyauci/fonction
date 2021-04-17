@@ -5,6 +5,8 @@ import { divide as _divide } from 'arithmetic4'
 /**
  * Divide input two arguments.
  *
+ * @beta
+ *
  * @param a - The first input number
  * @param b - The second input number
  * @returns The result of `a / b`
@@ -12,16 +14,21 @@ import { divide as _divide } from 'arithmetic4'
  * @remarks Note that when use curry, divide second argument from first argument.
 
  * @example
- * Basic
+ * ```ts
+ * // Basic
  * divide(10, 100) // 0.1
- *
+ *```
+
  * @example
- * Bigint
+ * ```ts
+ * // Bigint
  * divide(100n, 100n) // 1n
- *
+ * ```
  * @example
- * Curry
+ * ```ts
+ * // Curry
  * const half = divide(2)
  * half(20) // 10
+ * ```
  */
 export const divide = _divide

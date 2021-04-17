@@ -8,19 +8,26 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
 
 /**
  * Checks if a string ends with the provided substring.
+ *
+ * @beta
+ *
  * @param val - search string
  * @param target - target string
  * @returns The result of `target.endsWith(val)`
  *
  * @example
- * Basic
+ * ```ts
+ * // Basic
  * endsWith('world', 'hello world') // true
  * endsWith('earth', 'hello world') // false
+ * ```
  *
  * @example
- * Curry
+ * ```ts
+ * // Curry
  * const endsWithTs = endsWith('ts')
  * endsWithTs('index.ts') // true
+ * ```
  */
 const endsWith = <T extends string, U extends string | undefined = undefined>(
   val: T,
