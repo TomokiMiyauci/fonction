@@ -1,5 +1,8 @@
 # fonction
 
+<div align="center">
+
+![logo image](docs/public/icon.gif)
 ![npm version](https://img.shields.io/npm/v/fonction.svg?style=flat)
 ![bundle size](https://img.shields.io/bundlephobia/min/fonction)
 ![npm download](https://img.shields.io/npm/dw/fonction?color=blue)
@@ -10,6 +13,8 @@
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)
 ![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+
+</div>
 
 > A modern practical functional library
 
