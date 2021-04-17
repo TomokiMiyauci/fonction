@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /icon.gif
 heroAlt: Logo image
 heroText: ''
 tagline: ''

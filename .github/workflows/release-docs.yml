@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - beta
     paths:
       - docs/**
 
@@ -33,7 +34,7 @@ jobs:
 
       - name: Install
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
-        run: yarn --chec
+        run: yarn --check-files --frozen-lockfile --non-interactive
 
       - name: Build
         run: yarn build:docs

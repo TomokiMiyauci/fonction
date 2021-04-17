@@ -3,11 +3,20 @@
   "coverageDirectory": "coverage",
   "coverageProvider": "v8",
   "testEnvironment": "node",
-  "testMatch": ["**/test/**/*.ts?(x)"],
+  "testMatch": ["**/test/**/*.spec.ts?(x)"],
   "transform": {
     "^.+\\.ts$": "@swc/jest"
   },
   "moduleNameMapper": {
-    "^@/(.+)$": "<rootDir>/src/$1"
-  }
+    "^@/(.+)$": "<rootDir>/src/$1",
+    "^@test/(.+)$": "<rootDir>/test/$1",
+    "@test": "<rootDir>/test/index"
+  },
+  "collectCoverageFrom": [
+    "src/**/*.ts",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+    "!src/types/**",
+    "!src/{index,add,subtract,multiply,divide}.ts"
+  ]
 }
