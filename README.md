@@ -20,11 +20,11 @@
 
 ## :sparkles: Feature
 
-- Friendly type definition
-- Providing ESM and UMD
-- Optimized, Super Slim size
-- Kind TSDoc-style comments
-- Bigint support
+- :green_heart: Friendly type definition
+- :earth_americas: Universal functions providing ESM and UMD
+- :package: Optimized, super slim size
+- :page_facing_up: TSDoc-style comments
+- :1234: Bigint support
 
 Fonction (French word for "function", not typo:sweat_smile:) is modern practical functional library.
 Special attention is paid to bundle size and strict type definitions. Therefore, you can take out and use only what you want to use without worrying about the size.
