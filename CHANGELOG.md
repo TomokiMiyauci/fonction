@@ -1,3 +1,8 @@
+# [v1.0.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0...v1.0.1-beta.1) (2021-04-17)
+
+## 🐛 Bug Fixes
+- [`f978c42`](https://github.com/TomokiMiyauci/fonction/commit/f978c42)   Rename functions toUpper -&gt; upperCase, toLower -&gt; lowerCase
+
 # v1.0.0 (2021-04-17)
 
 ## ✨ New Features
