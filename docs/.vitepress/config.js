@@ -7,7 +7,7 @@ const baseHead = [
   ['meta', { name: 'author', content: name }],
   ['meta', { name: 'copyright', content: `2021 ©${name}` }],
   ['meta', { property: 'og:title', content: title }],
-  ['meta', { property: 'og:image', content: `${baseUrl}/icon.gif` }],
+  ['meta', { property: 'og:image', content: `${baseUrl}/logo.png` }],
   [
     'meta',
     {
@@ -70,7 +70,7 @@ module.exports = {
     },
 
     repo: `${name}/${title}`,
-    logo: '/icon.gif',
+    logo: '/logo.png',
     docsDir: 'docs',
     docsBranch: 'main',
 

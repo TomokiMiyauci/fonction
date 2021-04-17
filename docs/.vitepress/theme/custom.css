@@ -1,6 +1,16 @@
 .nav-bar .logo {
-  height: 30px;
+  height: 42px;
   margin-right: 6px;
+  border-radius: 0.25rem;
+}
+
+.nav-bar-title {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  border-radius: 0.5rem;
 }
 
 :root {
