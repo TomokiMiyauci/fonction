@@ -1,3 +1,8 @@
+# [v1.0.0-beta.7](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-04-17)
+
+## ✨ New Features
+- [`7f2ba8a`](https://github.com/TomokiMiyauci/fonction/commit/7f2ba8a)   Add reverse function
+
 # [v1.0.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-04-17)
 
 ## ✨ New Features
