@@ -5,7 +5,7 @@ import { multiply as _multiply } from 'arithmetic4'
 /**
  * Multiplies first argument and second argument.
  *
- * @beta
+ * @public
  *
  * @param a - The first input number
  * @param b - The second input number

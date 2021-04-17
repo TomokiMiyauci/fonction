@@ -3,7 +3,7 @@ import { BIGINT } from '@/constants'
 /**
  * Bigint or not
  *
- * @beta
+ * @public
  *
  * @typeParam T - any value
  */
@@ -12,7 +12,7 @@ type IsBigint<T extends unknown> = T extends bigint ? true : false
 /**
  * Whatever argument is type of bigint or not.
  *
- * @beta
+ * @public
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'bigint'`

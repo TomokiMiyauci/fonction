@@ -3,7 +3,7 @@ import { NULL } from '@/constants'
 /**
  * Null or not
  *
- * @beta
+ * @public
  *
  * @typeParam T - any value
  */
@@ -12,7 +12,7 @@ type IsNull<T extends unknown> = T extends null ? true : false
 /**
  * Whatever argument is type of null or not.
  *
- * @beta
+ * @public
  *
  * @param val - input any value
  * @returns The result of `val === null`

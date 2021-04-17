@@ -5,7 +5,7 @@ import { add as _add } from 'arithmetic4'
 /**
  * Adds first argument and second argument.
  *
- * @beta
+ * @public
  *
  * @param a - The first input number
  * @param b - The second input number

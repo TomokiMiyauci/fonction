@@ -3,7 +3,7 @@ import { IsPrimitive, isPrimitive } from '@/isPrimitive'
 /**
  * Object or not
  *
- * @beta
+ * @public
  *
  * @typeParam T - any value
  */
@@ -12,7 +12,7 @@ type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
 /**
  * Whatever argument is type of object or not.
  *
- * @beta
+ * @public
  *
  * @param val - input any value
  * @returns The result of object or not

@@ -5,7 +5,7 @@ import { divide as _divide } from 'arithmetic4'
 /**
  * Divide input two arguments.
  *
- * @beta
+ * @public
  *
  * @param a - The first input number
  * @param b - The second input number

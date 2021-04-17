@@ -4,7 +4,7 @@ import { IsUndefined, isUndefined } from '@/isUndefined'
 /**
  * Undefiled or null, or not
  *
- * @beta
+ * @public
  *
  * @typeParam T - any value
  */
@@ -17,7 +17,7 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
 /**
  * Whatever argument is type of undefined or null.
  *
- * @beta
+ * @public
  *
  * @param val - input any value
  * @returns The result of type of `val` is undefined or null

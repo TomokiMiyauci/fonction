@@ -4,7 +4,7 @@ import type { AnyFn } from '@/types'
 /**
  * Function or not
  *
- * @beta
+ * @public
  *
  * @typeParam T - any value
  */
@@ -13,7 +13,7 @@ type IsFunction<T extends unknown> = T extends AnyFn ? true : false
 /**
  * Whatever argument is type of function or not.
  *
- * @beta
+ * @public
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'function'`

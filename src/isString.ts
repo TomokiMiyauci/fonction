@@ -3,7 +3,7 @@ import { STRING } from '@/constants'
 /**
  * String or not
  *
- * @beta
+ * @public
  *
  * @typeParam T - any value
  */
@@ -12,7 +12,7 @@ type IsString<T extends unknown> = T extends string ? true : false
 /**
  * Whatever argument is type of string or not.
  *
- * @beta
+ * @public
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'string'`

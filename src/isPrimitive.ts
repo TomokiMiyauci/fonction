@@ -9,7 +9,7 @@ import { Primitive } from '@/types'
 /**
  * Primitive or not
  *
- * @beta
+ * @public
  *
  * @typeParam T - any value
  */
@@ -30,7 +30,7 @@ type IsPrimitive<T extends unknown> = IsBigint<T> extends true
 /**
  * Whatever argument is primitive or not.
  *
- * @beta
+ * @public
  *
  * @param val - input any value
  * @returns The result of primitive or not
