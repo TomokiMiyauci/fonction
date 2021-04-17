@@ -8,26 +8,26 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [add](./add/) | <b><i>(BETA)</i></b> Adds first argument and second argument. |
-|  [divide](./divide/) | <b><i>(BETA)</i></b> Divide input two arguments. |
+|  [add](./add/) | Adds first argument and second argument. |
+|  [divide](./divide/) | Divide input two arguments. |
 |  [endsWith](./endswith/) | <b><i>(BETA)</i></b> Checks if a string ends with the provided substring. |
 |  [first](./first/) | <b><i>(BETA)</i></b> Returns the first element of the given list or string. |
-|  [isBigint](./isbigint/) | <b><i>(BETA)</i></b> Whatever argument is type of bigint or not. |
-|  [isBoolean](./isboolean/) | <b><i>(BETA)</i></b> Whatever argument is type of boolean or not. |
-|  [isFunction](./isfunction/) | <b><i>(BETA)</i></b> Whatever argument is type of function or not. |
-|  [isNill](./isnill/) | <b><i>(BETA)</i></b> Whatever argument is type of undefined or null. |
-|  [isNull](./isnull/) | <b><i>(BETA)</i></b> Whatever argument is type of null or not. |
-|  [isNumber](./isnumber/) | <b><i>(BETA)</i></b> Whatever argument is type of number or not. |
-|  [isObject](./isobject/) | <b><i>(BETA)</i></b> Whatever argument is type of object or not. |
-|  [isPrimitive](./isprimitive/) | <b><i>(BETA)</i></b> Whatever argument is primitive or not. |
-|  [isString](./isstring/) | <b><i>(BETA)</i></b> Whatever argument is type of string or not. |
-|  [isSymbol](./issymbol/) | <b><i>(BETA)</i></b> Whatever argument is type of symbol or not. |
-|  [isUndefined](./isundefined/) | <b><i>(BETA)</i></b> Whatever argument is type of undefined or not. |
+|  [isBigint](./isbigint/) | Whatever argument is type of bigint or not. |
+|  [isBoolean](./isboolean/) | Whatever argument is type of boolean or not. |
+|  [isFunction](./isfunction/) | Whatever argument is type of function or not. |
+|  [isNill](./isnill/) | Whatever argument is type of undefined or null. |
+|  [isNull](./isnull/) | Whatever argument is type of null or not. |
+|  [isNumber](./isnumber/) | Whatever argument is type of number or not. |
+|  [isObject](./isobject/) | Whatever argument is type of object or not. |
+|  [isPrimitive](./isprimitive/) | Whatever argument is primitive or not. |
+|  [isString](./isstring/) | Whatever argument is type of string or not. |
+|  [isSymbol](./issymbol/) | Whatever argument is type of symbol or not. |
+|  [isUndefined](./isundefined/) | Whatever argument is type of undefined or not. |
 |  [last](./last/) | <b><i>(BETA)</i></b> Returns the last element of the given list or string. |
-|  [multiply](./multiply/) | <b><i>(BETA)</i></b> Multiplies first argument and second argument. |
+|  [multiply](./multiply/) | Multiplies first argument and second argument. |
 |  [reverse](./reverse/) | <b><i>(BETA)</i></b> Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | <b><i>(BETA)</i></b> Checks if a string starts with the provided substring. |
-|  [subtract](./subtract/) | <b><i>(BETA)</i></b> Subtracts second argument from first argument. |
+|  [subtract](./subtract/) | Subtracts second argument from first argument. |
 |  [sum](./sum/) | <b><i>(BETA)</i></b> Adds together all the elements of a list. |
 |  [toLower](./tolower/) | <b><i>(BETA)</i></b> Return lowercase string |
 |  [toUpper](./toupper/) | <b><i>(BETA)</i></b> Return uppercase string |
@@ -36,18 +36,7 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [AnyFn](./anyfn/) | <b><i>(BETA)</i></b> Type of any function |
+|  [AnyFn](./anyfn/) | Type of any function |
 |  [endsWith](./endswith/) |  |
-|  [IsBigint](./isbigint/) | <b><i>(BETA)</i></b> Bigint or not |
-|  [IsBoolean](./isboolean/) | <b><i>(BETA)</i></b> Boolean or not |
-|  [IsFunction](./isfunction/) | <b><i>(BETA)</i></b> Function or not |
-|  [IsNill](./isnill/) | <b><i>(BETA)</i></b> Undefiled or null, or not |
-|  [IsNull](./isnull/) | <b><i>(BETA)</i></b> Null or not |
-|  [IsNumber](./isnumber/) | <b><i>(BETA)</i></b> Number or not |
-|  [IsObject](./isobject/) | <b><i>(BETA)</i></b> Object or not |
-|  [IsPrimitive](./isprimitive/) | <b><i>(BETA)</i></b> Primitive or not |
-|  [IsString](./isstring/) | <b><i>(BETA)</i></b> String or not |
-|  [IsSymbol](./issymbol/) | <b><i>(BETA)</i></b> Symbol or not |
-|  [IsUndefined](./isundefined/) | <b><i>(BETA)</i></b> Undefined or not |
-|  [Primitive](./primitive/) | <b><i>(BETA)</i></b> Alias for Primitive values types |
+|  [Primitive](./primitive/) | Alias for Primitive values types |
 

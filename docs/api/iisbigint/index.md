@@ -2,12 +2,12 @@
 
 
 
-## AnyFn type
+## IIsBigint type
 
-Type of any function
+Bigint or not
 
 <b>Signature:</b>
 
 ```typescript
-type AnyFn<T = any> = (...args: T[]) => unknown;
+type IIsBigint<T extends unknown> = T extends bigint ? true : false;
 ```

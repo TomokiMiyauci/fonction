@@ -4,15 +4,17 @@
 
 ## subtract variable
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Subtracts second argument from first argument.
 
 <b>Signature:</b>
 
 ```typescript
-subtract: <T extends number | bigint, U extends (T extends number ? number : T extends bigint ? bigint : never) | undefined = undefined>(a: T, b?: U | undefined) => U extends undefined ? (b: T extends number ? number : T extends bigint ? bigint : never) => T extends number ? number : T extends bigint ? bigint : never : U extends (T extends number ? number : T extends bigint ? bigint : never) ? T extends number ? number : T extends bigint ? bigint : never : never
+subtract: {
+    (a: number, b: number): number;
+    (a: number): (b: number) => number;
+    (a: bigint, b: bigint): bigint;
+    (a: bigint): (b: bigint) => bigint;
+}
 ```
 
 ## Example 1
