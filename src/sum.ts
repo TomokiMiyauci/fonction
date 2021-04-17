@@ -4,7 +4,7 @@ import { InferArray } from '@/types'
 /**
  * Adds together all the elements of a list.
  *
- * @beta
+ * @public
  *
  * @param val - list An array of numbers
  * @returns The sum of all the numbers in the list

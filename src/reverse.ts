@@ -3,7 +3,7 @@ import { isString } from './isString'
 /**
  * Returns a new list or string with the elements or characters in reverse order.
  *
- * @beta
+ * @public
  *
  * @param val - list or string characters
  * @returns New list or string characters in reverse order

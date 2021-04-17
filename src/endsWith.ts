@@ -9,7 +9,7 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
 /**
  * Checks if a string ends with the provided substring.
  *
- * @beta
+ * @public
  *
  * @param val - search string
  * @param target - target string

@@ -10,7 +10,7 @@ type First<T extends string | unknown[]> = IsString<T> extends true
 /**
  * Returns the first element of the given list or string.
  *
- * @beta
+ * @public
  *
  * @param val - string or any array object
  * @returns The first element of the `val`

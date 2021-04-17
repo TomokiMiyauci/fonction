@@ -10,7 +10,7 @@ type Last<T extends string | unknown[]> = IsString<T> extends true
 /**
  * Returns the last element of the given list or string.
  *
- * @beta
+ * @public
  *
  * @param val - string or any array object
  * @returns The last element of the `val`

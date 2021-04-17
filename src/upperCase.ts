@@ -1,7 +1,7 @@
 /**
  * Return uppercase string
  *
- * @beta
+ * @public
  *
  * @param val - input string value
  * @returns uppercase string
@@ -11,7 +11,7 @@
  * toUpper('Hello') // HELLO
  * ```
  */
-const toUpper = <T extends string>(val: T): Uppercase<T> =>
+const upperCase = <T extends string>(val: T): Uppercase<T> =>
   val.toUpperCase() as Uppercase<T>
 
-export { toUpper }
+export { upperCase }
