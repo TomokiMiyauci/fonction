@@ -1,3 +1,4 @@
+export { _ } from 'arithmetic4'
 export const STRING = 'string'
 export const NUMBER = 'number'
 export const UNDEFINED = 'undefined'

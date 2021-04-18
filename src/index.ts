@@ -1,4 +1,5 @@
 export { add } from '@/add'
+export { _ } from '@/constants'
 export { divide } from '@/divide'
 export { endsWith } from '@/endsWith'
 export { first } from '@/first'
