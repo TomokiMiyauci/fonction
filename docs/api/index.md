@@ -9,10 +9,12 @@
 |  Variable | Description |
 |  --- | --- |
 |  [add](./add/) | Adds first argument and second argument. |
+|  [dec](./dec/) | <b><i>(BETA)</i></b> Decrements its argument. |
 |  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
 |  [F](./f/) | <b><i>(BETA)</i></b> A function that always returns <code>false</code>. Any passed in parameters are ignored. |
 |  [first](./first/) | Returns the first element of the given list or string. |
+|  [inc](./inc/) | <b><i>(BETA)</i></b> Increments its argument. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
 |  [isFunction](./isfunction/) | Whatever argument is type of <code>function</code> or not. |
