@@ -6,7 +6,7 @@
  *
  * @typeParam T - argument types
  */
-export type AnyFn<T = any> = (...args: T[]) => unknown
+export type AnyFn<T = any, U = unknown> = (...args: T[]) => U
 
 /**
  * Alias for Primitive values types
