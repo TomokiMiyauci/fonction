@@ -9,6 +9,7 @@
 |  Variable | Description |
 |  --- | --- |
 |  [add](./add/) | Adds first argument and second argument. |
+|  [and](./and/) | <b><i>(BETA)</i></b> Returns true if both arguments are true; otherwise false. |
 |  [dec](./dec/) | <b><i>(BETA)</i></b> Decrements its argument. |
 |  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
@@ -34,6 +35,7 @@
 |  [lt](./lt/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
 |  [lte](./lte/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
+|  [or](./or/) | <b><i>(BETA)</i></b> Returns true if one or both of its arguments are true; otherwise false. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
@@ -41,6 +43,7 @@
 |  [T](./t/) | <b><i>(BETA)</i></b> A function that always returns <code>true</code>. Any passed in parameters are ignored. |
 |  [trim](./trim/) | <b><i>(BETA)</i></b> Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
+|  [xor](./xor/) | <b><i>(BETA)</i></b> Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |
 
 ## Type Aliases
 
