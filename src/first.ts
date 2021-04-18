@@ -10,8 +10,6 @@ type First<T extends string | unknown[]> = IsString<T> extends true
 /**
  * Returns the first element of the given list or string.
  *
- * @beta
- *
  * @param val - string or any array object
  * @returns The first element of the `val`
  *
@@ -28,6 +26,8 @@ type First<T extends string | unknown[]> = IsString<T> extends true
  * first([]) // undefined
  * first(['one', 2, 3, 4]) // 'one'
  * ```
+ *
+ * @public
  */
 const first = <T extends string | unknown[]>(val: T): First<T> => {
   if (Array.isArray(val)) {

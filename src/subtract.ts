@@ -5,8 +5,6 @@ import { subtract as _subtract } from 'arithmetic4'
 /**
  * Subtracts second argument from first argument.
  *
- * @public
- *
  * @param a - The first input number
  * @param b - The second input number
  * @returns The result of `a - b`
@@ -29,5 +27,7 @@ import { subtract as _subtract } from 'arithmetic4'
  * const minus5 = subtract(5)
  * minus5(10) // 5
  * ```
+ *
+ * @public
  */
 export const subtract = _subtract

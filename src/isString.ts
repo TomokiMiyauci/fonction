@@ -3,16 +3,14 @@ import { STRING } from '@/constants'
 /**
  * String or not
  *
- * @public
- *
  * @typeParam T - any value
+ *
+ * @public
  */
 type IsString<T extends unknown> = T extends string ? true : false
 
 /**
  * Whatever argument is type of string or not.
- *
- * @public
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'string'`
@@ -22,6 +20,8 @@ type IsString<T extends unknown> = T extends string ? true : false
  * isString('hello world') // true
  * isString(1000) // false
  * ```
+ *
+ * @public
  */
 const isString = (val: unknown): val is string => typeof val === STRING
 

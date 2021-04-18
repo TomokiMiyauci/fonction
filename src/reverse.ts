@@ -3,8 +3,6 @@ import { isString } from './isString'
 /**
  * Returns a new list or string with the elements or characters in reverse order.
  *
- * @beta
- *
  * @param val - list or string characters
  * @returns New list or string characters in reverse order
  *
@@ -20,6 +18,8 @@ import { isString } from './isString'
  * reverse(['hello', 'new', 'world']) // ['world', 'new', 'hello']
  * reverse([0, {}, []]) // [[], {}, 0]
  * ```
+ *
+ * @public
  */
 const reverse: {
   (val: string): string

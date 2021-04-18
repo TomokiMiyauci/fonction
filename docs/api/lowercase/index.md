@@ -2,21 +2,21 @@
 
 
 
-## sum variable
+## lowerCase variable
 
-Adds together all the elements of a list.
+Return lowercase string
 
 <b>Signature:</b>
 
 ```typescript
-sum: <T extends number[]>(val: T) => InferArray<T>
+lowerCase: <T extends string>(val: T) => Lowercase<T>
 ```
 
 ## Example
 
 
 ```ts
-sum([1, 2, 3, 4, 5]) // 15
+toLower('Hello') // hello
 
 ```
 

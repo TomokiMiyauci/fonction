@@ -14,7 +14,7 @@ isPrimitive: (val: unknown) => val is Primitive
 
 ## Remarks
 
-- string - number - bigint - boolean - symbol - undefined - null
+Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
 
 ## Example
 

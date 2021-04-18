@@ -9,9 +9,9 @@ import { Primitive } from '@/types'
 /**
  * Primitive or not
  *
- * @public
- *
  * @typeParam T - any value
+ *
+ * @public
  */
 type IsPrimitive<T extends unknown> = IsBigint<T> extends true
   ? true
@@ -29,8 +29,6 @@ type IsPrimitive<T extends unknown> = IsBigint<T> extends true
 
 /**
  * Whatever argument is primitive or not.
- *
- * @public
  *
  * @param val - input any value
  * @returns The result of primitive or not
@@ -50,6 +48,8 @@ type IsPrimitive<T extends unknown> = IsBigint<T> extends true
  * isPrimitive(true) // true
  * isPrimitive([]) // false
  * ```
+ *
+ * @public
  */
 const isPrimitive = (val: unknown): val is Primitive =>
   [isNill, isBoolean, isNumber, isString, isBigint, isSymbol].some((is) =>

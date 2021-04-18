@@ -10,8 +10,8 @@
 |  --- | --- |
 |  [add](./add/) | Adds first argument and second argument. |
 |  [divide](./divide/) | Divide input two arguments. |
-|  [endsWith](./endswith/) | <b><i>(BETA)</i></b> Checks if a string ends with the provided substring. |
-|  [first](./first/) | <b><i>(BETA)</i></b> Returns the first element of the given list or string. |
+|  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
+|  [first](./first/) | Returns the first element of the given list or string. |
 |  [isBigint](./isbigint/) | Whatever argument is type of bigint or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of boolean or not. |
 |  [isFunction](./isfunction/) | Whatever argument is type of function or not. |
@@ -23,14 +23,14 @@
 |  [isString](./isstring/) | Whatever argument is type of string or not. |
 |  [isSymbol](./issymbol/) | Whatever argument is type of symbol or not. |
 |  [isUndefined](./isundefined/) | Whatever argument is type of undefined or not. |
-|  [last](./last/) | <b><i>(BETA)</i></b> Returns the last element of the given list or string. |
+|  [last](./last/) | Returns the last element of the given list or string. |
+|  [lowerCase](./lowercase/) | Return lowercase string |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
-|  [reverse](./reverse/) | <b><i>(BETA)</i></b> Returns a new list or string with the elements or characters in reverse order. |
-|  [startsWith](./startswith/) | <b><i>(BETA)</i></b> Checks if a string starts with the provided substring. |
+|  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
+|  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | Subtracts second argument from first argument. |
-|  [sum](./sum/) | <b><i>(BETA)</i></b> Adds together all the elements of a list. |
-|  [toLower](./tolower/) | <b><i>(BETA)</i></b> Return lowercase string |
-|  [toUpper](./toupper/) | <b><i>(BETA)</i></b> Return uppercase string |
+|  [sum](./sum/) | Adds together all the elements of a list. |
+|  [upperCase](./uppercase/) | Return uppercase string |
 
 ## Type Aliases
 

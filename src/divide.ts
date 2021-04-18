@@ -5,8 +5,6 @@ import { divide as _divide } from 'arithmetic4'
 /**
  * Divide input two arguments.
  *
- * @public
- *
  * @param a - The first input number
  * @param b - The second input number
  * @returns The result of `a / b`
@@ -30,5 +28,7 @@ import { divide as _divide } from 'arithmetic4'
  * const half = divide(2)
  * half(20) // 10
  * ```
+ *
+ * @public
  */
 export const divide = _divide
