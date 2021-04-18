@@ -22,4 +22,11 @@ export type Primitive =
   | symbol
   | undefined
   | null
+
+/**
+ * Abbreviation for Ordinal
+ *
+ * @beta
+ */
+export type Ord = string | number | bigint | boolean | Date
 export type InferArray<T> = T extends (infer R)[] ? R : never

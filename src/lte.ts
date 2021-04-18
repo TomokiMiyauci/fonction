@@ -1,3 +1,5 @@
+import { Ord } from '@/types'
+
 /**
  * Returns `true` if the first argument is less than or equal to the second; otherwise `false`
  *
@@ -29,8 +31,25 @@
  * lte('z', 'a') // false
  * ```
  *
+ * @example
+ * ```ts
+ * // Boolean
+ * lte(true, true) // true
+ * lte(false, false) // true
+ * lte(false, true) // true
+ * lte(true, false) // false
+ * ```
+ *
+ * @example
+ * ```ts
+ * // Date
+ * lte(new Date('2000/1/1'), new Date('2000/1/1')) // true
+ * lte(new Date('1999/12/31'), new Date('2000/1/1')) // true
+ * lte(new Date('2000/1/2'), new Date('2000/1/1')) // false
+ * ```
+ *
  * @beta
  */
-const lte = <T extends string | number | bigint>(a: T, b: T): boolean => a <= b
+const lte = <T extends Ord>(a: T, b: T): boolean => a <= b
 
 export { lte }

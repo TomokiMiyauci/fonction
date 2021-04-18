@@ -1,3 +1,4 @@
+import { Ord } from '@/types'
 /**
  * Returns `true` if the first argument is greater than the second; otherwise `false`
  *
@@ -26,8 +27,25 @@
  * gt('a', 'z') // false
  * ```
  *
+ * @example
+ * ```ts
+ * // Boolean
+ * gt(true, false) // true
+ * gt(false, true) // false
+ * gt(true, true) // false
+ * gt(false, false) // false
+ * ```
+ *
+ * @example
+ * ```ts
+ * // Date
+ * gt(new Date('2000/1/2'), new Date('2000/1/1')) // true
+ * gt(new Date('1999/12/31'), new Date('2000/1/1')) // false
+ * gt(new Date('2000/1/1'), new Date('2000/1/1')) // false
+ * ```
+ *
  * @beta
  */
-const gt = <T extends string | number | bigint>(a: T, b: T): boolean => a > b
+const gt = <T extends Ord>(a: T, b: T): boolean => a > b
 
 export { gt }
