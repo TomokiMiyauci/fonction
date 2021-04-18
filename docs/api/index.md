@@ -35,6 +35,7 @@
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
 |  [sum](./sum/) | Adds together all the elements of a list. |
 |  [T](./t/) | <b><i>(BETA)</i></b> A function that always returns <code>true</code>. Any passed in parameters are ignored. |
+|  [trim](./trim/) | <b><i>(BETA)</i></b> Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
 
 ## Type Aliases
