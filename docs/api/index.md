@@ -48,5 +48,6 @@
 |  --- | --- |
 |  [AnyFn](./anyfn/) | Type of any function |
 |  [endsWith](./endswith/) |  |
+|  [Ord](./ord/) | <b><i>(BETA)</i></b> Abbreviation for Ordinal |
 |  [Primitive](./primitive/) | Alias for Primitive values types |
 

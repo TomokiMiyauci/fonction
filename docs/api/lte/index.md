@@ -12,7 +12,7 @@ Returns `true` if the first argument is less than or equal to the second; otherw
 <b>Signature:</b>
 
 ```typescript
-lte: <T extends string | number | bigint>(a: T, b: T) => boolean
+lte: <T extends Ord>(a: T, b: T) => boolean
 ```
 
 ## Example 1
@@ -45,6 +45,29 @@ lte(2n, 1n) // true
 lte('a', 'z') // true
 lte('a', 'a') // true
 lte('z', 'a') // false
+
+```
+
+## Example 4
+
+
+```ts
+// Boolean
+lte(true, true) // true
+lte(false, false) // true
+lte(false, true) // true
+lte(true, false) // false
+
+```
+
+## Example 5
+
+
+```ts
+// Date
+lte(new Date('2000/1/1'), new Date('2000/1/1')) // true
+lte(new Date('1999/12/31'), new Date('2000/1/1')) // true
+lte(new Date('2000/1/2'), new Date('2000/1/1')) // false
 
 ```
 

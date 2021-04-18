@@ -12,7 +12,7 @@ Returns `true` if the first argument is less than the second; otherwise `false`
 <b>Signature:</b>
 
 ```typescript
-lt: <T extends string | number | bigint>(a: T, b: T) => boolean
+lt: <T extends Ord>(a: T, b: T) => boolean
 ```
 
 ## Example 1
@@ -42,6 +42,29 @@ lt(2n, 2n) // false
 // String
 lt('a', 'z') // true
 lt('a', 'a') // false
+
+```
+
+## Example 4
+
+
+```ts
+// Boolean
+lt(false, true) // true
+lt(true, true) // false
+lt(false, false) // false
+lt(true, false) // false
+
+```
+
+## Example 5
+
+
+```ts
+// Date
+lt(new Date('1999/12/31'), new Date('2000/1/1')) // true
+lt(new Date('2000/1/1'), new Date('2000/1/1')) // false
+lt(new Date('2000/1/2'), new Date('2000/1/1')) // false
 
 ```
 

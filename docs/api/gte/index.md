@@ -12,7 +12,7 @@ Returns `true` if the first argument is greater than or equal to the second; oth
 <b>Signature:</b>
 
 ```typescript
-gte: <T extends string | number | bigint>(a: T, b: T) => boolean
+gte: <T extends Ord>(a: T, b: T) => boolean
 ```
 
 ## Example 1
@@ -45,6 +45,29 @@ gte(2n, 3n) // false
 gte('z', 'a') // true
 gte('a', 'a') // true
 gte('a', 'z') // false
+
+```
+
+## Example 4
+
+
+```ts
+// Boolean
+gte(true, false) // true
+gte(true, true) // true
+gte(false, false) // true
+gte(false, true) // false
+
+```
+
+## Example 5
+
+
+```ts
+// Date
+gte(new Date('2000/1/2'), new Date('2000/1/1')) // true
+gte(new Date('2000/1/1'), new Date('2000/1/1')) // true
+gte(new Date('1999/12/31'), new Date('2000/1/1')) // false
 
 ```
 
