@@ -1,3 +1,8 @@
+# [v1.1.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.0.1-beta.1...v1.1.0-beta.1) (2021-04-18)
+
+## ✨ New Features
+- [`f9d8c04`](https://github.com/TomokiMiyauci/fonction/commit/f9d8c04)   Add combinator functions
+
 # [v1.0.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.0.0...v1.0.1-beta.1) (2021-04-17)
 
 ## 🐛 Bug Fixes
