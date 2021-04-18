@@ -14,6 +14,8 @@
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
 |  [F](./f/) | <b><i>(BETA)</i></b> A function that always returns <code>false</code>. Any passed in parameters are ignored. |
 |  [first](./first/) | Returns the first element of the given list or string. |
+|  [gt](./gt/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is greater than the second; otherwise <code>false</code> |
+|  [gte](./gte/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is greater than or equal to the second; otherwise <code>false</code> |
 |  [inc](./inc/) | <b><i>(BETA)</i></b> Increments its argument. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
@@ -29,6 +31,8 @@
 |  [K](./k/) | <b><i>(BETA)</i></b> K combinator. Returns a function that always returns the given value. |
 |  [last](./last/) | Returns the last element of the given list or string. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
+|  [lt](./lt/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
+|  [lte](./lte/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
