@@ -38,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
     "@wessberg/rollup-plugin-ts": "^1.3.11",
-    "arithmetic4": "^1.0.6",
+    "arithmetic4": "^2.0.0",
     "commitizen": "^4.2.3",
     "commitlint-config-gitmoji": "^2.2.3",
     "cz-emoji": "^1.3.1",
