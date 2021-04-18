@@ -9,7 +9,7 @@
 |  Variable | Description |
 |  --- | --- |
 |  [add](./add/) | Adds first argument and second argument. |
-|  [divide](./divide/) | Divide input two arguments. |
+|  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
 |  [first](./first/) | Returns the first element of the given list or string. |
 |  [isBigint](./isbigint/) | Whatever argument is type of bigint or not. |
@@ -28,7 +28,7 @@
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
-|  [subtract](./subtract/) | Subtracts second argument from first argument. |
+|  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
 |  [sum](./sum/) | Adds together all the elements of a list. |
 |  [upperCase](./uppercase/) | Return uppercase string |
 
