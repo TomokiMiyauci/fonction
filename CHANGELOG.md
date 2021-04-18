@@ -1,3 +1,8 @@
+# [v1.1.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2021-04-18)
+
+## ✨ New Features
+- [`6ab26f4`](https://github.com/TomokiMiyauci/fonction/commit/6ab26f4)   Add logical operation functions
+
 # [v1.1.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2021-04-18)
 
 ## ✨ New Features
