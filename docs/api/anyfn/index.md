@@ -9,5 +9,5 @@ Type of any function
 <b>Signature:</b>
 
 ```typescript
-type AnyFn<T = any> = (...args: T[]) => unknown;
+type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 ```

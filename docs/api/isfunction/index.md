@@ -9,7 +9,7 @@ Whatever argument is type of function or not.
 <b>Signature:</b>
 
 ```typescript
-isFunction: (val: unknown) => val is AnyFn<any>
+isFunction: (val: unknown) => val is AnyFn<any, unknown>
 ```
 
 ## Example

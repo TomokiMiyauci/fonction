@@ -11,6 +11,7 @@
 |  [add](./add/) | Adds first argument and second argument. |
 |  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
+|  [F](./f/) | <b><i>(BETA)</i></b> A function that always returns <code>false</code>. Any passed in parameters are ignored. |
 |  [first](./first/) | Returns the first element of the given list or string. |
 |  [isBigint](./isbigint/) | Whatever argument is type of bigint or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of boolean or not. |
@@ -23,6 +24,7 @@
 |  [isString](./isstring/) | Whatever argument is type of string or not. |
 |  [isSymbol](./issymbol/) | Whatever argument is type of symbol or not. |
 |  [isUndefined](./isundefined/) | Whatever argument is type of undefined or not. |
+|  [K](./k/) | <b><i>(BETA)</i></b> K combinator. Returns a function that always returns the given value. |
 |  [last](./last/) | Returns the last element of the given list or string. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
@@ -30,6 +32,7 @@
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
 |  [sum](./sum/) | Adds together all the elements of a list. |
+|  [T](./t/) | <b><i>(BETA)</i></b> A function that always returns <code>true</code>. Any passed in parameters are ignored. |
 |  [upperCase](./uppercase/) | Return uppercase string |
 
 ## Type Aliases
