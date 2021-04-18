@@ -1,3 +1,9 @@
+# [v1.1.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2021-04-18)
+
+## ✨ New Features
+- [`ebef512`](https://github.com/TomokiMiyauci/fonction/commit/ebef512)   Add trim function 
+- [`bb3e1b7`](https://github.com/TomokiMiyauci/fonction/commit/bb3e1b7)   Add comparison functions
+
 # [v1.1.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.0.1-beta.1...v1.1.0-beta.1) (2021-04-18)
 
 ## ✨ New Features
