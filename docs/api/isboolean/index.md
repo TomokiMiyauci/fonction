@@ -4,7 +4,7 @@
 
 ## isBoolean variable
 
-Whatever argument is type of boolean or not.
+Whatever argument is type of `boolean` or not.
 
 <b>Signature:</b>
 

@@ -13,17 +13,17 @@
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
 |  [F](./f/) | <b><i>(BETA)</i></b> A function that always returns <code>false</code>. Any passed in parameters are ignored. |
 |  [first](./first/) | Returns the first element of the given list or string. |
-|  [isBigint](./isbigint/) | Whatever argument is type of bigint or not. |
-|  [isBoolean](./isboolean/) | Whatever argument is type of boolean or not. |
-|  [isFunction](./isfunction/) | Whatever argument is type of function or not. |
-|  [isNill](./isnill/) | Whatever argument is type of undefined or null. |
-|  [isNull](./isnull/) | Whatever argument is type of null or not. |
-|  [isNumber](./isnumber/) | Whatever argument is type of number or not. |
-|  [isObject](./isobject/) | Whatever argument is type of object or not. |
-|  [isPrimitive](./isprimitive/) | Whatever argument is primitive or not. |
-|  [isString](./isstring/) | Whatever argument is type of string or not. |
-|  [isSymbol](./issymbol/) | Whatever argument is type of symbol or not. |
-|  [isUndefined](./isundefined/) | Whatever argument is type of undefined or not. |
+|  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
+|  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
+|  [isFunction](./isfunction/) | Whatever argument is type of <code>function</code> or not. |
+|  [isNill](./isnill/) | Whatever argument is type of <code>undefined</code> or <code>null</code>. |
+|  [isNull](./isnull/) | Whatever argument is type of <code>null</code> or not. |
+|  [isNumber](./isnumber/) | Whatever argument is type of <code>number</code> or not. |
+|  [isObject](./isobject/) | Whatever argument is type of <code>object</code> or not. |
+|  [isPrimitive](./isprimitive/) | Whatever argument is <code>primitive</code> or not. |
+|  [isString](./isstring/) | Whatever argument is type of <code>string</code> or not. |
+|  [isSymbol](./issymbol/) | Whatever argument is type of <code>symbol</code> or not. |
+|  [isUndefined](./isundefined/) | Whatever argument is type of <code>undefined</code> or not. |
 |  [K](./k/) | <b><i>(BETA)</i></b> K combinator. Returns a function that always returns the given value. |
 |  [last](./last/) | Returns the last element of the given list or string. |
 |  [lowerCase](./lowercase/) | Return lowercase string |

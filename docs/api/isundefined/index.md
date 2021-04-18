@@ -4,7 +4,7 @@
 
 ## isUndefined variable
 
-Whatever argument is type of undefined or not.
+Whatever argument is type of `undefined` or not.
 
 <b>Signature:</b>
 

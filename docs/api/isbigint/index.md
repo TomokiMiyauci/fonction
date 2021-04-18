@@ -4,7 +4,7 @@
 
 ## isBigint variable
 
-Whatever argument is type of bigint or not.
+Whatever argument is type of `bigint` or not.
 
 <b>Signature:</b>
 

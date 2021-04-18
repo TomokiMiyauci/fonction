@@ -4,7 +4,7 @@
 
 ## isFunction variable
 
-Whatever argument is type of function or not.
+Whatever argument is type of `function` or not.
 
 <b>Signature:</b>
 

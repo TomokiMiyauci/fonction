@@ -15,7 +15,7 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
   : false
 
 /**
- * Whatever argument is type of undefined or null.
+ * Whatever argument is type of `undefined` or `null`.
  *
  * @param val - input any value
  * @returns The result of type of `val` is undefined or null

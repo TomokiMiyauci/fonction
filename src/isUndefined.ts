@@ -10,7 +10,7 @@ import { UNDEFINED } from '@/constants'
 type IsUndefined<T extends unknown> = T extends undefined ? true : false
 
 /**
- * Whatever argument is type of undefined or not.
+ * Whatever argument is type of `undefined` or not.
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'undefined'`

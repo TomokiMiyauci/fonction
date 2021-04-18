@@ -4,7 +4,7 @@
 
 ## isSymbol variable
 
-Whatever argument is type of symbol or not.
+Whatever argument is type of `symbol` or not.
 
 <b>Signature:</b>
 

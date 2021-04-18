@@ -4,7 +4,7 @@
 
 ## isObject variable
 
-Whatever argument is type of object or not.
+Whatever argument is type of `object` or not.
 
 <b>Signature:</b>
 
