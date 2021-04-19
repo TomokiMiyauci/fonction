@@ -8,7 +8,7 @@ const getFileInfo = (path: string): FileInfo => {
   return {
     path,
     content,
-    name: name.replace(/fonction\.?/, ''),
+    name: name.replace(/fonction\.?/, '').replace('length_2', 'length'),
     ext
   }
 }
@@ -35,6 +35,8 @@ const run = () => {
     const replaced = content
       .replace(/\[Home\].*/, '')
       .replace(/\.\/fonction\.(.+)\.md/g, `./$1/`)
+      .replace(/length\\_2/g, 'length')
+      .replace(/length_2/g, 'length')
     // .replace(/\r?\n```/g, '```')
     const to = resolve('docs', 'api', name, 'index.md')
     outputFileSync(to, replaced)

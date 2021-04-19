@@ -33,6 +33,7 @@
 |  [isUndefined](./isundefined/) | Whatever argument is type of <code>undefined</code> or not. |
 |  [K](./k/) | K combinator. Returns a function that always returns the given value. |
 |  [last](./last/) | Returns the last element of the given list or string. |
+|  [length](./length/) | <b><i>(BETA)</i></b> Returns the number of elements in the array or string length. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
 |  [lt](./lt/) | Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
 |  [lte](./lte/) | Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
