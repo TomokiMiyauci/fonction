@@ -1,3 +1,12 @@
+# [v1.1.0](https://github.com/TomokiMiyauci/fonction/compare/v1.0.1...v1.1.0) (2021-04-19)
+
+## ✨ New Features
+- [`f9d8c04`](https://github.com/TomokiMiyauci/fonction/commit/f9d8c04)   Add combinator functions 
+- [`de97f78`](https://github.com/TomokiMiyauci/fonction/commit/de97f78)   Add increment and decrement functions 
+- [`ebef512`](https://github.com/TomokiMiyauci/fonction/commit/ebef512)   Add trim function 
+- [`bb3e1b7`](https://github.com/TomokiMiyauci/fonction/commit/bb3e1b7)   Add comparison functions 
+- [`6ab26f4`](https://github.com/TomokiMiyauci/fonction/commit/6ab26f4)   Add logical operation functions
+
 # [v1.1.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2021-04-18)
 
 ## ✨ New Features
