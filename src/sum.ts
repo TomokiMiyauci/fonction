@@ -1,5 +1,7 @@
 import { add } from '@/add'
-import { InferArray } from '@/types'
+import { first } from '@/first'
+import { isNumber } from '@/isNumber'
+import { isUndefined } from '@/isUndefined'
 
 /**
  * Adds together all the elements of a list.
@@ -10,11 +12,23 @@ import { InferArray } from '@/types'
  * @example
  * ```ts
  * sum([1, 2, 3, 4, 5]) // 15
+ * sum([1n, 2n, 3n, 4n, 5n]) // 15n
+ * sum([]) // 0
  * ```
  *
  * @public
  */
-const sum = <T extends number[]>(val: T): InferArray<T> =>
-  val.reduce((acc, cur) => add(acc, cur), 0) as InferArray<T>
+const sum: {
+  (val: []): 0
+  (val: number[]): number
+  (val: bigint[]): bigint
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+} = (val: any) => {
+  const head = first(val) as number | bigint
+  if (isUndefined(head)) return 0
+  const init = isNumber(head) ? 0 : 0n
+
+  return val.reduce(add, init)
+}
 
 export { sum }

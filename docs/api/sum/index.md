@@ -9,7 +9,12 @@ Adds together all the elements of a list.
 <b>Signature:</b>
 
 ```typescript
-sum: <T extends number[]>(val: T) => InferArray<T>
+sum: {
+    (val: [
+    ]): 0;
+    (val: number[]): number;
+    (val: bigint[]): bigint;
+}
 ```
 
 ## Example
@@ -17,6 +22,8 @@ sum: <T extends number[]>(val: T) => InferArray<T>
 
 ```ts
 sum([1, 2, 3, 4, 5]) // 15
+sum([1n, 2n, 3n, 4n, 5n]) // 15n
+sum([]) // 0
 
 ```
 
