@@ -4,7 +4,7 @@
 
 ## divide variable
 
-Divide input two arguments.
+Divide its second argument from its first argument.
 
 <b>Signature:</b>
 
@@ -14,18 +14,21 @@ divide: {
     (a: number): (b: number) => number;
     (a: bigint, b: bigint): bigint;
     (a: bigint): (b: bigint) => bigint;
+} & {
+    (a: typeof _, b: number): (a: number) => number;
+    (a: typeof _, b: bigint): (a: bigint) => bigint;
 }
 ```
 
 ## Remarks
 
-Note that when use curry, divide second argument from first argument.
+Since division is not idempotent, there are two ways to curry.
 
 ## Example 1
 
 
 ```ts
-// Basic
+// Number
 divide(10, 100) // 0.1
 
 ```
@@ -35,7 +38,7 @@ divide(10, 100) // 0.1
 
 ```ts
 // Bigint
-divide(100n, 100n) // 1n
+divide(1n, 2n) // 3n
 
 ```
 
@@ -43,8 +46,19 @@ divide(100n, 100n) // 1n
 
 
 ```ts
-// Curry
-const half = divide(2)
+// First argument curry
+const reciprocal = divide(1)
+reciprocal(4) // 0.25
+
+```
+
+## Example 4
+
+
+```ts
+// Second argument curry
+import { _ } from 'fonction'
+const half = divide(_, 2)
 half(20) // 10
 
 ```

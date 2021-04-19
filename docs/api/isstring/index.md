@@ -4,7 +4,7 @@
 
 ## isString variable
 
-Whatever argument is type of string or not.
+Whatever argument is type of `string` or not.
 
 <b>Signature:</b>
 

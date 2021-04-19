@@ -6,6 +6,7 @@
 ![npm download](https://img.shields.io/npm/dw/fonction?color=blue)
 [![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/fonction.svg)](https://david-dm.org/TomokiMiyauci/fonction)
 [![codecov](https://codecov.io/gh/TomokiMiyauci/fonction/branch/main/graph/badge.svg?token=SPAi5Pv2wd)](https://codecov.io/gh/TomokiMiyauci/fonction)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f43b1c317e11445399d85ce6efc06504)](https://www.codacy.com/gh/TomokiMiyauci/fonction/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TomokiMiyauci/fonction&utm_campaign=Badge_Grade)
 ![npm type definitions](https://img.shields.io/npm/types/arithmetic4)
 ![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)

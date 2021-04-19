@@ -10,7 +10,7 @@ import { BOOLEAN } from '@/constants'
 type IsBoolean<T extends unknown> = T extends boolean ? true : false
 
 /**
- * Whatever argument is type of boolean or not.
+ * Whatever argument is type of `boolean` or not.
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'boolean'`

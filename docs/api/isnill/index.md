@@ -4,7 +4,7 @@
 
 ## isNill variable
 
-Whatever argument is type of undefined or null.
+Whatever argument is type of `undefined` or `null`<!-- -->.
 
 <b>Signature:</b>
 

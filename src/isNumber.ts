@@ -10,7 +10,7 @@ import { NUMBER } from '@/constants'
 type IsNumber<T extends unknown> = T extends number ? true : false
 
 /**
- * Whatever argument is type of number or not.
+ * Whatever argument is type of `number` or not.
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'number'`

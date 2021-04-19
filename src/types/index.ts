@@ -6,7 +6,7 @@
  *
  * @typeParam T - argument types
  */
-export type AnyFn<T = any> = (...args: T[]) => unknown
+export type AnyFn<T = any, U = unknown> = (...args: T[]) => U
 
 /**
  * Alias for Primitive values types
@@ -22,4 +22,11 @@ export type Primitive =
   | symbol
   | undefined
   | null
+
+/**
+ * Abbreviation for Ordinal
+ *
+ * @public
+ */
+export type Ord = string | number | bigint | boolean | Date
 export type InferArray<T> = T extends (infer R)[] ? R : never

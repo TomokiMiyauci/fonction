@@ -10,7 +10,7 @@ import { SYMBOL } from '@/constants'
 type IsSymbol<T extends unknown> = T extends symbol ? true : false
 
 /**
- * Whatever argument is type of symbol or not.
+ * Whatever argument is type of `symbol` or not.
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'symbol'`

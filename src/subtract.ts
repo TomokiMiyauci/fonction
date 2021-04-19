@@ -1,31 +1,45 @@
 import { subtract as _subtract } from 'arithmetic4'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { _ } from '@/constants'
+
 // re-export
 
 /**
- * Subtracts second argument from first argument.
+ * Subtracts its second argument from its first argument.
  *
  * @param a - The first input number
  * @param b - The second input number
  * @returns The result of `a - b`
  *
+ * @remarks
+ * Since subtraction is not idempotent, there are two ways to curry.
+ *
  * @example
  * ```ts
- * // Basic
+ * // Number
  * subtract(2, 1) // 1
  * ```
  *
  * @example
  * ```ts
  * // Bigint
- * subtract(2n, 1n) // 1n
+ * subtract(3n, 2n) //1n
  * ```
  *
  * @example
  * ```ts
- * // Curry
- * const minus5 = subtract(5)
- * minus5(10) // 5
+ * // First argument curry
+ * const from5Minus = subtract(5)
+ * from5Minus(10) // -5
+ * ```
+ *
+ * @example
+ * ```ts
+ * // Second argument curry
+ * import { _ } from 'fonction'
+ * const minus5 = (_, 5)
+ * minus5(20) // 15
  * ```
  *
  * @public

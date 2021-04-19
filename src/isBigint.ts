@@ -8,7 +8,7 @@ import { BIGINT } from '@/constants'
 type IsBigint<T extends unknown> = T extends bigint ? true : false
 
 /**
- * Whatever argument is type of bigint or not.
+ * Whatever argument is type of `bigint` or not.
  *
  * @public
  *

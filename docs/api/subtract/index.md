@@ -4,7 +4,7 @@
 
 ## subtract variable
 
-Subtracts second argument from first argument.
+Subtracts its second argument from its first argument.
 
 <b>Signature:</b>
 
@@ -14,14 +14,21 @@ subtract: {
     (a: number): (b: number) => number;
     (a: bigint, b: bigint): bigint;
     (a: bigint): (b: bigint) => bigint;
+} & {
+    (a: typeof _, b: number): (a: number) => number;
+    (a: typeof _, b: bigint): (a: bigint) => bigint;
 }
 ```
+
+## Remarks
+
+Since subtraction is not idempotent, there are two ways to curry.
 
 ## Example 1
 
 
 ```ts
-// Basic
+// Number
 subtract(2, 1) // 1
 
 ```
@@ -31,7 +38,7 @@ subtract(2, 1) // 1
 
 ```ts
 // Bigint
-subtract(2n, 1n) // 1n
+subtract(3n, 2n) //1n
 
 ```
 
@@ -39,9 +46,20 @@ subtract(2n, 1n) // 1n
 
 
 ```ts
-// Curry
-const minus5 = subtract(5)
-minus5(10) // 5
+// First argument curry
+const from5Minus = subtract(5)
+from5Minus(10) // -5
+
+```
+
+## Example 4
+
+
+```ts
+// Second argument curry
+import { _ } from 'fonction'
+const minus5 = (_, 5)
+minus5(20) // 15
 
 ```
 

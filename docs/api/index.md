@@ -9,28 +9,41 @@
 |  Variable | Description |
 |  --- | --- |
 |  [add](./add/) | Adds first argument and second argument. |
-|  [divide](./divide/) | Divide input two arguments. |
+|  [and](./and/) | Returns true if both arguments are true; otherwise false. |
+|  [dec](./dec/) | Decrements its argument. |
+|  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
+|  [F](./f/) | A function that always returns <code>false</code>. Any passed in parameters are ignored. |
 |  [first](./first/) | Returns the first element of the given list or string. |
-|  [isBigint](./isbigint/) | Whatever argument is type of bigint or not. |
-|  [isBoolean](./isboolean/) | Whatever argument is type of boolean or not. |
-|  [isFunction](./isfunction/) | Whatever argument is type of function or not. |
-|  [isNill](./isnill/) | Whatever argument is type of undefined or null. |
-|  [isNull](./isnull/) | Whatever argument is type of null or not. |
-|  [isNumber](./isnumber/) | Whatever argument is type of number or not. |
-|  [isObject](./isobject/) | Whatever argument is type of object or not. |
-|  [isPrimitive](./isprimitive/) | Whatever argument is primitive or not. |
-|  [isString](./isstring/) | Whatever argument is type of string or not. |
-|  [isSymbol](./issymbol/) | Whatever argument is type of symbol or not. |
-|  [isUndefined](./isundefined/) | Whatever argument is type of undefined or not. |
+|  [gt](./gt/) | Returns <code>true</code> if the first argument is greater than the second; otherwise <code>false</code> |
+|  [gte](./gte/) | Returns <code>true</code> if the first argument is greater than or equal to the second; otherwise <code>false</code> |
+|  [inc](./inc/) | Increments its argument. |
+|  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
+|  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
+|  [isFunction](./isfunction/) | Whatever argument is type of <code>function</code> or not. |
+|  [isNill](./isnill/) | Whatever argument is type of <code>undefined</code> or <code>null</code>. |
+|  [isNull](./isnull/) | Whatever argument is type of <code>null</code> or not. |
+|  [isNumber](./isnumber/) | Whatever argument is type of <code>number</code> or not. |
+|  [isObject](./isobject/) | Whatever argument is type of <code>object</code> or not. |
+|  [isPrimitive](./isprimitive/) | Whatever argument is <code>primitive</code> or not. |
+|  [isString](./isstring/) | Whatever argument is type of <code>string</code> or not. |
+|  [isSymbol](./issymbol/) | Whatever argument is type of <code>symbol</code> or not. |
+|  [isUndefined](./isundefined/) | Whatever argument is type of <code>undefined</code> or not. |
+|  [K](./k/) | K combinator. Returns a function that always returns the given value. |
 |  [last](./last/) | Returns the last element of the given list or string. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
+|  [lt](./lt/) | Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
+|  [lte](./lte/) | Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
+|  [or](./or/) | Returns true if one or both of its arguments are true; otherwise false. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
-|  [subtract](./subtract/) | Subtracts second argument from first argument. |
+|  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
 |  [sum](./sum/) | Adds together all the elements of a list. |
+|  [T](./t/) | A function that always returns <code>true</code>. Any passed in parameters are ignored. |
+|  [trim](./trim/) | Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
+|  [xor](./xor/) | Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |
 
 ## Type Aliases
 
@@ -38,5 +51,6 @@
 |  --- | --- |
 |  [AnyFn](./anyfn/) | Type of any function |
 |  [endsWith](./endswith/) |  |
+|  [Ord](./ord/) | Abbreviation for Ordinal |
 |  [Primitive](./primitive/) | Alias for Primitive values types |
 

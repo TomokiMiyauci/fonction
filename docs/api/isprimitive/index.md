@@ -4,7 +4,7 @@
 
 ## isPrimitive variable
 
-Whatever argument is primitive or not.
+Whatever argument is `primitive` or not.
 
 <b>Signature:</b>
 

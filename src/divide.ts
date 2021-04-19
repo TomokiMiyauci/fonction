@@ -1,31 +1,44 @@
 import { divide as _divide } from 'arithmetic4'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { _ } from '@/constants'
+
 // re-export
 
 /**
- * Divide input two arguments.
+ * Divide its second argument from its first argument.
  *
  * @param a - The first input number
  * @param b - The second input number
  * @returns The result of `a / b`
 
- * @remarks Note that when use curry, divide second argument from first argument.
-
+ * @remarks
+ * Since division is not idempotent, there are two ways to curry.
+ *
  * @example
  * ```ts
- * // Basic
+ * // Number
  * divide(10, 100) // 0.1
- *```
-
+ * ```
+ *
  * @example
  * ```ts
  * // Bigint
- * divide(100n, 100n) // 1n
+ * divide(1n, 2n) // 3n
  * ```
+ *
  * @example
  * ```ts
- * // Curry
- * const half = divide(2)
+ * // First argument curry
+ * const reciprocal = divide(1)
+ * reciprocal(4) // 0.25
+ * ```
+ *
+ * @example
+ * ```ts
+ * // Second argument curry
+ * import { _ } from 'fonction'
+ * const half = divide(_, 2)
  * half(20) // 10
  * ```
  *

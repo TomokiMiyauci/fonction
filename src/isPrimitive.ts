@@ -28,7 +28,7 @@ type IsPrimitive<T extends unknown> = IsBigint<T> extends true
   : false
 
 /**
- * Whatever argument is primitive or not.
+ * Whatever argument is `primitive` or not.
  *
  * @param val - input any value
  * @returns The result of primitive or not

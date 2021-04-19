@@ -4,7 +4,7 @@
 
 ## isNull variable
 
-Whatever argument is type of null or not.
+Whatever argument is type of `null` or not.
 
 <b>Signature:</b>
 

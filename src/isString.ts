@@ -10,7 +10,7 @@ import { STRING } from '@/constants'
 type IsString<T extends unknown> = T extends string ? true : false
 
 /**
- * Whatever argument is type of string or not.
+ * Whatever argument is type of `string` or not.
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'string'`

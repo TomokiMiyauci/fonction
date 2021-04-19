@@ -4,7 +4,7 @@
 
 ## isNumber variable
 
-Whatever argument is type of number or not.
+Whatever argument is type of `number` or not.
 
 <b>Signature:</b>
 
