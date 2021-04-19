@@ -8,3 +8,6 @@ export const OBJECT = 'object'
 export const FUNCTION = 'function'
 export const NULL = null
 export const BIGINT = 'bigint'
+
+const { hasOwnProperty } = Object.prototype
+export { hasOwnProperty }
