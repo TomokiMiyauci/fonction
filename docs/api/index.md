@@ -9,15 +9,15 @@
 |  Variable | Description |
 |  --- | --- |
 |  [add](./add/) | Adds first argument and second argument. |
-|  [and](./and/) | <b><i>(BETA)</i></b> Returns true if both arguments are true; otherwise false. |
-|  [dec](./dec/) | <b><i>(BETA)</i></b> Decrements its argument. |
+|  [and](./and/) | Returns true if both arguments are true; otherwise false. |
+|  [dec](./dec/) | Decrements its argument. |
 |  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
-|  [F](./f/) | <b><i>(BETA)</i></b> A function that always returns <code>false</code>. Any passed in parameters are ignored. |
+|  [F](./f/) | A function that always returns <code>false</code>. Any passed in parameters are ignored. |
 |  [first](./first/) | Returns the first element of the given list or string. |
-|  [gt](./gt/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is greater than the second; otherwise <code>false</code> |
-|  [gte](./gte/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is greater than or equal to the second; otherwise <code>false</code> |
-|  [inc](./inc/) | <b><i>(BETA)</i></b> Increments its argument. |
+|  [gt](./gt/) | Returns <code>true</code> if the first argument is greater than the second; otherwise <code>false</code> |
+|  [gte](./gte/) | Returns <code>true</code> if the first argument is greater than or equal to the second; otherwise <code>false</code> |
+|  [inc](./inc/) | Increments its argument. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
 |  [isFunction](./isfunction/) | Whatever argument is type of <code>function</code> or not. |
@@ -29,21 +29,21 @@
 |  [isString](./isstring/) | Whatever argument is type of <code>string</code> or not. |
 |  [isSymbol](./issymbol/) | Whatever argument is type of <code>symbol</code> or not. |
 |  [isUndefined](./isundefined/) | Whatever argument is type of <code>undefined</code> or not. |
-|  [K](./k/) | <b><i>(BETA)</i></b> K combinator. Returns a function that always returns the given value. |
+|  [K](./k/) | K combinator. Returns a function that always returns the given value. |
 |  [last](./last/) | Returns the last element of the given list or string. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
-|  [lt](./lt/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
-|  [lte](./lte/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
+|  [lt](./lt/) | Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
+|  [lte](./lte/) | Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
-|  [or](./or/) | <b><i>(BETA)</i></b> Returns true if one or both of its arguments are true; otherwise false. |
+|  [or](./or/) | Returns true if one or both of its arguments are true; otherwise false. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
 |  [sum](./sum/) | Adds together all the elements of a list. |
-|  [T](./t/) | <b><i>(BETA)</i></b> A function that always returns <code>true</code>. Any passed in parameters are ignored. |
-|  [trim](./trim/) | <b><i>(BETA)</i></b> Removes (strips) whitespace from both ends of the string. |
+|  [T](./t/) | A function that always returns <code>true</code>. Any passed in parameters are ignored. |
+|  [trim](./trim/) | Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
-|  [xor](./xor/) | <b><i>(BETA)</i></b> Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |
+|  [xor](./xor/) | Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |
 
 ## Type Aliases
 
@@ -51,6 +51,6 @@
 |  --- | --- |
 |  [AnyFn](./anyfn/) | Type of any function |
 |  [endsWith](./endswith/) |  |
-|  [Ord](./ord/) | <b><i>(BETA)</i></b> Abbreviation for Ordinal |
+|  [Ord](./ord/) | Abbreviation for Ordinal |
 |  [Primitive](./primitive/) | Alias for Primitive values types |
 

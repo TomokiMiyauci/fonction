@@ -4,9 +4,6 @@
 
 ## F variable
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 A function that always returns `false`<!-- -->. Any passed in parameters are ignored.
 
 <b>Signature:</b>

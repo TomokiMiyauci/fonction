@@ -4,9 +4,6 @@
 
 ## xor variable
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
 
 <b>Signature:</b>

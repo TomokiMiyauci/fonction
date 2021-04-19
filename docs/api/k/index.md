@@ -4,9 +4,6 @@
 
 ## K variable
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 K combinator. Returns a function that always returns the given value.
 
 <b>Signature:</b>
