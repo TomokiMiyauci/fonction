@@ -1,3 +1,8 @@
+# [v1.2.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2021-04-19)
+
+## ✨ New Features
+- [`7cf6c56`](https://github.com/TomokiMiyauci/fonction/commit/7cf6c56)   Add append and prepend functions
+
 # [v1.2.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2021-04-19)
 
 ## ✨ New Features
