@@ -1,3 +1,8 @@
+# [v1.2.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2021-04-19)
+
+## ✨ New Features
+- [`01a4905`](https://github.com/TomokiMiyauci/fonction/commit/01a4905)   Add length function
+
 # [v1.2.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0...v1.2.0-beta.1) (2021-04-19)
 
 ## ✨ New Features
