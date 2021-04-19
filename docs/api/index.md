@@ -20,6 +20,7 @@
 |  [gte](./gte/) | Returns <code>true</code> if the first argument is greater than or equal to the second; otherwise <code>false</code> |
 |  [has](./has/) | <b><i>(BETA)</i></b> Returns whether or not an object has an own property with the specified name. |
 |  [hasPath](./haspath/) | <b><i>(BETA)</i></b> Returns whether or not a path exists in an object. Only the object's own properties are checked. |
+|  [head](./head/) | <b><i>(BETA)</i></b> Returns all but the last element of the given list or string. |
 |  [identity](./identity/) | <b><i>(BETA)</i></b> Return the parameter supplied to it. |
 |  [inc](./inc/) | Increments its argument. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
