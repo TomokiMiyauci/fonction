@@ -1,7 +1,8 @@
 import { first } from '@/first'
 
 describe('first', () => {
-  const table: [string | unknown[], unknown][] = [
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const table: [string | unknown[] | any, unknown][] = [
     ['', ''],
     ['a', 'a'],
     [' ab', ' '],

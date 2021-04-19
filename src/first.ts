@@ -1,11 +1,4 @@
-import { IsString } from '@/isString'
 import { InferArray } from '@/types'
-
-type First<T extends string | unknown[]> = IsString<T> extends true
-  ? string
-  : T extends never[]
-  ? undefined
-  : InferArray<T>
 
 /**
  * Returns the first element of the given list or string.
@@ -29,13 +22,17 @@ type First<T extends string | unknown[]> = IsString<T> extends true
  *
  * @public
  */
-const first = <T extends string | unknown[]>(val: T): First<T> => {
+const first: {
+  (val: string): string
+  <T extends unknown[]>(val: T): T['length'] extends 0
+    ? undefined
+    : InferArray<T> | undefined
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+} = (val: any) => {
   if (Array.isArray(val)) {
-    return val.length
-      ? (val.slice(0, 1)[0] as First<T>)
-      : (undefined as First<T>)
+    return val.length ? val.slice(0, 1)[0] : undefined
   } else {
-    return (val as string).slice(0, 1) as First<T>
+    return (val as string).slice(0, 1)
   }
 }
 

@@ -9,7 +9,10 @@ Returns the first element of the given list or string.
 <b>Signature:</b>
 
 ```typescript
-first: <T extends string | unknown[]>(val: T) => First<T>
+first: {
+    (val: string): string;
+    <T extends unknown[]>(val: T): T["length"] extends 0 ? undefined : InferArray<T> | undefined;
+}
 ```
 
 ## Example 1
