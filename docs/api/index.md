@@ -17,6 +17,8 @@
 |  [first](./first/) | Returns the first element of the given list or string. |
 |  [gt](./gt/) | Returns <code>true</code> if the first argument is greater than the second; otherwise <code>false</code> |
 |  [gte](./gte/) | Returns <code>true</code> if the first argument is greater than or equal to the second; otherwise <code>false</code> |
+|  [has](./has/) | <b><i>(BETA)</i></b> Returns whether or not an object has an own property with the specified name. |
+|  [hasPath](./haspath/) | <b><i>(BETA)</i></b> Returns whether or not a path exists in an object. Only the object's own properties are checked. |
 |  [inc](./inc/) | Increments its argument. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
@@ -41,6 +43,7 @@
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
 |  [sum](./sum/) | Adds together all the elements of a list. |
 |  [T](./t/) | A function that always returns <code>true</code>. Any passed in parameters are ignored. |
+|  [tail](./tail/) | <b><i>(BETA)</i></b> Returns all but the first element of the given list or string. |
 |  [trim](./trim/) | Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
 |  [xor](./xor/) | Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |
