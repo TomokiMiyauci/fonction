@@ -3,6 +3,7 @@ import { first } from '@/first'
 import { has } from '@/has'
 import { isObject } from '@/isObject'
 import { isUndefined } from '@/isUndefined'
+import { length } from '@/length'
 import { tail } from '@/tail'
 
 /**
@@ -31,8 +32,7 @@ const hasPath = <T extends unknown>(
   const key = first(path)
   if (isUndefined(key)) return false
   const rest = tail(path)
-  const isLast = !rest.length
-  if (isLast) {
+  if (!length(rest)) {
     return has(key, obj)
   }
   return and(has(key, obj), isObject(obj[key]))

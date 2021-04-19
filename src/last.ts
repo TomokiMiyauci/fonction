@@ -1,4 +1,5 @@
 import { IsString } from '@/isString'
+import { length } from '@/length'
 import { InferArray } from '@/types'
 
 type Last<T extends string | unknown[]> = IsString<T> extends true
@@ -31,7 +32,7 @@ type Last<T extends string | unknown[]> = IsString<T> extends true
  */
 const last = <T extends string | unknown[]>(val: T): Last<T> => {
   if (Array.isArray(val)) {
-    return val.length ? (val.slice(-1)[0] as Last<T>) : (undefined as Last<T>)
+    return length(val) ? (val.slice(-1)[0] as Last<T>) : (undefined as Last<T>)
   } else {
     return (val as string).slice(-1) as Last<T>
   }
