@@ -13,6 +13,8 @@ Multiplies together all the elements of a list.
 
 ```typescript
 product: {
+    (val: [
+    ]): 0;
     (val: number[]): number;
     (val: bigint[]): bigint;
 }

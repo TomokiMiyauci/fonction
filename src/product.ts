@@ -19,6 +19,7 @@ import { multiply } from '@/multiply'
  * @beta
  */
 const product: {
+  (val: []): 0
   (val: number[]): number
   (val: bigint[]): bigint
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
