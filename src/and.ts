@@ -13,7 +13,7 @@
  * and(false, false) // false
  * ```
  *
- * @beta
+ * @public
  */
 const and = <T, U>(a: T, b: U): boolean => !!a && !!b
 export { and }

@@ -11,7 +11,7 @@
  * k() // 'k'
  * ```
  *
- * @beta
+ * @public
  */
 const K = <T extends unknown>(val: T): (() => T) => (): T => val
 

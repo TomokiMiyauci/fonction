@@ -9,7 +9,7 @@
  * trim('   hello   ') // 'hello'
  * ```
  *
- * @beta
+ * @public
  */
 const trim = (val: string): ReturnType<string['trim']> => val.trim()
 

@@ -44,7 +44,7 @@ import { Ord } from '@/types'
  * gt(new Date('2000/1/1'), new Date('2000/1/1')) // false
  * ```
  *
- * @beta
+ * @public
  */
 const gt = <T extends Ord>(a: T, b: T): boolean => a > b
 

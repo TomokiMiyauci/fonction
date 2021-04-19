@@ -13,7 +13,7 @@ import { subtract } from '@/subtract'
  * dec(10n) // 9n
  * ```
  *
- * @beta
+ * @public
  */
 const dec: {
   (val: number): number

@@ -13,7 +13,7 @@ import { isNumber } from '@/isNumber'
  * inc(10n) // 11n
  * ```
  *
- * @beta
+ * @public
  */
 const inc: {
   (val: number): number

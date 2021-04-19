@@ -11,7 +11,7 @@ import { AnyFn } from '@/types'
  * F(1, 'hello', 'world') // false
  * ```
  *
- * @beta
+ * @public
  */
 const F: AnyFn<unknown, false> = () => false
 

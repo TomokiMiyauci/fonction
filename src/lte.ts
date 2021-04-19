@@ -48,7 +48,7 @@ import { Ord } from '@/types'
  * lte(new Date('2000/1/2'), new Date('2000/1/1')) // false
  * ```
  *
- * @beta
+ * @public
  */
 const lte = <T extends Ord>(a: T, b: T): boolean => a <= b
 

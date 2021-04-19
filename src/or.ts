@@ -13,7 +13,7 @@
  * or(false, false) // false
  * ```
  *
- * @beta
+ * @public
  */
 const or = <T, U>(a: T, b: U): boolean => !!a || !!b
 export { or }
