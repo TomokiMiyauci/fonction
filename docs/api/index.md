@@ -39,6 +39,7 @@
 |  [lte](./lte/) | Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
 |  [or](./or/) | Returns true if one or both of its arguments are true; otherwise false. |
+|  [product](./product/) | <b><i>(BETA)</i></b> Multiplies together all the elements of a list. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
