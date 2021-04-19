@@ -1,3 +1,8 @@
+# [v1.2.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2021-04-19)
+
+## ✨ New Features
+- [`f1ccc1d`](https://github.com/TomokiMiyauci/fonction/commit/f1ccc1d)   Add product function
+
 # [v1.2.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2021-04-19)
 
 ## ✨ New Features
