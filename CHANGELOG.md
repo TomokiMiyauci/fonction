@@ -1,3 +1,9 @@
+# [v1.2.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0...v1.2.0-beta.1) (2021-04-19)
+
+## ✨ New Features
+- [`3b67787`](https://github.com/TomokiMiyauci/fonction/commit/3b67787)   Add checking exist object property functions 
+- [`cc59f96`](https://github.com/TomokiMiyauci/fonction/commit/cc59f96)   Add getting first element of array and string function
+
 # [v1.1.0](https://github.com/TomokiMiyauci/fonction/compare/v1.0.1...v1.1.0) (2021-04-19)
 
 ## ✨ New Features
