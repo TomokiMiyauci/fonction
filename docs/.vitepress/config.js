@@ -1,3 +1,6 @@
+const { members } = require('../../temp/fonction.api.json')
+const { lowerCase } = require('fonction')
+
 const title = 'fonction'
 const description = 'A modern practical functional library'
 const name = 'TomokiMiyauci'
@@ -64,7 +67,23 @@ module.exports = {
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
         sidebar: {
-          '/guide/': 'auto'
+          '/guide/': 'auto',
+          '/api': [
+            {
+              text: 'List of function',
+              link: '/api/',
+              children: members[0]?.members
+                .filter((a) => a.kind === 'Variable')
+                .map(({ name }) => {
+                  const fName = name === 'length_2' ? 'length' : name
+                  console.log(fName)
+                  return {
+                    text: fName,
+                    link: `/api/${lowerCase(fName)}/`
+                  }
+                })
+            }
+          ]
         }
       }
     },

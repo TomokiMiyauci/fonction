@@ -4364,6 +4364,11 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
+fonction@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.2.0.tgz#18c9c349a14ee5a9f95e4dcc20eb162dd8b9f3ba"
+  integrity sha512-iJNqledP1lBE8/13c0zDeQtu1HbZ0h4d/YJ7pC0fAafK5mrGqikPM8n9FiqIh8eC3Kar9tNtsDUgZius/OfUHg==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"

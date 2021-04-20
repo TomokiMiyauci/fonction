@@ -5,7 +5,10 @@
  * @returns The result of `val.length`
  *
  * @example
- *
+ * ```ts
+ * length('hello') // 5
+ * length(['hello', 'world', 1]) // 3
+ * ```
  *
  * @public
  */
