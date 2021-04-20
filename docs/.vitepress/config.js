@@ -1,4 +1,5 @@
 const { members } = require('../../temp/fonction.api.json')
+const { lowerCase } = require('fonction')
 
 const title = 'fonction'
 const description = 'A modern practical functional library'
@@ -71,10 +72,16 @@ module.exports = {
             {
               text: 'List of function',
               link: '/api/',
-              children: members[0]?.members.map(({ name }) => ({
-                text: name,
-                link: `/api/${name}/`
-              }))
+              children: members[0]?.members
+                .filter((a) => a.kind === 'Variable')
+                .map(({ name }) => {
+                  const fName = name === 'length_2' ? 'length' : name
+                  console.log(fName)
+                  return {
+                    text: fName,
+                    link: `/api/${lowerCase(fName)}/`
+                  }
+                })
             }
           ]
         }
