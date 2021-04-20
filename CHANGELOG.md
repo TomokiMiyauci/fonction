@@ -1,3 +1,9 @@
+# [v1.2.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2021-04-19)
+
+## ✨ New Features
+- [`6c57821`](https://github.com/TomokiMiyauci/fonction/commit/6c57821)   Add identity function 
+- [`1df1aa4`](https://github.com/TomokiMiyauci/fonction/commit/1df1aa4)   Add head function
+
 # [v1.2.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2021-04-19)
 
 ## ✨ New Features
