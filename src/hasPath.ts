@@ -23,7 +23,7 @@ import { tail } from '@/tail'
  * hasPath(['hi', 'Tom'], { hi: { John: 1 } } ) // false
  * ```
  *
- * @beta
+ * @public
  */
 const hasPath = <T extends unknown>(
   path: (string | number)[],

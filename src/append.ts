@@ -13,7 +13,7 @@
  * ```
  *
  *
- * @beta
+ * @public
  */
 const append = <T, U>(val: T, list: U[]): (T | U)[] => [...list, val]
 export { append }

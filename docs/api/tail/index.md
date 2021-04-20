@@ -4,9 +4,6 @@
 
 ## tail variable
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Returns all but the first element of the given list or string.
 
 <b>Signature:</b>

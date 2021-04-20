@@ -20,7 +20,7 @@
  * head([]) // []
  * ```
  *
- * @beta
+ * @public
  */
 const head: {
   (val: string): string

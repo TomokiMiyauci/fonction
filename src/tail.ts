@@ -20,7 +20,7 @@
  * tail([]) // []
  * ```
  *
- * @beta
+ * @public
  */
 const tail: {
   (val: string): string

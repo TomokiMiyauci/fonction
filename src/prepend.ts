@@ -13,7 +13,7 @@
  * ```
  *
  *
- * @beta
+ * @public
  */
 const prepend = <T, U>(val: T, list: U[]): (T | U)[] => [val, ...list]
 export { prepend }

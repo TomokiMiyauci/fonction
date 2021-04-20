@@ -16,7 +16,7 @@ import { multiply } from '@/multiply'
  * product([]) // 0
  * ```
  *
- * @beta
+ * @public
  */
 const product: {
   (val: []): 0

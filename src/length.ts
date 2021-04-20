@@ -7,7 +7,7 @@
  * @example
  *
  *
- * @beta
+ * @public
  */
 const length = <T extends unknown[] | string>(val: T): T['length'] => val.length
 

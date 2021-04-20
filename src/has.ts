@@ -15,7 +15,7 @@ import { hasOwnProperty } from '@/constants'
  * has('hello', { hi : hello: 'world' }) // false
  * ```
  *
- * @beta
+ * @public
  */
 const has = <T extends unknown>(
   props: string | number,

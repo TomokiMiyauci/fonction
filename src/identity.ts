@@ -10,7 +10,7 @@
  * identity({}) // {}
  * ```
  *
- * @beta
+ * @public
  */
 const identity = <T>(val: T): T => val
 
