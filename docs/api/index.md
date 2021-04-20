@@ -10,6 +10,7 @@
 |  --- | --- |
 |  [add](./add/) | Adds first argument and second argument. |
 |  [and](./and/) | Returns true if both arguments are true; otherwise false. |
+|  [append](./append/) | Returns a new list containing the contents of the given list, followed by the given value |
 |  [dec](./dec/) | Decrements its argument. |
 |  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
@@ -17,6 +18,10 @@
 |  [first](./first/) | Returns the first element of the given list or string. |
 |  [gt](./gt/) | Returns <code>true</code> if the first argument is greater than the second; otherwise <code>false</code> |
 |  [gte](./gte/) | Returns <code>true</code> if the first argument is greater than or equal to the second; otherwise <code>false</code> |
+|  [has](./has/) | Returns whether or not an object has an own property with the specified name. |
+|  [hasPath](./haspath/) | Returns whether or not a path exists in an object. Only the object's own properties are checked. |
+|  [head](./head/) | Returns all but the last element of the given list or string. |
+|  [identity](./identity/) | Return the parameter supplied to it. |
 |  [inc](./inc/) | Increments its argument. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
@@ -31,16 +36,20 @@
 |  [isUndefined](./isundefined/) | Whatever argument is type of <code>undefined</code> or not. |
 |  [K](./k/) | K combinator. Returns a function that always returns the given value. |
 |  [last](./last/) | Returns the last element of the given list or string. |
+|  [length](./length/) | Returns the number of elements in the array or string length. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
 |  [lt](./lt/) | Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
 |  [lte](./lte/) | Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
 |  [or](./or/) | Returns true if one or both of its arguments are true; otherwise false. |
+|  [prepend](./prepend/) | Returns a new list with the given value at the front, followed by the contents of the list. |
+|  [product](./product/) | Multiplies together all the elements of a list. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
 |  [sum](./sum/) | Adds together all the elements of a list. |
 |  [T](./t/) | A function that always returns <code>true</code>. Any passed in parameters are ignored. |
+|  [tail](./tail/) | Returns all but the first element of the given list or string. |
 |  [trim](./trim/) | Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
 |  [xor](./xor/) | Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |

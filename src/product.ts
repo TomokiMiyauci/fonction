@@ -1,24 +1,24 @@
-import { add } from '@/add'
 import { first } from '@/first'
 import { isNumber } from '@/isNumber'
 import { isUndefined } from '@/isUndefined'
+import { multiply } from '@/multiply'
 
 /**
- * Adds together all the elements of a list.
+ * Multiplies together all the elements of a list.
  *
  * @param val - list An array of numbers
- * @returns The sum of all the numbers in the list
+ * @returns The product of all the numbers in the list
  *
  * @example
  * ```ts
- * sum([1, 2, 3, 4, 5]) // 15
- * sum([1n, 2n, 3n, 4n, 5n]) // 15n
- * sum([]) // 0
+ * product([1, 2, 3, 4, 5]) // 120
+ * product([1n, 2n, 3n, 4n, 5n]) //120n
+ * product([]) // 0
  * ```
  *
  * @public
  */
-const sum: {
+const product: {
   (val: []): 0
   (val: number[]): number
   (val: bigint[]): bigint
@@ -26,9 +26,9 @@ const sum: {
 } = (val: any) => {
   const head = first(val) as number | bigint
   if (isUndefined(head)) return 0
-  const init = isNumber(head) ? 0 : 0n
+  const init = isNumber(head) ? 1 : 1n
 
-  return val.reduce(add, init)
+  return val.reduce(multiply, init)
 }
 
-export { sum }
+export { product }

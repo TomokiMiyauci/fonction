@@ -1,3 +1,30 @@
+# [v1.2.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2021-04-19)
+
+## ✨ New Features
+- [`6c57821`](https://github.com/TomokiMiyauci/fonction/commit/6c57821)   Add identity function 
+- [`1df1aa4`](https://github.com/TomokiMiyauci/fonction/commit/1df1aa4)   Add head function
+
+# [v1.2.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2021-04-19)
+
+## ✨ New Features
+- [`7cf6c56`](https://github.com/TomokiMiyauci/fonction/commit/7cf6c56)   Add append and prepend functions
+
+# [v1.2.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2021-04-19)
+
+## ✨ New Features
+- [`f1ccc1d`](https://github.com/TomokiMiyauci/fonction/commit/f1ccc1d)   Add product function
+
+# [v1.2.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2021-04-19)
+
+## ✨ New Features
+- [`01a4905`](https://github.com/TomokiMiyauci/fonction/commit/01a4905)   Add length function
+
+# [v1.2.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0...v1.2.0-beta.1) (2021-04-19)
+
+## ✨ New Features
+- [`3b67787`](https://github.com/TomokiMiyauci/fonction/commit/3b67787)   Add checking exist object property functions 
+- [`cc59f96`](https://github.com/TomokiMiyauci/fonction/commit/cc59f96)   Add getting first element of array and string function
+
 # [v1.1.0](https://github.com/TomokiMiyauci/fonction/compare/v1.0.1...v1.1.0) (2021-04-19)
 
 ## ✨ New Features

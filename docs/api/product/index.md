@@ -2,14 +2,14 @@
 
 
 
-## sum variable
+## product variable
 
-Adds together all the elements of a list.
+Multiplies together all the elements of a list.
 
 <b>Signature:</b>
 
 ```typescript
-sum: {
+product: {
     (val: [
     ]): 0;
     (val: number[]): number;
@@ -21,9 +21,9 @@ sum: {
 
 
 ```ts
-sum([1, 2, 3, 4, 5]) // 15
-sum([1n, 2n, 3n, 4n, 5n]) // 15n
-sum([]) // 0
+product([1, 2, 3, 4, 5]) // 120
+product([1n, 2n, 3n, 4n, 5n]) //120n
+product([]) // 0
 
 ```
 
