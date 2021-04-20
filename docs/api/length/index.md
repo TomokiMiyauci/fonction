@@ -15,3 +15,9 @@ length: <T extends string | unknown[]>(val: T) => T["length"]
 ## Example
 
 
+```ts
+length('hello') // 5
+length(['hello', 'world', 1]) // 3
+
+```
+
