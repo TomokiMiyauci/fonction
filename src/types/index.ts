@@ -30,3 +30,4 @@ export type Primitive =
  */
 export type Ord = string | number | bigint | boolean | Date
 export type InferArray<T> = T extends (infer R)[] ? R : never
+export type Whitespace = ' ' | '\t' | '\n'
