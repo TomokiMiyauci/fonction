@@ -5,7 +5,7 @@ import { terser } from 'rollup-plugin-terser'
 import { main, module } from './package.json'
 
 const config = {
-  input: 'src/index.ts',
+  input: 'temp/mod.ts',
   plugins: [ts(), nodeResolve(), terser()],
 
   output: [

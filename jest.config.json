@@ -10,7 +10,8 @@
   "moduleNameMapper": {
     "^@/(.+)$": "<rootDir>/src/$1",
     "^@test/(.+)$": "<rootDir>/test/$1",
-    "@test": "<rootDir>/test/index"
+    "@test": "<rootDir>/test/index",
+    "https://x.nest.land/arithmetic4@0.1.1/mod.ts": "arithmetic4"
   },
   "collectCoverageFrom": [
     "src/**/*.ts",
