@@ -1,3 +1,8 @@
+# [v1.3.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.4...v1.3.0-beta.5) (2021-04-28)
+
+## 🐛 Bug Fixes
+- [`bcee969`](https://github.com/TomokiMiyauci/fonction/commit/bcee969)   Fix import path
+
 # [v1.3.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.3...v1.3.0-beta.4) (2021-04-28)
 
 ## ✨ New Features
