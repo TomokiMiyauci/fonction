@@ -32,7 +32,7 @@ For prototyping and learning purposes, the latest version is available as follow
 <script src="https://unpkg.com/fonction"></script>
 
 <script>
-  console.log(Fonction.add(1, 2)) //=> 3
+  console.log(F.add(1, 2)) //=> 3
 </script>
 ```
 
