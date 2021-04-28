@@ -27,8 +27,8 @@ endsWith('earth', 'hello world') // false
 
 ```ts
 // Curry
-const endsWithTs = endsWith('ts')
-endsWithTs('index.ts') // true
+const endsWithHtml = endsWith('html')
+endsWithHtml('index.html') // true
 
 ```
 
