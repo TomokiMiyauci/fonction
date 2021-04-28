@@ -194,10 +194,10 @@ jobs:
       - name: Setup Deno
         uses: denolib/setup-deno@v2
         with:
-          deno-version: 1.9.2
+          deno-version: v1.5.x
 
       - name: Publish module
         run: |
-          deno install -A --unstable https://x.nest.land/eggs@0.3.6/eggs.ts
+          deno install -A --unstable https://x.nest.land/eggs@0.3.2/eggs.ts
           eggs link ${{ secrets.NESTAPIKEY }}
           eggs publish --yes --no-check --version $(git describe --tags $(git rev-list --tags --max-count=1))
