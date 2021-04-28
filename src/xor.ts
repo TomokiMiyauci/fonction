@@ -1,3 +1,5 @@
+import { not } from './not.ts'
+
 /**
  * Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
  *
@@ -15,5 +17,5 @@
  *
  * @public
  */
-const xor = <T, U>(a: T, b: U): boolean => !a !== !b
+const xor = <T, U>(a: T, b: U): boolean => not(a) !== (not(b) as boolean)
 export { xor }

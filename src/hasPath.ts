@@ -4,6 +4,7 @@ import { has } from './has.ts'
 import { isObject } from './isObject.ts'
 import { isUndefined } from './isUndefined.ts'
 import { length } from './length.ts'
+import { not } from './not.ts'
 import { tail } from './tail.ts'
 
 /**
@@ -32,7 +33,7 @@ const hasPath = <T extends unknown>(
   const key = first(path)
   if (isUndefined(key)) return false
   const rest = tail(path)
-  if (!length(rest)) {
+  if (not(length(rest))) {
     return has(key, obj)
   }
   return and(has(key, obj), isObject(obj[key]))

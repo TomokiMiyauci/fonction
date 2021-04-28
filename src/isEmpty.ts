@@ -4,6 +4,7 @@ import { isObject } from './isObject.ts'
 import { isString } from './isString.ts'
 import { keys } from './keys.ts'
 import { length } from './length.ts'
+import { not } from './not.ts'
 import { Empty } from './types/index.ts'
 
 /**
@@ -31,11 +32,11 @@ import { Empty } from './types/index.ts'
  * @beta
  */
 const isEmpty = (val: unknown): val is Empty => {
-  if (isString(val)) return !length(val)
-  else if (isArray(val)) return !length(val)
+  if (isString(val)) return not(length(val))
+  else if (isArray(val)) return not(length(val))
   else if (isObject(val))
     return and(
-      !length(keys(val as Record<PropertyKey, unknown>)),
+      not(length(keys(val as Record<PropertyKey, unknown>))),
       (val as Record<PropertyKey, unknown>).constructor === Object
     )
   else return false
