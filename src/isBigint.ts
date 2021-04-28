@@ -8,8 +8,6 @@ type IsBigint<T extends unknown> = T extends bigint ? true : false
 /**
  * Whatever argument is type of `bigint` or not.
  *
- * @public
- *
  * @param val - input any value
  * @returns The result of `typeof val === 'bigint'`
  *
