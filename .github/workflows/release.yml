@@ -188,15 +188,16 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      - uses: denolib/setup-deno@master
+      - name: Setup Deno
+        uses: denolib/setup-deno@v2
         with:
           deno-version: 1.9.2
 
-      - run: deno install -Afq --unstable https://x.nest.land/eggs@0.3.6/eggs.ts
-
-      - run: |
-          export PATH="/home/runner/.deno/bin:$PATH"
+      - name: Publish module
+        run: |
+          deno install -A --unstable https://x.nest.land/eggs@0.3.6/eggs.ts
           eggs link ${{ secrets.NESTAPIKEY }}
           eggs publish --yes --no-check --version $(git describe --tags $(git rev-list --tags --max-count=1))
