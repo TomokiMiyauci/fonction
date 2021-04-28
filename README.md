@@ -4,6 +4,8 @@
 ![npm version](https://img.shields.io/npm/v/fonction.svg?style=flat)
 ![bundle size](https://img.shields.io/bundlephobia/min/fonction)
 ![npm download](https://img.shields.io/npm/dw/fonction?color=blue)
+[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black)](https://deno.land/x/fonction)
+[![nest badge](https://nest.land/badge.svg)](https://nest.land/package/fonction)
 [![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/fonction.svg)](https://david-dm.org/TomokiMiyauci/fonction)
 [![codecov](https://codecov.io/gh/TomokiMiyauci/fonction/branch/main/graph/badge.svg?token=SPAi5Pv2wd)](https://codecov.io/gh/TomokiMiyauci/fonction)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f43b1c317e11445399d85ce6efc06504)](https://www.codacy.com/gh/TomokiMiyauci/fonction/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TomokiMiyauci/fonction&utm_campaign=Badge_Grade)
@@ -26,6 +28,7 @@
 - :package: Optimized, super slim size
 - :page_facing_up: TSDoc-style comments
 - :1234: Bigint support
+- 🦕 Deno support
 
 Fonction (French word for "function", not typo:sweat_smile:) is modern practical functional library.
 Special attention is paid to bundle size and strict type definitions. Therefore, you can take out and use only what you want to use without worrying about the size.
