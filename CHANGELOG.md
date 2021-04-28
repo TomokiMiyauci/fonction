@@ -1,3 +1,8 @@
+# [v1.3.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0...v1.3.0-beta.1) (2021-04-28)
+
+## ✨ New Features
+- [`a76a383`](https://github.com/TomokiMiyauci/fonction/commit/a76a383)   Publish to deno.land and nest.land
+
 # [v1.2.0](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0...v1.2.0) (2021-04-20)
 
 ## ✨ New Features
