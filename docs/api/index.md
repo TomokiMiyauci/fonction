@@ -23,6 +23,7 @@
 |  [head](./head/) | Returns all but the last element of the given list or string. |
 |  [identity](./identity/) | Return the parameter supplied to it. |
 |  [inc](./inc/) | Increments its argument. |
+|  [isArray](./isarray/) | <b><i>(BETA)</i></b> Whatever argument is <code>Array</code> or not. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
 |  [isEmpty](./isempty/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the given value is its type's empty value; otherwise <code>false</code>. |
