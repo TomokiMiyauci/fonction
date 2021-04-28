@@ -199,4 +199,4 @@ jobs:
       - run: |
           export PATH="/home/runner/.deno/bin:$PATH"
           eggs link ${{ secrets.NESTAPIKEY }}
-          eggs publish
+          eggs publish --yes --no-check --version $(git describe --tags $(git rev-list --tags --max-count=1))
