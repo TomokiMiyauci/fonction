@@ -26,7 +26,7 @@ import { Falsy } from './types/index.ts'
  * not({}) // false
  * ```
  *
- * @beta
+ * @public
  */
 const not = <T>(val: T): T extends Falsy ? true : boolean =>
   !val as T extends Falsy ? true : boolean

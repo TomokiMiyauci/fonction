@@ -22,7 +22,7 @@
  * values(['hello', 'world']) // ['hello', 'world']
  * ```
  *
- * @beta
+ * @public
  */
 const values = <T extends unknown>(
   val: Record<PropertyKey, T> | ArrayLike<T>

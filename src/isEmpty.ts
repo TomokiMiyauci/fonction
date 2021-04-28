@@ -29,7 +29,7 @@ import { Empty } from './types/index.ts'
  * isEmpty(1000) // false
  * ```
  *
- * @beta
+ * @public
  */
 const isEmpty = (val: unknown): val is Empty => {
   if (isString(val)) return not(length(val))

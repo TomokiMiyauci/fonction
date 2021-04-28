@@ -15,6 +15,8 @@ features:
     details: 'All functions have TSDoc-style comments. This is useful because you can learn more about the function when using the latest editors.'
   - title: '🔢 Bigint support'
     details: 'Not only number but also bigint is supported as standard.'
+  - title: '🦕 Deno support'
+    details: 'Support multi platform of Node and Deno.'
 
 footer: MIT Licensed | Copyright © 2021-present
 ---

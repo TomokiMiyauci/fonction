@@ -33,7 +33,7 @@ export type Ord = string | number | bigint | boolean | Date
 /**
  * Alias for Empty values
  *
- * @beta
+ * @public
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type Empty = '' | [] | {}
@@ -41,7 +41,7 @@ export type Empty = '' | [] | {}
 /**
  * Alias for Falsy values
  *
- * @beta
+ * @public
  */
 export type Falsy = false | '' | 0 | null | undefined
 

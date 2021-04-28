@@ -4,9 +4,6 @@
 
 ## isEmpty variable
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Returns `true` if the given value is its type's empty value; otherwise `false`<!-- -->.
 
 <b>Signature:</b>

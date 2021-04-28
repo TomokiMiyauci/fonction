@@ -14,7 +14,7 @@
  * keys({ 0: 'hello', 1: 'world' }) // ['0', '1']
  * ```
  *
- * @beta
+ * @public
  */
 const keys = <T extends PropertyKey>(val: Record<T, unknown>): string[] =>
   Object.keys(val)
