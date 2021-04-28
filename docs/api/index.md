@@ -44,6 +44,7 @@
 |  [lt](./lt/) | Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
 |  [lte](./lte/) | Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
+|  [not](./not/) | <b><i>(BETA)</i></b> Returns the <code>!</code> of its argument. |
 |  [or](./or/) | Returns true if one or both of its arguments are true; otherwise false. |
 |  [prepend](./prepend/) | Returns a new list with the given value at the front, followed by the contents of the list. |
 |  [product](./product/) | Multiplies together all the elements of a list. |
@@ -65,6 +66,7 @@
 |  [AnyFn](./anyfn/) | Type of any function |
 |  [Empty](./empty/) | <b><i>(BETA)</i></b> Alias for Empty values |
 |  [endsWith](./endswith/) |  |
+|  [Falsy](./falsy/) | <b><i>(BETA)</i></b> Alias for Falsy values |
 |  [Ord](./ord/) | Abbreviation for Ordinal |
 |  [Primitive](./primitive/) | Alias for Primitive values types |
 

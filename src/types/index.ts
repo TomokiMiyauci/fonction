@@ -38,5 +38,12 @@ export type Ord = string | number | bigint | boolean | Date
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type Empty = '' | [] | {}
 
+/**
+ * Alias for Falsy values
+ *
+ * @beta
+ */
+export type Falsy = false | '' | 0 | null | undefined
+
 export type InferArray<T> = T extends (infer R)[] ? R : never
 export type Whitespace = ' ' | '\t' | '\n'
