@@ -1,4 +1,4 @@
-import { multiply as _multiply } from 'arithmetic4'
+import { multiply as _multiply } from '../deps.ts'
 
 // re-export
 

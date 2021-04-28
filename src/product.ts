@@ -1,7 +1,7 @@
-import { first } from '@/first'
-import { isNumber } from '@/isNumber'
-import { isUndefined } from '@/isUndefined'
-import { multiply } from '@/multiply'
+import { first } from './first.ts'
+import { isNumber } from './isNumber.ts'
+import { isUndefined } from './isUndefined.ts'
+import { multiply } from './multiply.ts'
 
 /**
  * Multiplies together all the elements of a list.

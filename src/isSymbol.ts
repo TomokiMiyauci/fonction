@@ -1,5 +1,3 @@
-import { SYMBOL } from '@/constants'
-
 /**
  * Symbol or not
  *
@@ -23,7 +21,7 @@ type IsSymbol<T extends unknown> = T extends symbol ? true : false
  *
  * @public
  */
-const isSymbol = (val: unknown): val is symbol => typeof val === SYMBOL
+const isSymbol = (val: unknown): val is symbol => typeof val === 'symbol'
 
 export { isSymbol }
 export type { IsSymbol }

@@ -1,5 +1,3 @@
-import { UNDEFINED } from '@/constants'
-
 /**
  * Undefined or not
  *
@@ -23,7 +21,8 @@ type IsUndefined<T extends unknown> = T extends undefined ? true : false
  *
  * @public
  */
-const isUndefined = (val: unknown): val is undefined => typeof val === UNDEFINED
+const isUndefined = (val: unknown): val is undefined =>
+  typeof val === 'undefined'
 
 export { isUndefined }
 export type { IsUndefined }

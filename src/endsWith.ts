@@ -1,5 +1,5 @@
-import { isString } from '@/isString'
-import { StringWith } from '@/startsWith'
+import { isString } from './isString.ts'
+import { StringWith } from './startsWith.ts'
 
 type endsWith<T extends string | undefined = undefined> = StringWith<
   'endsWith',
@@ -23,8 +23,8 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
  * @example
  * ```ts
  * // Curry
- * const endsWithTs = endsWith('ts')
- * endsWithTs('index.ts') // true
+ * const endsWithHtml = endsWith('html')
+ * endsWithHtml('index.html') // true
  * ```
  *
  * @public

@@ -1,5 +1,3 @@
-import { NUMBER } from '@/constants'
-
 /**
  * Number or not
  *
@@ -23,7 +21,7 @@ type IsNumber<T extends unknown> = T extends number ? true : false
  *
  * @public
  */
-const isNumber = (val: unknown): val is number => typeof val === NUMBER
+const isNumber = (val: unknown): val is number => typeof val === 'number'
 
 export { isNumber }
 export type { IsNumber }

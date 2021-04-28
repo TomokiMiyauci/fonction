@@ -1,5 +1,3 @@
-import { STRING } from '@/constants'
-
 /**
  * String or not
  *
@@ -23,7 +21,7 @@ type IsString<T extends unknown> = T extends string ? true : false
  *
  * @public
  */
-const isString = (val: unknown): val is string => typeof val === STRING
+const isString = (val: unknown): val is string => typeof val === 'string'
 
 export { isString }
 export type { IsString }

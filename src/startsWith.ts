@@ -1,4 +1,4 @@
-import { isString } from '@/isString'
+import { isString } from './isString.ts'
 
 type StringWith<
   T extends 'startsWith' | 'endsWith',

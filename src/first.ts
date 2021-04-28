@@ -1,5 +1,5 @@
-import { length } from '@/length'
-import { InferArray } from '@/types'
+import { length } from './length.ts'
+import { InferArray } from './types/index.ts'
 /**
  * Returns the first element of the given list or string.
  *

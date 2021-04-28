@@ -1,4 +1,4 @@
-import { length } from '@/length'
+import { length } from './length.ts'
 
 /**
  * Returns the last element of the given list or string.

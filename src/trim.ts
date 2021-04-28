@@ -1,4 +1,4 @@
-import { Whitespace } from '@/types'
+import { Whitespace } from './types/index.ts'
 
 type Trim<T extends string> = T extends `${Whitespace}${infer U}`
   ? Trim<U>

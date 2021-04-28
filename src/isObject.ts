@@ -1,4 +1,4 @@
-import { IsPrimitive, isPrimitive } from '@/isPrimitive'
+import { IsPrimitive, isPrimitive } from './isPrimitive.ts'
 
 /**
  * Object or not

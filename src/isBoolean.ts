@@ -1,5 +1,3 @@
-import { BOOLEAN } from '@/constants'
-
 /**
  * Boolean or not
  *
@@ -23,7 +21,7 @@ type IsBoolean<T extends unknown> = T extends boolean ? true : false
  *
  * @public
  */
-const isBoolean = (val: unknown): val is boolean => typeof val === BOOLEAN
+const isBoolean = (val: unknown): val is boolean => typeof val === 'boolean'
 
 export { isBoolean }
 export type { IsBoolean }

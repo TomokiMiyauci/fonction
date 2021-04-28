@@ -1,7 +1,6 @@
-import { divide as _divide } from 'arithmetic4'
-
+import { divide as _divide } from '../deps.ts'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { _ } from '@/constants'
+import { _ } from './constants/index.ts'
 
 // re-export
 

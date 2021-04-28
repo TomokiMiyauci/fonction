@@ -1,4 +1,4 @@
-import { hasOwnProperty } from '@/constants'
+import { hasOwnProperty } from './constants/index.ts'
 
 /**
  * Returns whether or not an object has an own property with the specified name.

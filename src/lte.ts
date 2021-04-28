@@ -1,4 +1,4 @@
-import { Ord } from '@/types'
+import { Ord } from './types/index.ts'
 
 /**
  * Returns `true` if the first argument is less than or equal to the second; otherwise `false`

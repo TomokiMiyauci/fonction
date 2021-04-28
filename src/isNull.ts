@@ -1,4 +1,4 @@
-import { NULL } from '@/constants'
+import { NULL } from './constants/index.ts'
 
 /**
  * Null or not
