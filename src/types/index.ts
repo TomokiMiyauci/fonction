@@ -29,5 +29,13 @@ export type Primitive =
  * @public
  */
 export type Ord = string | number | bigint | boolean | Date
+
+/**
+ * Alias for Empty values
+ *
+ * @beta
+ */
+export type Empty = '' | [] | {}
+
 export type InferArray<T> = T extends (infer R)[] ? R : never
 export type Whitespace = ' ' | '\t' | '\n'

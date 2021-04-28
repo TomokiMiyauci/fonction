@@ -25,6 +25,7 @@
 |  [inc](./inc/) | Increments its argument. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
+|  [isEmpty](./isempty/) | <b><i>(BETA)</i></b> Returns <code>true</code> if the given value is its type's empty value; otherwise <code>false</code>. |
 |  [isFunction](./isfunction/) | Whatever argument is type of <code>function</code> or not. |
 |  [isNill](./isnill/) | Whatever argument is type of <code>undefined</code> or <code>null</code>. |
 |  [isNull](./isnull/) | Whatever argument is type of <code>null</code> or not. |
@@ -59,6 +60,7 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [AnyFn](./anyfn/) | Type of any function |
+|  [Empty](./empty/) | <b><i>(BETA)</i></b> Alias for Empty values |
 |  [endsWith](./endswith/) |  |
 |  [Ord](./ord/) | Abbreviation for Ordinal |
 |  [Primitive](./primitive/) | Alias for Primitive values types |
