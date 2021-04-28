@@ -13,7 +13,7 @@ const config = {
       file: main,
       format: 'umd',
       sourcemap: true,
-      name: 'Fonction'
+      name: 'F'
     },
     {
       file: module,
