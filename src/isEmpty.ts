@@ -1,6 +1,7 @@
 import { and } from './and.ts'
 import { isObject } from './isObject.ts'
 import { isString } from './isString.ts'
+import { keys } from './keys.ts'
 import { length } from './length.ts'
 import { Empty } from './types/index.ts'
 
@@ -28,15 +29,13 @@ import { Empty } from './types/index.ts'
  *
  * @beta
  */
-
-// eslint-disable-next-line @typescript-eslint/ban-types
 const isEmpty = (val: unknown): val is Empty => {
   if (isString(val)) return !length(val)
   else if (Array.isArray(val)) return !length(val)
   else if (isObject(val))
     return and(
-      !length(Object.keys(val as Record<string, unknown>)),
-      (val as Record<string, unknown>).constructor === Object
+      !length(keys(val as Record<PropertyKey, unknown>)),
+      (val as Record<PropertyKey, unknown>).constructor === Object
     )
   else return false
 }
