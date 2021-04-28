@@ -4,8 +4,8 @@ on:
   create:
     ref_type: tag
 
-    branches:
-      - main
+    tags-ignore:
+      - v**-beta.*
 
 jobs:
   release:
