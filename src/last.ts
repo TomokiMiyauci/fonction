@@ -1,3 +1,4 @@
+import { isArray } from './isArray.ts'
 import { length } from './length.ts'
 
 /**
@@ -31,7 +32,7 @@ const last = <T extends string | unknown[]>(
   : T extends string
   ? string
   : never => {
-  if (Array.isArray(val)) {
+  if (isArray(val)) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return length(val) ? (val.slice(-1)[0] as any) : undefined
   } else {

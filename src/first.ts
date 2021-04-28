@@ -1,3 +1,4 @@
+import { isArray } from './isArray.ts'
 import { length } from './length.ts'
 import { InferArray } from './types/index.ts'
 /**
@@ -29,7 +30,7 @@ const first: {
     : InferArray<T> | undefined
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } = (val: any) => {
-  if (Array.isArray(val)) {
+  if (isArray(val)) {
     return length(val) ? val.slice(0, 1)[0] : undefined
   } else {
     return (val as string).slice(0, 1)

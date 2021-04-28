@@ -1,4 +1,5 @@
 import { and } from './and.ts'
+import { isArray } from './isArray.ts'
 import { isObject } from './isObject.ts'
 import { isString } from './isString.ts'
 import { keys } from './keys.ts'
@@ -31,7 +32,7 @@ import { Empty } from './types/index.ts'
  */
 const isEmpty = (val: unknown): val is Empty => {
   if (isString(val)) return !length(val)
-  else if (Array.isArray(val)) return !length(val)
+  else if (isArray(val)) return !length(val)
   else if (isObject(val))
     return and(
       !length(keys(val as Record<PropertyKey, unknown>)),
