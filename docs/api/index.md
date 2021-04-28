@@ -36,6 +36,7 @@
 |  [isSymbol](./issymbol/) | Whatever argument is type of <code>symbol</code> or not. |
 |  [isUndefined](./isundefined/) | Whatever argument is type of <code>undefined</code> or not. |
 |  [K](./k/) | K combinator. Returns a function that always returns the given value. |
+|  [keys](./keys/) | <b><i>(BETA)</i></b> Returns the names of the enumerable string properties and methods of an object. |
 |  [last](./last/) | Returns the last element of the given list or string. |
 |  [length](./length/) | Returns the number of elements in the array or string length. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
@@ -53,6 +54,7 @@
 |  [tail](./tail/) | Returns all but the first element of the given list or string. |
 |  [trim](./trim/) | Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
+|  [values](./values/) | <b><i>(BETA)</i></b> Returns an array of values of the enumerable properties of an object. |
 |  [xor](./xor/) | Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |
 
 ## Type Aliases
