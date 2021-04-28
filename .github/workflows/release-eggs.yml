@@ -1,10 +1,11 @@
 name: release-eggs
 
 on:
-  branches:
-    - main
   create:
     ref_type: tag
+
+    branches:
+      - main
 
 jobs:
   release:
