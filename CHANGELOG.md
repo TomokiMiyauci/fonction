@@ -1,3 +1,8 @@
+# [v1.3.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.3...v1.3.0-beta.4) (2021-04-28)
+
+## ✨ New Features
+- [`ac95f4c`](https://github.com/TomokiMiyauci/fonction/commit/ac95f4c)   Add not function
+
 # [v1.3.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.2...v1.3.0-beta.3) (2021-04-28)
 
 ## ✨ New Features
