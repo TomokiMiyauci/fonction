@@ -1,3 +1,8 @@
+# [v1.3.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.1...v1.3.0-beta.2) (2021-04-28)
+
+## ✨ New Features
+- [`d842fd7`](https://github.com/TomokiMiyauci/fonction/commit/d842fd7)   Add isEmpty function
+
 # [v1.3.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0...v1.3.0-beta.1) (2021-04-28)
 
 ## ✨ New Features
