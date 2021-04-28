@@ -1,0 +1,22 @@
+{
+  "$schema": "https://x.nest.land/eggs@0.3.6/src/schema.json",
+  "name": "fonction",
+  "entry": "./mod.ts",
+  "description": "A modern practical functional library",
+  "homepage": "https://github.com/TomokiMiyauci/fonction",
+  "version": "0.1.0",
+  "releaseType": "patch",
+  "files": [
+    "./mod.ts",
+    "./deps.ts",
+    "./src/**/*.ts",
+    "./README.md",
+    "./LICENSE"
+  ],
+  "ignore": [".git"],
+  "checkFormat": "deno fmt --ignore=node_modules",
+  "checkTests": false,
+  "checkInstallation": true,
+  "check": false,
+  "unlisted": false
+}
