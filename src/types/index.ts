@@ -35,6 +35,7 @@ export type Ord = string | number | bigint | boolean | Date
  *
  * @beta
  */
+// eslint-disable-next-line @typescript-eslint/ban-types
 export type Empty = '' | [] | {}
 
 export type InferArray<T> = T extends (infer R)[] ? R : never
