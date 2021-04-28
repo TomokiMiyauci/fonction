@@ -1,3 +1,9 @@
+# [v1.3.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.2...v1.3.0-beta.3) (2021-04-28)
+
+## ✨ New Features
+- [`a8165cd`](https://github.com/TomokiMiyauci/fonction/commit/a8165cd)   Add keys and values functions 
+- [`dd685d5`](https://github.com/TomokiMiyauci/fonction/commit/dd685d5)   Add isArray function
+
 # [v1.3.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.1...v1.3.0-beta.2) (2021-04-28)
 
 ## ✨ New Features
