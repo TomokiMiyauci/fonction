@@ -65,7 +65,7 @@ add(1, 2) // 3
 #### nest.land
 
 ```ts
-import { add } from 'https://deno.land/x/fonction@v1.3.0/mod.ts'
+import { add } from 'https://x.nest.land/fonction@1.3.0/mod.ts'
 
 add(1, 2) // 3
 ```
