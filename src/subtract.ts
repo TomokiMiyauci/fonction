@@ -1,7 +1,7 @@
-import { subtract as _subtract } from 'arithmetic4'
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { _ } from '@/constants'
+import { subtract as _subtract } from '../deps.ts'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { _ } from './constants/index.ts'
 
 // re-export
 

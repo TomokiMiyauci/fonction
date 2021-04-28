@@ -1,4 +1,4 @@
-import { isString } from './isString'
+import { isString } from './isString.ts'
 
 /**
  * Returns a new list or string with the elements or characters in reverse order.

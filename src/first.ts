@@ -1,5 +1,6 @@
-import { length } from '@/length'
-import { InferArray } from '@/types'
+import { isArray } from './isArray.ts'
+import { length } from './length.ts'
+import { InferArray } from './types/index.ts'
 /**
  * Returns the first element of the given list or string.
  *
@@ -29,7 +30,7 @@ const first: {
     : InferArray<T> | undefined
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } = (val: any) => {
-  if (Array.isArray(val)) {
+  if (isArray(val)) {
     return length(val) ? val.slice(0, 1)[0] : undefined
   } else {
     return (val as string).slice(0, 1)

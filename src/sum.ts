@@ -1,7 +1,7 @@
-import { add } from '@/add'
-import { first } from '@/first'
-import { isNumber } from '@/isNumber'
-import { isUndefined } from '@/isUndefined'
+import { add } from './add.ts'
+import { first } from './first.ts'
+import { isNumber } from './isNumber.ts'
+import { isUndefined } from './isUndefined.ts'
 
 /**
  * Adds together all the elements of a list.

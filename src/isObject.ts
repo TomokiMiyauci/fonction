@@ -1,4 +1,5 @@
-import { IsPrimitive, isPrimitive } from '@/isPrimitive'
+import { IsPrimitive, isPrimitive } from './isPrimitive.ts'
+import { not } from './not.ts'
 
 /**
  * Object or not
@@ -40,7 +41,7 @@ type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
  * @public
  */
 const isObject = <T extends unknown>(val: T): val is T =>
-  !isPrimitive(val) as IsObject<T>
+  not(isPrimitive(val) as IsObject<T>)
 
 export { isObject }
 export type { IsObject }

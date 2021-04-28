@@ -1,10 +1,11 @@
-import { and } from '@/and'
-import { first } from '@/first'
-import { has } from '@/has'
-import { isObject } from '@/isObject'
-import { isUndefined } from '@/isUndefined'
-import { length } from '@/length'
-import { tail } from '@/tail'
+import { and } from './and.ts'
+import { first } from './first.ts'
+import { has } from './has.ts'
+import { isObject } from './isObject.ts'
+import { isUndefined } from './isUndefined.ts'
+import { length } from './length.ts'
+import { not } from './not.ts'
+import { tail } from './tail.ts'
 
 /**
  * Returns whether or not a path exists in an object. Only the object's own properties are checked.
@@ -32,7 +33,7 @@ const hasPath = <T extends unknown>(
   const key = first(path)
   if (isUndefined(key)) return false
   const rest = tail(path)
-  if (!length(rest)) {
+  if (not(length(rest))) {
     return has(key, obj)
   }
   return and(has(key, obj), isObject(obj[key]))

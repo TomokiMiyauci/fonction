@@ -1,4 +1,4 @@
-import { AnyFn } from '@/types'
+import { AnyFn } from './types/index.ts'
 
 /**
  * A function that always returns `false`. Any passed in parameters are ignored.

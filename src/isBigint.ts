@@ -1,5 +1,3 @@
-import { BIGINT } from '@/constants'
-
 /**
  * Bigint or not
  *
@@ -9,8 +7,6 @@ type IsBigint<T extends unknown> = T extends bigint ? true : false
 
 /**
  * Whatever argument is type of `bigint` or not.
- *
- * @public
  *
  * @param val - input any value
  * @returns The result of `typeof val === 'bigint'`
@@ -23,7 +19,7 @@ type IsBigint<T extends unknown> = T extends bigint ? true : false
  *
  * @public
  */
-const isBigint = (val: unknown): val is bigint => typeof val === BIGINT
+const isBigint = (val: unknown): val is bigint => typeof val === 'bigint'
 
 export { isBigint }
 export type { IsBigint }

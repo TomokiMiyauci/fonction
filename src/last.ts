@@ -1,12 +1,5 @@
-import { IsString } from '@/isString'
-import { length } from '@/length'
-import { InferArray } from '@/types'
-
-type Last<T extends string | unknown[]> = IsString<T> extends true
-  ? string
-  : T extends never[]
-  ? undefined
-  : InferArray<T>
+import { isArray } from './isArray.ts'
+import { length } from './length.ts'
 
 /**
  * Returns the last element of the given list or string.
@@ -30,11 +23,21 @@ type Last<T extends string | unknown[]> = IsString<T> extends true
  *
  * @public
  */
-const last = <T extends string | unknown[]>(val: T): Last<T> => {
-  if (Array.isArray(val)) {
-    return length(val) ? (val.slice(-1)[0] as Last<T>) : (undefined as Last<T>)
+const last = <T extends string | unknown[]>(
+  val: T
+): T extends never[]
+  ? undefined
+  : T extends unknown[]
+  ? [never, ...T][T['length']]
+  : T extends string
+  ? string
+  : never => {
+  if (isArray(val)) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return length(val) ? (val.slice(-1)[0] as any) : undefined
   } else {
-    return (val as string).slice(-1) as Last<T>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return (val as string).slice(-1) as any
   }
 }
 

@@ -1,3 +1,29 @@
+# [v1.3.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.4...v1.3.0-beta.5) (2021-04-28)
+
+## 🐛 Bug Fixes
+- [`bcee969`](https://github.com/TomokiMiyauci/fonction/commit/bcee969)   Fix import path
+
+# [v1.3.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.3...v1.3.0-beta.4) (2021-04-28)
+
+## ✨ New Features
+- [`ac95f4c`](https://github.com/TomokiMiyauci/fonction/commit/ac95f4c)   Add not function
+
+# [v1.3.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.2...v1.3.0-beta.3) (2021-04-28)
+
+## ✨ New Features
+- [`a8165cd`](https://github.com/TomokiMiyauci/fonction/commit/a8165cd)   Add keys and values functions 
+- [`dd685d5`](https://github.com/TomokiMiyauci/fonction/commit/dd685d5)   Add isArray function
+
+# [v1.3.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0-beta.1...v1.3.0-beta.2) (2021-04-28)
+
+## ✨ New Features
+- [`d842fd7`](https://github.com/TomokiMiyauci/fonction/commit/d842fd7)   Add isEmpty function
+
+# [v1.3.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.2.0...v1.3.0-beta.1) (2021-04-28)
+
+## ✨ New Features
+- [`a76a383`](https://github.com/TomokiMiyauci/fonction/commit/a76a383)   Publish to deno.land and nest.land
+
 # [v1.2.0](https://github.com/TomokiMiyauci/fonction/compare/v1.1.0...v1.2.0) (2021-04-20)
 
 ## ✨ New Features

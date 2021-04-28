@@ -1,7 +1,7 @@
-import type { IsNull } from '@/isNull'
-import { isNull } from '@/isNull'
-import { IsUndefined, isUndefined } from '@/isUndefined'
-import { or } from '@/or'
+import type { IsNull } from './isNull.ts'
+import { isNull } from './isNull.ts'
+import { IsUndefined, isUndefined } from './isUndefined.ts'
+import { or } from './or.ts'
 /**
  * Undefiled or null, or not
  *

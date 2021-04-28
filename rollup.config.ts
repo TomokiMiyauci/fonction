@@ -5,7 +5,7 @@ import { terser } from 'rollup-plugin-terser'
 import { main, module } from './package.json'
 
 const config = {
-  input: 'src/index.ts',
+  input: 'temp/mod.ts',
   plugins: [ts(), nodeResolve(), terser()],
 
   output: [
@@ -13,7 +13,7 @@ const config = {
       file: main,
       format: 'umd',
       sourcemap: true,
-      name: 'Fonction'
+      name: 'F'
     },
     {
       file: module,

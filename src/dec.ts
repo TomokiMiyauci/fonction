@@ -1,5 +1,5 @@
-import { isNumber } from '@/isNumber'
-import { subtract } from '@/subtract'
+import { isNumber } from './isNumber.ts'
+import { subtract } from './subtract.ts'
 
 /**
  * Decrements its argument.

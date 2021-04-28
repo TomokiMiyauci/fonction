@@ -1,10 +1,10 @@
-import { IsBigint, isBigint } from '@/isBigint'
-import { IsBoolean, isBoolean } from '@/isBoolean'
-import { IsNill, isNill } from '@/isNill'
-import { IsNumber, isNumber } from '@/isNumber'
-import { IsString, isString } from '@/isString'
-import { IsSymbol, isSymbol } from '@/isSymbol'
-import { Primitive } from '@/types'
+import { IsBigint, isBigint } from './isBigint.ts'
+import { IsBoolean, isBoolean } from './isBoolean.ts'
+import { IsNill, isNill } from './isNill.ts'
+import { IsNumber, isNumber } from './isNumber.ts'
+import { IsString, isString } from './isString.ts'
+import { IsSymbol, isSymbol } from './isSymbol.ts'
+import { Primitive } from './types/index.ts'
 
 /**
  * Primitive or not

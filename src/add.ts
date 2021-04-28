@@ -1,4 +1,4 @@
-import { add as _add } from 'arithmetic4'
+import { add as _add } from '../deps.ts'
 
 // re-export
 

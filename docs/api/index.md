@@ -23,8 +23,10 @@
 |  [head](./head/) | Returns all but the last element of the given list or string. |
 |  [identity](./identity/) | Return the parameter supplied to it. |
 |  [inc](./inc/) | Increments its argument. |
+|  [isArray](./isarray/) | Whatever argument is <code>Array</code> or not. |
 |  [isBigint](./isbigint/) | Whatever argument is type of <code>bigint</code> or not. |
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
+|  [isEmpty](./isempty/) | Returns <code>true</code> if the given value is its type's empty value; otherwise <code>false</code>. |
 |  [isFunction](./isfunction/) | Whatever argument is type of <code>function</code> or not. |
 |  [isNill](./isnill/) | Whatever argument is type of <code>undefined</code> or <code>null</code>. |
 |  [isNull](./isnull/) | Whatever argument is type of <code>null</code> or not. |
@@ -35,12 +37,14 @@
 |  [isSymbol](./issymbol/) | Whatever argument is type of <code>symbol</code> or not. |
 |  [isUndefined](./isundefined/) | Whatever argument is type of <code>undefined</code> or not. |
 |  [K](./k/) | K combinator. Returns a function that always returns the given value. |
+|  [keys](./keys/) | Returns the names of the enumerable string properties and methods of an object. |
 |  [last](./last/) | Returns the last element of the given list or string. |
 |  [length](./length/) | Returns the number of elements in the array or string length. |
 |  [lowerCase](./lowercase/) | Return lowercase string |
 |  [lt](./lt/) | Returns <code>true</code> if the first argument is less than the second; otherwise <code>false</code> |
 |  [lte](./lte/) | Returns <code>true</code> if the first argument is less than or equal to the second; otherwise <code>false</code> |
 |  [multiply](./multiply/) | Multiplies first argument and second argument. |
+|  [not](./not/) | Returns the <code>!</code> of its argument. |
 |  [or](./or/) | Returns true if one or both of its arguments are true; otherwise false. |
 |  [prepend](./prepend/) | Returns a new list with the given value at the front, followed by the contents of the list. |
 |  [product](./product/) | Multiplies together all the elements of a list. |
@@ -52,6 +56,7 @@
 |  [tail](./tail/) | Returns all but the first element of the given list or string. |
 |  [trim](./trim/) | Removes (strips) whitespace from both ends of the string. |
 |  [upperCase](./uppercase/) | Return uppercase string |
+|  [values](./values/) | Returns an array of values of the enumerable properties of an object. |
 |  [xor](./xor/) | Returns true if one of the arguments is truthy and the other is falsy; otherwise false. |
 
 ## Type Aliases
@@ -59,7 +64,9 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [AnyFn](./anyfn/) | Type of any function |
+|  [Empty](./empty/) | Alias for Empty values |
 |  [endsWith](./endswith/) |  |
+|  [Falsy](./falsy/) | Alias for Falsy values |
 |  [Ord](./ord/) | Abbreviation for Ordinal |
 |  [Primitive](./primitive/) | Alias for Primitive values types |
 

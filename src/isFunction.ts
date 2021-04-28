@@ -1,5 +1,4 @@
-import { FUNCTION } from '@/constants'
-import type { AnyFn } from '@/types'
+import type { AnyFn } from './types/index.ts'
 
 /**
  * Function or not
@@ -24,7 +23,7 @@ type IsFunction<T extends unknown> = T extends AnyFn ? true : false
  *
  * @public
  */
-const isFunction = (val: unknown): val is AnyFn => typeof val === FUNCTION
+const isFunction = (val: unknown): val is AnyFn => typeof val === 'function'
 
 export { isFunction }
 export type { IsFunction }

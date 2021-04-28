@@ -9,7 +9,7 @@ Removes (strips) whitespace from both ends of the string.
 <b>Signature:</b>
 
 ```typescript
-trim: (val: string) => ReturnType<string["trim"]>
+trim: <T extends string>(val: T) => Trim<T>
 ```
 
 ## Example
