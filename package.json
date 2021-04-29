@@ -24,7 +24,7 @@
     "build": "yarn prepare:build && rollup -c rollup.config.ts && yarn post:build",
     "build:docs": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "test": "jest",
+    "test": "deno test test/",
     "release": "semantic-release"
   },
   "devDependencies": {

@@ -1,1 +1,1 @@
-export * from '@test/constants'
+export * from './constants/index.ts'
