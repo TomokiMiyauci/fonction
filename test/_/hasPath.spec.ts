@@ -1,29 +1,7 @@
-import { has } from '@/has'
+import { hasPath } from '@/_/hasPath'
 
-describe('has', () => {
-  const tablePrimitive: [
-    string | number,
-    Record<PropertyKey, unknown>,
-    boolean
-  ][] = [
-    ['', {}, false],
-    ['', { ' ': '' }, false],
-    ['', { ' ': { '': '' } }, false],
-    [0, {}, false],
-    [0, { 1: '' }, false],
-    [0, { 1: { 0: '' } }, false],
-    ['', { '': '' }, true],
-    ['Hello', { hello: '' }, false],
-    ['Hello', { Hello: '' }, true],
-    ['hello', { hello: '' }, true],
-    [0, { 0: 1 }, true]
-  ]
-
-  it.each(tablePrimitive)('has(%s, %s) -> %s', (a, b, expected) => {
-    expect(has(a, b)).toBe(expected)
-  })
-
-  const tableArray: [
+describe('hasPath', () => {
+  const table: [
     (string | number)[],
     Record<PropertyKey, unknown>,
     boolean
@@ -57,7 +35,7 @@ describe('has', () => {
     [[0, 'a', 'B'], { 0: { a: { B: 'c' } } }, true]
   ]
 
-  it.each(tableArray)('has(%s, %s) -> %s', (a, b, expected) => {
-    expect(has(a, b)).toBe(expected)
+  it.each(table)('hasPath(%s, %s) -> %s', (a, b, expected) => {
+    expect(hasPath(a, b)).toBe(expected)
   })
 })

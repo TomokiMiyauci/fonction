@@ -9,17 +9,32 @@ Returns whether or not an object has an own property with the specified name.
 <b>Signature:</b>
 
 ```typescript
-has: <T extends string | number, U extends Record<PropertyKey, unknown>>(props: T, obj: U) => U extends Record<T, unknown> ? true : false
+has: <T extends string | number | (string | number)[], U extends Record<PropertyKey, unknown>>(props: T, obj: U) => T extends unknown[] ? boolean : T extends string | number ? U extends Record<T, unknown> ? true : false : never
 ```
 
-## Example
+## Example 1
 
 
 ```ts
+// Primitive
 has('hello', { hello: 'world' }) // true
 has(0, { 0 : 1}) // true
 has('', {}) // false
 has('hello', { hi : hello: 'world' }) // false
+
+```
+
+## Example 2
+
+
+```ts
+// Array
+hasPath(['hello'], { hello: 'world' }) // true
+hasPath([0], { 0: 1 }) // true
+hasPath(['hello', 'world'], { hello: { world: '' } } // true
+
+hasPath(['hi'], { hello: '' } ) // false
+hasPath(['hi', 'Tom'], { hi: { John: 1 } } ) // false
 
 ```
 

@@ -4,6 +4,11 @@
 
 ## hasPath variable
 
+> Warning: This API is now obsolete.
+> 
+> This function will remove next major release. `hasPath` merged `has` function.
+> 
+
 Returns whether or not a path exists in an object. Only the object's own properties are checked.
 
 <b>Signature:</b>
