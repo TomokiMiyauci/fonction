@@ -23,11 +23,11 @@ import { length } from './length.ts'
  *
  * @public
  */
-const last = <T extends string | unknown[]>(
+const last = <T extends string | unknown[] | readonly unknown[]>(
   val: T
-): T extends never[]
+): T extends never[] | readonly never[]
   ? undefined
-  : T extends unknown[]
+  : T extends unknown[] | readonly unknown[]
   ? [never, ...T][T['length']]
   : T extends string
   ? string

@@ -9,7 +9,7 @@ Returns the last element of the given list or string.
 <b>Signature:</b>
 
 ```typescript
-last: <T extends string | unknown[]>(val: T) => T extends never[] ? undefined : T extends unknown[] ? [
+last: <T extends string | unknown[] | readonly unknown[]>(val: T) => T extends never[] | readonly never[] ? undefined : T extends unknown[] | readonly unknown[] ? [
     never,
     ...T
 ][T["length"]] : T extends string ? string : never
