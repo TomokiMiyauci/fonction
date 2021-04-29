@@ -142,9 +142,12 @@ jobs:
           name: coverage
           path: ./coverage.lcov
 
+      - name: debug
+        run: ls -a
+
       - uses: codecov/codecov-action@v1
         with:
-          files: ./coverage.lcov
+          files: coverage.lcov
 
   release:
     needs: [lint, test, build]
