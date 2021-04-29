@@ -7,11 +7,11 @@ import { isArray } from './isArray.ts'
  *
  * @param props - The name of the property to check for
  * @param obj - The check object
- * @returns The result of `Object.prototype.hasOwnProperty.call(obj, props)`
+ * @returns The result of `Object.prototype.hasOwnProperty`
  *
  * @example
  * ```ts
- * // Primitive
+ * // Flat
  * has('hello', { hello: 'world' }) // true
  * has(0, { 0 : 1}) // true
  * has('', {}) // false
@@ -20,7 +20,7 @@ import { isArray } from './isArray.ts'
  *
  * @example
  * ```ts
- * // Array
+ * // Nest
  * hasPath(['hello'], { hello: 'world' }) // true
  * hasPath([0], { 0: 1 }) // true
  * hasPath(['hello', 'world'], { hello: { world: '' } } // true

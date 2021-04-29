@@ -16,7 +16,7 @@ has: <T extends string | number | (string | number)[], U extends Record<Property
 
 
 ```ts
-// Primitive
+// Flat
 has('hello', { hello: 'world' }) // true
 has(0, { 0 : 1}) // true
 has('', {}) // false
@@ -28,7 +28,7 @@ has('hello', { hi : hello: 'world' }) // false
 
 
 ```ts
-// Array
+// Nest
 hasPath(['hello'], { hello: 'world' }) // true
 hasPath([0], { 0: 1 }) // true
 hasPath(['hello', 'world'], { hello: { world: '' } } // true
