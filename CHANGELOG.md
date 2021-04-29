@@ -1,3 +1,8 @@
+# [v1.4.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.4.0-beta.1...v1.4.0-beta.2) (2021-04-29)
+
+## ✨ New Features
+- [`bf68be4`](https://github.com/TomokiMiyauci/fonction/commit/bf68be4)   Add chunk and props functions
+
 # [v1.4.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0...v1.4.0-beta.1) (2021-04-29)
 
 ## ✨ New Features
