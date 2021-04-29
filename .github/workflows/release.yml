@@ -140,7 +140,6 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: coverage
-          path: coverage.lcov
 
       - name: debug
         run: ls -a
