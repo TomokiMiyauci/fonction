@@ -12,6 +12,7 @@
 |  [and](./and/) | Returns true if both arguments are true; otherwise false. |
 |  [append](./append/) | Returns a new list containing the contents of the given list, followed by the given value |
 |  [dec](./dec/) | Decrements its argument. |
+|  [defaultTo](./defaultto/) | <b><i>(BETA)</i></b> Returns the second argument if it is not <code>null</code>, <code>undefined</code> or <code>NaN</code>; otherwise the first argument is returned. |
 |  [divide](./divide/) | Divide its second argument from its first argument. |
 |  [endsWith](./endswith/) | Checks if a string ends with the provided substring. |
 |  [F](./f/) | A function that always returns <code>false</code>. Any passed in parameters are ignored. |
@@ -28,6 +29,7 @@
 |  [isBoolean](./isboolean/) | Whatever argument is type of <code>boolean</code> or not. |
 |  [isEmpty](./isempty/) | Returns <code>true</code> if the given value is its type's empty value; otherwise <code>false</code>. |
 |  [isFunction](./isfunction/) | Whatever argument is type of <code>function</code> or not. |
+|  [isNaN](./isnan/) | <b><i>(BETA)</i></b> Whatever argument is <code>NaN</code> or not. |
 |  [isNill](./isnill/) | Whatever argument is type of <code>undefined</code> or <code>null</code>. |
 |  [isNull](./isnull/) | Whatever argument is type of <code>null</code> or not. |
 |  [isNumber](./isnumber/) | Whatever argument is type of <code>number</code> or not. |
