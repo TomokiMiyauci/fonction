@@ -75,8 +75,9 @@ module.exports = {
               children: members[0]?.members
                 .filter((a) => a.kind === 'Variable')
                 .map(({ name }) => {
-                  const fName = name === 'length_2' ? 'length' : name
-                  console.log(fName)
+                  const fName = name
+                    .replace('length_2', 'length')
+                    .replace('isNaN_2', 'isNaN')
                   return {
                     text: fName,
                     link: `/api/${lowerCase(fName)}/`
