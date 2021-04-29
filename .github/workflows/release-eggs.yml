@@ -4,8 +4,9 @@ on:
   create:
     ref_type: tag
 
-    tags-ignore:
-      - v**-beta.*
+    tags:
+      - v**
+      - '!v**-beta.*'
 
 jobs:
   release:
