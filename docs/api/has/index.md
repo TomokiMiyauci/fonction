@@ -9,7 +9,7 @@ Returns whether or not an object has an own property with the specified name.
 <b>Signature:</b>
 
 ```typescript
-has: <T extends unknown>(props: string | number, obj: Record<PropertyKey, T>) => boolean
+has: <T extends string | number, U extends Record<PropertyKey, unknown>>(props: T, obj: U) => U extends Record<T, unknown> ? true : false
 ```
 
 ## Example

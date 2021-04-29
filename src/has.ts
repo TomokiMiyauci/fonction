@@ -17,9 +17,10 @@ import { hasOwnProperty } from './constants/index.ts'
  *
  * @public
  */
-const has = <T extends unknown>(
-  props: string | number,
-  obj: Record<PropertyKey, T>
-): boolean => hasOwnProperty.call(obj, props)
+const has = <T extends string | number, U extends Record<PropertyKey, unknown>>(
+  props: T,
+  obj: U
+): U extends Record<T, unknown> ? true : false =>
+  hasOwnProperty.call(obj, props) as U extends Record<T, unknown> ? true : false
 
 export { has }
