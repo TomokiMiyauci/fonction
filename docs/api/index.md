@@ -11,6 +11,7 @@
 |  [add](./add/) | Adds first argument and second argument. |
 |  [and](./and/) | Returns true if both arguments are true; otherwise false. |
 |  [append](./append/) | Returns a new list containing the contents of the given list, followed by the given value |
+|  [chunk](./chunk/) | <b><i>(BETA)</i></b> Return an array of elements split into groups the length of size. |
 |  [dec](./dec/) | Decrements its argument. |
 |  [defaultTo](./defaultto/) | <b><i>(BETA)</i></b> Returns the second argument if it is not <code>null</code>, <code>undefined</code> or <code>NaN</code>; otherwise the first argument is returned. |
 |  [divide](./divide/) | Divide its second argument from its first argument. |
@@ -50,6 +51,7 @@
 |  [or](./or/) | Returns true if one or both of its arguments are true; otherwise false. |
 |  [prepend](./prepend/) | Returns a new list with the given value at the front, followed by the contents of the list. |
 |  [product](./product/) | Multiplies together all the elements of a list. |
+|  [props](./props/) | <b><i>(BETA)</i></b> Returns a function that when supplied an object returns the indicated property of that object, if it exists. |
 |  [reverse](./reverse/) | Returns a new list or string with the elements or characters in reverse order. |
 |  [startsWith](./startswith/) | Checks if a string starts with the provided substring. |
 |  [subtract](./subtract/) | Subtracts its second argument from its first argument. |
