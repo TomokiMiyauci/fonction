@@ -1,5 +1,6 @@
 import { assertEquals } from '../deps.ts'
 import { defaultTo } from '../src/defaultTo.ts'
+import { assertEqual } from './asserts.ts'
 
 Deno.test('defaultTo', () => {
   const defaultValue = 'hello'
@@ -21,4 +22,12 @@ Deno.test('defaultTo', () => {
       `defaultTo(${a}, ${b}) -> ${expected}`
     )
   })
+
+  assertEqual<string>(defaultTo('')(undefined as undefined))
+  assertEqual<string>(defaultTo('')(null as null))
+  assertEqual<''>(defaultTo('' as const)(undefined))
+  assertEqual<''>(defaultTo('' as const)(null))
+  assertEqual<string | number>(defaultTo('')(100))
+  assertEqual<string | number>(defaultTo('')(NaN))
+  assertEqual<'' | number>(defaultTo('' as const)(NaN))
 })
