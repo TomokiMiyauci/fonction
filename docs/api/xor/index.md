@@ -9,7 +9,7 @@ Returns true if one of the arguments is truthy and the other is falsy; otherwise
 <b>Signature:</b>
 
 ```typescript
-xor: <T, U>(a: T, b: U) => boolean
+xor: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean : boolean
 ```
 
 ## Example

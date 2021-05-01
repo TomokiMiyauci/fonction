@@ -9,7 +9,7 @@ Returns true if both arguments are true; otherwise false.
 <b>Signature:</b>
 
 ```typescript
-and: <T, U>(a: T, b: U) => boolean
+and: <T, U>(a: T, b: U) => T extends Falsy ? false : U extends Falsy ? false : boolean
 ```
 
 ## Example
