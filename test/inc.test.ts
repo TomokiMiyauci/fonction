@@ -1,6 +1,6 @@
 import { assertEquals } from '../deps.ts'
 import { inc } from '../src/inc.ts'
-
+import { assertEqual } from './asserts.ts'
 Deno.test('inc', () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const table: [number | bigint | any, number | bigint][] = [
@@ -14,4 +14,9 @@ Deno.test('inc', () => {
   table.forEach(([val, expected]) => {
     assertEquals(inc(val), expected, `inc(${val}) -> ${expected}`)
   })
+
+  assertEqual<number>(inc(1 as const))
+  assertEqual<number>(inc(1))
+  assertEqual<bigint>(inc(1n as const))
+  assertEqual<bigint>(inc(1n))
 })

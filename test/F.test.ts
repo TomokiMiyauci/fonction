@@ -1,5 +1,6 @@
 import { assertEquals } from '../deps.ts'
 import { F } from '../src/F.ts'
+import { assertReturnType } from './asserts.ts'
 
 Deno.test('F', () => {
   const table: unknown[] = [
@@ -12,4 +13,6 @@ Deno.test('F', () => {
   table.forEach((val) => {
     assertEquals(F(val), false, `F(${val}) -> false`)
   })
+
+  assertReturnType<false>(F)
 })
