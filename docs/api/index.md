@@ -72,6 +72,7 @@
 |  [endsWith](./endswith/) |  |
 |  [Falsy](./falsy/) | Alias for Falsy values |
 |  [First](./first/) | <b><i>(BETA)</i></b> Infer the first types. |
+|  [Last](./last/) | <b><i>(BETA)</i></b> Infer the last types. |
 |  [Ord](./ord/) | Abbreviation for Ordinal |
 |  [Primitive](./primitive/) | Alias for Primitive values types |
 
