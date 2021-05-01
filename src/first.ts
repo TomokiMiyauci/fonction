@@ -1,6 +1,34 @@
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
-import { InferArray } from './types/index.ts'
+
+/**
+ * Infer the first types.
+ *
+ * @typeParam T - `string` or any `array`
+ *
+ * @example
+ * ```ts
+ * // String
+ * First<string> // string
+ * First<'hello'> // string
+ * ```
+ *
+ * @example
+ * ```ts
+ * // Array
+ * First<[] | never[] | readonly [] | readonly never[]> // undefined
+ * First<['hello', 'world']> // 'hello'
+ * First<string | number[]> // string | number
+ * ```
+ *
+ * @beta
+ */
+type First<T extends readonly unknown[] | string> = T extends
+  | readonly never[]
+  | []
+  ? undefined
+  : T[0]
+
 /**
  * Returns the first element of the given list or string.
  *
@@ -23,18 +51,15 @@ import { InferArray } from './types/index.ts'
  *
  * @public
  */
-const first: {
-  (val: string): string
-  <T extends unknown[]>(val: T): T['length'] extends 0
-    ? undefined
-    : InferArray<T> | undefined
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-} = (val: any) => {
+const first = <T extends readonly unknown[] | string>(val: T): First<T> => {
   if (isArray(val)) {
-    return length(val) ? val.slice(0, 1)[0] : undefined
+    return length(val)
+      ? (val.slice(0, 1)[0] as First<T>)
+      : (undefined as First<T>)
   } else {
-    return (val as string).slice(0, 1)
+    return (val as string).slice(0, 1) as First<T>
   }
 }
 
 export { first }
+export type { First }
