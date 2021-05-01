@@ -29,16 +29,16 @@ import { lte } from './lte.ts'
  *
  * @beta
  */
-const chunk = <T extends number, U extends unknown[]>(
+const chunk = <T extends number, U extends readonly unknown[]>(
   size: T,
   array: U
 ): T extends 0
   ? U
   : `${T}` extends `-${number}`
   ? U
-  : U extends never[]
+  : U extends readonly []
   ? U
-  : U extends (infer R)[]
+  : U extends readonly (infer R)[]
   ? R[][]
   : never =>
   lte(size, 0 as T)

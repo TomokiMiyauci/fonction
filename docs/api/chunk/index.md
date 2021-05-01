@@ -12,7 +12,8 @@ Return an array of elements split into groups the length of size.
 <b>Signature:</b>
 
 ```typescript
-chunk: <T extends number, U extends unknown[]>(size: T, array: U) => T extends 0 ? U : `${T}` extends `-${number}` ? U : U extends never[] ? U : U extends (infer R)[] ? R[][] : never
+chunk: <T extends number, U extends readonly unknown[]>(size: T, array: U) => T extends 0 ? U : `${T}` extends `-${number}` ? U : U extends readonly [
+] ? U : U extends readonly (infer R)[] ? R[][] : never
 ```
 
 ## Remarks
