@@ -1,0 +1,46 @@
+### <%= it.name %>
+
+<% it.tagName %>
+
+<% if (it.tagName === '@beta') { %>
+<span class="tag beta">beta</span>
+<% } %>
+
+<% if (it.deprecated) { %>
+<span class="tag deprecated">deprecate</span>
+<% } %>
+
+<%= it.description %>
+
+<% if (it.tagName === '@beta') { %>
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+<% } %>
+
+<% if (it.deprecated) { %>
+::: danger
+This function will remove next major release.
+:::
+<% } %>
+
+
+**Signature:**
+
+```ts
+<%= it.signature %>
+
+```
+
+<% it.examples.forEach(([language, code], index) => {
+%>
+#### Example <%= it.examples.length === 1 ? '' : index + 1 %>
+
+
+```<%= language %>
+
+<%= code %>
+```
+
+<%});%>
