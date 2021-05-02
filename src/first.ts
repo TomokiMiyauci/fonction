@@ -21,7 +21,7 @@ import { length } from './length.ts'
  * First<string | number[]> // string | number
  * ```
  *
- * @beta
+ * @public
  */
 type First<T extends readonly unknown[] | string> = T extends
   | readonly never[]

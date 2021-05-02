@@ -13,7 +13,7 @@
  * isNaN(100) // false
  * ```
  *
- * @beta
+ * @public
  *
  */
 const isNaN = (val: unknown): val is typeof NaN => Number.isNaN(val)

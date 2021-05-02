@@ -14,7 +14,7 @@ import { prop } from './_/prop.ts'
  * props('x', {}) // undefined
  * ```
  *
- * @beta
+ * @public
  */
 const props = <
   T extends string | number,

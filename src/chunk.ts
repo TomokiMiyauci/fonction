@@ -27,7 +27,7 @@ import { lte } from './lte.ts'
  * chunk(5, []) // []
  * ```
  *
- * @beta
+ * @public
  */
 const chunk = <T extends number, U extends readonly unknown[]>(
   size: T,

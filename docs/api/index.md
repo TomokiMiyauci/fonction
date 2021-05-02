@@ -93,14 +93,9 @@ append(['Tom'], ['hello', 'world']) // ['hello', 'world', ['Tom']]
 
 ### chunk
 
-<span class="tag beta">beta</span>
 
 
 Return an array of elements split into groups the length of size.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -157,14 +152,9 @@ dec(10n) // 9n
 
 ### defaultTo
 
-<span class="tag beta">beta</span>
 
 
 Returns the second argument if it is not `null`, `undefined` or `NaN`; otherwise the first argument is returned.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -710,14 +700,9 @@ isFunction('hello') // false
 
 ### isNaN
 
-<span class="tag beta">beta</span>
 
 
 Whatever argument is `NaN` or not.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1296,14 +1281,9 @@ product([]) // 0
 
 ### props
 
-<span class="tag beta">beta</span>
 
 
 Returns a function that when supplied an object returns the indicated property of that object, if it exists.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1679,14 +1659,9 @@ type Falsy = false | "" | 0 | null | undefined;
 
 ### First
 
-<span class="tag beta">beta</span>
 
 
 Infer the first types.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1717,14 +1692,9 @@ First<string | number[]> // string | number
 
 ### Last
 
-<span class="tag beta">beta</span>
 
 
 Infer the last types.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 

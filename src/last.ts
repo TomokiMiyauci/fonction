@@ -20,7 +20,7 @@ import { length } from './length.ts'
  * Last<['hello', 'world']> // 'world'
  * Last<string | number[]> // string | number
  * ```
- * @beta
+ * @public
  */
 type Last<T extends string | readonly unknown[]> = T extends
   | never[]

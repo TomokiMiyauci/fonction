@@ -20,7 +20,7 @@ import { or } from './or.ts'
  * defaultVal('Tom') // 'Tom'
  * ```
  *
- * @beta
+ * @public
  */
 const defaultTo = <T extends unknown>(a: T) => <U extends unknown>(
   b: U
