@@ -1,3 +1,10 @@
+# [v1.4.0](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0...v1.4.0) (2021-05-02)
+
+## ✨ New Features
+- [`10e6e57`](https://github.com/TomokiMiyauci/fonction/commit/10e6e57)   Add isNaN function 
+- [`ebe3c90`](https://github.com/TomokiMiyauci/fonction/commit/ebe3c90)   Add defaultTo function 
+- [`bf68be4`](https://github.com/TomokiMiyauci/fonction/commit/bf68be4)   Add chunk and props functions
+
 # [v1.4.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.4.0-beta.1...v1.4.0-beta.2) (2021-04-29)
 
 ## ✨ New Features
