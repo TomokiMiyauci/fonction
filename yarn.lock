@@ -1383,9 +1383,9 @@
     extend "3.0.2"
 
 "@microsoft/api-documenter@^7.12.22":
-  version "7.13.3"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.3.tgz#08e15750ee132f6a0ba262dff82959ab16b6bbd5"
-  integrity sha512-K+/CAbpXWSrUkoUMkG5AAnuWI5DdNw22sEnjAYMgD6M7Y+tjV/nBTaGt4UmVl05fWjEN18W9VHIiLttw19bstg==
+  version "7.13.5"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.5.tgz#847a678ac3f18e61ea19ee046b7d8786abc4f0d0"
+  integrity sha512-wLyGu+EzdzeeDU7Xpsy8hdhtkzf9N/CL3tE51M8PQWiTAvNJOImMpNokK1kpDwbCW3h1BNAZZB/e3VGcyeqd1Q==
   dependencies:
     "@microsoft/api-extractor-model" "7.13.0"
     "@microsoft/tsdoc" "0.13.2"
@@ -1405,9 +1405,9 @@
     "@rushstack/node-core-library" "3.36.2"
 
 "@microsoft/api-extractor@^7.13.5":
-  version "7.14.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-extractor/-/api-extractor-7.14.0.tgz#8427753663807678ea49dd92a16113496e92b0ef"
-  integrity sha512-R9B0ic8EIcHhwSFQWYTyQX7QDi7kXONeKdIjJI8R+WzVJMA3r0Je9XxSQxxZ9MZIBUxv3fB7pXC2CPIsSkI/BA==
+  version "7.15.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-extractor/-/api-extractor-7.15.0.tgz#138311dd8187b70b1a1dfb943c69f96310815f5c"
+  integrity sha512-VN6YUwV+xzdmBV9yTb0dVd3XbdKsCQy4KYzsoIdUCs0oVt61X1gVNF7Nk+0NOroI6j+UghtD6w5meh2nuA9KMg==
   dependencies:
     "@microsoft/api-extractor-model" "7.13.0"
     "@microsoft/tsdoc" "0.13.2"
@@ -1420,7 +1420,7 @@
     resolve "~1.17.0"
     semver "~7.3.0"
     source-map "~0.6.1"
-    typescript "~4.1.3"
+    typescript "~4.2.4"
 
 "@microsoft/tsdoc-config@0.15.2", "@microsoft/tsdoc-config@~0.15.2":
   version "0.15.2"
@@ -4077,6 +4077,11 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
+eta@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/eta/-/eta-1.12.1.tgz#d985766591676c323f02dfc48a67539212745937"
+  integrity sha512-H8npoci2J/7XiPnVcCVulBSPsTNGvGaINyMjQDU8AFqp9LGsEYS88g2CiU+d01Sg44WtX7o4nb8wUJ9vnI+tiA==
+
 exec-sh@^0.3.2:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.3.6.tgz#ff264f9e325519a60cb5e273692943483cca63bc"
@@ -4374,10 +4379,10 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
-fonction@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.2.0.tgz#18c9c349a14ee5a9f95e4dcc20eb162dd8b9f3ba"
-  integrity sha512-iJNqledP1lBE8/13c0zDeQtu1HbZ0h4d/YJ7pC0fAafK5mrGqikPM8n9FiqIh8eC3Kar9tNtsDUgZius/OfUHg==
+fonction@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.3.0.tgz#d0b2caf32600dfb840b6269ec8905bada34ca4e8"
+  integrity sha512-T0uASuSxL3/gxoNXci9Mn1Ua31cYkabooLRvQW8/KyIYI7UaC1XMj1IpM3gscSQTdVkvvzvlFtit08+nedc1FQ==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -8055,10 +8060,17 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.38.5, rollup@^2.45.1:
+rollup@^2.38.5:
   version "2.45.2"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.45.2.tgz#8fb85917c9f35605720e92328f3ccbfba6f78b48"
   integrity sha512-kRRU7wXzFHUzBIv0GfoFFIN3m9oteY4uAsKllIpQDId5cfnkWF2J130l+27dzDju0E6MScKiV0ZM5Bw8m4blYQ==
+  optionalDependencies:
+    fsevents "~2.3.1"
+
+rollup@^2.45.1:
+  version "2.46.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.46.0.tgz#8cacf89d2ee31a34755f1af40a665168f592b829"
+  integrity sha512-qPGoUBNl+Z8uNu0z7pD3WPTABWRbcOwIrO/5ccDJzmrtzn0LVf6Lj91+L5CcWhXl6iWf23FQ6m8Jkl2CmN1O7Q==
   optionalDependencies:
     fsevents "~2.3.1"
 
@@ -9052,15 +9064,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.2.3:
+typescript@^4.2.3, typescript@~4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
   integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
-
-typescript@~4.1.3:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
-  integrity sha512-6OSu9PTIzmn9TCDiovULTnET6BgXtDYL4Gg4szY+cGsc3JP1dQL8qvE8kShTRx1NIw4Q9IBHlwODjkjWEtMUyA==
 
 ua-parser-js@^0.7.27:
   version "0.7.28"

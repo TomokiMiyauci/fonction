@@ -106,27 +106,24 @@ jobs:
         node: [15]
 
     steps:
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: ${{ matrix.node }}
-
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Restore node_modules
-        id: node_modules_cache_id
-        uses: actions/cache@v2
+      - name: Setup Deno
+        uses: denolib/setup-deno@v2
         with:
-          path: '**/node_modules'
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          deno-version: v1.9.x
 
       - name: Test
-        run: yarn test --ci --coverage
+        run: yarn test --unstable --coverage=coverage
+
+      - name: Generate coverage report
+        run: deno --unstable coverage ./coverage --lcov > coverage.lcov
 
       - uses: actions/upload-artifact@v2
         with:
           name: coverage
-          path: coverage
+          path: coverage.lcov
 
   report-coverage:
     needs: [test]
@@ -143,11 +140,13 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: coverage
-          path: coverage
+
+      - name: debug
+        run: ls -a
 
       - uses: codecov/codecov-action@v1
         with:
-          files: coverage/clover.xml
+          files: coverage.lcov
 
   release:
     needs: [lint, test, build]

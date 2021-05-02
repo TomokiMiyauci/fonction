@@ -1,4 +1,5 @@
 import { not } from './not.ts'
+import { Falsy } from './types/index.ts'
 
 /**
  * Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
@@ -17,5 +18,13 @@ import { not } from './not.ts'
  *
  * @public
  */
-const xor = <T, U>(a: T, b: U): boolean => not(a) !== (not(b) as boolean)
+const xor = <T, U>(
+  a: T,
+  b: U
+): T extends Falsy ? (U extends Falsy ? false : boolean) : boolean =>
+  (not(a) !== (not(b) as unknown)) as T extends Falsy
+    ? U extends Falsy
+      ? false
+      : boolean
+    : boolean
 export { xor }

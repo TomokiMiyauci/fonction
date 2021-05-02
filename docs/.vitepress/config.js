@@ -68,22 +68,7 @@ module.exports = {
         lastUpdated: 'Last Updated',
         sidebar: {
           '/guide/': 'auto',
-          '/api': [
-            {
-              text: 'List of function',
-              link: '/api/',
-              children: members[0]?.members
-                .filter((a) => a.kind === 'Variable')
-                .map(({ name }) => {
-                  const fName = name === 'length_2' ? 'length' : name
-                  console.log(fName)
-                  return {
-                    text: fName,
-                    link: `/api/${lowerCase(fName)}/`
-                  }
-                })
-            }
-          ]
+          '/api/': 'auto'
         }
       }
     },

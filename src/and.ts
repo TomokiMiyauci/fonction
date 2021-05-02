@@ -1,3 +1,4 @@
+import { Falsy } from './types/index.ts'
 /**
  * Returns true if both arguments are true; otherwise false.
  *
@@ -15,5 +16,9 @@
  *
  * @public
  */
-const and = <T, U>(a: T, b: U): boolean => !!a && !!b
+const and = <T, U>(
+  a: T,
+  b: U
+): T extends Falsy ? false : U extends Falsy ? false : boolean =>
+  (!!a && !!b) as T extends Falsy ? false : U extends Falsy ? false : boolean
 export { and }

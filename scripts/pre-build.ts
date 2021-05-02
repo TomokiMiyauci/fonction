@@ -11,6 +11,10 @@ const main = async () => {
     const content = readFileSync(fullPath, { encoding: 'utf-8' })
     const replaced = content
       .replace('https://x.nest.land/arithmetic4@0.1.1/mod.ts', 'arithmetic4')
+      .replace(
+        /export { assert, assertEquals } from 'https:\/\/deno.land\/std\/testing\/asserts.ts'\n/,
+        ''
+      )
       .replace(/\.ts/g, '')
     outputFile(fullPath, replaced)
   })

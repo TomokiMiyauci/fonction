@@ -1,0 +1,149 @@
+import {
+  ApiDocumentedItem,
+  ApiItem,
+  ApiModel,
+  ApiVariable
+} from '@microsoft/api-extractor-model'
+import {
+  DocBlock,
+  DocCodeSpan,
+  DocFencedCode,
+  DocParagraph,
+  DocPlainText,
+  DocSection
+} from '@microsoft/tsdoc'
+import { configure, renderFile } from 'eta'
+import { writeFileSync } from 'fs-extra'
+import { join, resolve } from 'path'
+
+const apiModel = new ApiModel()
+const apiPackage = apiModel.loadPackage(
+  resolve(__dirname, '..', 'temp', 'fonction.api.json')
+)
+
+const getSummary = ({ nodes }: DocSection): string => {
+  const _nodeSection = nodes[0]
+  if (_nodeSection instanceof DocParagraph) {
+    const summary = _nodeSection.nodes.map((n) => {
+      if (n instanceof DocPlainText || n instanceof DocCodeSpan) {
+        const _n = n as DocPlainText
+        return _n.kind === 'PlainText'
+          ? _n.text
+          : _n.kind === 'CodeSpan'
+          ? `\`${((_n as unknown) as DocCodeSpan).code}\``
+          : ''
+      }
+      return ''
+    })
+
+    return summary.join('') ?? ''
+  }
+  return ''
+}
+
+const getExampleCode = (
+  customBlocks: readonly DocBlock[]
+): [string, string][] | [] => {
+  if (!customBlocks.length) return []
+  return customBlocks
+    .map(({ content }) => {
+      const _docFencedCode = content.nodes[1]
+      if (_docFencedCode instanceof DocFencedCode) {
+        const { code, language } = _docFencedCode
+        return [language, code] as [string, string]
+      }
+    })
+    .filter((_) => !!_)
+}
+
+interface MdVariables {
+  name: string
+  description: string
+  examples: [string, string][]
+  signature: string
+  tagName: string
+  deprecated: boolean
+}
+
+const render = async (mdArgs: MdVariables): Promise<string> => {
+  configure({
+    views: resolve(__dirname, '..', 'docs', 'views'),
+    autoEscape: false
+  })
+
+  const md = await renderFile(join('.', 'api'), mdArgs)
+
+  return md || ''
+}
+
+const generate = (path: string, content: string): void =>
+  writeFileSync(path, content)
+
+const mapMember = async (
+  member: ApiItem
+): Promise<{
+  name: string
+  md: string
+}> => {
+  const { displayName: name, excerpt } = member as ApiVariable
+  const signature = excerpt.text
+
+  if (member instanceof ApiDocumentedItem && member.tsdocComment) {
+    const {
+      summarySection,
+      customBlocks,
+      modifierTagSet,
+      deprecatedBlock
+    } = member.tsdocComment
+
+    const isDeprecated = !!deprecatedBlock
+    const tagName = modifierTagSet.nodes[0].tagName
+    const description = getSummary(summarySection)
+    const examples = getExampleCode(customBlocks)
+    const md = await render({
+      name,
+      description,
+      examples,
+      signature,
+      tagName,
+      deprecated: isDeprecated
+    })
+
+    return {
+      name,
+      md
+    }
+  }
+}
+const run = async () => {
+  apiPackage.members.forEach(async (root) => {
+    const functionContents = await Promise.all(
+      root.members.filter(({ kind }) => kind === 'Variable').map(mapMember)
+    )
+
+    const typesContents = await Promise.all(
+      root.members.filter(({ kind }) => kind === 'TypeAlias').map(mapMember)
+    )
+
+    const mdFunctions = functionContents.filter((_) => !!_).map(({ md }) => md)
+    const mdTypes = typesContents.filter((_) => !!_).map(({ md }) => md)
+    const merged = mdFunctions.join('\n')
+    const mergedTypesMd = mdTypes.join('\n')
+
+    generate(
+      resolve(__dirname, '..', 'docs', 'api', 'index.md'),
+      `# API
+
+## Functions
+
+${merged}
+
+## Types
+
+${mergedTypesMd}
+`
+    )
+  })
+}
+
+run()
