@@ -1531,6 +1531,33 @@ trim('   hello   ') // 'hello'
 ```
 
 
+### trimLeft
+
+<span class="tag beta">beta</span>
+
+
+Removes space from left ends of the string.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+trimLeft: <T extends string>(val: T) => TrimLeft<T>
+```
+
+#### Example 
+
+```ts
+trimLeft('   hello') // 'hello'
+trimLeft(' \n\thello') // 'hello'
+```
+
+
 ### upperCase
 
 
@@ -1752,6 +1779,52 @@ Alias for Primitive values types
 
 ```ts
 type Primitive = string | number | bigint | boolean | symbol | undefined | null;
+```
+
+
+### Space
+
+<span class="tag beta">beta</span>
+
+
+Alias for Space values.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+type Space = " " | "\n" | "\t";
+```
+
+
+### TrimLeft
+
+<span class="tag beta">beta</span>
+
+
+Infer the string with the left ends of trimmed.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+type TrimLeft<T extends string> = T extends `${Space}${infer R}` ? TrimLeft<R> : T;
+```
+
+#### Example 
+
+```ts
+TrimLeft<' \n\thello'> // 'hello'
 ```
 
 

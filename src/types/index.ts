@@ -45,5 +45,12 @@ export type Empty = '' | [] | {}
  */
 export type Falsy = false | '' | 0 | null | undefined
 
+/**
+ * Alias for Space values.
+ *
+ * @beta
+ */
+export type Space = ' ' | '\n' | '\t'
+
 export type InferArray<T> = T extends (infer R)[] ? R : never
 export type Whitespace = ' ' | '\t' | '\n'

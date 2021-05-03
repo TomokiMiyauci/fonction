@@ -52,7 +52,16 @@ export { sum } from './src/sum.ts'
 export { T } from './src/T.ts'
 export { tail } from './src/tail.ts'
 export { trim } from './src/trim.ts'
-export type { AnyFn, Empty, Falsy, Ord, Primitive } from './src/types/index.ts'
+export type { TrimLeft } from './src/trimLeft.ts'
+export { trimLeft } from './src/trimLeft.ts'
+export type {
+  AnyFn,
+  Empty,
+  Falsy,
+  Ord,
+  Primitive,
+  Space
+} from './src/types/index.ts'
 export { upperCase } from './src/upperCase.ts'
 export { values } from './src/values.ts'
 export { xor } from './src/xor.ts'
