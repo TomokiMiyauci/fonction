@@ -1,3 +1,8 @@
+# [v1.5.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.1...v1.5.0-beta.2) (2021-05-03)
+
+## ✨ New Features
+- [`fbc8d3a`](https://github.com/TomokiMiyauci/fonction/commit/fbc8d3a)   Add trimRight and export Trim and TrimRight types
+
 # [v1.5.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.4.0...v1.5.0-beta.1) (2021-05-03)
 
 ## ✨ New Features
