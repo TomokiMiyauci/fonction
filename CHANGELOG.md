@@ -1,3 +1,8 @@
+# [v1.5.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.4.0...v1.5.0-beta.1) (2021-05-03)
+
+## ✨ New Features
+- [`3aa6af9`](https://github.com/TomokiMiyauci/fonction/commit/3aa6af9)   Add trimLeft function
+
 # [v1.4.0](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0...v1.4.0) (2021-05-02)
 
 ## ✨ New Features
