@@ -15,13 +15,10 @@ import {
 } from '@microsoft/tsdoc'
 import { configure, renderFile } from 'eta'
 import { isUndefined } from 'fonction'
-import { writeFileSync } from 'fs-extra'
+import { outputFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
 const apiModel = new ApiModel()
-const apiPackage = apiModel.loadPackage(
-  resolve(__dirname, '..', 'temp', 'fonction.api.json')
-)
 
 const getSummary = ({ nodes }: DocSection): string => {
   const _nodeSection = nodes[0]
@@ -129,7 +126,7 @@ const render = async (mdArgs: MdVariables): Promise<string> => {
 }
 
 const generate = (path: string, content: string): void =>
-  writeFileSync(path, content)
+  outputFileSync(path, content)
 
 const mapMember = async (
   member: ApiItem
@@ -151,7 +148,7 @@ const mapMember = async (
 
     const remarks = getRemarks(remarksBlock)
     const isDeprecated = !!deprecatedBlock
-    const tagName = modifierTagSet.nodes[0].tagName
+    const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
     const description = getSummary(summarySection)
     const examples = getExampleCode(customBlocks)
     const md = await render({
@@ -170,7 +167,15 @@ const mapMember = async (
     }
   }
 }
-const run = async () => {
+const run = async ({
+  version,
+  apiJsonPath
+}: {
+  version: string
+  apiJsonPath: string
+}): Promise<void> => {
+  const apiPackage = apiModel.loadPackage(apiJsonPath)
+
   apiPackage.members.forEach(async (root) => {
     const functionContents = await Promise.all(
       root.members.filter(({ kind }) => kind === 'Variable').map(mapMember)
@@ -186,7 +191,7 @@ const run = async () => {
     const mergedTypesMd = mdTypes.join('\n')
 
     generate(
-      resolve(__dirname, '..', 'docs', 'api', 'index.md'),
+      resolve(__dirname, '..', 'docs', 'api', version, 'index.md'),
       `# API
 
 ## Functions
@@ -201,4 +206,11 @@ ${mergedTypesMd}
   })
 }
 
-run()
+if (require.main === module) {
+  run({
+    version: '',
+    apiJsonPath: resolve(__dirname, '..', 'temp', 'fonction.api.json')
+  })
+}
+
+export { run }

@@ -16,7 +16,9 @@
   "scripts": {
     "commit": "cz",
     "prepare": "husky install",
-    "prepare:docs": "esno scripts/gen-api-model.ts && esno scripts/gen-api.ts",
+    "prepare:docs": "yarn prepare:latest-docs && yarn prepare:full-docs",
+    "prepare:latest-docs": "esno scripts/gen-api-model.ts && esno scripts/gen-api.ts",
+    "prepare:full-docs": "esno scripts/gen-full-docs.ts",
     "dev": "vitepress dev docs",
     "lint": "eslint . --ext .ts --ignore-pattern dist",
     "prepare:build": "esno scripts/pre-build.ts",
