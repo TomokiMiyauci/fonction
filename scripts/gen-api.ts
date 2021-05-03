@@ -8,11 +8,13 @@ import {
   DocBlock,
   DocCodeSpan,
   DocFencedCode,
+  DocNode,
   DocParagraph,
   DocPlainText,
   DocSection
 } from '@microsoft/tsdoc'
 import { configure, renderFile } from 'eta'
+import { isUndefined } from 'fonction'
 import { writeFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
@@ -48,12 +50,61 @@ const getExampleCode = (
   return customBlocks
     .map(({ content }) => {
       const _docFencedCode = content.nodes[1]
-      if (_docFencedCode instanceof DocFencedCode) {
+      if (isDocFencedCode(_docFencedCode)) {
         const { code, language } = _docFencedCode
         return [language, code] as [string, string]
       }
     })
     .filter((_) => !!_)
+}
+
+const isDocParagraph = (docNode: DocNode): docNode is DocParagraph =>
+  docNode instanceof DocParagraph
+
+const isDocPlainText = (docNode: DocNode): docNode is DocPlainText =>
+  docNode instanceof DocPlainText
+
+const isDocCodeSpan = (docNode: DocNode): docNode is DocCodeSpan =>
+  docNode instanceof DocCodeSpan
+const isDocFencedCode = (docNode: DocNode): docNode is DocFencedCode =>
+  docNode instanceof DocFencedCode
+
+const getRemarks = (docBlock: DocBlock | undefined) => {
+  if (isUndefined(docBlock)) return []
+
+  const remarksMatrix = docBlock.content.nodes.map((_node) =>
+    isDocParagraph(_node)
+      ? _node.nodes
+          .map((_node) => getDocPlainText(_node) || getDocCodeSpan(_node))
+          .filter((_) => !!_)
+      : []
+  )
+
+  return remarksMatrix.map((remarks) => remarks.join(''))
+}
+
+const getDocCodeSpan = (docNode: DocNode): string => {
+  if (isDocCodeSpan(docNode)) {
+    return `\`${docNode.code}\``
+  }
+
+  return ''
+}
+
+const getDocFencedCode = (docNode: DocNode): string => {
+  if (isDocFencedCode(docNode)) {
+    return `\`${docNode.code}\``
+  }
+
+  return ''
+}
+
+const getDocPlainText = (docNode: DocNode): string => {
+  if (isDocPlainText(docNode)) {
+    return docNode.text
+  }
+
+  return ''
 }
 
 interface MdVariables {
@@ -63,6 +114,7 @@ interface MdVariables {
   signature: string
   tagName: string
   deprecated: boolean
+  remarks: string[]
 }
 
 const render = async (mdArgs: MdVariables): Promise<string> => {
@@ -93,9 +145,11 @@ const mapMember = async (
       summarySection,
       customBlocks,
       modifierTagSet,
-      deprecatedBlock
+      deprecatedBlock,
+      remarksBlock
     } = member.tsdocComment
 
+    const remarks = getRemarks(remarksBlock)
     const isDeprecated = !!deprecatedBlock
     const tagName = modifierTagSet.nodes[0].tagName
     const description = getSummary(summarySection)
@@ -106,7 +160,8 @@ const mapMember = async (
       examples,
       signature,
       tagName,
-      deprecated: isDeprecated
+      deprecated: isDeprecated,
+      remarks
     })
 
     return {

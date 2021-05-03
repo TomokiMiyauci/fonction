@@ -21,6 +21,7 @@ add: {
 }
 ```
 
+
 #### Example 1
 
 ```ts
@@ -58,6 +59,7 @@ Returns true if both arguments are true; otherwise false.
 and: <T, U>(a: T, b: U) => T extends Falsy ? false : U extends Falsy ? false : boolean
 ```
 
+
 #### Example 
 
 ```ts
@@ -82,6 +84,7 @@ Returns a new list containing the contents of the given list, followed by the gi
 append: <T, U>(val: T, list: U[]) => (T | U)[]
 ```
 
+
 #### Example 
 
 ```ts
@@ -105,6 +108,10 @@ Return an array of elements split into groups the length of size.
 chunk: <T extends number, U extends readonly unknown[]>(size: T, array: U) => T extends 0 ? U : `${T}` extends `-${number}` ? U : U extends readonly [
 ] ? U : U extends readonly (infer R)[] ? R[][] : never
 ```
+
+::: tip Remark
+If array can't be split evenly, the final chunk will be the remaining elements.
+:::
 
 #### Example 1
 
@@ -142,6 +149,7 @@ dec: {
 }
 ```
 
+
 #### Example 
 
 ```ts
@@ -163,6 +171,7 @@ Returns the second argument if it is not `null`, `undefined` or `NaN`; otherwise
 ```ts
 defaultTo: <T extends unknown>(a: T) => <U extends unknown>(b: U) => IsNill<U> extends true ? T : IsNumber<U> extends false ? U : T | U
 ```
+
 
 #### Example 
 
@@ -197,6 +206,10 @@ divide: {
     (a: typeof _, b: bigint): (a: bigint) => bigint;
 }
 ```
+
+::: tip Remark
+Since division is not idempotent, there are two ways to curry.
+:::
 
 #### Example 1
 
@@ -244,6 +257,7 @@ Checks if a string ends with the provided substring.
 endsWith: <T extends string, U extends string | undefined = undefined>(val: T, target?: U | undefined) => StringWith<"endsWith", U>
 ```
 
+
 #### Example 1
 
 ```ts
@@ -275,6 +289,7 @@ A function that always returns `false`. Any passed in parameters are ignored.
 F: AnyFn<unknown, false>
 ```
 
+
 #### Example 
 
 ```ts
@@ -296,6 +311,7 @@ Returns the first element of the given list or string.
 ```ts
 first: <T extends string | readonly unknown[]>(val: T) => First<T>
 ```
+
 
 #### Example 1
 
@@ -327,6 +343,7 @@ Returns `true` if the first argument is greater than the second; otherwise `fals
 ```ts
 gt: <T extends Ord>(a: T, b: T) => boolean
 ```
+
 
 #### Example 1
 
@@ -385,6 +402,7 @@ Returns `true` if the first argument is greater than or equal to the second; oth
 ```ts
 gte: <T extends Ord>(a: T, b: T) => boolean
 ```
+
 
 #### Example 1
 
@@ -447,6 +465,7 @@ Returns whether or not an object has an own property with the specified name.
 has: <T extends string | number | (string | number)[], U extends Record<PropertyKey, unknown>>(props: T, obj: U) => T extends unknown[] ? boolean : T extends string | number ? U extends Record<T, unknown> ? true : false : never
 ```
 
+
 #### Example 1
 
 ```ts
@@ -488,6 +507,7 @@ This function will remove next major release.
 hasPath: <T extends unknown>(path: (string | number)[], obj: Record<PropertyKey, T>) => boolean
 ```
 
+
 #### Example 
 
 ```ts
@@ -516,6 +536,7 @@ head: {
     <T extends unknown[]>(val: T): T;
 }
 ```
+
 
 #### Example 1
 
@@ -550,6 +571,7 @@ Return the parameter supplied to it.
 identity: <T>(val: T) => T
 ```
 
+
 #### Example 
 
 ```ts
@@ -575,6 +597,7 @@ inc: {
 }
 ```
 
+
 #### Example 
 
 ```ts
@@ -596,6 +619,7 @@ Whatever argument is `Array` or not.
 ```ts
 isArray: (val: unknown) => val is any[]
 ```
+
 
 #### Example 
 
@@ -620,6 +644,7 @@ Whatever argument is type of `bigint` or not.
 isBigint: (val: unknown) => val is bigint
 ```
 
+
 #### Example 
 
 ```ts
@@ -642,6 +667,7 @@ Whatever argument is type of `boolean` or not.
 isBoolean: (val: unknown) => val is boolean
 ```
 
+
 #### Example 
 
 ```ts
@@ -663,6 +689,10 @@ Returns `true` if the given value is its type's empty value; otherwise `false`.
 ```ts
 isEmpty: (val: unknown) => val is Empty
 ```
+
+::: tip Remark
+The definition of Empty - `''` - `{}` - `[]`
+:::
 
 #### Example 
 
@@ -690,6 +720,7 @@ Whatever argument is type of `function` or not.
 isFunction: (val: unknown) => val is AnyFn<any, unknown>
 ```
 
+
 #### Example 
 
 ```ts
@@ -711,6 +742,10 @@ Whatever argument is `NaN` or not.
 ```ts
 isNaN: (val: unknown) => val is number
 ```
+
+::: tip Remark
+`NaN` is primitive `number`.
+:::
 
 #### Example 
 
@@ -734,6 +769,7 @@ Whatever argument is type of `undefined` or `null`.
 isNill: (val: unknown) => val is null | undefined
 ```
 
+
 #### Example 
 
 ```ts
@@ -755,6 +791,7 @@ Whatever argument is type of `null` or not.
 ```ts
 isNull: (val: unknown) => val is null
 ```
+
 
 #### Example 
 
@@ -778,6 +815,7 @@ Whatever argument is type of `number` or not.
 isNumber: (val: unknown) => val is number
 ```
 
+
 #### Example 
 
 ```ts
@@ -799,6 +837,10 @@ Whatever argument is type of `object` or not.
 ```ts
 isObject: <T extends unknown>(val: T) => val is T
 ```
+
+::: tip Remark
+Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
+:::
 
 #### Example 
 
@@ -822,6 +864,10 @@ Whatever argument is `primitive` or not.
 isPrimitive: (val: unknown) => val is Primitive
 ```
 
+::: tip Remark
+Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
+:::
+
 #### Example 
 
 ```ts
@@ -843,6 +889,7 @@ Whatever argument is type of `string` or not.
 ```ts
 isString: (val: unknown) => val is string
 ```
+
 
 #### Example 
 
@@ -866,6 +913,7 @@ Whatever argument is type of `symbol` or not.
 isSymbol: (val: unknown) => val is symbol
 ```
 
+
 #### Example 
 
 ```ts
@@ -887,6 +935,7 @@ Whatever argument is type of `undefined` or not.
 ```ts
 isUndefined: (val: unknown) => val is undefined
 ```
+
 
 #### Example 
 
@@ -910,6 +959,7 @@ K combinator. Returns a function that always returns the given value.
 K: <T extends unknown>(val: T) => () => T
 ```
 
+
 #### Example 
 
 ```ts
@@ -931,6 +981,10 @@ Returns the names of the enumerable string properties and methods of an object.
 ```ts
 keys: <T extends PropertyKey>(val: Record<T, unknown>) => string[]
 ```
+
+::: tip Remark
+The order of the output array is not guaranteed to be consistent across different JS platforms.
+:::
 
 #### Example 
 
@@ -954,6 +1008,7 @@ Returns the last element of the given list or string.
 ```ts
 last: <T extends string | readonly unknown[]>(val: T) => Last<T>
 ```
+
 
 #### Example 1
 
@@ -986,6 +1041,7 @@ Returns the number of elements in the array or string length.
 length: <T extends string | unknown[]>(val: T) => T["length"]
 ```
 
+
 #### Example 
 
 ```ts
@@ -1008,6 +1064,7 @@ Return lowercase string
 lowerCase: <T extends string>(val: T) => Lowercase<T>
 ```
 
+
 #### Example 
 
 ```ts
@@ -1028,6 +1085,7 @@ Returns `true` if the first argument is less than the second; otherwise `false`
 ```ts
 lt: <T extends Ord>(a: T, b: T) => boolean
 ```
+
 
 #### Example 1
 
@@ -1086,6 +1144,7 @@ Returns `true` if the first argument is less than or equal to the second; otherw
 ```ts
 lte: <T extends Ord>(a: T, b: T) => boolean
 ```
+
 
 #### Example 1
 
@@ -1153,6 +1212,7 @@ multiply: {
 }
 ```
 
+
 #### Example 1
 
 ```ts
@@ -1190,6 +1250,10 @@ Returns the `!` of its argument.
 not: <T>(val: T) => T extends Falsy ? true : boolean
 ```
 
+::: tip Remark
+The Definition of Falsy - `''` - `false` - `0` - `NaN` - `undefined` - `null`
+:::
+
 #### Example 
 
 ```ts
@@ -1218,6 +1282,7 @@ Returns true if one or both of its arguments are true; otherwise false.
 or: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean : boolean
 ```
 
+
 #### Example 
 
 ```ts
@@ -1241,6 +1306,7 @@ Returns a new list with the given value at the front, followed by the contents o
 ```ts
 prepend: <T, U>(val: T, list: U[]) => (T | U)[]
 ```
+
 
 #### Example 
 
@@ -1270,6 +1336,7 @@ product: {
 }
 ```
 
+
 #### Example 
 
 ```ts
@@ -1292,6 +1359,7 @@ Returns a function that when supplied an object returns the indicated property o
 ```ts
 props: <T extends string | number, U extends Record<PropertyKey, unknown>>(val: T, obj: U) => U extends Record<T, unknown> ? U[T] : undefined
 ```
+
 
 #### Example 
 
@@ -1323,6 +1391,7 @@ reverse: {
 }
 ```
 
+
 #### Example 1
 
 ```ts
@@ -1352,6 +1421,7 @@ Checks if a string starts with the provided substring.
 ```ts
 startsWith: <T extends string, U extends string | undefined = undefined>(val: T, target?: U | undefined) => StringWith<"startsWith", U>
 ```
+
 
 #### Example 1
 
@@ -1391,6 +1461,10 @@ subtract: {
     (a: typeof _, b: bigint): (a: bigint) => bigint;
 }
 ```
+
+::: tip Remark
+Since subtraction is not idempotent, there are two ways to curry.
+:::
 
 #### Example 1
 
@@ -1443,6 +1517,7 @@ sum: {
 }
 ```
 
+
 #### Example 
 
 ```ts
@@ -1465,6 +1540,7 @@ A function that always returns `true`. Any passed in parameters are ignored.
 ```ts
 T: AnyFn<unknown, true>
 ```
+
 
 #### Example 
 
@@ -1490,6 +1566,7 @@ tail: {
     <T extends unknown[]>(val: T): T;
 }
 ```
+
 
 #### Example 1
 
@@ -1524,6 +1601,7 @@ Removes whitespace from both ends of the string.
 trim: <T extends string>(val: T) => TrimLeft<TrimRight<T>>
 ```
 
+
 #### Example 
 
 ```ts
@@ -1549,6 +1627,10 @@ Do not use this API in a production environment.
 ```ts
 trimLeft: <T extends string>(val: T) => TrimLeft<T>
 ```
+
+::: tip Remark
+The definition of space - `''` - `\n` - `\t`
+:::
 
 #### Example 
 
@@ -1577,6 +1659,10 @@ Do not use this API in a production environment.
 trimRight: <T extends string>(val: T) => TrimRight<T>
 ```
 
+::: tip Remark
+The definition of space - `''` - `\n` - `\t`
+:::
+
 #### Example 
 
 ```ts
@@ -1599,6 +1685,7 @@ Return uppercase string
 upperCase: <T extends string>(val: T) => Uppercase<T>
 ```
 
+
 #### Example 
 
 ```ts
@@ -1619,6 +1706,10 @@ Returns an array of values of the enumerable properties of an object.
 ```ts
 values: <T extends unknown>(val: Record<PropertyKey, T> | ArrayLike<T>) => T[]
 ```
+
+::: tip Remark
+The order of the output array is not guaranteed to be consistent across different platforms.
+:::
 
 #### Example 1
 
@@ -1652,6 +1743,7 @@ Returns true if one of the arguments is truthy and the other is falsy; otherwise
 xor: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean : boolean
 ```
 
+
 #### Example 
 
 ```ts
@@ -1680,6 +1772,7 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 ```
 
 
+
 ### Empty
 
 
@@ -1694,6 +1787,7 @@ Alias for Empty values
 type Empty = "" | [
 ] | {};
 ```
+
 
 
 ### Falsy
@@ -1711,6 +1805,7 @@ type Falsy = false | "" | 0 | null | undefined;
 ```
 
 
+
 ### First
 
 
@@ -1725,6 +1820,7 @@ Infer the first types.
 type First<T extends readonly unknown[] | string> = T extends readonly never[] | [
 ] ? undefined : T[0];
 ```
+
 
 #### Example 1
 
@@ -1761,6 +1857,7 @@ type Last<T extends string | readonly unknown[]> = T extends never[] | readonly 
 ][T["length"]] : T extends string ? string : never;
 ```
 
+
 #### Example 1
 
 ```ts
@@ -1794,6 +1891,7 @@ type Ord = string | number | bigint | boolean | Date;
 ```
 
 
+
 ### Primitive
 
 
@@ -1807,6 +1905,7 @@ Alias for Primitive values types
 ```ts
 type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 ```
+
 
 
 ### Space
@@ -1829,6 +1928,7 @@ type Space = " " | "\n" | "\t";
 ```
 
 
+
 ### Trim
 
 <span class="tag beta">beta</span>
@@ -1847,6 +1947,10 @@ Do not use this API in a production environment.
 ```ts
 type Trim<T extends string> = TrimLeft<TrimRight<T>>;
 ```
+
+::: tip Remark
+The definition of space - `''` - `\n` - `\t`
+:::
 
 #### Example 
 
@@ -1874,6 +1978,10 @@ Do not use this API in a production environment.
 type TrimLeft<T extends string> = T extends `${Space}${infer R}` ? TrimLeft<R> : T;
 ```
 
+::: tip Remark
+The definition of space - `''` - `\n` - `\t`
+:::
+
 #### Example 
 
 ```ts
@@ -1899,6 +2007,10 @@ Do not use this API in a production environment.
 ```ts
 type TrimRight<T extends string> = T extends `${infer R}${Space}` ? TrimRight<R> : T;
 ```
+
+::: tip Remark
+The definition of space - `''` - `\n` - `\t`
+:::
 
 #### Example 
 
