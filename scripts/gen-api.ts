@@ -169,10 +169,12 @@ const mapMember = async (
 }
 const run = async ({
   version,
-  apiJsonPath
+  apiJsonPath,
+  editLink = true
 }: {
   version: string
   apiJsonPath: string
+  editLink?: boolean
 }): Promise<void> => {
   const apiPackage = apiModel.loadPackage(apiJsonPath)
 
@@ -190,9 +192,15 @@ const run = async ({
     const merged = mdFunctions.join('\n')
     const mergedTypesMd = mdTypes.join('\n')
 
+    const frontmatter = `---
+editLink: false
+---
+
+`
+
     generate(
       resolve(__dirname, '..', 'docs', 'api', version, 'index.md'),
-      `# API
+      `${editLink ? '' : frontmatter}# API
 
 ## Functions
 

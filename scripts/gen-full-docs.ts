@@ -63,7 +63,8 @@ const run = async () => {
 
       _run({
         version,
-        apiJsonPath: apiJsonFilePath
+        apiJsonPath: apiJsonFilePath,
+        editLink: false
       })
     })
   )
