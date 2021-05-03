@@ -1,5 +1,12 @@
 const { members } = require('../../temp/fonction.api.json')
 const { lowerCase } = require('fonction')
+const { versions } = require('../../temp/meta.json')
+
+const links = versions.map((version) => ({
+  text: version,
+  link: `/api/${version}/`,
+  activeMatch: `/api/${version}/`
+}))
 
 const title = 'fonction'
 const description = 'A modern practical functional library'
@@ -59,6 +66,10 @@ module.exports = {
         nav: [
           { text: 'Guide', link: '/guide/', activeMatch: '^/guide' },
           { text: 'API', link: '/api/', activeMatch: '^/api' },
+          {
+            text: 'Releases',
+            items: links
+          },
           {
             text: 'Release Notes',
             link: `https://github.com/${name}/${title}/blob/main/CHANGELOG.md`
