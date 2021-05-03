@@ -53,4 +53,3 @@ export type Falsy = false | '' | 0 | null | undefined
 export type Space = ' ' | '\n' | '\t'
 
 export type InferArray<T> = T extends (infer R)[] ? R : never
-export type Whitespace = ' ' | '\t' | '\n'
