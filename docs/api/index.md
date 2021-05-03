@@ -1514,14 +1514,14 @@ tail([]) // []
 
 
 
-Removes (strips) whitespace from both ends of the string.
+Removes whitespace from both ends of the string.
 
 
 
 **Signature:**
 
 ```ts
-trim: <T extends string>(val: T) => Trim<T>
+trim: <T extends string>(val: T) => TrimLeft<TrimRight<T>>
 ```
 
 #### Example 
@@ -1555,6 +1555,33 @@ trimLeft: <T extends string>(val: T) => TrimLeft<T>
 ```ts
 trimLeft('   hello') // 'hello'
 trimLeft(' \n\thello') // 'hello'
+```
+
+
+### trimRight
+
+<span class="tag beta">beta</span>
+
+
+Removes space from right ends of the string.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+trimRight: <T extends string>(val: T) => TrimRight<T>
+```
+
+#### Example 
+
+```ts
+trimRight('hello   ') // 'hello'
+trimRight('hello \n\t') // 'hello'
 ```
 
 
@@ -1802,6 +1829,32 @@ type Space = " " | "\n" | "\t";
 ```
 
 
+### Trim
+
+<span class="tag beta">beta</span>
+
+
+Infer the trimmed string.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+type Trim<T extends string> = TrimLeft<TrimRight<T>>;
+```
+
+#### Example 
+
+```ts
+Trim<'\t\n hello \t\n'> // 'hello'
+```
+
+
 ### TrimLeft
 
 <span class="tag beta">beta</span>
@@ -1825,6 +1878,32 @@ type TrimLeft<T extends string> = T extends `${Space}${infer R}` ? TrimLeft<R> :
 
 ```ts
 TrimLeft<' \n\thello'> // 'hello'
+```
+
+
+### TrimRight
+
+<span class="tag beta">beta</span>
+
+
+Infer the string with the right ends of trimmed.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+type TrimRight<T extends string> = T extends `${infer R}${Space}` ? TrimRight<R> : T;
+```
+
+#### Example 
+
+```ts
+TrimRight<'hello \n\t'> // 'hello'
 ```
 
 

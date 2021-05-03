@@ -51,9 +51,12 @@ export { subtract } from './src/subtract.ts'
 export { sum } from './src/sum.ts'
 export { T } from './src/T.ts'
 export { tail } from './src/tail.ts'
+export type { Trim } from './src/trim.ts'
 export { trim } from './src/trim.ts'
 export type { TrimLeft } from './src/trimLeft.ts'
 export { trimLeft } from './src/trimLeft.ts'
+export type { TrimRight } from './src/trimRight.ts'
+export { trimRight } from './src/trimRight.ts'
 export type {
   AnyFn,
   Empty,

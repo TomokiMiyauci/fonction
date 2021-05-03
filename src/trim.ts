@@ -1,16 +1,31 @@
-import { Whitespace } from './types/index.ts'
-
-type Trim<T extends string> = T extends `${Whitespace}${infer U}`
-  ? Trim<U>
-  : T extends `${infer U}${Whitespace}`
-  ? Trim<U>
-  : T
+import { TrimLeft } from './trimLeft.ts'
+import { TrimRight } from './trimRight.ts'
 
 /**
- * Removes (strips) whitespace from both ends of the string.
+ * Infer the trimmed string.
+ *
+ * @typeParam T - any string
+ * @returns Trimmed string
+ *
+ * @remarks
+ * The definition of space
+ * - `''`
+ * - `\n`
+ * - `\t`
+ *
+ * @example
+ * ```ts
+ * Trim<'\t\n hello \t\n'> // 'hello'
+ * ```
+ * @beta
+ */
+type Trim<T extends string> = TrimLeft<TrimRight<T>>
+
+/**
+ * Removes whitespace from both ends of the string.
  *
  * @param val - `string` to trim
- * @returns Trimmed `val`
+ * @returns The result of `val.trim()`
  *
  * @example
  * ```ts
@@ -22,3 +37,4 @@ type Trim<T extends string> = T extends `${Whitespace}${infer U}`
 const trim = <T extends string>(val: T): Trim<T> => val.trim() as Trim<T>
 
 export { trim }
+export type { Trim }
