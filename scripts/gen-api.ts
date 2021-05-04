@@ -112,6 +112,7 @@ interface MdVariables {
   tagName: string
   deprecated: boolean
   remarks: string[]
+  isLatest: boolean
 }
 
 const render = async (mdArgs: MdVariables): Promise<string> => {
@@ -128,7 +129,7 @@ const render = async (mdArgs: MdVariables): Promise<string> => {
 const generate = (path: string, content: string): void =>
   outputFileSync(path, content)
 
-const mapMember = async (
+const mapMember = (isLatest: boolean) => async (
   member: ApiItem
 ): Promise<{
   name: string
@@ -158,7 +159,8 @@ const mapMember = async (
       signature,
       tagName,
       deprecated: isDeprecated,
-      remarks
+      remarks,
+      isLatest
     })
 
     return {
@@ -170,21 +172,27 @@ const mapMember = async (
 const run = async ({
   version,
   apiJsonPath,
-  editLink = true
+  editLink = true,
+  isLatest
 }: {
   version: string
   apiJsonPath: string
   editLink?: boolean
+  isLatest: boolean
 }): Promise<void> => {
   const apiPackage = apiModel.loadPackage(apiJsonPath)
 
   apiPackage.members.forEach(async (root) => {
     const functionContents = await Promise.all(
-      root.members.filter(({ kind }) => kind === 'Variable').map(mapMember)
+      root.members
+        .filter(({ kind }) => kind === 'Variable')
+        .map(mapMember(isLatest))
     )
 
     const typesContents = await Promise.all(
-      root.members.filter(({ kind }) => kind === 'TypeAlias').map(mapMember)
+      root.members
+        .filter(({ kind }) => kind === 'TypeAlias')
+        .map(mapMember(isLatest))
     )
 
     const mdFunctions = functionContents.filter((_) => !!_).map(({ md }) => md)
@@ -217,7 +225,8 @@ ${mergedTypesMd}
 if (require.main === module) {
   run({
     version: '',
-    apiJsonPath: resolve(__dirname, '..', 'temp', 'fonction.api.json')
+    apiJsonPath: resolve(__dirname, '..', 'temp', 'fonction.api.json'),
+    isLatest: true
   })
 }
 

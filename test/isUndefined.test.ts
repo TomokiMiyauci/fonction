@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { assertEquals } from '../deps.ts'
 import { isSymbol } from '../src/isSymbol.ts'
 import { isUndefined } from '../src/isUndefined.ts'

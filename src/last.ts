@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
 import { String2Array } from './types/index.ts'

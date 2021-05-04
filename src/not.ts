@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { Falsy } from './types/index.ts'
 /**
  * Returns the `!` of its argument.

@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { add } from './add.ts'
 import { first } from './first.ts'
 import { isNumber } from './isNumber.ts'

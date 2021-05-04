@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
  * Returns the number of elements in the array or string length.
  *

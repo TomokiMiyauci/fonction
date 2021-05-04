@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { IsPrimitive, isPrimitive } from './isPrimitive.ts'
 import { not } from './not.ts'
 

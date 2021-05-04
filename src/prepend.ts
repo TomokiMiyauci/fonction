@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
  * Returns a new list with the given value at the front, followed by the contents of the list.
  *
