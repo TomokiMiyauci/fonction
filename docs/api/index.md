@@ -1370,6 +1370,62 @@ props('x', {}) // undefined
 ```
 
 
+### replace
+
+<span class="tag beta">beta</span>
+
+
+Replaces matches for `from` in string with `to`.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+replace: <From extends string, To extends string, T extends string>(from: From, to: To, val: T) => Replace<T, From, To>
+```
+
+
+#### Example 
+
+```ts
+replace('hello Tom', 'Tom', 'Bob') // 'hello Bob'
+replace('hogehoge', 'hoge', 'fuga') // 'fugahoge'
+```
+
+
+### replaceAll
+
+<span class="tag beta">beta</span>
+
+
+Replaces all matches for `from` in string with `to`.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+replaceAll: <From extends string, To extends string, T extends string>(from: From, to: To, val: T) => ReplaceAll<T, From, To>
+```
+
+
+#### Example 
+
+```ts
+replaceAll('hello Tom', 'Tom', 'Bob') // 'hello Bob'
+replaceAll('hogehoge', 'hoge', 'fuga') // 'fugafuga'
+```
+
+
 ### reverse
 
 
@@ -1906,6 +1962,62 @@ Alias for Primitive values types
 type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 ```
 
+
+
+### Replace
+
+<span class="tag beta">beta</span>
+
+
+Infer the replacement value.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+type Replace<T extends string, From extends string, To extends string> = From extends "" ? T : T extends `${infer F}${From}${infer L}` ? `${F}${To}${L}` : T;
+```
+
+
+#### Example 
+
+```ts
+Replace<'hello Tom', 'Tom', 'Bob'> // 'hello Bob'
+Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
+```
+
+
+### ReplaceAll
+
+<span class="tag beta">beta</span>
+
+
+Infer the all replacement value.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+type ReplaceAll<T extends string, From extends string, To extends string> = From extends "" | To ? T : T extends `${infer L}${From}${infer R}` ? `${L}${ReplaceAll<`${To}${R}`, From, To>}` : T;
+```
+
+
+#### Example 
+
+```ts
+ReplaceAll<'hello Tom', 'Tom', 'Bob'> // 'hello Bob'
+ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
+```
 
 
 ### Space
