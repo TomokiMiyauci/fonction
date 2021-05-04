@@ -1,3 +1,8 @@
+# [v1.5.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.2...v1.5.0-beta.3) (2021-05-04)
+
+## ✨ New Features
+- [`01ac18c`](https://github.com/TomokiMiyauci/fonction/commit/01ac18c)   Add replace and replaceAll functions
+
 # [v1.5.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.1...v1.5.0-beta.2) (2021-05-03)
 
 ## ✨ New Features
