@@ -51,5 +51,16 @@ This function will remove next major release.
 ```
 
 <%});%>
+
+<% if(it.isLatest && it.test) { %><details>
+<summary>Tests</summary>
+
+```ts
+<%= it.test %>
+```
+
+</details>
+<% } %>
+
 <% if (it.isLatest) { %> [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/<%= it.name %>.ts)
 <% } %>
