@@ -14,12 +14,13 @@ import {
   DocSection
 } from '@microsoft/tsdoc'
 import { configure, renderFile } from 'eta'
-import { isUndefined } from 'fonction'
-import { outputFileSync } from 'fs-extra'
+import { isUndefined, replace } from 'fonction'
+import { outputFileSync, pathExistsSync, readFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
 const apiModel = new ApiModel()
-
+const copyright =
+  '// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.\n'
 const getSummary = ({ nodes }: DocSection): string => {
   const _nodeSection = nodes[0]
   if (_nodeSection instanceof DocParagraph) {
@@ -96,6 +97,14 @@ const getDocFencedCode = (docNode: DocNode): string => {
   return ''
 }
 
+const getTestCase = (path: string): string => {
+  if (pathExistsSync(path)) {
+    const testContent = readFileSync(path, { encoding: 'utf-8' })
+    return replace(copyright, '', testContent)
+  }
+  return ''
+}
+
 const getDocPlainText = (docNode: DocNode): string => {
   if (isDocPlainText(docNode)) {
     return docNode.text
@@ -113,6 +122,7 @@ interface MdVariables {
   deprecated: boolean
   remarks: string[]
   isLatest: boolean
+  test: string
 }
 
 const render = async (mdArgs: MdVariables): Promise<string> => {
@@ -129,7 +139,14 @@ const render = async (mdArgs: MdVariables): Promise<string> => {
 const generate = (path: string, content: string): void =>
   outputFileSync(path, content)
 
-const mapMember = (isLatest: boolean) => async (
+type ExportKind = 'Fn' | 'Type'
+const mapMember = ({
+  isLatest,
+  type
+}: {
+  isLatest: boolean
+  type: ExportKind
+}) => async (
   member: ApiItem
 ): Promise<{
   name: string
@@ -152,6 +169,10 @@ const mapMember = (isLatest: boolean) => async (
     const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
     const description = getSummary(summarySection)
     const examples = getExampleCode(customBlocks)
+    const test =
+      type === 'Fn'
+        ? getTestCase(resolve(__dirname, '..', 'test', `${name}.test.ts`))
+        : ''
     const md = await render({
       name,
       description,
@@ -160,7 +181,8 @@ const mapMember = (isLatest: boolean) => async (
       tagName,
       deprecated: isDeprecated,
       remarks,
-      isLatest
+      isLatest,
+      test
     })
 
     return {
@@ -186,13 +208,13 @@ const run = async ({
     const functionContents = await Promise.all(
       root.members
         .filter(({ kind }) => kind === 'Variable')
-        .map(mapMember(isLatest))
+        .map(mapMember({ isLatest, type: 'Fn' }))
     )
 
     const typesContents = await Promise.all(
       root.members
         .filter(({ kind }) => kind === 'TypeAlias')
-        .map(mapMember(isLatest))
+        .map(mapMember({ isLatest, type: 'Type' }))
     )
 
     const mdFunctions = functionContents.filter((_) => !!_).map(({ md }) => md)
