@@ -1,3 +1,8 @@
+# [v1.5.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.3...v1.5.0-beta.4) (2021-05-04)
+
+## ✨ New Features
+- [`7dadd6b`](https://github.com/TomokiMiyauci/fonction/commit/7dadd6b)   Add flattenDeep function
+
 # [v1.5.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.2...v1.5.0-beta.3) (2021-05-04)
 
 ## ✨ New Features
