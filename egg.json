@@ -4,7 +4,7 @@
   "entry": "./mod.ts",
   "description": "A modern practical functional library",
   "homepage": "https://github.com/TomokiMiyauci/fonction",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "releaseType": "patch",
   "files": [
     "./docs/public/icon.gif",
