@@ -48,7 +48,7 @@ export type Falsy = false | '' | 0 | null | undefined
 /**
  * Alias for Space values.
  *
- * @beta
+ * @public
  */
 export type Space = ' ' | '\n' | '\t'
 

@@ -10,7 +10,7 @@
  * FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
  * ```
  *
- * @beta
+ * @public
  */
 type FlattenDeep<T extends readonly unknown[]> = T extends readonly [
   infer A,
@@ -32,7 +32,7 @@ type FlattenDeep<T extends readonly unknown[]> = T extends readonly [
  * flattenDeep([1, [2, [3, [4]], 5]]) // [1, 2, 3, 4, 5]
  * ```
  *
- * @beta
+ * @public
  */
 const flattenDeep = <T extends readonly unknown[]>(val: T): FlattenDeep<T> =>
   val.flat(Infinity) as FlattenDeep<T>

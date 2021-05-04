@@ -11,7 +11,7 @@
  * ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
  * ```
  *
- * @beta
+ * @public
  */
 type ReplaceAll<
   T extends string,
@@ -37,7 +37,7 @@ type ReplaceAll<
  * replaceAll('hogehoge', 'hoge', 'fuga') // 'fugafuga'
  * ```
  *
- * @beta
+ * @public
  */
 const replaceAll = <From extends string, To extends string, T extends string>(
   from: From,

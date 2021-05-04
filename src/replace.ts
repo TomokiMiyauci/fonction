@@ -11,7 +11,7 @@
  * Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
  * ```
  *
- * @beta
+ * @public
  */
 type Replace<
   T extends string,
@@ -37,7 +37,7 @@ type Replace<
  * replace('hogehoge', 'hoge', 'fuga') // 'fugahoge'
  * ```
  *
- * @beta
+ * @public
  */
 const replace = <From extends string, To extends string, T extends string>(
   from: From,

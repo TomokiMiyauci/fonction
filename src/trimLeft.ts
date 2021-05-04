@@ -16,7 +16,7 @@ import { Space } from './types/index.ts'
  * TrimLeft<' \n\thello'> // 'hello'
  * ```
  *
- * @beta
+ * @public
  */
 type TrimLeft<T extends string> = T extends `${Space}${infer R}`
   ? TrimLeft<R>
@@ -40,7 +40,7 @@ type TrimLeft<T extends string> = T extends `${Space}${infer R}`
  * trimLeft(' \n\thello') // 'hello'
  * ```
  *
- * @beta
+ * @public
  */
 const trimLeft = <T extends string>(val: T): TrimLeft<T> =>
   val.trimLeft() as TrimLeft<T>

@@ -17,7 +17,7 @@ import { Space } from './types/index.ts'
  * TrimRight<'hello \n\t'> // 'hello'
  * ```
  *
- * @beta
+ * @public
  */
 type TrimRight<T extends string> = T extends `${infer R}${Space}`
   ? TrimRight<R>
@@ -41,7 +41,7 @@ type TrimRight<T extends string> = T extends `${infer R}${Space}`
  * trimRight('hello \n\t') // 'hello'
  * ```
  *
- * @beta
+ * @public
  */
 const trimRight = <T extends string>(val: T): TrimRight<T> =>
   val.trimRight() as TrimRight<T>
