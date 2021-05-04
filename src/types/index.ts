@@ -53,3 +53,24 @@ export type Falsy = false | '' | 0 | null | undefined
 export type Space = ' ' | '\n' | '\t'
 
 export type InferArray<T> = T extends (infer R)[] ? R : never
+
+/**
+ * Convert `string` to `array` types.
+ *
+ * @typeParam T - any string
+ * @returns string array
+ *
+ * @example
+ * ```ts
+ * String2Array<string> string[]
+ * String2Array<''> // []
+ * String2Array<'hello'> // ["h", "e", "l", "l", "o"]
+ * ```
+ *
+ * @internal
+ */
+export type String2Array<T extends string> = T extends ''
+  ? []
+  : T extends `${infer F}${infer R}`
+  ? [F, ...String2Array<R>]
+  : string[]

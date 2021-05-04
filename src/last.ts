@@ -1,6 +1,6 @@
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
-
+import { String2Array } from './types/index.ts'
 /**
  * Infer the last types.
  *
@@ -10,7 +10,8 @@ import { length } from './length.ts'
  * ```ts
  * // String
  * Last<string> // string
- * Last<'hello'> // string
+ * Last<''> // ''
+ * Last<'hello'> // 'o'
  * ```
  *
  * @example
@@ -22,9 +23,13 @@ import { length } from './length.ts'
  * ```
  * @public
  */
-type Last<T extends string | readonly unknown[]> = T extends
-  | never[]
-  | readonly never[]
+type Last<T extends string | readonly unknown[]> = T extends ''
+  ? ''
+  : T extends string
+  ? String2Array<T> extends []
+    ? string
+    : [never, ...String2Array<T>][String2Array<T>['length']]
+  : T extends never[] | readonly never[]
   ? undefined
   : T extends unknown[] | readonly unknown[]
   ? [never, ...T][T['length']]

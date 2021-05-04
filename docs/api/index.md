@@ -317,6 +317,7 @@ first: <T extends string | readonly unknown[]>(val: T) => First<T>
 
 ```ts
 // String
+first('') // ''
 first('hello') // 'h'
 ```
 
@@ -1873,7 +1874,8 @@ Infer the first types.
 **Signature:**
 
 ```ts
-type First<T extends readonly unknown[] | string> = T extends readonly never[] | [
+type First<T extends readonly unknown[] | string> = T extends "" ? "" : T extends string ? String2Array<T> extends [
+] ? string : String2Array<T>[0] : T extends readonly never[] | [
 ] ? undefined : T[0];
 ```
 
@@ -1883,7 +1885,8 @@ type First<T extends readonly unknown[] | string> = T extends readonly never[] |
 ```ts
 // String
 First<string> // string
-First<'hello'> // string
+First<''> // ''
+First<'hello'> // 'h'
 ```
 
 #### Example 2
@@ -1907,7 +1910,11 @@ Infer the last types.
 **Signature:**
 
 ```ts
-type Last<T extends string | readonly unknown[]> = T extends never[] | readonly never[] ? undefined : T extends unknown[] | readonly unknown[] ? [
+type Last<T extends string | readonly unknown[]> = T extends "" ? "" : T extends string ? String2Array<T> extends [
+] ? string : [
+    never,
+    ...String2Array<T>
+][String2Array<T>["length"]] : T extends never[] | readonly never[] ? undefined : T extends unknown[] | readonly unknown[] ? [
     never,
     ...T
 ][T["length"]] : T extends string ? string : never;
@@ -1919,7 +1926,8 @@ type Last<T extends string | readonly unknown[]> = T extends never[] | readonly 
 ```ts
 // String
 Last<string> // string
-Last<'hello'> // string
+Last<''> // ''
+Last<'hello'> // 'o'
 ```
 
 #### Example 2
@@ -1980,7 +1988,7 @@ Do not use this API in a production environment.
 **Signature:**
 
 ```ts
-type Replace<T extends string, From extends string, To extends string> = From extends "" ? T : T extends `${infer F}${From}${infer L}` ? `${F}${To}${L}` : T;
+type Replace<T extends string, From extends string, To extends string> = From extends "" | To ? T : T extends `${infer L}${From}${infer R}` ? `${L}${To}${R}` : T;
 ```
 
 

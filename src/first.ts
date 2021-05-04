@@ -1,5 +1,6 @@
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
+import { String2Array } from './types/index.ts'
 
 /**
  * Infer the first types.
@@ -10,7 +11,8 @@ import { length } from './length.ts'
  * ```ts
  * // String
  * First<string> // string
- * First<'hello'> // string
+ * First<''> // ''
+ * First<'hello'> // 'h'
  * ```
  *
  * @example
@@ -23,9 +25,13 @@ import { length } from './length.ts'
  *
  * @public
  */
-type First<T extends readonly unknown[] | string> = T extends
-  | readonly never[]
-  | []
+type First<T extends readonly unknown[] | string> = T extends ''
+  ? ''
+  : T extends string
+  ? String2Array<T> extends []
+    ? string
+    : String2Array<T>[0]
+  : T extends readonly never[] | []
   ? undefined
   : T[0]
 
@@ -38,6 +44,7 @@ type First<T extends readonly unknown[] | string> = T extends
  * @example
  * ```ts
  * // String
+ * first('') // ''
  * first('hello') // 'h'
  * ```
  *

@@ -50,5 +50,7 @@ Deno.test('Last', () => {
   assertEqual<string, Last<string[]>>()
   assertEqual<string | number, Last<string | number[]>>()
   assertEqual<[], Last<[100, 200, 'hello', []]>>()
-  assertEqual<string, Last<string | '' | 'hello'>>()
+  assertEqual<string, Last<string>>()
+  assertEqual<'', Last<''>>()
+  assertEqual<'o', Last<'hello'>>()
 })
