@@ -139,8 +139,10 @@ yarn add fonction@beta
 
 ```ts
 // deno.land
-import {} from 'https://deno.land/x/fonction@v1.3.0-beta.x/mod.ts'
+import { _ } from 'https://deno.land/x/fonction@VERSION/mod.ts'
 ```
+
+`@VERSION` format is like `v1.5.0-beta.1`.
 
 ## :bulb: License
 
