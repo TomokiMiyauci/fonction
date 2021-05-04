@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { divide as _divide } from '../deps.ts'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { _ } from './constants/index.ts'

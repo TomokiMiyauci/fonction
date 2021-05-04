@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import type { IsNull } from './isNull.ts'
 import { isNull } from './isNull.ts'
 import { IsUndefined, isUndefined } from './isUndefined.ts'

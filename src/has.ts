@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { has as _has } from './_/has.ts'
 import { hasPath as _hasPath } from './_/hasPath.ts'
 import { isArray } from './isArray.ts'

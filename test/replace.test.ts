@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { assertEquals } from '../deps.ts'
 import { Replace, replace } from '../src/replace.ts'
 import { assertEqual } from './asserts.ts'

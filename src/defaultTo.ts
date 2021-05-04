@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { isNaN } from './isNaN.ts'
 import { IsNill, isNill } from './isNill.ts'
 import { IsNumber } from './isNumber.ts'

@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
  * Returns the names of the enumerable string properties and methods of an object.
  *

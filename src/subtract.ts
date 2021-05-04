@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { subtract as _subtract } from '../deps.ts'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

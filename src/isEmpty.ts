@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { and } from './and.ts'
 import { isArray } from './isArray.ts'
 import { isObject } from './isObject.ts'

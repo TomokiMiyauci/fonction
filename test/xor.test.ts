@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { assertEquals } from '../deps.ts'
 import { xor } from '../src/xor.ts'
 import { Falsy } from './../src/types/index.ts'

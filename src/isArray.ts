@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
  * Whatever argument is `Array` or not.
  *

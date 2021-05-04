@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { IsBigint, isBigint } from './isBigint.ts'
 import { IsBoolean, isBoolean } from './isBoolean.ts'
 import { IsNill, isNill } from './isNill.ts'

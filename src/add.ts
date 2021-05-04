@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { add as _add } from '../deps.ts'
 
 // re-export
