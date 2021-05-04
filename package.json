@@ -23,7 +23,7 @@
     "lint": "eslint . --ext .ts --ignore-pattern dist",
     "prepare:build": "esno scripts/pre-build.ts",
     "post:build": "esno scripts/post-build.ts",
-    "build": "yarn prepare:build && rollup -c rollup.config.ts && yarn post:build",
+    "build": "yarn prepare:build && rollup -c rollup.config.ts",
     "build:docs": "vitepress build docs",
     "serve": "vitepress serve docs",
     "test": "deno test test/",
