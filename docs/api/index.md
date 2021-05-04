@@ -44,6 +44,7 @@ const plus2(2)
 plus2(-3) // -1
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/add.ts)
 
 ### and
 
@@ -69,6 +70,7 @@ and(true, false) // false
 and(false, false) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/and.ts)
 
 ### append
 
@@ -93,6 +95,7 @@ append('Tom', []) // ['Tom']
 append(['Tom'], ['hello', 'world']) // ['hello', 'world', ['Tom']]
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/append.ts)
 
 ### chunk
 
@@ -131,6 +134,7 @@ chunk(-3, ['a', 'b', 'c']) // ['a', 'b', 'c']
 chunk(5, []) // []
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/chunk.ts)
 
 ### dec
 
@@ -157,6 +161,7 @@ dec(100) // 99
 dec(10n) // 9n
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/dec.ts)
 
 ### defaultTo
 
@@ -184,6 +189,7 @@ defaultVal(NaN) // 'anonymous'
 defaultVal('Tom') // 'Tom'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/defaultTo.ts)
 
 ### divide
 
@@ -242,6 +248,7 @@ const half = divide(_, 2)
 half(20) // 10
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/divide.ts)
 
 ### endsWith
 
@@ -274,6 +281,7 @@ const endsWithHtml = endsWith('html')
 endsWithHtml('index.html') // true
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/endsWith.ts)
 
 ### F
 
@@ -297,6 +305,7 @@ F() // false
 F(1, 'hello', 'world') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/F.ts)
 
 ### first
 
@@ -330,6 +339,7 @@ first([]) // undefined
 first(['one', 2, 3, 4]) // 'one'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/first.ts)
 
 ### flattenDeep
 
@@ -353,6 +363,7 @@ flattenDeep([]) // []
 flattenDeep([1, [2, [3, [4]], 5]]) // [1, 2, 3, 4, 5]
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/flattenDeep.ts)
 
 ### gt
 
@@ -412,6 +423,7 @@ gt(new Date('1999/12/31'), new Date('2000/1/1')) // false
 gt(new Date('2000/1/1'), new Date('2000/1/1')) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gt.ts)
 
 ### gte
 
@@ -474,6 +486,7 @@ gte(new Date('2000/1/1'), new Date('2000/1/1')) // true
 gte(new Date('1999/12/31'), new Date('2000/1/1')) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gte.ts)
 
 ### has
 
@@ -512,6 +525,7 @@ hasPath(['hi'], { hello: '' } ) // false
 hasPath(['hi', 'Tom'], { hi: { John: 1 } } ) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/has.ts)
 
 ### hasPath
 
@@ -543,6 +557,7 @@ hasPath(['hi'], { hello: '' } ) // false
 hasPath(['hi', 'Tom'], { hi: { John: 1 } } ) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/hasPath.ts)
 
 ### head
 
@@ -580,6 +595,7 @@ head(['hello']) // []
 head([]) // []
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/head.ts)
 
 ### identity
 
@@ -603,6 +619,7 @@ identity(1) // 1
 identity({}) // {}
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/identity.ts)
 
 ### inc
 
@@ -629,6 +646,7 @@ inc(100) // 101
 inc(10n) // 11n
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/inc.ts)
 
 ### isArray
 
@@ -653,6 +671,7 @@ isArray(['hello', 'world']) // true
 isArray({}) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isArray.ts)
 
 ### isBigint
 
@@ -676,6 +695,7 @@ isBigint(1n) // true
 isBigint(1000) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isBigint.ts)
 
 ### isBoolean
 
@@ -699,6 +719,7 @@ isBoolean(true) // true
 isBoolean('hello') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isBoolean.ts)
 
 ### isEmpty
 
@@ -729,6 +750,7 @@ isEmpty('hello world') // false
 isEmpty(1000) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isEmpty.ts)
 
 ### isFunction
 
@@ -752,6 +774,7 @@ isFunction(function) // true
 isFunction('hello') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isFunction.ts)
 
 ### isNaN
 
@@ -778,6 +801,7 @@ isNaN(NaN) // true
 isNaN(100) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNaN.ts)
 
 ### isNill
 
@@ -801,6 +825,7 @@ isNumber(0) // true
 isNumber('hello') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNill.ts)
 
 ### isNull
 
@@ -824,6 +849,7 @@ isNull(null) // true
 isNull(undefined) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNull.ts)
 
 ### isNumber
 
@@ -847,6 +873,7 @@ isNumber(0) // true
 isNumber('hello') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNumber.ts)
 
 ### isObject
 
@@ -873,6 +900,7 @@ isObject([]) // true
 isObject('hello') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isObject.ts)
 
 ### isPrimitive
 
@@ -899,6 +927,7 @@ isPrimitive(true) // true
 isPrimitive([]) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isPrimitive.ts)
 
 ### isString
 
@@ -922,6 +951,7 @@ isString('hello world') // true
 isString(1000) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isString.ts)
 
 ### isSymbol
 
@@ -945,6 +975,7 @@ isSymbol(Symbol('hello')) // true
 isSymbol('hello') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isSymbol.ts)
 
 ### isUndefined
 
@@ -968,6 +999,7 @@ isUndefined(undefined) // true
 isUndefined('hello') // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isUndefined.ts)
 
 ### K
 
@@ -991,6 +1023,7 @@ const k = K('k')
 k() // 'k'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/K.ts)
 
 ### keys
 
@@ -1018,6 +1051,7 @@ keys({ 'a': 'b' }) // ['a']
 keys({ 0: 'hello', 1: 'world' }) // ['0', '1']
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/keys.ts)
 
 ### last
 
@@ -1050,6 +1084,7 @@ last([]) // undefined
 last(['one', 2, 3, 4]) // 4
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/last.ts)
 
 ### length
 
@@ -1073,6 +1108,7 @@ length('hello') // 5
 length(['hello', 'world', 1]) // 3
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/length.ts)
 
 ### lowerCase
 
@@ -1095,6 +1131,7 @@ lowerCase: <T extends string>(val: T) => Lowercase<T>
 toLower('Hello') // hello
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lowerCase.ts)
 
 ### lt
 
@@ -1154,6 +1191,7 @@ lt(new Date('2000/1/1'), new Date('2000/1/1')) // false
 lt(new Date('2000/1/2'), new Date('2000/1/1')) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lt.ts)
 
 ### lte
 
@@ -1216,6 +1254,7 @@ lte(new Date('1999/12/31'), new Date('2000/1/1')) // true
 lte(new Date('2000/1/2'), new Date('2000/1/1')) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lte.ts)
 
 ### multiply
 
@@ -1259,6 +1298,7 @@ const double = multiply(2)
 double(4) // 8
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/multiply.ts)
 
 ### not
 
@@ -1291,6 +1331,7 @@ not(null) // true
 not({}) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/not.ts)
 
 ### or
 
@@ -1316,6 +1357,7 @@ or(true, false) // true
 or(false, false) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/or.ts)
 
 ### prepend
 
@@ -1340,6 +1382,7 @@ prepend('Tom', []) // ['Tom']
 prepend(['Tom'], ['hello', 'world']) // [['Tom'], 'hello', 'world']
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/prepend.ts)
 
 ### product
 
@@ -1369,6 +1412,7 @@ product([1n, 2n, 3n, 4n, 5n]) //120n
 product([]) // 0
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/product.ts)
 
 ### props
 
@@ -1393,6 +1437,7 @@ props(1, { 1: 100 }) // 100
 props('x', {}) // undefined
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/props.ts)
 
 ### replace
 
@@ -1416,6 +1461,7 @@ replace('hello Tom', 'Tom', 'Bob') // 'hello Bob'
 replace('hogehoge', 'hoge', 'fuga') // 'fugahoge'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/replace.ts)
 
 ### replaceAll
 
@@ -1439,6 +1485,7 @@ replaceAll('hello Tom', 'Tom', 'Bob') // 'hello Bob'
 replaceAll('hogehoge', 'hoge', 'fuga') // 'fugafuga'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/replaceAll.ts)
 
 ### reverse
 
@@ -1477,6 +1524,7 @@ reverse(['hello', 'new', 'world']) // ['world', 'new', 'hello']
 reverse([0, {}, []]) // [[], {}, 0]
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/reverse.ts)
 
 ### startsWith
 
@@ -1509,6 +1557,7 @@ const startWithSlash = startsWith('/')
 startWithSlash('/path/to') // true
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/startsWith.ts)
 
 ### subtract
 
@@ -1567,6 +1616,7 @@ const minus5 = (_, 5)
 minus5(20) // 15
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/subtract.ts)
 
 ### sum
 
@@ -1596,6 +1646,7 @@ sum([1n, 2n, 3n, 4n, 5n]) // 15n
 sum([]) // 0
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/sum.ts)
 
 ### T
 
@@ -1619,6 +1670,7 @@ T() // true
 T(1, 'hello', 'world') // true
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/T.ts)
 
 ### tail
 
@@ -1656,6 +1708,7 @@ tail(['hello']) // []
 tail([]) // []
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/tail.ts)
 
 ### trim
 
@@ -1678,6 +1731,7 @@ trim: <T extends string>(val: T) => TrimLeft<TrimRight<T>>
 trim('   hello   ') // 'hello'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trim.ts)
 
 ### trimLeft
 
@@ -1704,6 +1758,7 @@ trimLeft('   hello') // 'hello'
 trimLeft(' \n\thello') // 'hello'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trimLeft.ts)
 
 ### trimRight
 
@@ -1730,6 +1785,7 @@ trimRight('hello   ') // 'hello'
 trimRight('hello \n\t') // 'hello'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trimRight.ts)
 
 ### upperCase
 
@@ -1752,6 +1808,7 @@ upperCase: <T extends string>(val: T) => Uppercase<T>
 toUpper('Hello') // HELLO
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/upperCase.ts)
 
 ### values
 
@@ -1788,6 +1845,7 @@ values([]) // []
 values(['hello', 'world']) // ['hello', 'world']
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/values.ts)
 
 ### xor
 
@@ -1813,6 +1871,7 @@ xor(true, true) // false
 xor(false, false) // false
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/xor.ts)
 
 
 ## Types
@@ -1832,6 +1891,7 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 ```
 
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/AnyFn.ts)
 
 ### Empty
 
@@ -1849,6 +1909,7 @@ type Empty = "" | [
 ```
 
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Empty.ts)
 
 ### Falsy
 
@@ -1865,6 +1926,7 @@ type Falsy = false | "" | 0 | null | undefined;
 ```
 
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Falsy.ts)
 
 ### First
 
@@ -1901,6 +1963,7 @@ First<['hello', 'world']> // 'hello'
 First<string | number[]> // string | number
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/First.ts)
 
 ### FlattenDeep
 
@@ -1935,6 +1998,7 @@ FlattenDeep<[]> // []
 FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/FlattenDeep.ts)
 
 ### Last
 
@@ -1976,6 +2040,7 @@ Last<['hello', 'world']> // 'world'
 Last<string | number[]> // string | number
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Last.ts)
 
 ### Ord
 
@@ -1992,6 +2057,7 @@ type Ord = string | number | bigint | boolean | Date;
 ```
 
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Ord.ts)
 
 ### Primitive
 
@@ -2008,6 +2074,7 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 ```
 
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Primitive.ts)
 
 ### Replace
 
@@ -2031,6 +2098,7 @@ Replace<'hello Tom', 'Tom', 'Bob'> // 'hello Bob'
 Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Replace.ts)
 
 ### ReplaceAll
 
@@ -2054,6 +2122,7 @@ ReplaceAll<'hello Tom', 'Tom', 'Bob'> // 'hello Bob'
 ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/ReplaceAll.ts)
 
 ### Space
 
@@ -2070,6 +2139,7 @@ type Space = " " | "\n" | "\t";
 ```
 
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Space.ts)
 
 ### Trim
 
@@ -2095,6 +2165,7 @@ The definition of space - `''` - `\n` - `\t`
 Trim<'\t\n hello \t\n'> // 'hello'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Trim.ts)
 
 ### TrimLeft
 
@@ -2120,6 +2191,7 @@ The definition of space - `''` - `\n` - `\t`
 TrimLeft<' \n\thello'> // 'hello'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/TrimLeft.ts)
 
 ### TrimRight
 
@@ -2145,4 +2217,5 @@ The definition of space - `''` - `\n` - `\t`
 TrimRight<'hello \n\t'> // 'hello'
 ```
 
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/TrimRight.ts)
 

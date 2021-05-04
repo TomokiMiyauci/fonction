@@ -116,4 +116,5 @@ dist
 .pnp.*
 
 temp
-docs/api/
+docs/api/*
+!docs/api/index.md
