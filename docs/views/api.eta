@@ -33,6 +33,13 @@ This function will remove next major release.
 
 ```
 
+<% it.remarks.forEach((remark) => { %>
+::: tip Remark
+<%= remark %>
+
+:::
+<% }) %>
+
 <% it.examples.forEach(([language, code], index) => {
 %>
 #### Example <%= it.examples.length === 1 ? '' : index + 1 %>

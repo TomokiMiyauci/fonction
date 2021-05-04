@@ -1,3 +1,23 @@
+# [v1.5.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.3...v1.5.0-beta.4) (2021-05-04)
+
+## ✨ New Features
+- [`7dadd6b`](https://github.com/TomokiMiyauci/fonction/commit/7dadd6b)   Add flattenDeep function
+
+# [v1.5.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.2...v1.5.0-beta.3) (2021-05-04)
+
+## ✨ New Features
+- [`01ac18c`](https://github.com/TomokiMiyauci/fonction/commit/01ac18c)   Add replace and replaceAll functions
+
+# [v1.5.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0-beta.1...v1.5.0-beta.2) (2021-05-03)
+
+## ✨ New Features
+- [`fbc8d3a`](https://github.com/TomokiMiyauci/fonction/commit/fbc8d3a)   Add trimRight and export Trim and TrimRight types
+
+# [v1.5.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.4.0...v1.5.0-beta.1) (2021-05-03)
+
+## ✨ New Features
+- [`3aa6af9`](https://github.com/TomokiMiyauci/fonction/commit/3aa6af9)   Add trimLeft function
+
 # [v1.4.0](https://github.com/TomokiMiyauci/fonction/compare/v1.3.0...v1.4.0) (2021-05-02)
 
 ## ✨ New Features
