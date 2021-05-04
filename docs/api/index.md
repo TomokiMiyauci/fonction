@@ -333,14 +333,9 @@ first(['one', 2, 3, 4]) // 'one'
 
 ### flattenDeep
 
-<span class="tag beta">beta</span>
 
 
 Recursively flattens array.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1401,14 +1396,9 @@ props('x', {}) // undefined
 
 ### replace
 
-<span class="tag beta">beta</span>
 
 
 Replaces matches for `from` in string with `to`.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1429,14 +1419,9 @@ replace('hogehoge', 'hoge', 'fuga') // 'fugahoge'
 
 ### replaceAll
 
-<span class="tag beta">beta</span>
 
 
 Replaces all matches for `from` in string with `to`.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1696,14 +1681,9 @@ trim('   hello   ') // 'hello'
 
 ### trimLeft
 
-<span class="tag beta">beta</span>
 
 
 Removes space from left ends of the string.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1727,14 +1707,9 @@ trimLeft(' \n\thello') // 'hello'
 
 ### trimRight
 
-<span class="tag beta">beta</span>
 
 
 Removes space from right ends of the string.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -1929,14 +1904,9 @@ First<string | number[]> // string | number
 
 ### FlattenDeep
 
-<span class="tag beta">beta</span>
 
 
 Infer deep flatted array.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -2041,14 +2011,9 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 
 ### Replace
 
-<span class="tag beta">beta</span>
 
 
 Infer the replacement value.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -2069,14 +2034,9 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 
 ### ReplaceAll
 
-<span class="tag beta">beta</span>
 
 
 Infer the all replacement value.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -2097,14 +2057,9 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 
 ### Space
 
-<span class="tag beta">beta</span>
 
 
 Alias for Space values.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -2118,14 +2073,9 @@ type Space = " " | "\n" | "\t";
 
 ### Trim
 
-<span class="tag beta">beta</span>
 
 
 Infer the trimmed string.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -2148,14 +2098,9 @@ Trim<'\t\n hello \t\n'> // 'hello'
 
 ### TrimLeft
 
-<span class="tag beta">beta</span>
 
 
 Infer the string with the left ends of trimmed.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
@@ -2178,14 +2123,9 @@ TrimLeft<' \n\thello'> // 'hello'
 
 ### TrimRight
 
-<span class="tag beta">beta</span>
 
 
 Infer the string with the right ends of trimmed.
-::: warning
-This API is provided as a preview for developers and may change based on feedback that we receive.
-Do not use this API in a production environment.
-:::
 
 
 
