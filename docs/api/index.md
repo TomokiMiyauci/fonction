@@ -331,6 +331,34 @@ first(['one', 2, 3, 4]) // 'one'
 ```
 
 
+### flattenDeep
+
+<span class="tag beta">beta</span>
+
+
+Recursively flattens array.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+flattenDeep: <T extends readonly unknown[]>(val: T) => FlattenDeep<T>
+```
+
+
+#### Example 
+
+```ts
+flattenDeep([]) // []
+flattenDeep([1, [2, [3, [4]], 5]]) // [1, 2, 3, 4, 5]
+```
+
+
 ### gt
 
 
@@ -1896,6 +1924,45 @@ First<'hello'> // 'h'
 First<[] | never[] | readonly [] | readonly never[]> // undefined
 First<['hello', 'world']> // 'hello'
 First<string | number[]> // string | number
+```
+
+
+### FlattenDeep
+
+<span class="tag beta">beta</span>
+
+
+Infer deep flatted array.
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+type FlattenDeep<T extends readonly unknown[]> = T extends readonly [
+    infer A,
+    ...infer Rest
+] ? A extends readonly unknown[] ? [
+    ...FlattenDeep<A>,
+    ...FlattenDeep<Rest>
+] : [
+    A,
+    ...FlattenDeep<Rest>
+] : [
+    ...T
+];
+```
+
+
+#### Example 
+
+```ts
+FlattenDeep<[]> // []
+FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 ```
 
 
