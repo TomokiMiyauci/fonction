@@ -35,6 +35,8 @@ add: {
 | `a` | The first input number |
 | `b` | The second input number |
 
+<code class="returns">=></code> The result of  `a + b`
+
 </details>
 
 
@@ -91,6 +93,8 @@ and: <T, U>(a: T, b: U) => T extends Falsy ? false : U extends Falsy ? false : b
 | --------- | ----------- |
 | `a` | The first input any value |
 | `b` | The second input any value |
+
+<code class="returns">=></code> The result of  `!!a && !!bb`
 
 </details>
 
@@ -164,6 +168,8 @@ append: <T, U>(val: T, list: U[]) => (T | U)[]
 | --------- | ----------- |
 | `val` | The value to add to the end of the new list |
 | `list` | The list of elements to add a new item to |
+
+<code class="returns">=></code> The result of  `[...list, val]`
 
 </details>
 
@@ -241,6 +247,8 @@ chunk: <T extends number, U extends readonly unknown[]>(size: T, array: U) => T 
 | --------- | ----------- |
 | `size` | The length of each chunk |
 | `array` | The array to process |
+
+<code class="returns">=></code> - Returns the new array of chunks
 
 </details>
 
@@ -392,6 +400,8 @@ dec: {
 | --------- | ----------- |
 | `val` | input  `number`  or  `bigint` |
 
+<code class="returns">=></code> decremented  `val`
+
 </details>
 
 
@@ -462,6 +472,8 @@ defaultTo: <T extends unknown>(a: T) => <U extends unknown>(b: U) => IsNill<U> e
 | Parameter | Description |
 | --------- | ----------- |
 | `a` | `a`  will be returned instead of  `default` |
+
+<code class="returns">=></code> Returns a function that stores the default  `a`  value. The function accept  `b`  argument. if  `b`  is  `null` ,  `undefined`  or  `NaN` , return  `a` ; otherwise return  `b`
 
 </details>
 
@@ -557,6 +569,8 @@ divide: {
 | `a` | The first input number |
 | `b` | The second input number |
 
+<code class="returns">=></code> The result of  `a / b`
+
 </details>
 
 ::: tip Remark
@@ -625,6 +639,8 @@ endsWith: <T extends string, U extends string | undefined = undefined>(val: T, t
 | --------- | ----------- |
 | `val` | search string |
 | `target` | target string |
+
+<code class="returns">=></code> The result of  `target.endsWith(val)`
 
 </details>
 
@@ -696,6 +712,13 @@ A function that always returns `false`. Any passed in parameters are ignored.
 F: AnyFn<unknown, false>
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> false
+
+</details>
 
 
 #### Example 
@@ -760,6 +783,8 @@ first: <T extends string | readonly unknown[]>(val: T) => First<T>
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | string or any array object |
+
+<code class="returns">=></code> The first element of the  `val`
 
 </details>
 
@@ -878,6 +903,8 @@ flattenDeep: <T extends readonly unknown[]>(val: T) => FlattenDeep<T>
 | --------- | ----------- |
 | `val` | The  `array`  to flatten |
 
+<code class="returns">=></code> The result of  `val.flat(Infinity)`
+
 </details>
 
 
@@ -994,6 +1021,8 @@ gt: <T extends Ord>(a: T, b: T) => boolean
 | `a` | The first input value |
 | `b` | The second input value |
 
+<code class="returns">=></code> The result of  `a > b`
+
 </details>
 
 
@@ -1106,6 +1135,8 @@ gte: <T extends Ord>(a: T, b: T) => boolean
 | --------- | ----------- |
 | `a` | The first input value |
 | `b` | The second input value |
+
+<code class="returns">=></code> The result of  `a >= b`
 
 </details>
 
@@ -1223,6 +1254,8 @@ has: <T extends string | number | (string | number)[], U extends Record<Property
 | --------- | ----------- |
 | `props` | The name of the property to check for |
 | `obj` | The check object |
+
+<code class="returns">=></code> The result of  `Object.prototype.hasOwnProperty`
 
 </details>
 
@@ -1355,6 +1388,8 @@ hasPath: <T extends unknown>(path: (string | number)[], obj: Record<PropertyKey,
 | `props` | The path to use |
 | `obj` | The object to check the path in |
 
+<code class="returns">=></code> Whether the path exists
+
 </details>
 
 
@@ -1450,6 +1485,8 @@ head: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | string or any array object |
+
+<code class="returns">=></code> The result of  `val.slice(0, -1)`
 
 </details>
 
@@ -1549,6 +1586,8 @@ identity: <T>(val: T) => T
 | --------- | ----------- |
 | `val` | The value to return |
 
+<code class="returns">=></code> The result of  `val`
+
 </details>
 
 
@@ -1615,6 +1654,8 @@ inc: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input  `number`  or  `bigint` |
+
+<code class="returns">=></code> incremented  `val`
 
 </details>
 
@@ -1685,6 +1726,8 @@ isArray: (val: unknown) => val is any[]
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of  `Array.isArray(val)`
 
 </details>
 
@@ -1787,6 +1830,8 @@ isBigint: (val: unknown) => val is bigint
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of  `typeof val === 'bigint'`
+
 </details>
 
 
@@ -1887,6 +1932,8 @@ isBoolean: (val: unknown) => val is boolean
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of  `typeof val === 'boolean'`
+
 </details>
 
 
@@ -1986,6 +2033,8 @@ isEmpty: (val: unknown) => val is Empty
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of empty or not
 
 </details>
 
@@ -2094,6 +2143,8 @@ isFunction: (val: unknown) => val is AnyFn<any, unknown>
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of  `typeof val === 'function'`
+
 </details>
 
 
@@ -2194,6 +2245,8 @@ isNaN: (val: unknown) => val is number
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of  `Number.isNaN(val)`
 
 </details>
 
@@ -2301,6 +2354,8 @@ isNill: (val: unknown) => val is null | undefined
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of type of  `val`  is undefined or null
+
 </details>
 
 
@@ -2400,6 +2455,8 @@ isNull: (val: unknown) => val is null
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of  `val === null`
 
 </details>
 
@@ -2501,6 +2558,8 @@ isNumber: (val: unknown) => val is number
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of  `typeof val === 'number'`
+
 </details>
 
 
@@ -2600,6 +2659,8 @@ isObject: <T extends unknown>(val: T) => val is T
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of object or not
 
 </details>
 
@@ -2704,6 +2765,8 @@ isPrimitive: (val: unknown) => val is Primitive
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of primitive or not
+
 </details>
 
 ::: tip Remark
@@ -2807,6 +2870,8 @@ isString: (val: unknown) => val is string
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of  `typeof val === 'string'`
+
 </details>
 
 
@@ -2907,6 +2972,8 @@ isSymbol: (val: unknown) => val is symbol
 | --------- | ----------- |
 | `val` | input any value |
 
+<code class="returns">=></code> The result of  `typeof val === 'symbol'`
+
 </details>
 
 
@@ -3005,6 +3072,8 @@ isUndefined: (val: unknown) => val is undefined
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'undefined'`
 
 </details>
 
@@ -3107,6 +3176,8 @@ K: <T extends unknown>(val: T) => () => T
 | --------- | ----------- |
 | `val` | The value to wrap in a function |
 
+<code class="returns">=></code> function wrapped  `val`
+
 </details>
 
 
@@ -3172,6 +3243,8 @@ keys: <T extends PropertyKey>(val: Record<T, unknown>) => string[]
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | `Object`  that contains the properties and methods |
+
+<code class="returns">=></code> The result of  `Object.keys(val)`
 
 </details>
 
@@ -3245,6 +3318,8 @@ last: <T extends string | readonly unknown[]>(val: T) => Last<T>
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | string or any array object |
+
+<code class="returns">=></code> The last element of the  `val`
 
 </details>
 
@@ -3359,6 +3434,8 @@ length: <T extends string | unknown[]>(val: T) => T["length"]
 | --------- | ----------- |
 | `val` | `string`  or any  `array` |
 
+<code class="returns">=></code> The result of  `val.length`
+
 </details>
 
 
@@ -3428,6 +3505,8 @@ lowerCase: <T extends string>(val: T) => Lowercase<T>
 | --------- | ----------- |
 | `val` | input string value |
 
+<code class="returns">=></code> lowercase string
+
 </details>
 
 
@@ -3490,6 +3569,8 @@ lt: <T extends Ord>(a: T, b: T) => boolean
 | --------- | ----------- |
 | `a` | The first input value |
 | `b` | The second input value |
+
+<code class="returns">=></code> The result of  `a < b`
 
 </details>
 
@@ -3603,6 +3684,8 @@ lte: <T extends Ord>(a: T, b: T) => boolean
 | --------- | ----------- |
 | `a` | The first input value |
 | `b` | The second input value |
+
+<code class="returns">=></code> The result of  `a <= b`
 
 </details>
 
@@ -3725,6 +3808,8 @@ multiply: {
 | `a` | The first input number |
 | `b` | The second input number |
 
+<code class="returns">=></code> The result of  `a * b`
+
 </details>
 
 
@@ -3780,6 +3865,8 @@ not: <T>(val: T) => T extends Falsy ? true : boolean
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of  `!val`
 
 </details>
 
@@ -3878,6 +3965,8 @@ or: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean : 
 | `a` | The first input any value |
 | `b` | The second input any value |
 
+<code class="returns">=></code> The result of  `!!a || !!bb`
+
 </details>
 
 
@@ -3952,6 +4041,8 @@ prepend: <T, U>(val: T, list: U[]) => (T | U)[]
 | --------- | ----------- |
 | `val` | The value to add to the front of the new list |
 | `list` | The list of elements to add a new item to |
+
+<code class="returns">=></code> The result of  `[val, ...list]`
 
 </details>
 
@@ -4032,6 +4123,8 @@ product: {
 | --------- | ----------- |
 | `val` | list An array of numbers |
 
+<code class="returns">=></code> The product of all the numbers in the list
+
 </details>
 
 
@@ -4108,6 +4201,8 @@ props: <T extends string | number, U extends Record<PropertyKey, unknown>>(val: 
 | --------- | ----------- |
 | `val` | input property key |
 | `obj` | The object to query |
+
+<code class="returns">=></code> The result of safety  `obj[val]`  or  `obj[val[0]][val[1]][val[...x]]`
 
 </details>
 
@@ -4190,6 +4285,8 @@ replace: <From extends string, To extends string, T extends string>(from: From, 
 | `to` | Holds the replacement string |
 | `val` | Original string |
 
+<code class="returns">=></code> The result of  `val.replace(from, to)`
+
 </details>
 
 
@@ -4271,6 +4368,8 @@ replaceAll: <From extends string, To extends string, T extends string>(from: Fro
 | `from` | Holds the pattern string that need to replace |
 | `to` | Holds the replacement string |
 | `val` | Original string |
+
+<code class="returns">=></code> The result of  `val.replaceAll(from, to)`
 
 </details>
 
@@ -4358,6 +4457,8 @@ reverse: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | list or string characters |
+
+<code class="returns">=></code> New list or string characters in reverse order
 
 </details>
 
@@ -4449,6 +4550,8 @@ startsWith: <T extends string, U extends string | undefined = undefined>(val: T,
 | `val` | search string |
 | `target` | target string |
 
+<code class="returns">=></code> The result of  `target.startsWith(val)`
+
 </details>
 
 
@@ -4507,6 +4610,8 @@ subtract: {
 | --------- | ----------- |
 | `a` | The first input number |
 | `b` | The second input number |
+
+<code class="returns">=></code> The result of  `a - b`
 
 </details>
 
@@ -4581,6 +4686,8 @@ sum: {
 | --------- | ----------- |
 | `val` | list An array of numbers |
 
+<code class="returns">=></code> The sum of all the numbers in the list
+
 </details>
 
 
@@ -4649,6 +4756,13 @@ A function that always returns `true`. Any passed in parameters are ignored.
 T: AnyFn<unknown, true>
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> true
+
+</details>
 
 
 #### Example 
@@ -4716,6 +4830,8 @@ tail: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | string or any array object |
+
+<code class="returns">=></code> The result of  `val.slice(1, Infinity)`
 
 </details>
 
@@ -4815,6 +4931,8 @@ trim: <T extends string>(val: T) => TrimLeft<TrimRight<T>>
 | --------- | ----------- |
 | `val` | `string`  to trim |
 
+<code class="returns">=></code> The result of  `val.trim()`
+
 </details>
 
 
@@ -4893,6 +5011,8 @@ trimLeft: <T extends string>(val: T) => TrimLeft<T>
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input string |
+
+<code class="returns">=></code> The result of  `val.trimLeft()`
 
 </details>
 
@@ -4977,6 +5097,8 @@ trimRight: <T extends string>(val: T) => TrimRight<T>
 | --------- | ----------- |
 | `val` | input string |
 
+<code class="returns">=></code> The result of  `val.trimRight()`
+
 </details>
 
 ::: tip Remark
@@ -5060,6 +5182,8 @@ upperCase: <T extends string>(val: T) => Uppercase<T>
 | --------- | ----------- |
 | `val` | input string value |
 
+<code class="returns">=></code> uppercase string
+
 </details>
 
 
@@ -5120,6 +5244,8 @@ values: <T extends unknown>(val: Record<PropertyKey, T> | ArrayLike<T>) => T[]
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | `Object`  that contains the properties and methods |
+
+<code class="returns">=></code> The result of  `Object.values(val)`
 
 </details>
 
@@ -5212,6 +5338,8 @@ xor: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean :
 | --------- | ----------- |
 | `a` | The first input any value |
 | `b` | The second input any value |
+
+<code class="returns">=></code> The result of  `!a !== !b`
 
 </details>
 
@@ -5419,6 +5547,13 @@ type FlattenDeep<T extends readonly unknown[]> = T extends readonly [
 ];
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> deep flatted array
+
+</details>
 
 
 #### Example 
@@ -5647,6 +5782,13 @@ Infer the trimmed string.
 type Trim<T extends string> = TrimLeft<TrimRight<T>>;
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> Trimmed string
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -5682,6 +5824,13 @@ Infer the string with the left ends of trimmed.
 type TrimLeft<T extends string> = T extends `${Space}${infer R}` ? TrimLeft<R> : T;
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> String left ends of trimmed
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -5717,6 +5866,13 @@ Infer the string with the right ends of trimmed.
 type TrimRight<T extends string> = T extends `${infer R}${Space}` ? TrimRight<R> : T;
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> String right ends of trimmed
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`

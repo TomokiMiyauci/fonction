@@ -150,6 +150,26 @@ const getParams = ({ blocks }: DocParamCollection) =>
     return [`\`${parameterName}\``, content] as [string, string]
   })
 
+const getReturns = ({ content }: DocBlock) =>
+  content.nodes
+    .map((node) => {
+      if (isDocParagraph(node)) {
+        return node.nodes
+          .map((node) => {
+            if (node instanceof DocCodeSpan) {
+              return `\`${node.code}\``
+            } else if (node instanceof DocPlainText) {
+              return node.text
+            }
+            return ''
+          })
+          .filter((_) => !!_)
+          .join(' ')
+      }
+      return ''
+    })
+    .filter((_) => !!_)
+
 interface MdVariables {
   name: string
   description: string
@@ -162,6 +182,7 @@ interface MdVariables {
   test: string
   version: string | undefined
   params: [string, string][]
+  returns: string[]
 }
 
 const generate = (path: string, content: string): void =>
@@ -192,10 +213,12 @@ const mapMember = ({
       modifierTagSet,
       deprecatedBlock,
       remarksBlock,
+      returnsBlock,
       params: _params
     } = member.tsdocComment
 
     const params = getParams(_params)
+    const returns = returnsBlock ? getReturns(returnsBlock) : []
     const remarks = getRemarks(remarksBlock)
     const isDeprecated = !!deprecatedBlock
     const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
@@ -216,7 +239,8 @@ const mapMember = ({
       isLatest,
       test,
       version: moduleVersions[name],
-      params
+      params,
+      returns
     })
 
     return {

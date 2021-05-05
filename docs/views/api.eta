@@ -47,14 +47,23 @@ This function will remove next major release.
 
 ```
 
-<% if(!!it.params.length) { %><details class="parameters-detail">
+<% if(!!it.params.length || !!it.returns.length) { %><details class="parameters-detail">
 <summary>Parameters</summary>
 
+<% if(!!it.params.length) { %>
 | Parameter | Description |
 | --------- | ----------- |
 <% it.params.forEach(([parameterName, description]) => { %>
 | <%= parameterName %> | <%= description %> |
 <% }) %>
+<% } %>
+
+<% if(!!it.returns.length) { %>
+<code class="returns">=></code><% it.returns.forEach((_return) => { %>
+<%= _return %>
+<% }) %>
+<% } %>
+
 
 </details>
 <% } %>
