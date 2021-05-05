@@ -54,7 +54,7 @@
   margin-bottom: 0;
 }
 
-.description {
+.desc {
   --tw-gradient-to: #dbe4ff;
   --tw-gradient-from: #ffffff;
   --tw-gradient-stops: var(--tw-gradient-from),

@@ -24,7 +24,7 @@
 
 <%= it.description %>
 
-{.description}
+{.desc}
 
 <% if (it.tagName === '@beta') { %>
 ::: warning
