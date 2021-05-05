@@ -18,6 +18,7 @@ import { isUndefined, replace } from 'fonction'
 import { outputFileSync, pathExistsSync, readFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
+import { getModuleStarts } from './gen-relations'
 const apiModel = new ApiModel()
 const copyright =
   '// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.\n'
@@ -123,6 +124,7 @@ interface MdVariables {
   remarks: string[]
   isLatest: boolean
   test: string
+  version: string | undefined
 }
 
 const render = async (mdArgs: MdVariables): Promise<string> => {
@@ -142,10 +144,12 @@ const generate = (path: string, content: string): void =>
 type ExportKind = 'Fn' | 'Type'
 const mapMember = ({
   isLatest,
-  type
+  type,
+  moduleVersions
 }: {
   isLatest: boolean
   type: ExportKind
+  moduleVersions: Record<string, string | undefined>
 }) => async (
   member: ApiItem
 ): Promise<{
@@ -182,7 +186,8 @@ const mapMember = ({
       deprecated: isDeprecated,
       remarks,
       isLatest,
-      test
+      test,
+      version: moduleVersions[name]
     })
 
     return {
@@ -195,12 +200,14 @@ const run = async ({
   version,
   apiJsonPath,
   editLink = true,
-  isLatest
+  isLatest,
+  moduleVersions
 }: {
   version: string
   apiJsonPath: string
   editLink?: boolean
   isLatest: boolean
+  moduleVersions: Record<string, string | undefined>
 }): Promise<void> => {
   const apiPackage = apiModel.loadPackage(apiJsonPath)
 
@@ -208,13 +215,13 @@ const run = async ({
     const functionContents = await Promise.all(
       root.members
         .filter(({ kind }) => kind === 'Variable')
-        .map(mapMember({ isLatest, type: 'Fn' }))
+        .map(mapMember({ isLatest, type: 'Fn', moduleVersions }))
     )
 
     const typesContents = await Promise.all(
       root.members
         .filter(({ kind }) => kind === 'TypeAlias')
-        .map(mapMember({ isLatest, type: 'Type' }))
+        .map(mapMember({ isLatest, type: 'Type', moduleVersions }))
     )
 
     const mdFunctions = functionContents.filter((_) => !!_).map(({ md }) => md)
@@ -244,12 +251,18 @@ ${mergedTypesMd}
   })
 }
 
-if (require.main === module) {
+const main = async () => {
+  const moduleStarts = await getModuleStarts()
   run({
     version: '',
     apiJsonPath: resolve(__dirname, '..', 'temp', 'fonction.api.json'),
-    isLatest: true
+    isLatest: true,
+    moduleVersions: moduleStarts
   })
+}
+
+if (require.main === module) {
+  main()
 }
 
 export { run }

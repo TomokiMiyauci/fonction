@@ -1,5 +1,17 @@
 ### <%= it.name %>
 
+<% if (it.version) { %>
+
+<% if ( it.isLatest ) { %>
+<small>Added from [<%= it.version %>](./<%= it.version %>/)</small>
+{.my-1}
+<% } %>
+<% else { %>
+<small>Added from [<%= it.version %>](../<%= it.version %>/)</small>
+{.my-1}
+<% } %>
+<% } %>
+
 <% it.tagName %>
 
 <% if (it.tagName === '@beta') { %>

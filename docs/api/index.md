@@ -4,6 +4,10 @@
 
 ### add
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Adds first argument and second argument.
@@ -49,6 +53,10 @@ plus2(-3) // -1
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/add.ts)
 
 ### and
+
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
 
 
 
@@ -106,6 +114,10 @@ Deno.test('and', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/and.ts)
 
 ### append
+
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
 
 
 
@@ -166,6 +178,10 @@ Deno.test('append', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/append.ts)
 
 ### chunk
+
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
 
 
 
@@ -300,6 +316,10 @@ Deno.test('chunk', () => {
 
 ### dec
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Decrements its argument.
@@ -358,6 +378,10 @@ Deno.test('dec', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/dec.ts)
 
 ### defaultTo
+
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
 
 
 
@@ -429,6 +453,10 @@ Deno.test('defaultTo', () => {
 
 ### divide
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Divide its second argument from its first argument.
@@ -489,6 +517,10 @@ half(20) // 10
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/divide.ts)
 
 ### endsWith
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -552,6 +584,10 @@ Deno.test('endsWith', () => {
 
 ### F
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 A function that always returns `false`. Any passed in parameters are ignored.
@@ -602,6 +638,10 @@ Deno.test('F', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/F.ts)
 
 ### first
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -705,6 +745,10 @@ Deno.test('First', () => {
 
 ### flattenDeep
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Recursively flattens array.
@@ -805,6 +849,10 @@ Deno.test('types', () => {
 
 ### gt
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns `true` if the first argument is greater than the second; otherwise `false`
@@ -901,6 +949,10 @@ Deno.test('gt', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gt.ts)
 
 ### gte
+
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
 
 
 
@@ -1002,6 +1054,10 @@ Deno.test('gte', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gte.ts)
 
 ### has
+
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
 
 
 
@@ -1114,6 +1170,10 @@ Deno.test('has', () => {
 
 ### hasPath
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 <span class="tag deprecated">deprecate</span>
 
@@ -1195,6 +1255,10 @@ Deno.test('hasPath', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/hasPath.ts)
 
 ### head
+
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
 
 
 
@@ -1282,6 +1346,10 @@ Deno.test('head', () => {
 
 ### identity
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Return the parameter supplied to it.
@@ -1330,6 +1398,10 @@ Deno.test('identity', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/identity.ts)
 
 ### inc
+
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
 
 
 
@@ -1388,6 +1460,10 @@ Deno.test('inc', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/inc.ts)
 
 ### isArray
+
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
 
 
 
@@ -1475,6 +1551,10 @@ Deno.test('isArray', () => {
 
 ### isBigint
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `bigint` or not.
@@ -1560,6 +1640,10 @@ Deno.test('isBigint', () => {
 
 ### isBoolean
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `boolean` or not.
@@ -1644,6 +1728,10 @@ Deno.test('isBoolean', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isBoolean.ts)
 
 ### isEmpty
+
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
 
 
 
@@ -1737,6 +1825,10 @@ Deno.test('isEmpty', () => {
 
 ### isFunction
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `function` or not.
@@ -1822,6 +1914,10 @@ Deno.test('isFunction', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isFunction.ts)
 
 ### isNaN
+
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
 
 
 
@@ -1914,6 +2010,10 @@ Deno.test('isNaN', () => {
 
 ### isNill
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `undefined` or `null`.
@@ -1998,6 +2098,10 @@ Deno.test('isNill', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNill.ts)
 
 ### isNull
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -2084,6 +2188,10 @@ Deno.test('isNull', () => {
 
 ### isNumber
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `number` or not.
@@ -2168,6 +2276,10 @@ Deno.test('isNumber', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNumber.ts)
 
 ### isObject
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -2257,6 +2369,10 @@ Deno.test('isObject', () => {
 
 ### isPrimitive
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is `primitive` or not.
@@ -2345,6 +2461,10 @@ Deno.test('isPrimitive', () => {
 
 ### isString
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `string` or not.
@@ -2430,6 +2550,10 @@ Deno.test('isString', () => {
 
 ### isSymbol
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `symbol` or not.
@@ -2513,6 +2637,10 @@ Deno.test('isSymbol', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isSymbol.ts)
 
 ### isUndefined
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -2600,6 +2728,10 @@ Deno.test('isUndefined', () => {
 
 ### K
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 K combinator. Returns a function that always returns the given value.
@@ -2650,6 +2782,10 @@ Deno.test('K', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/K.ts)
 
 ### keys
+
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
 
 
 
@@ -2708,6 +2844,10 @@ Deno.test('keys', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/keys.ts)
 
 ### last
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -2807,6 +2947,10 @@ Deno.test('Last', () => {
 
 ### length
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns the number of elements in the array or string length.
@@ -2861,6 +3005,10 @@ Deno.test('length', () => {
 
 ### lowerCase
 
+<small>Added from [1.0.1](./1.0.1/)</small>
+{.my-1}
+
+
 
 
 Return lowercase string
@@ -2907,6 +3055,10 @@ Deno.test('lowerCase', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lowerCase.ts)
 
 ### lt
+
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
 
 
 
@@ -3004,6 +3156,10 @@ Deno.test('lt', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lt.ts)
 
 ### lte
+
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
 
 
 
@@ -3105,6 +3261,10 @@ Deno.test('lte', () => {
 
 ### multiply
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Multiplies first argument and second argument.
@@ -3150,6 +3310,10 @@ double(4) // 8
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/multiply.ts)
 
 ### not
+
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
 
 
 
@@ -3232,6 +3396,10 @@ Deno.test('not', () => {
 
 ### or
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns true if one or both of its arguments are true; otherwise false.
@@ -3291,6 +3459,10 @@ Deno.test('or', () => {
 
 ### prepend
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns a new list with the given value at the front, followed by the contents of the list.
@@ -3349,6 +3521,10 @@ Deno.test('prepend', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/prepend.ts)
 
 ### product
+
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
 
 
 
@@ -3416,6 +3592,10 @@ Deno.test('product', () => {
 
 ### props
 
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
+
 
 
 Returns a function that when supplied an object returns the indicated property of that object, if it exists.
@@ -3479,6 +3659,10 @@ Deno.test('props', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/props.ts)
 
 ### replace
+
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
 
 
 
@@ -3545,6 +3729,10 @@ Deno.test('types', () => {
 
 ### replaceAll
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Replaces all matches for `from` in string with `to`.
@@ -3609,6 +3797,10 @@ Deno.test('types', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/replaceAll.ts)
 
 ### reverse
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -3691,6 +3883,10 @@ Deno.test('reverse', () => {
 
 ### startsWith
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Checks if a string starts with the provided substring.
@@ -3725,6 +3921,10 @@ startWithSlash('/path/to') // true
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/startsWith.ts)
 
 ### subtract
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -3786,6 +3986,10 @@ minus5(20) // 15
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/subtract.ts)
 
 ### sum
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
 
 
 
@@ -3852,6 +4056,10 @@ Deno.test('sum', () => {
 
 ### T
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 A function that always returns `true`. Any passed in parameters are ignored.
@@ -3902,6 +4110,10 @@ Deno.test('T', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/T.ts)
 
 ### tail
+
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
 
 
 
@@ -3989,6 +4201,10 @@ Deno.test('tail', () => {
 
 ### trim
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Removes whitespace from both ends of the string.
@@ -4052,6 +4268,10 @@ Deno.test('types', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trim.ts)
 
 ### trimLeft
+
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
 
 
 
@@ -4121,6 +4341,10 @@ Deno.test('types', () => {
 
 ### trimRight
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Removes space from right ends of the string.
@@ -4189,6 +4413,10 @@ Deno.test('types', () => {
 
 ### upperCase
 
+<small>Added from [1.0.1](./1.0.1/)</small>
+{.my-1}
+
+
 
 
 Return uppercase string
@@ -4234,6 +4462,10 @@ Deno.test('upperCase', () => {
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/upperCase.ts)
 
 ### values
+
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
 
 
 
@@ -4311,6 +4543,10 @@ Deno.test('values', () => {
 
 ### xor
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
@@ -4373,6 +4609,10 @@ Deno.test('xor', () => {
 
 ### AnyFn
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Type of any function
@@ -4391,6 +4631,10 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/AnyFn.ts)
 
 ### Empty
+
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
 
 
 
@@ -4412,6 +4656,10 @@ type Empty = "" | [
 
 ### Falsy
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Alias for Falsy values
@@ -4430,6 +4678,10 @@ type Falsy = false | "" | 0 | null | undefined;
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Falsy.ts)
 
 ### First
+
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
 
 
 
@@ -4470,6 +4722,10 @@ First<string | number[]> // string | number
 
 ### FlattenDeep
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer deep flatted array.
@@ -4506,6 +4762,10 @@ FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/FlattenDeep.ts)
 
 ### Last
+
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
 
 
 
@@ -4551,6 +4811,10 @@ Last<string | number[]> // string | number
 
 ### Ord
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Abbreviation for Ordinal
@@ -4570,6 +4834,10 @@ type Ord = string | number | bigint | boolean | Date;
 
 ### Primitive
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Alias for Primitive values types
@@ -4588,6 +4856,10 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Primitive.ts)
 
 ### Replace
+
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
 
 
 
@@ -4615,6 +4887,10 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 
 ### ReplaceAll
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer the all replacement value.
@@ -4641,6 +4917,10 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 
 ### Space
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Alias for Space values.
@@ -4659,6 +4939,10 @@ type Space = " " | "\n" | "\t";
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Space.ts)
 
 ### Trim
+
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
 
 
 
@@ -4688,6 +4972,10 @@ Trim<'\t\n hello \t\n'> // 'hello'
 
 ### TrimLeft
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer the string with the left ends of trimmed.
@@ -4715,6 +5003,10 @@ TrimLeft<' \n\thello'> // 'hello'
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/TrimLeft.ts)
 
 ### TrimRight
+
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
 
 
 
