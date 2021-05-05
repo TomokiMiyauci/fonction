@@ -1,5 +1,8 @@
 # API
 
+Version: `Latest`
+{.my-1}
+
 ## Functions
 
 ### add

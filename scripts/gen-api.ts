@@ -292,6 +292,9 @@ editLink: false
       resolve(__dirname, '..', 'docs', 'api', version, 'index.md'),
       `${editLink ? '' : frontmatter}# API
 
+Version: \`${isLatest ? 'Latest' : version}\`
+{.my-1}
+
 ## Functions
 
 ${merged}
