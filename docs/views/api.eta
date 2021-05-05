@@ -47,6 +47,18 @@ This function will remove next major release.
 
 ```
 
+<% if(!!it.params.length) { %><details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+<% it.params.forEach(([parameterName, description]) => { %>
+| <%= parameterName %> | <%= description %> |
+<% }) %>
+
+</details>
+<% } %>
+
 <% it.remarks.forEach((remark) => { %>
 ::: tip Remark
 <%= remark %>

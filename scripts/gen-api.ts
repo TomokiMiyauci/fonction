@@ -10,6 +10,7 @@ import {
   DocFencedCode,
   DocNode,
   DocParagraph,
+  DocParamCollection,
   DocPlainText,
   DocSection
 } from '@microsoft/tsdoc'
@@ -114,6 +115,41 @@ const getDocPlainText = (docNode: DocNode): string => {
   return ''
 }
 
+const render = async (mdArgs: MdVariables): Promise<string> => {
+  configure({
+    views: resolve(__dirname, '..', 'docs', 'views'),
+    autoEscape: false
+  })
+
+  const md = await renderFile(join('.', 'api'), mdArgs)
+
+  return md || ''
+}
+
+const getParams = ({ blocks }: DocParamCollection) =>
+  blocks.map(({ content: _content, parameterName }) => {
+    const content = _content.nodes
+      .map((node) => {
+        if (isDocParagraph(node)) {
+          return node.nodes
+            .map((node) => {
+              if (node instanceof DocCodeSpan) {
+                return `\`${node.code}\``
+              } else if (node instanceof DocPlainText) {
+                return node.text
+              }
+              return ''
+            })
+            .filter((_) => !!_)
+            .join(' ')
+        }
+        return []
+      })
+      .join(' ')
+
+    return [`\`${parameterName}\``, content] as [string, string]
+  })
+
 interface MdVariables {
   name: string
   description: string
@@ -125,17 +161,7 @@ interface MdVariables {
   isLatest: boolean
   test: string
   version: string | undefined
-}
-
-const render = async (mdArgs: MdVariables): Promise<string> => {
-  configure({
-    views: resolve(__dirname, '..', 'docs', 'views'),
-    autoEscape: false
-  })
-
-  const md = await renderFile(join('.', 'api'), mdArgs)
-
-  return md || ''
+  params: [string, string][]
 }
 
 const generate = (path: string, content: string): void =>
@@ -165,9 +191,11 @@ const mapMember = ({
       customBlocks,
       modifierTagSet,
       deprecatedBlock,
-      remarksBlock
+      remarksBlock,
+      params: _params
     } = member.tsdocComment
 
+    const params = getParams(_params)
     const remarks = getRemarks(remarksBlock)
     const isDeprecated = !!deprecatedBlock
     const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
@@ -187,7 +215,8 @@ const mapMember = ({
       remarks,
       isLatest,
       test,
-      version: moduleVersions[name]
+      version: moduleVersions[name],
+      params
     })
 
     return {

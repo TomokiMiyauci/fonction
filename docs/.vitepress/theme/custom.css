@@ -76,3 +76,11 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+.parameters-detail {
+  margin: 1rem 0 1rem 0;
+}
+
+th:nth-child(2) {
+  width: 100%;
+}
