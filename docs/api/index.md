@@ -69,6 +69,8 @@ plus2(-3) // -1
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/add.ts)
 
+---
+
 ### and
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -143,6 +145,8 @@ Deno.test('and', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/and.ts)
+
+---
 
 ### append
 
@@ -221,6 +225,8 @@ Deno.test('append', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/append.ts)
+
+---
 
 ### chunk
 
@@ -373,6 +379,8 @@ Deno.test('chunk', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/chunk.ts)
 
+---
+
 ### dec
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -448,6 +456,8 @@ Deno.test('dec', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/dec.ts)
+
+---
 
 ### defaultTo
 
@@ -536,6 +546,8 @@ Deno.test('defaultTo', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/defaultTo.ts)
 
+---
+
 ### divide
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -614,6 +626,8 @@ half(20) // 10
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/divide.ts)
+
+---
 
 ### endsWith
 
@@ -695,6 +709,8 @@ Deno.test('endsWith', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/endsWith.ts)
 
+---
+
 ### F
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -759,6 +775,8 @@ Deno.test('F', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/F.ts)
+
+---
 
 ### first
 
@@ -879,6 +897,8 @@ Deno.test('First', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/first.ts)
 
+---
+
 ### flattenDeep
 
 <small>Added from [1.5.0](./1.5.0/)</small>
@@ -996,6 +1016,8 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/flattenDeep.ts)
 
+---
+
 ### gt
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -1110,6 +1132,8 @@ Deno.test('gt', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gt.ts)
+
+---
 
 ### gte
 
@@ -1229,6 +1253,8 @@ Deno.test('gte', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gte.ts)
+
+---
 
 ### has
 
@@ -1359,6 +1385,8 @@ Deno.test('has', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/has.ts)
 
+---
+
 ### hasPath
 
 <small>Added from [1.2.0](./1.2.0/)</small>
@@ -1458,6 +1486,8 @@ Deno.test('hasPath', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/hasPath.ts)
+
+---
 
 ### head
 
@@ -1562,6 +1592,8 @@ Deno.test('head', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/head.ts)
 
+---
+
 ### identity
 
 <small>Added from [1.2.0](./1.2.0/)</small>
@@ -1627,6 +1659,8 @@ Deno.test('identity', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/identity.ts)
+
+---
 
 ### inc
 
@@ -1702,6 +1736,8 @@ Deno.test('inc', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/inc.ts)
+
+---
 
 ### isArray
 
@@ -1806,6 +1842,8 @@ Deno.test('isArray', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isArray.ts)
 
+---
+
 ### isBigint
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -1908,6 +1946,8 @@ Deno.test('isBigint', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isBigint.ts)
 
+---
+
 ### isBoolean
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -2009,6 +2049,8 @@ Deno.test('isBoolean', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isBoolean.ts)
+
+---
 
 ### isEmpty
 
@@ -2119,6 +2161,8 @@ Deno.test('isEmpty', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isEmpty.ts)
 
+---
+
 ### isFunction
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -2221,6 +2265,8 @@ Deno.test('isFunction', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isFunction.ts)
+
+---
 
 ### isNaN
 
@@ -2330,6 +2376,8 @@ Deno.test('isNaN', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNaN.ts)
 
+---
+
 ### isNill
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -2431,6 +2479,8 @@ Deno.test('isNill', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNill.ts)
+
+---
 
 ### isNull
 
@@ -2534,6 +2584,8 @@ Deno.test('isNull', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNull.ts)
 
+---
+
 ### isNumber
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -2635,6 +2687,8 @@ Deno.test('isNumber', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNumber.ts)
+
+---
 
 ### isObject
 
@@ -2741,6 +2795,8 @@ Deno.test('isObject', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isObject.ts)
 
+---
+
 ### isPrimitive
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -2846,6 +2902,8 @@ Deno.test('isPrimitive', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isPrimitive.ts)
 
+---
+
 ### isString
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -2948,6 +3006,8 @@ Deno.test('isString', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isString.ts)
 
+---
+
 ### isSymbol
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -3048,6 +3108,8 @@ Deno.test('isSymbol', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isSymbol.ts)
+
+---
 
 ### isUndefined
 
@@ -3152,6 +3214,8 @@ Deno.test('isUndefined', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isUndefined.ts)
 
+---
+
 ### K
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -3219,6 +3283,8 @@ Deno.test('K', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/K.ts)
+
+---
 
 ### keys
 
@@ -3294,6 +3360,8 @@ Deno.test('keys', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/keys.ts)
+
+---
 
 ### last
 
@@ -3410,6 +3478,8 @@ Deno.test('Last', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/last.ts)
 
+---
+
 ### length
 
 <small>Added from [1.2.0](./1.2.0/)</small>
@@ -3481,6 +3551,8 @@ Deno.test('length', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/length.ts)
 
+---
+
 ### lowerCase
 
 <small>Added from [1.0.1](./1.0.1/)</small>
@@ -3544,6 +3616,8 @@ Deno.test('lowerCase', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lowerCase.ts)
+
+---
 
 ### lt
 
@@ -3659,6 +3733,8 @@ Deno.test('lt', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lt.ts)
+
+---
 
 ### lte
 
@@ -3778,6 +3854,8 @@ Deno.test('lte', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lte.ts)
 
+---
+
 ### multiply
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -3841,6 +3919,8 @@ double(4) // 8
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/multiply.ts)
+
+---
 
 ### not
 
@@ -3940,6 +4020,8 @@ Deno.test('not', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/not.ts)
 
+---
+
 ### or
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -4017,6 +4099,8 @@ Deno.test('or', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/or.ts)
 
+---
+
 ### prepend
 
 <small>Added from [1.2.0](./1.2.0/)</small>
@@ -4093,6 +4177,8 @@ Deno.test('prepend', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/prepend.ts)
+
+---
 
 ### product
 
@@ -4177,6 +4263,8 @@ Deno.test('product', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/product.ts)
 
+---
+
 ### props
 
 <small>Added from [1.4.0](./1.4.0/)</small>
@@ -4258,6 +4346,8 @@ Deno.test('props', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/props.ts)
+
+---
 
 ### replace
 
@@ -4343,6 +4433,8 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/replace.ts)
 
+---
+
 ### replaceAll
 
 <small>Added from [1.5.0](./1.5.0/)</small>
@@ -4426,6 +4518,8 @@ Deno.test('types', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/replaceAll.ts)
+
+---
 
 ### reverse
 
@@ -4525,6 +4619,8 @@ Deno.test('reverse', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/reverse.ts)
 
+---
+
 ### startsWith
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -4577,6 +4673,8 @@ startWithSlash('/path/to') // true
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/startsWith.ts)
+
+---
 
 ### subtract
 
@@ -4656,6 +4754,8 @@ minus5(20) // 15
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/subtract.ts)
+
+---
 
 ### sum
 
@@ -4739,6 +4839,8 @@ Deno.test('sum', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/sum.ts)
 
+---
+
 ### T
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -4803,6 +4905,8 @@ Deno.test('T', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/T.ts)
+
+---
 
 ### tail
 
@@ -4907,6 +5011,8 @@ Deno.test('tail', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/tail.ts)
 
+---
+
 ### trim
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -4987,6 +5093,8 @@ Deno.test('types', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trim.ts)
+
+---
 
 ### trimLeft
 
@@ -5073,6 +5181,8 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trimLeft.ts)
 
+---
+
 ### trimRight
 
 <small>Added from [1.5.0](./1.5.0/)</small>
@@ -5158,6 +5268,8 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trimRight.ts)
 
+---
+
 ### upperCase
 
 <small>Added from [1.0.1](./1.0.1/)</small>
@@ -5220,6 +5332,8 @@ Deno.test('upperCase', () => {
 </details>
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/upperCase.ts)
+
+---
 
 ### values
 
@@ -5314,6 +5428,8 @@ Deno.test('values', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/values.ts)
 
+---
+
 ### xor
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -5391,6 +5507,8 @@ Deno.test('xor', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/xor.ts)
 
+---
+
 
 ## Types
 
@@ -5420,6 +5538,8 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/AnyFn.ts)
 
+---
+
 ### Empty
 
 <small>Added from [1.3.0](./1.3.0/)</small>
@@ -5447,6 +5567,8 @@ type Empty = "" | [
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Empty.ts)
 
+---
+
 ### Falsy
 
 <small>Added from [1.3.0](./1.3.0/)</small>
@@ -5472,6 +5594,8 @@ type Falsy = false | "" | 0 | null | undefined;
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Falsy.ts)
+
+---
 
 ### First
 
@@ -5518,6 +5642,8 @@ First<string | number[]> // string | number
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/First.ts)
+
+---
 
 ### FlattenDeep
 
@@ -5570,6 +5696,8 @@ FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/FlattenDeep.ts)
 
+---
+
 ### Last
 
 <small>Added from [1.4.0](./1.4.0/)</small>
@@ -5621,6 +5749,8 @@ Last<string | number[]> // string | number
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Last.ts)
 
+---
+
 ### Ord
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -5647,6 +5777,8 @@ type Ord = string | number | bigint | boolean | Date;
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Ord.ts)
 
+---
+
 ### Primitive
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -5672,6 +5804,8 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Primitive.ts)
+
+---
 
 ### Replace
 
@@ -5706,6 +5840,8 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Replace.ts)
 
+---
+
 ### ReplaceAll
 
 <small>Added from [1.5.0](./1.5.0/)</small>
@@ -5739,6 +5875,8 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/ReplaceAll.ts)
 
+---
+
 ### Space
 
 <small>Added from [1.5.0](./1.5.0/)</small>
@@ -5764,6 +5902,8 @@ type Space = " " | "\n" | "\t";
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Space.ts)
+
+---
 
 ### Trim
 
@@ -5807,6 +5947,8 @@ Trim<'\t\n hello \t\n'> // 'hello'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Trim.ts)
 
+---
+
 ### TrimLeft
 
 <small>Added from [1.5.0](./1.5.0/)</small>
@@ -5849,6 +5991,8 @@ TrimLeft<' \n\thello'> // 'hello'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/TrimLeft.ts)
 
+---
+
 ### TrimRight
 
 <small>Added from [1.5.0](./1.5.0/)</small>
@@ -5890,4 +6034,6 @@ TrimRight<'hello \n\t'> // 'hello'
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/TrimRight.ts)
+
+---
 

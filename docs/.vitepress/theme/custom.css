@@ -92,3 +92,12 @@ th:nth-child(2) {
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   color: rgb(11, 105, 228);
 }
+
+hr {
+  border-top: none;
+  border-bottom: 1px solid var(--c-divider);
+}
+
+hr:last-child {
+  display: none;
+}
