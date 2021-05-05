@@ -11,6 +11,8 @@
 
 
 Adds first argument and second argument.
+{.description}
+
 
 
 
@@ -61,6 +63,8 @@ plus2(-3) // -1
 
 
 Returns true if both arguments are true; otherwise false.
+{.description}
+
 
 
 
@@ -122,6 +126,8 @@ Deno.test('and', () => {
 
 
 Returns a new list containing the contents of the given list, followed by the given value
+{.description}
+
 
 
 
@@ -186,6 +192,8 @@ Deno.test('append', () => {
 
 
 Return an array of elements split into groups the length of size.
+{.description}
+
 
 
 
@@ -323,6 +331,8 @@ Deno.test('chunk', () => {
 
 
 Decrements its argument.
+{.description}
+
 
 
 
@@ -386,6 +396,8 @@ Deno.test('dec', () => {
 
 
 Returns the second argument if it is not `null`, `undefined` or `NaN`; otherwise the first argument is returned.
+{.description}
+
 
 
 
@@ -460,6 +472,8 @@ Deno.test('defaultTo', () => {
 
 
 Divide its second argument from its first argument.
+{.description}
+
 
 
 
@@ -525,6 +539,8 @@ half(20) // 10
 
 
 Checks if a string ends with the provided substring.
+{.description}
+
 
 
 
@@ -591,6 +607,8 @@ Deno.test('endsWith', () => {
 
 
 A function that always returns `false`. Any passed in parameters are ignored.
+{.description}
+
 
 
 
@@ -646,6 +664,8 @@ Deno.test('F', () => {
 
 
 Returns the first element of the given list or string.
+{.description}
+
 
 
 
@@ -752,6 +772,8 @@ Deno.test('First', () => {
 
 
 Recursively flattens array.
+{.description}
+
 
 
 
@@ -856,6 +878,8 @@ Deno.test('types', () => {
 
 
 Returns `true` if the first argument is greater than the second; otherwise `false`
+{.description}
+
 
 
 
@@ -957,6 +981,8 @@ Deno.test('gt', () => {
 
 
 Returns `true` if the first argument is greater than or equal to the second; otherwise `false`
+{.description}
+
 
 
 
@@ -1062,6 +1088,8 @@ Deno.test('gte', () => {
 
 
 Returns whether or not an object has an own property with the specified name.
+{.description}
+
 
 
 
@@ -1178,6 +1206,8 @@ Deno.test('has', () => {
 <span class="tag deprecated">deprecate</span>
 
 Returns whether or not a path exists in an object. Only the object's own properties are checked.
+{.description}
+
 
 ::: danger
 This function will remove next major release.
@@ -1263,6 +1293,8 @@ Deno.test('hasPath', () => {
 
 
 Returns all but the last element of the given list or string.
+{.description}
+
 
 
 
@@ -1353,6 +1385,8 @@ Deno.test('head', () => {
 
 
 Return the parameter supplied to it.
+{.description}
+
 
 
 
@@ -1406,6 +1440,8 @@ Deno.test('identity', () => {
 
 
 Increments its argument.
+{.description}
+
 
 
 
@@ -1468,6 +1504,8 @@ Deno.test('inc', () => {
 
 
 Whatever argument is `Array` or not.
+{.description}
+
 
 
 
@@ -1558,6 +1596,8 @@ Deno.test('isArray', () => {
 
 
 Whatever argument is type of `bigint` or not.
+{.description}
+
 
 
 
@@ -1647,6 +1687,8 @@ Deno.test('isBigint', () => {
 
 
 Whatever argument is type of `boolean` or not.
+{.description}
+
 
 
 
@@ -1736,6 +1778,8 @@ Deno.test('isBoolean', () => {
 
 
 Returns `true` if the given value is its type's empty value; otherwise `false`.
+{.description}
+
 
 
 
@@ -1832,6 +1876,8 @@ Deno.test('isEmpty', () => {
 
 
 Whatever argument is type of `function` or not.
+{.description}
+
 
 
 
@@ -1922,6 +1968,8 @@ Deno.test('isFunction', () => {
 
 
 Whatever argument is `NaN` or not.
+{.description}
+
 
 
 
@@ -2017,6 +2065,8 @@ Deno.test('isNaN', () => {
 
 
 Whatever argument is type of `undefined` or `null`.
+{.description}
+
 
 
 
@@ -2106,6 +2156,8 @@ Deno.test('isNill', () => {
 
 
 Whatever argument is type of `null` or not.
+{.description}
+
 
 
 
@@ -2195,6 +2247,8 @@ Deno.test('isNull', () => {
 
 
 Whatever argument is type of `number` or not.
+{.description}
+
 
 
 
@@ -2284,6 +2338,8 @@ Deno.test('isNumber', () => {
 
 
 Whatever argument is type of `object` or not.
+{.description}
+
 
 
 
@@ -2376,6 +2432,8 @@ Deno.test('isObject', () => {
 
 
 Whatever argument is `primitive` or not.
+{.description}
+
 
 
 
@@ -2468,6 +2526,8 @@ Deno.test('isPrimitive', () => {
 
 
 Whatever argument is type of `string` or not.
+{.description}
+
 
 
 
@@ -2557,6 +2617,8 @@ Deno.test('isString', () => {
 
 
 Whatever argument is type of `symbol` or not.
+{.description}
+
 
 
 
@@ -2645,6 +2707,8 @@ Deno.test('isSymbol', () => {
 
 
 Whatever argument is type of `undefined` or not.
+{.description}
+
 
 
 
@@ -2735,6 +2799,8 @@ Deno.test('isUndefined', () => {
 
 
 K combinator. Returns a function that always returns the given value.
+{.description}
+
 
 
 
@@ -2790,6 +2856,8 @@ Deno.test('K', () => {
 
 
 Returns the names of the enumerable string properties and methods of an object.
+{.description}
+
 
 
 
@@ -2852,6 +2920,8 @@ Deno.test('keys', () => {
 
 
 Returns the last element of the given list or string.
+{.description}
+
 
 
 
@@ -2954,6 +3024,8 @@ Deno.test('Last', () => {
 
 
 Returns the number of elements in the array or string length.
+{.description}
+
 
 
 
@@ -3012,6 +3084,8 @@ Deno.test('length', () => {
 
 
 Return lowercase string
+{.description}
+
 
 
 
@@ -3063,6 +3137,8 @@ Deno.test('lowerCase', () => {
 
 
 Returns `true` if the first argument is less than the second; otherwise `false`
+{.description}
+
 
 
 
@@ -3164,6 +3240,8 @@ Deno.test('lt', () => {
 
 
 Returns `true` if the first argument is less than or equal to the second; otherwise `false`
+{.description}
+
 
 
 
@@ -3268,6 +3346,8 @@ Deno.test('lte', () => {
 
 
 Multiplies first argument and second argument.
+{.description}
+
 
 
 
@@ -3318,6 +3398,8 @@ double(4) // 8
 
 
 Returns the `!` of its argument.
+{.description}
+
 
 
 
@@ -3403,6 +3485,8 @@ Deno.test('not', () => {
 
 
 Returns true if one or both of its arguments are true; otherwise false.
+{.description}
+
 
 
 
@@ -3466,6 +3550,8 @@ Deno.test('or', () => {
 
 
 Returns a new list with the given value at the front, followed by the contents of the list.
+{.description}
+
 
 
 
@@ -3529,6 +3615,8 @@ Deno.test('prepend', () => {
 
 
 Multiplies together all the elements of a list.
+{.description}
+
 
 
 
@@ -3599,6 +3687,8 @@ Deno.test('product', () => {
 
 
 Returns a function that when supplied an object returns the indicated property of that object, if it exists.
+{.description}
+
 
 
 
@@ -3667,6 +3757,8 @@ Deno.test('props', () => {
 
 
 Replaces matches for `from` in string with `to`.
+{.description}
+
 
 
 
@@ -3736,6 +3828,8 @@ Deno.test('types', () => {
 
 
 Replaces all matches for `from` in string with `to`.
+{.description}
+
 
 
 
@@ -3805,6 +3899,8 @@ Deno.test('types', () => {
 
 
 Returns a new list or string with the elements or characters in reverse order.
+{.description}
+
 
 
 
@@ -3890,6 +3986,8 @@ Deno.test('reverse', () => {
 
 
 Checks if a string starts with the provided substring.
+{.description}
+
 
 
 
@@ -3929,6 +4027,8 @@ startWithSlash('/path/to') // true
 
 
 Subtracts its second argument from its first argument.
+{.description}
+
 
 
 
@@ -3994,6 +4094,8 @@ minus5(20) // 15
 
 
 Adds together all the elements of a list.
+{.description}
+
 
 
 
@@ -4063,6 +4165,8 @@ Deno.test('sum', () => {
 
 
 A function that always returns `true`. Any passed in parameters are ignored.
+{.description}
+
 
 
 
@@ -4118,6 +4222,8 @@ Deno.test('T', () => {
 
 
 Returns all but the first element of the given list or string.
+{.description}
+
 
 
 
@@ -4208,6 +4314,8 @@ Deno.test('tail', () => {
 
 
 Removes whitespace from both ends of the string.
+{.description}
+
 
 
 
@@ -4276,6 +4384,8 @@ Deno.test('types', () => {
 
 
 Removes space from left ends of the string.
+{.description}
+
 
 
 
@@ -4348,6 +4458,8 @@ Deno.test('types', () => {
 
 
 Removes space from right ends of the string.
+{.description}
+
 
 
 
@@ -4420,6 +4532,8 @@ Deno.test('types', () => {
 
 
 Return uppercase string
+{.description}
+
 
 
 
@@ -4470,6 +4584,8 @@ Deno.test('upperCase', () => {
 
 
 Returns an array of values of the enumerable properties of an object.
+{.description}
+
 
 
 
@@ -4550,6 +4666,8 @@ Deno.test('values', () => {
 
 
 Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
+{.description}
+
 
 
 
@@ -4616,6 +4734,8 @@ Deno.test('xor', () => {
 
 
 Type of any function
+{.description}
+
 
 
 
@@ -4639,6 +4759,8 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 
 
 Alias for Empty values
+{.description}
+
 
 
 
@@ -4663,6 +4785,8 @@ type Empty = "" | [
 
 
 Alias for Falsy values
+{.description}
+
 
 
 
@@ -4686,6 +4810,8 @@ type Falsy = false | "" | 0 | null | undefined;
 
 
 Infer the first types.
+{.description}
+
 
 
 
@@ -4729,6 +4855,8 @@ First<string | number[]> // string | number
 
 
 Infer deep flatted array.
+{.description}
+
 
 
 
@@ -4770,6 +4898,8 @@ FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 
 
 Infer the last types.
+{.description}
+
 
 
 
@@ -4818,6 +4948,8 @@ Last<string | number[]> // string | number
 
 
 Abbreviation for Ordinal
+{.description}
+
 
 
 
@@ -4841,6 +4973,8 @@ type Ord = string | number | bigint | boolean | Date;
 
 
 Alias for Primitive values types
+{.description}
+
 
 
 
@@ -4864,6 +4998,8 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 
 
 Infer the replacement value.
+{.description}
+
 
 
 
@@ -4894,6 +5030,8 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 
 
 Infer the all replacement value.
+{.description}
+
 
 
 
@@ -4924,6 +5062,8 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 
 
 Alias for Space values.
+{.description}
+
 
 
 
@@ -4947,6 +5087,8 @@ type Space = " " | "\n" | "\t";
 
 
 Infer the trimmed string.
+{.description}
+
 
 
 
@@ -4979,6 +5121,8 @@ Trim<'\t\n hello \t\n'> // 'hello'
 
 
 Infer the string with the left ends of trimmed.
+{.description}
+
 
 
 
@@ -5011,6 +5155,8 @@ TrimLeft<' \n\thello'> // 'hello'
 
 
 Infer the string with the right ends of trimmed.
+{.description}
+
 
 
 
