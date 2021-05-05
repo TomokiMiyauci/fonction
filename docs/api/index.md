@@ -4,9 +4,15 @@
 
 ### add
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Adds first argument and second argument.
+{.desc}
+
 
 
 
@@ -20,6 +26,16 @@ add: {
     (a: bigint): (b: bigint) => bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input number |
+| `b` | The second input number |
+
+</details>
 
 
 #### Example 1
@@ -50,9 +66,15 @@ plus2(-3) // -1
 
 ### and
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns true if both arguments are true; otherwise false.
+{.desc}
+
 
 
 
@@ -61,6 +83,16 @@ Returns true if both arguments are true; otherwise false.
 ```ts
 and: <T, U>(a: T, b: U) => T extends Falsy ? false : U extends Falsy ? false : boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input any value |
+| `b` | The second input any value |
+
+</details>
 
 
 #### Example 
@@ -107,9 +139,15 @@ Deno.test('and', () => {
 
 ### append
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns a new list containing the contents of the given list, followed by the given value
+{.desc}
+
 
 
 
@@ -118,6 +156,16 @@ Returns a new list containing the contents of the given list, followed by the gi
 ```ts
 append: <T, U>(val: T, list: U[]) => (T | U)[]
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | The value to add to the end of the new list |
+| `list` | The list of elements to add a new item to |
+
+</details>
 
 
 #### Example 
@@ -167,9 +215,15 @@ Deno.test('append', () => {
 
 ### chunk
 
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
+
 
 
 Return an array of elements split into groups the length of size.
+{.desc}
+
 
 
 
@@ -179,6 +233,16 @@ Return an array of elements split into groups the length of size.
 chunk: <T extends number, U extends readonly unknown[]>(size: T, array: U) => T extends 0 ? U : `${T}` extends `-${number}` ? U : U extends readonly [
 ] ? U : U extends readonly (infer R)[] ? R[][] : never
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `size` | The length of each chunk |
+| `array` | The array to process |
+
+</details>
 
 ::: tip Remark
 If array can't be split evenly, the final chunk will be the remaining elements.
@@ -300,9 +364,15 @@ Deno.test('chunk', () => {
 
 ### dec
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Decrements its argument.
+{.desc}
+
 
 
 
@@ -314,6 +384,15 @@ dec: {
     (val: bigint): bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input  `number`  or  `bigint` |
+
+</details>
 
 
 #### Example 
@@ -359,9 +438,15 @@ Deno.test('dec', () => {
 
 ### defaultTo
 
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
+
 
 
 Returns the second argument if it is not `null`, `undefined` or `NaN`; otherwise the first argument is returned.
+{.desc}
+
 
 
 
@@ -370,6 +455,15 @@ Returns the second argument if it is not `null`, `undefined` or `NaN`; otherwise
 ```ts
 defaultTo: <T extends unknown>(a: T) => <U extends unknown>(b: U) => IsNill<U> extends true ? T : IsNumber<U> extends false ? U : T | U
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | `a`  will be returned instead of  `default` |
+
+</details>
 
 
 #### Example 
@@ -429,9 +523,15 @@ Deno.test('defaultTo', () => {
 
 ### divide
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Divide its second argument from its first argument.
+{.desc}
+
 
 
 
@@ -448,6 +548,16 @@ divide: {
     (a: typeof _, b: bigint): (a: bigint) => bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input number |
+| `b` | The second input number |
+
+</details>
 
 ::: tip Remark
 Since division is not idempotent, there are two ways to curry.
@@ -490,9 +600,15 @@ half(20) // 10
 
 ### endsWith
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Checks if a string ends with the provided substring.
+{.desc}
+
 
 
 
@@ -501,6 +617,16 @@ Checks if a string ends with the provided substring.
 ```ts
 endsWith: <T extends string, U extends string | undefined = undefined>(val: T, target?: U | undefined) => StringWith<"endsWith", U>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | search string |
+| `target` | target string |
+
+</details>
 
 
 #### Example 1
@@ -552,9 +678,15 @@ Deno.test('endsWith', () => {
 
 ### F
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 A function that always returns `false`. Any passed in parameters are ignored.
+{.desc}
+
 
 
 
@@ -563,6 +695,7 @@ A function that always returns `false`. Any passed in parameters are ignored.
 ```ts
 F: AnyFn<unknown, false>
 ```
+
 
 
 #### Example 
@@ -603,9 +736,15 @@ Deno.test('F', () => {
 
 ### first
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Returns the first element of the given list or string.
+{.desc}
+
 
 
 
@@ -614,6 +753,15 @@ Returns the first element of the given list or string.
 ```ts
 first: <T extends string | readonly unknown[]>(val: T) => First<T>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | string or any array object |
+
+</details>
 
 
 #### Example 1
@@ -705,9 +853,15 @@ Deno.test('First', () => {
 
 ### flattenDeep
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Recursively flattens array.
+{.desc}
+
 
 
 
@@ -716,6 +870,15 @@ Recursively flattens array.
 ```ts
 flattenDeep: <T extends readonly unknown[]>(val: T) => FlattenDeep<T>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | The  `array`  to flatten |
+
+</details>
 
 
 #### Example 
@@ -805,9 +968,15 @@ Deno.test('types', () => {
 
 ### gt
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns `true` if the first argument is greater than the second; otherwise `false`
+{.desc}
+
 
 
 
@@ -816,6 +985,16 @@ Returns `true` if the first argument is greater than the second; otherwise `fals
 ```ts
 gt: <T extends Ord>(a: T, b: T) => boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input value |
+| `b` | The second input value |
+
+</details>
 
 
 #### Example 1
@@ -902,9 +1081,15 @@ Deno.test('gt', () => {
 
 ### gte
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns `true` if the first argument is greater than or equal to the second; otherwise `false`
+{.desc}
+
 
 
 
@@ -913,6 +1098,16 @@ Returns `true` if the first argument is greater than or equal to the second; oth
 ```ts
 gte: <T extends Ord>(a: T, b: T) => boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input value |
+| `b` | The second input value |
+
+</details>
 
 
 #### Example 1
@@ -1003,9 +1198,15 @@ Deno.test('gte', () => {
 
 ### has
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns whether or not an object has an own property with the specified name.
+{.desc}
+
 
 
 
@@ -1014,6 +1215,16 @@ Returns whether or not an object has an own property with the specified name.
 ```ts
 has: <T extends string | number | (string | number)[], U extends Record<PropertyKey, unknown>>(props: T, obj: U) => T extends unknown[] ? boolean : T extends string | number ? U extends Record<T, unknown> ? true : false : never
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `props` | The name of the property to check for |
+| `obj` | The check object |
+
+</details>
 
 
 #### Example 1
@@ -1114,10 +1325,16 @@ Deno.test('has', () => {
 
 ### hasPath
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 <span class="tag deprecated">deprecate</span>
 
 Returns whether or not a path exists in an object. Only the object's own properties are checked.
+{.desc}
+
 
 ::: danger
 This function will remove next major release.
@@ -1129,6 +1346,16 @@ This function will remove next major release.
 ```ts
 hasPath: <T extends unknown>(path: (string | number)[], obj: Record<PropertyKey, T>) => boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `props` | The path to use |
+| `obj` | The object to check the path in |
+
+</details>
 
 
 #### Example 
@@ -1196,9 +1423,15 @@ Deno.test('hasPath', () => {
 
 ### head
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns all but the last element of the given list or string.
+{.desc}
+
 
 
 
@@ -1210,6 +1443,15 @@ head: {
     <T extends unknown[]>(val: T): T;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | string or any array object |
+
+</details>
 
 
 #### Example 1
@@ -1282,9 +1524,15 @@ Deno.test('head', () => {
 
 ### identity
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Return the parameter supplied to it.
+{.desc}
+
 
 
 
@@ -1293,6 +1541,15 @@ Return the parameter supplied to it.
 ```ts
 identity: <T>(val: T) => T
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | The value to return |
+
+</details>
 
 
 #### Example 
@@ -1331,9 +1588,15 @@ Deno.test('identity', () => {
 
 ### inc
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Increments its argument.
+{.desc}
+
 
 
 
@@ -1345,6 +1608,15 @@ inc: {
     (val: bigint): bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input  `number`  or  `bigint` |
+
+</details>
 
 
 #### Example 
@@ -1389,9 +1661,15 @@ Deno.test('inc', () => {
 
 ### isArray
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is `Array` or not.
+{.desc}
+
 
 
 
@@ -1400,6 +1678,15 @@ Whatever argument is `Array` or not.
 ```ts
 isArray: (val: unknown) => val is any[]
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -1475,9 +1762,15 @@ Deno.test('isArray', () => {
 
 ### isBigint
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `bigint` or not.
+{.desc}
+
 
 
 
@@ -1486,6 +1779,15 @@ Whatever argument is type of `bigint` or not.
 ```ts
 isBigint: (val: unknown) => val is bigint
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -1560,9 +1862,15 @@ Deno.test('isBigint', () => {
 
 ### isBoolean
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `boolean` or not.
+{.desc}
+
 
 
 
@@ -1571,6 +1879,15 @@ Whatever argument is type of `boolean` or not.
 ```ts
 isBoolean: (val: unknown) => val is boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -1645,9 +1962,15 @@ Deno.test('isBoolean', () => {
 
 ### isEmpty
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Returns `true` if the given value is its type's empty value; otherwise `false`.
+{.desc}
+
 
 
 
@@ -1656,6 +1979,15 @@ Returns `true` if the given value is its type's empty value; otherwise `false`.
 ```ts
 isEmpty: (val: unknown) => val is Empty
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 ::: tip Remark
 The definition of Empty - `''` - `{}` - `[]`
@@ -1737,9 +2069,15 @@ Deno.test('isEmpty', () => {
 
 ### isFunction
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `function` or not.
+{.desc}
+
 
 
 
@@ -1748,6 +2086,15 @@ Whatever argument is type of `function` or not.
 ```ts
 isFunction: (val: unknown) => val is AnyFn<any, unknown>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -1823,9 +2170,15 @@ Deno.test('isFunction', () => {
 
 ### isNaN
 
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is `NaN` or not.
+{.desc}
+
 
 
 
@@ -1834,6 +2187,15 @@ Whatever argument is `NaN` or not.
 ```ts
 isNaN: (val: unknown) => val is number
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 ::: tip Remark
 `NaN` is primitive `number`.
@@ -1914,9 +2276,15 @@ Deno.test('isNaN', () => {
 
 ### isNill
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `undefined` or `null`.
+{.desc}
+
 
 
 
@@ -1925,6 +2293,15 @@ Whatever argument is type of `undefined` or `null`.
 ```ts
 isNill: (val: unknown) => val is null | undefined
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -1999,9 +2376,15 @@ Deno.test('isNill', () => {
 
 ### isNull
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `null` or not.
+{.desc}
+
 
 
 
@@ -2010,6 +2393,15 @@ Whatever argument is type of `null` or not.
 ```ts
 isNull: (val: unknown) => val is null
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -2084,9 +2476,15 @@ Deno.test('isNull', () => {
 
 ### isNumber
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `number` or not.
+{.desc}
+
 
 
 
@@ -2095,6 +2493,15 @@ Whatever argument is type of `number` or not.
 ```ts
 isNumber: (val: unknown) => val is number
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -2169,9 +2576,15 @@ Deno.test('isNumber', () => {
 
 ### isObject
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `object` or not.
+{.desc}
+
 
 
 
@@ -2180,6 +2593,15 @@ Whatever argument is type of `object` or not.
 ```ts
 isObject: <T extends unknown>(val: T) => val is T
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 ::: tip Remark
 Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
@@ -2257,9 +2679,15 @@ Deno.test('isObject', () => {
 
 ### isPrimitive
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is `primitive` or not.
+{.desc}
+
 
 
 
@@ -2268,6 +2696,15 @@ Whatever argument is `primitive` or not.
 ```ts
 isPrimitive: (val: unknown) => val is Primitive
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 ::: tip Remark
 Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
@@ -2345,9 +2782,15 @@ Deno.test('isPrimitive', () => {
 
 ### isString
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `string` or not.
+{.desc}
+
 
 
 
@@ -2356,6 +2799,15 @@ Whatever argument is type of `string` or not.
 ```ts
 isString: (val: unknown) => val is string
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -2430,9 +2882,15 @@ Deno.test('isString', () => {
 
 ### isSymbol
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `symbol` or not.
+{.desc}
+
 
 
 
@@ -2441,6 +2899,15 @@ Whatever argument is type of `symbol` or not.
 ```ts
 isSymbol: (val: unknown) => val is symbol
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -2514,9 +2981,15 @@ Deno.test('isSymbol', () => {
 
 ### isUndefined
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Whatever argument is type of `undefined` or not.
+{.desc}
+
 
 
 
@@ -2525,6 +2998,15 @@ Whatever argument is type of `undefined` or not.
 ```ts
 isUndefined: (val: unknown) => val is undefined
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 
 #### Example 
@@ -2600,9 +3082,15 @@ Deno.test('isUndefined', () => {
 
 ### K
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 K combinator. Returns a function that always returns the given value.
+{.desc}
+
 
 
 
@@ -2611,6 +3099,15 @@ K combinator. Returns a function that always returns the given value.
 ```ts
 K: <T extends unknown>(val: T) => () => T
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | The value to wrap in a function |
+
+</details>
 
 
 #### Example 
@@ -2651,9 +3148,15 @@ Deno.test('K', () => {
 
 ### keys
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Returns the names of the enumerable string properties and methods of an object.
+{.desc}
+
 
 
 
@@ -2662,6 +3165,15 @@ Returns the names of the enumerable string properties and methods of an object.
 ```ts
 keys: <T extends PropertyKey>(val: Record<T, unknown>) => string[]
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | `Object`  that contains the properties and methods |
+
+</details>
 
 ::: tip Remark
 The order of the output array is not guaranteed to be consistent across different JS platforms.
@@ -2709,9 +3221,15 @@ Deno.test('keys', () => {
 
 ### last
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Returns the last element of the given list or string.
+{.desc}
+
 
 
 
@@ -2720,6 +3238,15 @@ Returns the last element of the given list or string.
 ```ts
 last: <T extends string | readonly unknown[]>(val: T) => Last<T>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | string or any array object |
+
+</details>
 
 
 #### Example 1
@@ -2807,9 +3334,15 @@ Deno.test('Last', () => {
 
 ### length
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns the number of elements in the array or string length.
+{.desc}
+
 
 
 
@@ -2818,6 +3351,15 @@ Returns the number of elements in the array or string length.
 ```ts
 length: <T extends string | unknown[]>(val: T) => T["length"]
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | `string`  or any  `array` |
+
+</details>
 
 
 #### Example 
@@ -2861,9 +3403,15 @@ Deno.test('length', () => {
 
 ### lowerCase
 
+<small>Added from [1.0.1](./1.0.1/)</small>
+{.my-1}
+
+
 
 
 Return lowercase string
+{.desc}
+
 
 
 
@@ -2872,6 +3420,15 @@ Return lowercase string
 ```ts
 lowerCase: <T extends string>(val: T) => Lowercase<T>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input string value |
+
+</details>
 
 
 #### Example 
@@ -2908,9 +3465,15 @@ Deno.test('lowerCase', () => {
 
 ### lt
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns `true` if the first argument is less than the second; otherwise `false`
+{.desc}
+
 
 
 
@@ -2919,6 +3482,16 @@ Returns `true` if the first argument is less than the second; otherwise `false`
 ```ts
 lt: <T extends Ord>(a: T, b: T) => boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input value |
+| `b` | The second input value |
+
+</details>
 
 
 #### Example 1
@@ -3005,9 +3578,15 @@ Deno.test('lt', () => {
 
 ### lte
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns `true` if the first argument is less than or equal to the second; otherwise `false`
+{.desc}
+
 
 
 
@@ -3016,6 +3595,16 @@ Returns `true` if the first argument is less than or equal to the second; otherw
 ```ts
 lte: <T extends Ord>(a: T, b: T) => boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input value |
+| `b` | The second input value |
+
+</details>
 
 
 #### Example 1
@@ -3105,9 +3694,15 @@ Deno.test('lte', () => {
 
 ### multiply
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Multiplies first argument and second argument.
+{.desc}
+
 
 
 
@@ -3121,6 +3716,16 @@ multiply: {
     (a: bigint): (b: bigint) => bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input number |
+| `b` | The second input number |
+
+</details>
 
 
 #### Example 1
@@ -3151,9 +3756,15 @@ double(4) // 8
 
 ### not
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Returns the `!` of its argument.
+{.desc}
+
 
 
 
@@ -3162,6 +3773,15 @@ Returns the `!` of its argument.
 ```ts
 not: <T>(val: T) => T extends Falsy ? true : boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input any value |
+
+</details>
 
 ::: tip Remark
 The Definition of Falsy - `''` - `false` - `0` - `NaN` - `undefined` - `null`
@@ -3232,9 +3852,15 @@ Deno.test('not', () => {
 
 ### or
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns true if one or both of its arguments are true; otherwise false.
+{.desc}
+
 
 
 
@@ -3243,6 +3869,16 @@ Returns true if one or both of its arguments are true; otherwise false.
 ```ts
 or: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean : boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input any value |
+| `b` | The second input any value |
+
+</details>
 
 
 #### Example 
@@ -3291,9 +3927,15 @@ Deno.test('or', () => {
 
 ### prepend
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns a new list with the given value at the front, followed by the contents of the list.
+{.desc}
+
 
 
 
@@ -3302,6 +3944,16 @@ Returns a new list with the given value at the front, followed by the contents o
 ```ts
 prepend: <T, U>(val: T, list: U[]) => (T | U)[]
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | The value to add to the front of the new list |
+| `list` | The list of elements to add a new item to |
+
+</details>
 
 
 #### Example 
@@ -3350,9 +4002,15 @@ Deno.test('prepend', () => {
 
 ### product
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Multiplies together all the elements of a list.
+{.desc}
+
 
 
 
@@ -3366,6 +4024,15 @@ product: {
     (val: bigint[]): bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | list An array of numbers |
+
+</details>
 
 
 #### Example 
@@ -3416,9 +4083,15 @@ Deno.test('product', () => {
 
 ### props
 
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
+
 
 
 Returns a function that when supplied an object returns the indicated property of that object, if it exists.
+{.desc}
+
 
 
 
@@ -3427,6 +4100,16 @@ Returns a function that when supplied an object returns the indicated property o
 ```ts
 props: <T extends string | number, U extends Record<PropertyKey, unknown>>(val: T, obj: U) => U extends Record<T, unknown> ? U[T] : undefined
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input property key |
+| `obj` | The object to query |
+
+</details>
 
 
 #### Example 
@@ -3480,9 +4163,15 @@ Deno.test('props', () => {
 
 ### replace
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Replaces matches for `from` in string with `to`.
+{.desc}
+
 
 
 
@@ -3491,6 +4180,17 @@ Replaces matches for `from` in string with `to`.
 ```ts
 replace: <From extends string, To extends string, T extends string>(from: From, to: To, val: T) => Replace<T, From, To>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `from` | Holds the pattern string that need to replace |
+| `to` | Holds the replacement string |
+| `val` | Original string |
+
+</details>
 
 
 #### Example 
@@ -3545,9 +4245,15 @@ Deno.test('types', () => {
 
 ### replaceAll
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Replaces all matches for `from` in string with `to`.
+{.desc}
+
 
 
 
@@ -3556,6 +4262,17 @@ Replaces all matches for `from` in string with `to`.
 ```ts
 replaceAll: <From extends string, To extends string, T extends string>(from: From, to: To, val: T) => ReplaceAll<T, From, To>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `from` | Holds the pattern string that need to replace |
+| `to` | Holds the replacement string |
+| `val` | Original string |
+
+</details>
 
 
 #### Example 
@@ -3610,9 +4327,15 @@ Deno.test('types', () => {
 
 ### reverse
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Returns a new list or string with the elements or characters in reverse order.
+{.desc}
+
 
 
 
@@ -3628,6 +4351,15 @@ reverse: {
     <T extends unknown[]>(val: T): T;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | list or string characters |
+
+</details>
 
 
 #### Example 1
@@ -3691,9 +4423,15 @@ Deno.test('reverse', () => {
 
 ### startsWith
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Checks if a string starts with the provided substring.
+{.desc}
+
 
 
 
@@ -3702,6 +4440,16 @@ Checks if a string starts with the provided substring.
 ```ts
 startsWith: <T extends string, U extends string | undefined = undefined>(val: T, target?: U | undefined) => StringWith<"startsWith", U>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | search string |
+| `target` | target string |
+
+</details>
 
 
 #### Example 1
@@ -3726,9 +4474,15 @@ startWithSlash('/path/to') // true
 
 ### subtract
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Subtracts its second argument from its first argument.
+{.desc}
+
 
 
 
@@ -3745,6 +4499,16 @@ subtract: {
     (a: typeof _, b: bigint): (a: bigint) => bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input number |
+| `b` | The second input number |
+
+</details>
 
 ::: tip Remark
 Since subtraction is not idempotent, there are two ways to curry.
@@ -3787,9 +4551,15 @@ minus5(20) // 15
 
 ### sum
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Adds together all the elements of a list.
+{.desc}
+
 
 
 
@@ -3803,6 +4573,15 @@ sum: {
     (val: bigint[]): bigint;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | list An array of numbers |
+
+</details>
 
 
 #### Example 
@@ -3852,9 +4631,15 @@ Deno.test('sum', () => {
 
 ### T
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 A function that always returns `true`. Any passed in parameters are ignored.
+{.desc}
+
 
 
 
@@ -3863,6 +4648,7 @@ A function that always returns `true`. Any passed in parameters are ignored.
 ```ts
 T: AnyFn<unknown, true>
 ```
+
 
 
 #### Example 
@@ -3903,9 +4689,15 @@ Deno.test('T', () => {
 
 ### tail
 
+<small>Added from [1.2.0](./1.2.0/)</small>
+{.my-1}
+
+
 
 
 Returns all but the first element of the given list or string.
+{.desc}
+
 
 
 
@@ -3917,6 +4709,15 @@ tail: {
     <T extends unknown[]>(val: T): T;
 }
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | string or any array object |
+
+</details>
 
 
 #### Example 1
@@ -3989,9 +4790,15 @@ Deno.test('tail', () => {
 
 ### trim
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Removes whitespace from both ends of the string.
+{.desc}
+
 
 
 
@@ -4000,6 +4807,15 @@ Removes whitespace from both ends of the string.
 ```ts
 trim: <T extends string>(val: T) => TrimLeft<TrimRight<T>>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | `string`  to trim |
+
+</details>
 
 
 #### Example 
@@ -4053,9 +4869,15 @@ Deno.test('types', () => {
 
 ### trimLeft
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Removes space from left ends of the string.
+{.desc}
+
 
 
 
@@ -4064,6 +4886,15 @@ Removes space from left ends of the string.
 ```ts
 trimLeft: <T extends string>(val: T) => TrimLeft<T>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input string |
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -4121,9 +4952,15 @@ Deno.test('types', () => {
 
 ### trimRight
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Removes space from right ends of the string.
+{.desc}
+
 
 
 
@@ -4132,6 +4969,15 @@ Removes space from right ends of the string.
 ```ts
 trimRight: <T extends string>(val: T) => TrimRight<T>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input string |
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -4189,9 +5035,15 @@ Deno.test('types', () => {
 
 ### upperCase
 
+<small>Added from [1.0.1](./1.0.1/)</small>
+{.my-1}
+
+
 
 
 Return uppercase string
+{.desc}
+
 
 
 
@@ -4200,6 +5052,15 @@ Return uppercase string
 ```ts
 upperCase: <T extends string>(val: T) => Uppercase<T>
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | input string value |
+
+</details>
 
 
 #### Example 
@@ -4235,9 +5096,15 @@ Deno.test('upperCase', () => {
 
 ### values
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Returns an array of values of the enumerable properties of an object.
+{.desc}
+
 
 
 
@@ -4246,6 +5113,15 @@ Returns an array of values of the enumerable properties of an object.
 ```ts
 values: <T extends unknown>(val: Record<PropertyKey, T> | ArrayLike<T>) => T[]
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | `Object`  that contains the properties and methods |
+
+</details>
 
 ::: tip Remark
 The order of the output array is not guaranteed to be consistent across different platforms.
@@ -4311,9 +5187,15 @@ Deno.test('values', () => {
 
 ### xor
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
+{.desc}
+
 
 
 
@@ -4322,6 +5204,16 @@ Returns true if one of the arguments is truthy and the other is falsy; otherwise
 ```ts
 xor: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean : boolean
 ```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `a` | The first input any value |
+| `b` | The second input any value |
+
+</details>
 
 
 #### Example 
@@ -4373,9 +5265,15 @@ Deno.test('xor', () => {
 
 ### AnyFn
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Type of any function
+{.desc}
+
 
 
 
@@ -4388,13 +5286,20 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 
 
 
+
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/AnyFn.ts)
 
 ### Empty
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Alias for Empty values
+{.desc}
+
 
 
 
@@ -4408,13 +5313,20 @@ type Empty = "" | [
 
 
 
+
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Empty.ts)
 
 ### Falsy
 
+<small>Added from [1.3.0](./1.3.0/)</small>
+{.my-1}
+
+
 
 
 Alias for Falsy values
+{.desc}
+
 
 
 
@@ -4427,13 +5339,20 @@ type Falsy = false | "" | 0 | null | undefined;
 
 
 
+
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Falsy.ts)
 
 ### First
 
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
+
 
 
 Infer the first types.
+{.desc}
+
 
 
 
@@ -4444,6 +5363,7 @@ type First<T extends readonly unknown[] | string> = T extends "" ? "" : T extend
 ] ? string : String2Array<T>[0] : T extends readonly never[] | [
 ] ? undefined : T[0];
 ```
+
 
 
 #### Example 1
@@ -4470,9 +5390,15 @@ First<string | number[]> // string | number
 
 ### FlattenDeep
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer deep flatted array.
+{.desc}
+
 
 
 
@@ -4494,6 +5420,7 @@ type FlattenDeep<T extends readonly unknown[]> = T extends readonly [
 ```
 
 
+
 #### Example 
 
 ```ts
@@ -4507,9 +5434,15 @@ FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 
 ### Last
 
+<small>Added from [1.4.0](./1.4.0/)</small>
+{.my-1}
+
+
 
 
 Infer the last types.
+{.desc}
+
 
 
 
@@ -4525,6 +5458,7 @@ type Last<T extends string | readonly unknown[]> = T extends "" ? "" : T extends
     ...T
 ][T["length"]] : T extends string ? string : never;
 ```
+
 
 
 #### Example 1
@@ -4551,9 +5485,15 @@ Last<string | number[]> // string | number
 
 ### Ord
 
+<small>Added from [1.1.0](./1.1.0/)</small>
+{.my-1}
+
+
 
 
 Abbreviation for Ordinal
+{.desc}
+
 
 
 
@@ -4566,13 +5506,20 @@ type Ord = string | number | bigint | boolean | Date;
 
 
 
+
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Ord.ts)
 
 ### Primitive
 
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
 
 
 Alias for Primitive values types
+{.desc}
+
 
 
 
@@ -4585,13 +5532,20 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 
 
 
+
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Primitive.ts)
 
 ### Replace
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer the replacement value.
+{.desc}
+
 
 
 
@@ -4600,6 +5554,7 @@ Infer the replacement value.
 ```ts
 type Replace<T extends string, From extends string, To extends string> = From extends "" | To ? T : T extends `${infer L}${From}${infer R}` ? `${L}${To}${R}` : T;
 ```
+
 
 
 #### Example 
@@ -4615,9 +5570,15 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 
 ### ReplaceAll
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer the all replacement value.
+{.desc}
+
 
 
 
@@ -4626,6 +5587,7 @@ Infer the all replacement value.
 ```ts
 type ReplaceAll<T extends string, From extends string, To extends string> = From extends "" | To ? T : T extends `${infer L}${From}${infer R}` ? `${L}${ReplaceAll<`${To}${R}`, From, To>}` : T;
 ```
+
 
 
 #### Example 
@@ -4641,9 +5603,15 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 
 ### Space
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Alias for Space values.
+{.desc}
+
 
 
 
@@ -4656,13 +5624,20 @@ type Space = " " | "\n" | "\t";
 
 
 
+
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Space.ts)
 
 ### Trim
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer the trimmed string.
+{.desc}
+
 
 
 
@@ -4671,6 +5646,7 @@ Infer the trimmed string.
 ```ts
 type Trim<T extends string> = TrimLeft<TrimRight<T>>;
 ```
+
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -4688,9 +5664,15 @@ Trim<'\t\n hello \t\n'> // 'hello'
 
 ### TrimLeft
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer the string with the left ends of trimmed.
+{.desc}
+
 
 
 
@@ -4699,6 +5681,7 @@ Infer the string with the left ends of trimmed.
 ```ts
 type TrimLeft<T extends string> = T extends `${Space}${infer R}` ? TrimLeft<R> : T;
 ```
+
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -4716,9 +5699,15 @@ TrimLeft<' \n\thello'> // 'hello'
 
 ### TrimRight
 
+<small>Added from [1.5.0](./1.5.0/)</small>
+{.my-1}
+
+
 
 
 Infer the string with the right ends of trimmed.
+{.desc}
+
 
 
 
@@ -4727,6 +5716,7 @@ Infer the string with the right ends of trimmed.
 ```ts
 type TrimRight<T extends string> = T extends `${infer R}${Space}` ? TrimRight<R> : T;
 ```
+
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`

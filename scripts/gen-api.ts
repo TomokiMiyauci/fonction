@@ -10,6 +10,7 @@ import {
   DocFencedCode,
   DocNode,
   DocParagraph,
+  DocParamCollection,
   DocPlainText,
   DocSection
 } from '@microsoft/tsdoc'
@@ -18,6 +19,7 @@ import { isUndefined, replace } from 'fonction'
 import { outputFileSync, pathExistsSync, readFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
+import { getModuleStarts } from './gen-relations'
 const apiModel = new ApiModel()
 const copyright =
   '// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.\n'
@@ -113,18 +115,6 @@ const getDocPlainText = (docNode: DocNode): string => {
   return ''
 }
 
-interface MdVariables {
-  name: string
-  description: string
-  examples: [string, string][]
-  signature: string
-  tagName: string
-  deprecated: boolean
-  remarks: string[]
-  isLatest: boolean
-  test: string
-}
-
 const render = async (mdArgs: MdVariables): Promise<string> => {
   configure({
     views: resolve(__dirname, '..', 'docs', 'views'),
@@ -136,16 +126,56 @@ const render = async (mdArgs: MdVariables): Promise<string> => {
   return md || ''
 }
 
+const getParams = ({ blocks }: DocParamCollection) =>
+  blocks.map(({ content: _content, parameterName }) => {
+    const content = _content.nodes
+      .map((node) => {
+        if (isDocParagraph(node)) {
+          return node.nodes
+            .map((node) => {
+              if (node instanceof DocCodeSpan) {
+                return `\`${node.code}\``
+              } else if (node instanceof DocPlainText) {
+                return node.text
+              }
+              return ''
+            })
+            .filter((_) => !!_)
+            .join(' ')
+        }
+        return []
+      })
+      .join(' ')
+
+    return [`\`${parameterName}\``, content] as [string, string]
+  })
+
+interface MdVariables {
+  name: string
+  description: string
+  examples: [string, string][]
+  signature: string
+  tagName: string
+  deprecated: boolean
+  remarks: string[]
+  isLatest: boolean
+  test: string
+  version: string | undefined
+  params: [string, string][]
+}
+
 const generate = (path: string, content: string): void =>
   outputFileSync(path, content)
 
 type ExportKind = 'Fn' | 'Type'
 const mapMember = ({
   isLatest,
-  type
+  type,
+  moduleVersions
 }: {
   isLatest: boolean
   type: ExportKind
+  moduleVersions: Record<string, string | undefined>
 }) => async (
   member: ApiItem
 ): Promise<{
@@ -161,9 +191,11 @@ const mapMember = ({
       customBlocks,
       modifierTagSet,
       deprecatedBlock,
-      remarksBlock
+      remarksBlock,
+      params: _params
     } = member.tsdocComment
 
+    const params = getParams(_params)
     const remarks = getRemarks(remarksBlock)
     const isDeprecated = !!deprecatedBlock
     const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
@@ -182,7 +214,9 @@ const mapMember = ({
       deprecated: isDeprecated,
       remarks,
       isLatest,
-      test
+      test,
+      version: moduleVersions[name],
+      params
     })
 
     return {
@@ -195,12 +229,14 @@ const run = async ({
   version,
   apiJsonPath,
   editLink = true,
-  isLatest
+  isLatest,
+  moduleVersions
 }: {
   version: string
   apiJsonPath: string
   editLink?: boolean
   isLatest: boolean
+  moduleVersions: Record<string, string | undefined>
 }): Promise<void> => {
   const apiPackage = apiModel.loadPackage(apiJsonPath)
 
@@ -208,13 +244,13 @@ const run = async ({
     const functionContents = await Promise.all(
       root.members
         .filter(({ kind }) => kind === 'Variable')
-        .map(mapMember({ isLatest, type: 'Fn' }))
+        .map(mapMember({ isLatest, type: 'Fn', moduleVersions }))
     )
 
     const typesContents = await Promise.all(
       root.members
         .filter(({ kind }) => kind === 'TypeAlias')
-        .map(mapMember({ isLatest, type: 'Type' }))
+        .map(mapMember({ isLatest, type: 'Type', moduleVersions }))
     )
 
     const mdFunctions = functionContents.filter((_) => !!_).map(({ md }) => md)
@@ -244,12 +280,18 @@ ${mergedTypesMd}
   })
 }
 
-if (require.main === module) {
+const main = async () => {
+  const moduleStarts = await getModuleStarts()
   run({
     version: '',
     apiJsonPath: resolve(__dirname, '..', 'temp', 'fonction.api.json'),
-    isLatest: true
+    isLatest: true,
+    moduleVersions: moduleStarts
   })
+}
+
+if (require.main === module) {
+  main()
 }
 
 export { run }
