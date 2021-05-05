@@ -48,3 +48,8 @@
 .tag.deprecated {
   background-color: #c00;
 }
+
+.my-1 {
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+}

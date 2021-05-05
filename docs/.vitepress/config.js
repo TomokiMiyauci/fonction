@@ -90,5 +90,10 @@ module.exports = {
     docsBranch: 'main',
 
     editLinks: true
+  },
+  markdown: {
+    config: (md) => {
+      md.use(require('markdown-it-attrs'))
+    }
   }
 }
