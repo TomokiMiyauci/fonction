@@ -23,6 +23,8 @@
  * values(['hello', 'world']) // ['hello', 'world']
  * ```
  *
+ * @see Related to {@link keys}
+ *
  * @public
  */
 const values = <T extends unknown>(

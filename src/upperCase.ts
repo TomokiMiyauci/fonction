@@ -1,14 +1,16 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
- * Return uppercase string
+ * Return uppercase string.
  *
- * @param val - input string value
- * @returns uppercase string
+ * @param val - Input string value
+ * @returns Uppercase string
  *
  * @example
  * ```ts
  * toUpper('Hello') // HELLO
  * ```
+ *
+ * @see Related to {@link lowerCase}
  *
  * @public
  */

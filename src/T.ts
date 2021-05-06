@@ -4,13 +4,15 @@ import { AnyFn } from './types/index.ts'
 /**
  * A function that always returns `true`. Any passed in parameters are ignored.
  *
- * @returns true
+ * @returns `True`
  *
  * @example
  * ```ts
  * T() // true
  * T(1, 'hello', 'world') // true
  * ```
+ *
+ * @see Related to {@link F}
  *
  * @public
  */

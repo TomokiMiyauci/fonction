@@ -1,8 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
- * Bigint or not
+ * Bigint or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  */
 type IsBigint<T extends unknown> = T extends bigint ? true : false
 

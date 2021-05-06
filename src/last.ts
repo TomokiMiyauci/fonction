@@ -22,6 +22,9 @@ import { String2Array } from './types/index.ts'
  * Last<['hello', 'world']> // 'world'
  * Last<string | number[]> // string | number
  * ```
+ *
+ * @see Related to {@link First}
+ *
  * @public
  */
 type Last<T extends string | readonly unknown[]> = T extends ''
@@ -41,7 +44,7 @@ type Last<T extends string | readonly unknown[]> = T extends ''
 /**
  * Returns the last element of the given list or string.
  *
- * @param val - string or any array object
+ * @param val - `string` or any `array` object
  * @returns The last element of the `val`
  *
  * @example
@@ -57,6 +60,8 @@ type Last<T extends string | readonly unknown[]> = T extends ''
  * last([]) // undefined
  * last(['one', 2, 3, 4]) // 4
  * ```
+ *
+ * @see Related to {@link first}
  *
  * @public
  */

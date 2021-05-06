@@ -15,6 +15,8 @@ import { Falsy } from './types/index.ts'
  * and(false, false) // false
  * ```
  *
+ * @see Related to {@link or} {@link xor}
+ *
  * @public
  */
 const and = <T, U>(

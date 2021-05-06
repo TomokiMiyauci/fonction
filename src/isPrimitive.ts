@@ -8,9 +8,9 @@ import { IsSymbol, isSymbol } from './isSymbol.ts'
 import { Primitive } from './types/index.ts'
 
 /**
- * Primitive or not
+ * Primitive or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  *
  * @public
  */
@@ -31,18 +31,18 @@ type IsPrimitive<T extends unknown> = IsBigint<T> extends true
 /**
  * Whatever argument is `primitive` or not.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of primitive or not
  *
  * @remarks
  * Definition of Primitive
- * - string
- * - number
- * - bigint
- * - boolean
- * - symbol
- * - undefined
- * - null
+ * - `string`
+ * - `number`
+ * - `bigint`
+ * - `boolean`
+ * - `symbol`
+ * - `undefined`
+ * - `null`
  *
  * @example
  * ```ts

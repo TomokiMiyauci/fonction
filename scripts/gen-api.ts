@@ -8,6 +8,7 @@ import {
   DocBlock,
   DocCodeSpan,
   DocFencedCode,
+  DocLinkTag,
   DocNode,
   DocParagraph,
   DocParamCollection,
@@ -68,7 +69,8 @@ const isDocCodeSpan = (docNode: DocNode): docNode is DocCodeSpan =>
   docNode instanceof DocCodeSpan
 const isDocFencedCode = (docNode: DocNode): docNode is DocFencedCode =>
   docNode instanceof DocFencedCode
-
+const isDocLinkTag = (docNode: DocNode): docNode is DocLinkTag =>
+  docNode instanceof DocLinkTag
 const getRemarks = (docBlock: DocBlock | undefined) => {
   if (isUndefined(docBlock)) return []
 
@@ -91,11 +93,13 @@ const getDocCodeSpan = (docNode: DocNode): string => {
   return ''
 }
 
-const getDocFencedCode = (docNode: DocNode): string => {
-  if (isDocFencedCode(docNode)) {
-    return `\`${docNode.code}\``
+const getDocLinkTag = (docNode: DocNode) => {
+  if (isDocLinkTag(docNode)) {
+    return docNode.codeDestination?.memberReferences
+      .map(({ memberIdentifier }) => memberIdentifier?.identifier)
+      .filter((_) => !!_)
+      .join('.')
   }
-
   return ''
 }
 
@@ -126,6 +130,28 @@ const render = async (mdArgs: MdVariables): Promise<string> => {
   return md || ''
 }
 
+const getSees = (docBlocks: readonly DocBlock[]) => {
+  return docBlocks
+    .map((docBlock) => {
+      return docBlock.content.nodes
+        .map((node) => {
+          if (isDocParagraph(node)) {
+            return node.nodes
+              .map((node) => {
+                if (isDocLinkTag(node)) {
+                  return getDocLinkTag(node)
+                }
+                return ''
+              })
+              .filter((_) => !!_)
+          }
+          return []
+        })
+        .filter((_) => !!_)
+    })
+    .flat()
+}
+
 const getParams = ({ blocks }: DocParamCollection) =>
   blocks.map(({ content: _content, parameterName }) => {
     const content = _content.nodes
@@ -150,6 +176,26 @@ const getParams = ({ blocks }: DocParamCollection) =>
     return [`\`${parameterName}\``, content] as [string, string]
   })
 
+const getReturns = ({ content }: DocBlock) =>
+  content.nodes
+    .map((node) => {
+      if (isDocParagraph(node)) {
+        return node.nodes
+          .map((node) => {
+            if (node instanceof DocCodeSpan) {
+              return `\`${node.code}\``
+            } else if (node instanceof DocPlainText) {
+              return node.text
+            }
+            return ''
+          })
+          .filter((_) => !!_)
+          .join(' ')
+      }
+      return ''
+    })
+    .filter((_) => !!_)
+
 interface MdVariables {
   name: string
   description: string
@@ -162,6 +208,8 @@ interface MdVariables {
   test: string
   version: string | undefined
   params: [string, string][]
+  returns: string[]
+  sees: string[]
 }
 
 const generate = (path: string, content: string): void =>
@@ -192,10 +240,14 @@ const mapMember = ({
       modifierTagSet,
       deprecatedBlock,
       remarksBlock,
-      params: _params
+      returnsBlock,
+      params: _params,
+      seeBlocks
     } = member.tsdocComment
 
+    const sees = getSees(seeBlocks)
     const params = getParams(_params)
+    const returns = returnsBlock ? getReturns(returnsBlock) : []
     const remarks = getRemarks(remarksBlock)
     const isDeprecated = !!deprecatedBlock
     const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
@@ -216,7 +268,9 @@ const mapMember = ({
       isLatest,
       test,
       version: moduleVersions[name],
-      params
+      params,
+      returns,
+      sees
     })
 
     return {
@@ -267,6 +321,9 @@ editLink: false
     generate(
       resolve(__dirname, '..', 'docs', 'api', version, 'index.md'),
       `${editLink ? '' : frontmatter}# API
+
+Version: \`${isLatest ? 'Latest' : version}\`
+{.my-1}
 
 ## Functions
 

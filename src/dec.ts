@@ -6,13 +6,15 @@ import { subtract } from './subtract.ts'
  * Decrements its argument.
  *
  * @param val - input `number` or `bigint`
- * @returns decremented `val`
+ * @returns Decremented `val`
  *
  * @example
  * ```ts
  * dec(100) // 99
  * dec(10n) // 9n
  * ```
+ *
+ * @see Related to {@link inc}
  *
  * @public
  */

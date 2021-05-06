@@ -2,7 +2,7 @@
 import { Ord } from './types/index.ts'
 
 /**
- * Returns `true` if the first argument is less than or equal to the second; otherwise `false`
+ * Returns `true` if the first argument is less than or equal to the second; otherwise `false`.
  *
  * @param a - The first input value
  * @param b - The second input value
@@ -48,6 +48,8 @@ import { Ord } from './types/index.ts'
  * lte(new Date('1999/12/31'), new Date('2000/1/1')) // true
  * lte(new Date('2000/1/2'), new Date('2000/1/1')) // false
  * ```
+ *
+ * @see Related to {@link lt} {@link gt} {@link gte}
  *
  * @public
  */

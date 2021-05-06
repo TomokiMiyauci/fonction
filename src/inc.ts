@@ -5,14 +5,16 @@ import { isNumber } from './isNumber.ts'
 /**
  * Increments its argument.
  *
- * @param val - input `number` or `bigint`
- * @returns incremented `val`
+ * @param val - Input `number` or `bigint`
+ * @returns Incremented `val`
  *
  * @example
  * ```ts
  * inc(100) // 101
  * inc(10n) // 11n
  * ```
+ *
+ * @see Related to {@link dec}
  *
  * @public
  */

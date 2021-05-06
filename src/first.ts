@@ -7,6 +7,7 @@ import { String2Array } from './types/index.ts'
  * Infer the first types.
  *
  * @typeParam T - `string` or any `array`
+ * @returns First element of the `T`
  *
  * @example
  * ```ts
@@ -24,6 +25,8 @@ import { String2Array } from './types/index.ts'
  * First<string | number[]> // string | number
  * ```
  *
+ * @see Related to {@link Last}
+ *
  * @public
  */
 type First<T extends readonly unknown[] | string> = T extends ''
@@ -39,7 +42,7 @@ type First<T extends readonly unknown[] | string> = T extends ''
 /**
  * Returns the first element of the given list or string.
  *
- * @param val - string or any array object
+ * @param val - String or any array object
  * @returns The first element of the `val`
  *
  * @example
@@ -56,6 +59,8 @@ type First<T extends readonly unknown[] | string> = T extends ''
  * first([]) // undefined
  * first(['one', 2, 3, 4]) // 'one'
  * ```
+ *
+ * @see Related to {@link last}
  *
  * @public
  */

@@ -4,9 +4,9 @@ import { isNull } from './isNull.ts'
 import { IsUndefined, isUndefined } from './isUndefined.ts'
 import { or } from './or.ts'
 /**
- * Undefiled or null, or not
+ * Undefiled or null, or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  *
  * @public
  */
@@ -19,7 +19,7 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
 /**
  * Whatever argument is type of `undefined` or `null`.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of type of `val` is undefined or null
  *
  * @example

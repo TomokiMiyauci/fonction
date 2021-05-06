@@ -28,6 +28,8 @@ import { add as _add } from '../deps.ts'
  * plus2(-3) // -1
  * ```
  *
+ * @see Related to {@link subtract} {@link multiply} {@link divide}
+ *
  * @public
  */
 export const add = _add

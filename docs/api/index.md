@@ -1,11 +1,19 @@
 # API
 
+Version: `Latest`
+{.my-1}
+
 ## Functions
 
 ### add
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[subtract](#subtract)&nbsp;
+[multiply](#multiply)&nbsp;
+[divide](#divide)&nbsp;
 
 
 
@@ -34,6 +42,8 @@ add: {
 | --------- | ----------- |
 | `a` | The first input number |
 | `b` | The second input number |
+
+<code class="returns">=></code> The result of  `a + b`
 
 </details>
 
@@ -64,10 +74,16 @@ plus2(-3) // -1
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/add.ts)
 
+---
+
 ### and
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[or](#or)&nbsp;
+[xor](#xor)&nbsp;
 
 
 
@@ -91,6 +107,8 @@ and: <T, U>(a: T, b: U) => T extends Falsy ? false : U extends Falsy ? false : b
 | --------- | ----------- |
 | `a` | The first input any value |
 | `b` | The second input any value |
+
+<code class="returns">=></code> The result of  `!!a && !!bb`
 
 </details>
 
@@ -137,15 +155,20 @@ Deno.test('and', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/and.ts)
 
+---
+
 ### append
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
 
+:link:&nbsp;
+[prepend](#prepend)&nbsp;
 
 
 
-Returns a new list containing the contents of the given list, followed by the given value
+
+Returns a new list containing the contents of the given list, followed by the given value.
 {.desc}
 
 
@@ -164,6 +187,8 @@ append: <T, U>(val: T, list: U[]) => (T | U)[]
 | --------- | ----------- |
 | `val` | The value to add to the end of the new list |
 | `list` | The list of elements to add a new item to |
+
+<code class="returns">=></code> The result of  `[...list, val]`
 
 </details>
 
@@ -213,10 +238,13 @@ Deno.test('append', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/append.ts)
 
+---
+
 ### chunk
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
 
 
 
@@ -241,6 +269,8 @@ chunk: <T extends number, U extends readonly unknown[]>(size: T, array: U) => T 
 | --------- | ----------- |
 | `size` | The length of each chunk |
 | `array` | The array to process |
+
+<code class="returns">=></code> Returns the new array of chunks
 
 </details>
 
@@ -362,10 +392,15 @@ Deno.test('chunk', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/chunk.ts)
 
+---
+
 ### dec
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[inc](#inc)&nbsp;
 
 
 
@@ -391,6 +426,8 @@ dec: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input  `number`  or  `bigint` |
+
+<code class="returns">=></code> Decremented  `val`
 
 </details>
 
@@ -436,10 +473,13 @@ Deno.test('dec', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/dec.ts)
 
+---
+
 ### defaultTo
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
 
 
 
@@ -462,6 +502,8 @@ defaultTo: <T extends unknown>(a: T) => <U extends unknown>(b: U) => IsNill<U> e
 | Parameter | Description |
 | --------- | ----------- |
 | `a` | `a`  will be returned instead of  `default` |
+
+<code class="returns">=></code> Returns a function that stores the default  `a`  value. The function accept  `b`  argument. if  `b`  is  `null` ,  `undefined`  or  `NaN` , return  `a` ; otherwise return  `b`
 
 </details>
 
@@ -521,10 +563,17 @@ Deno.test('defaultTo', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/defaultTo.ts)
 
+---
+
 ### divide
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[add](#add)&nbsp;
+[subtract](#subtract)&nbsp;
+[multiply](#multiply)&nbsp;
 
 
 
@@ -556,6 +605,8 @@ divide: {
 | --------- | ----------- |
 | `a` | The first input number |
 | `b` | The second input number |
+
+<code class="returns">=></code> The result of  `a / b`
 
 </details>
 
@@ -598,10 +649,15 @@ half(20) // 10
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/divide.ts)
 
+---
+
 ### endsWith
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[startsWith](#startswith)&nbsp;
 
 
 
@@ -623,8 +679,10 @@ endsWith: <T extends string, U extends string | undefined = undefined>(val: T, t
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | search string |
-| `target` | target string |
+| `val` | Search string |
+| `target` | Target string |
+
+<code class="returns">=></code> The result of  `target.endsWith(val)`
 
 </details>
 
@@ -676,10 +734,15 @@ Deno.test('endsWith', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/endsWith.ts)
 
+---
+
 ### F
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[T](#t)&nbsp;
 
 
 
@@ -696,6 +759,13 @@ A function that always returns `false`. Any passed in parameters are ignored.
 F: AnyFn<unknown, false>
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> false
+
+</details>
 
 
 #### Example 
@@ -734,10 +804,15 @@ Deno.test('F', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/F.ts)
 
+---
+
 ### first
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[last](#last)&nbsp;
 
 
 
@@ -759,7 +834,9 @@ first: <T extends string | readonly unknown[]>(val: T) => First<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | string or any array object |
+| `val` | String or any array object |
+
+<code class="returns">=></code> The first element of the  `val`
 
 </details>
 
@@ -851,10 +928,13 @@ Deno.test('First', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/first.ts)
 
+---
+
 ### flattenDeep
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
 
 
 
@@ -877,6 +957,8 @@ flattenDeep: <T extends readonly unknown[]>(val: T) => FlattenDeep<T>
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | The  `array`  to flatten |
+
+<code class="returns">=></code> The result of  `val.flat(Infinity)`
 
 </details>
 
@@ -966,15 +1048,22 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/flattenDeep.ts)
 
+---
+
 ### gt
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
 
+:link:&nbsp;
+[gte](#gte)&nbsp;
+[lt](#lt)&nbsp;
+[lte](#lte)&nbsp;
 
 
 
-Returns `true` if the first argument is greater than the second; otherwise `false`
+
+Returns `true` if the first argument is greater than the second; otherwise `false`.
 {.desc}
 
 
@@ -993,6 +1082,8 @@ gt: <T extends Ord>(a: T, b: T) => boolean
 | --------- | ----------- |
 | `a` | The first input value |
 | `b` | The second input value |
+
+<code class="returns">=></code> The result of  `a > b`
 
 </details>
 
@@ -1079,15 +1170,22 @@ Deno.test('gt', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gt.ts)
 
+---
+
 ### gte
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
 
+:link:&nbsp;
+[gt](#gt)&nbsp;
+[lt](#lt)&nbsp;
+[lte](#lte)&nbsp;
 
 
 
-Returns `true` if the first argument is greater than or equal to the second; otherwise `false`
+
+Returns `true` if the first argument is greater than or equal to the second; otherwise `false`.
 {.desc}
 
 
@@ -1106,6 +1204,8 @@ gte: <T extends Ord>(a: T, b: T) => boolean
 | --------- | ----------- |
 | `a` | The first input value |
 | `b` | The second input value |
+
+<code class="returns">=></code> The result of  `a >= b`
 
 </details>
 
@@ -1196,10 +1296,15 @@ Deno.test('gte', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/gte.ts)
 
+---
+
 ### has
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[props](#props)&nbsp;
 
 
 
@@ -1223,6 +1328,8 @@ has: <T extends string | number | (string | number)[], U extends Record<Property
 | --------- | ----------- |
 | `props` | The name of the property to check for |
 | `obj` | The check object |
+
+<code class="returns">=></code> The result of  `Object.prototype.hasOwnProperty`
 
 </details>
 
@@ -1323,10 +1430,15 @@ Deno.test('has', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/has.ts)
 
+---
+
 ### hasPath
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[has](#has)&nbsp;
 
 
 
@@ -1352,8 +1464,10 @@ hasPath: <T extends unknown>(path: (string | number)[], obj: Record<PropertyKey,
 
 | Parameter | Description |
 | --------- | ----------- |
-| `props` | The path to use |
+| `path` | The path to use |
 | `obj` | The object to check the path in |
+
+<code class="returns">=></code> Whether the path exists
 
 </details>
 
@@ -1421,10 +1535,15 @@ Deno.test('hasPath', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/hasPath.ts)
 
+---
+
 ### head
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[tail](#tail)&nbsp;
 
 
 
@@ -1450,6 +1569,8 @@ head: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | string or any array object |
+
+<code class="returns">=></code> The result of  `val.slice(0, -1)`
 
 </details>
 
@@ -1522,10 +1643,13 @@ Deno.test('head', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/head.ts)
 
+---
+
 ### identity
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
 
 
 
@@ -1548,6 +1672,8 @@ identity: <T>(val: T) => T
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | The value to return |
+
+<code class="returns">=></code> The result of  `val`
 
 </details>
 
@@ -1586,10 +1712,15 @@ Deno.test('identity', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/identity.ts)
 
+---
+
 ### inc
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[dec](#dec)&nbsp;
 
 
 
@@ -1614,7 +1745,9 @@ inc: {
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input  `number`  or  `bigint` |
+| `val` | Input  `number`  or  `bigint` |
+
+<code class="returns">=></code> Incremented  `val`
 
 </details>
 
@@ -1659,10 +1792,13 @@ Deno.test('inc', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/inc.ts)
 
+---
+
 ### isArray
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
 
 
 
@@ -1684,7 +1820,9 @@ isArray: (val: unknown) => val is any[]
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `Array.isArray(val)`
 
 </details>
 
@@ -1760,10 +1898,13 @@ Deno.test('isArray', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isArray.ts)
 
+---
+
 ### isBigint
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -1786,6 +1927,8 @@ isBigint: (val: unknown) => val is bigint
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'bigint'`
 
 </details>
 
@@ -1860,10 +2003,13 @@ Deno.test('isBigint', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isBigint.ts)
 
+---
+
 ### isBoolean
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -1885,7 +2031,9 @@ isBoolean: (val: unknown) => val is boolean
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'boolean'`
 
 </details>
 
@@ -1960,10 +2108,13 @@ Deno.test('isBoolean', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isBoolean.ts)
 
+---
+
 ### isEmpty
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
 
 
 
@@ -1985,7 +2136,9 @@ isEmpty: (val: unknown) => val is Empty
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of empty or not
 
 </details>
 
@@ -2067,10 +2220,13 @@ Deno.test('isEmpty', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isEmpty.ts)
 
+---
+
 ### isFunction
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2092,7 +2248,9 @@ isFunction: (val: unknown) => val is AnyFn<any, unknown>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'function'`
 
 </details>
 
@@ -2168,10 +2326,13 @@ Deno.test('isFunction', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isFunction.ts)
 
+---
+
 ### isNaN
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
 
 
 
@@ -2193,7 +2354,9 @@ isNaN: (val: unknown) => val is number
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `Number.isNaN(val)`
 
 </details>
 
@@ -2274,10 +2437,13 @@ Deno.test('isNaN', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNaN.ts)
 
+---
+
 ### isNill
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2299,7 +2465,9 @@ isNill: (val: unknown) => val is null | undefined
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of type of  `val`  is undefined or null
 
 </details>
 
@@ -2374,10 +2542,13 @@ Deno.test('isNill', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNill.ts)
 
+---
+
 ### isNull
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2399,7 +2570,9 @@ isNull: (val: unknown) => val is null
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `val === null`
 
 </details>
 
@@ -2474,10 +2647,13 @@ Deno.test('isNull', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNull.ts)
 
+---
+
 ### isNumber
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2499,7 +2675,9 @@ isNumber: (val: unknown) => val is number
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'number'`
 
 </details>
 
@@ -2574,10 +2752,13 @@ Deno.test('isNumber', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNumber.ts)
 
+---
+
 ### isObject
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2599,12 +2780,14 @@ isObject: <T extends unknown>(val: T) => val is T
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of object or not
 
 </details>
 
 ::: tip Remark
-Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
+Definition of Primitive - `string` - `number` - `bigint` - `boolean` - `symbol` - `undefined` - `null`
 :::
 
 #### Example 
@@ -2677,10 +2860,13 @@ Deno.test('isObject', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isObject.ts)
 
+---
+
 ### isPrimitive
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2702,12 +2888,14 @@ isPrimitive: (val: unknown) => val is Primitive
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of primitive or not
 
 </details>
 
 ::: tip Remark
-Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
+Definition of Primitive - `string` - `number` - `bigint` - `boolean` - `symbol` - `undefined` - `null`
 :::
 
 #### Example 
@@ -2780,10 +2968,13 @@ Deno.test('isPrimitive', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isPrimitive.ts)
 
+---
+
 ### isString
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2805,7 +2996,9 @@ isString: (val: unknown) => val is string
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'string'`
 
 </details>
 
@@ -2880,10 +3073,13 @@ Deno.test('isString', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isString.ts)
 
+---
+
 ### isSymbol
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2905,7 +3101,9 @@ isSymbol: (val: unknown) => val is symbol
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'symbol'`
 
 </details>
 
@@ -2979,10 +3177,13 @@ Deno.test('isSymbol', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isSymbol.ts)
 
+---
+
 ### isUndefined
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -3004,7 +3205,9 @@ isUndefined: (val: unknown) => val is undefined
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
+
+<code class="returns">=></code> The result of  `typeof val === 'undefined'`
 
 </details>
 
@@ -3080,10 +3283,13 @@ Deno.test('isUndefined', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isUndefined.ts)
 
+---
+
 ### K
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
 
 
 
@@ -3106,6 +3312,8 @@ K: <T extends unknown>(val: T) => () => T
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | The value to wrap in a function |
+
+<code class="returns">=></code> Function wrapped  `val`
 
 </details>
 
@@ -3146,10 +3354,15 @@ Deno.test('K', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/K.ts)
 
+---
+
 ### keys
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[values](#values)&nbsp;
 
 
 
@@ -3172,6 +3385,8 @@ keys: <T extends PropertyKey>(val: Record<T, unknown>) => string[]
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | `Object`  that contains the properties and methods |
+
+<code class="returns">=></code> The result of  `Object.keys(val)`
 
 </details>
 
@@ -3219,10 +3434,15 @@ Deno.test('keys', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/keys.ts)
 
+---
+
 ### last
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[first](#first)&nbsp;
 
 
 
@@ -3244,7 +3464,9 @@ last: <T extends string | readonly unknown[]>(val: T) => Last<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | string or any array object |
+| `val` | `string`  or any  `array`  object |
+
+<code class="returns">=></code> The last element of the  `val`
 
 </details>
 
@@ -3332,10 +3554,13 @@ Deno.test('Last', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/last.ts)
 
+---
+
 ### length
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
 
 
 
@@ -3358,6 +3583,8 @@ length: <T extends string | unknown[]>(val: T) => T["length"]
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | `string`  or any  `array` |
+
+<code class="returns">=></code> The result of  `val.length`
 
 </details>
 
@@ -3401,15 +3628,20 @@ Deno.test('length', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/length.ts)
 
+---
+
 ### lowerCase
 
 <small>Added from [1.0.1](./1.0.1/)</small>
 {.my-1}
 
+:link:&nbsp;
+[upperCase](#uppercase)&nbsp;
 
 
 
-Return lowercase string
+
+Return lowercase string.
 {.desc}
 
 
@@ -3426,7 +3658,9 @@ lowerCase: <T extends string>(val: T) => Lowercase<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input string value |
+| `val` | Input string value |
+
+<code class="returns">=></code> Lowercase string
 
 </details>
 
@@ -3463,15 +3697,22 @@ Deno.test('lowerCase', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lowerCase.ts)
 
+---
+
 ### lt
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
 
+:link:&nbsp;
+[lte](#lte)&nbsp;
+[gt](#gt)&nbsp;
+[gte](#gte)&nbsp;
 
 
 
-Returns `true` if the first argument is less than the second; otherwise `false`
+
+Returns `true` if the first argument is less than the second; otherwise `false`.
 {.desc}
 
 
@@ -3490,6 +3731,8 @@ lt: <T extends Ord>(a: T, b: T) => boolean
 | --------- | ----------- |
 | `a` | The first input value |
 | `b` | The second input value |
+
+<code class="returns">=></code> The result of  `a < b`
 
 </details>
 
@@ -3576,15 +3819,22 @@ Deno.test('lt', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lt.ts)
 
+---
+
 ### lte
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
 
+:link:&nbsp;
+[lt](#lt)&nbsp;
+[gt](#gt)&nbsp;
+[gte](#gte)&nbsp;
 
 
 
-Returns `true` if the first argument is less than or equal to the second; otherwise `false`
+
+Returns `true` if the first argument is less than or equal to the second; otherwise `false`.
 {.desc}
 
 
@@ -3603,6 +3853,8 @@ lte: <T extends Ord>(a: T, b: T) => boolean
 | --------- | ----------- |
 | `a` | The first input value |
 | `b` | The second input value |
+
+<code class="returns">=></code> The result of  `a <= b`
 
 </details>
 
@@ -3692,10 +3944,17 @@ Deno.test('lte', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/lte.ts)
 
+---
+
 ### multiply
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[add](#add)&nbsp;
+[subtract](#subtract)&nbsp;
+[divide](#divide)&nbsp;
 
 
 
@@ -3724,6 +3983,8 @@ multiply: {
 | --------- | ----------- |
 | `a` | The first input number |
 | `b` | The second input number |
+
+<code class="returns">=></code> The result of  `a * b`
 
 </details>
 
@@ -3754,10 +4015,13 @@ double(4) // 8
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/multiply.ts)
 
+---
+
 ### not
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
 
 
 
@@ -3780,6 +4044,8 @@ not: <T>(val: T) => T extends Falsy ? true : boolean
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input any value |
+
+<code class="returns">=></code> The result of  `!val`
 
 </details>
 
@@ -3850,10 +4116,16 @@ Deno.test('not', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/not.ts)
 
+---
+
 ### or
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[and](#and)&nbsp;
+[xor](#xor)&nbsp;
 
 
 
@@ -3877,6 +4149,8 @@ or: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean : 
 | --------- | ----------- |
 | `a` | The first input any value |
 | `b` | The second input any value |
+
+<code class="returns">=></code> The result of  `!!a || !!bb`
 
 </details>
 
@@ -3925,10 +4199,15 @@ Deno.test('or', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/or.ts)
 
+---
+
 ### prepend
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[append](#append)&nbsp;
 
 
 
@@ -3952,6 +4231,8 @@ prepend: <T, U>(val: T, list: U[]) => (T | U)[]
 | --------- | ----------- |
 | `val` | The value to add to the front of the new list |
 | `list` | The list of elements to add a new item to |
+
+<code class="returns">=></code> The result of  `[val, ...list]`
 
 </details>
 
@@ -4000,10 +4281,13 @@ Deno.test('prepend', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/prepend.ts)
 
+---
+
 ### product
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
 
 
 
@@ -4031,6 +4315,8 @@ product: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | list An array of numbers |
+
+<code class="returns">=></code> The product of all the numbers in the list
 
 </details>
 
@@ -4081,10 +4367,15 @@ Deno.test('product', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/product.ts)
 
+---
+
 ### props
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[has](#has)&nbsp;
 
 
 
@@ -4106,8 +4397,10 @@ props: <T extends string | number, U extends Record<PropertyKey, unknown>>(val: 
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input property key |
+| `val` | Input property key |
 | `obj` | The object to query |
+
+<code class="returns">=></code> The result of safety  `obj[val]`  or  `obj[val[0]][val[1]][val[...x]]`
 
 </details>
 
@@ -4161,10 +4454,15 @@ Deno.test('props', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/props.ts)
 
+---
+
 ### replace
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[replaceAll](#replaceall)&nbsp;
 
 
 
@@ -4189,6 +4487,8 @@ replace: <From extends string, To extends string, T extends string>(from: From, 
 | `from` | Holds the pattern string that need to replace |
 | `to` | Holds the replacement string |
 | `val` | Original string |
+
+<code class="returns">=></code> The result of  `val.replace(from, to)`
 
 </details>
 
@@ -4243,10 +4543,15 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/replace.ts)
 
+---
+
 ### replaceAll
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[replace](#replace)&nbsp;
 
 
 
@@ -4271,6 +4576,8 @@ replaceAll: <From extends string, To extends string, T extends string>(from: Fro
 | `from` | Holds the pattern string that need to replace |
 | `to` | Holds the replacement string |
 | `val` | Original string |
+
+<code class="returns">=></code> The result of  `val.replaceAll(from, to)`
 
 </details>
 
@@ -4325,10 +4632,13 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/replaceAll.ts)
 
+---
+
 ### reverse
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -4358,6 +4668,8 @@ reverse: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | list or string characters |
+
+<code class="returns">=></code> New list or string characters in reverse order
 
 </details>
 
@@ -4421,10 +4733,15 @@ Deno.test('reverse', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/reverse.ts)
 
+---
+
 ### startsWith
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[endsWith](#endswith)&nbsp;
 
 
 
@@ -4449,6 +4766,8 @@ startsWith: <T extends string, U extends string | undefined = undefined>(val: T,
 | `val` | search string |
 | `target` | target string |
 
+<code class="returns">=></code> The result of  `target.startsWith(val)`
+
 </details>
 
 
@@ -4472,10 +4791,17 @@ startWithSlash('/path/to') // true
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/startsWith.ts)
 
+---
+
 ### subtract
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[add](#add)&nbsp;
+[multiply](#multiply)&nbsp;
+[divide](#divide)&nbsp;
 
 
 
@@ -4507,6 +4833,8 @@ subtract: {
 | --------- | ----------- |
 | `a` | The first input number |
 | `b` | The second input number |
+
+<code class="returns">=></code> The result of  `a - b`
 
 </details>
 
@@ -4549,10 +4877,13 @@ minus5(20) // 15
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/subtract.ts)
 
+---
+
 ### sum
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -4580,6 +4911,8 @@ sum: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | list An array of numbers |
+
+<code class="returns">=></code> The sum of all the numbers in the list
 
 </details>
 
@@ -4629,10 +4962,15 @@ Deno.test('sum', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/sum.ts)
 
+---
+
 ### T
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[F](#f)&nbsp;
 
 
 
@@ -4649,6 +4987,13 @@ A function that always returns `true`. Any passed in parameters are ignored.
 T: AnyFn<unknown, true>
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code>  `True`
+
+</details>
 
 
 #### Example 
@@ -4687,10 +5032,15 @@ Deno.test('T', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/T.ts)
 
+---
+
 ### tail
 
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[head](#head)&nbsp;
 
 
 
@@ -4716,6 +5066,8 @@ tail: {
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | string or any array object |
+
+<code class="returns">=></code> The result of  `val.slice(1, Infinity)`
 
 </details>
 
@@ -4788,10 +5140,16 @@ Deno.test('tail', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/tail.ts)
 
+---
+
 ### trim
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[trimLeft](#trimleft)&nbsp;
+[trimRight](#trimright)&nbsp;
 
 
 
@@ -4814,6 +5172,8 @@ trim: <T extends string>(val: T) => TrimLeft<TrimRight<T>>
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | `string`  to trim |
+
+<code class="returns">=></code> The result of  `val.trim()`
 
 </details>
 
@@ -4867,10 +5227,16 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trim.ts)
 
+---
+
 ### trimLeft
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[trimRight](#trimright)&nbsp;
+[trim](#trim)&nbsp;
 
 
 
@@ -4893,6 +5259,8 @@ trimLeft: <T extends string>(val: T) => TrimLeft<T>
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input string |
+
+<code class="returns">=></code> The result of  `val.trimLeft()`
 
 </details>
 
@@ -4950,10 +5318,16 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trimLeft.ts)
 
+---
+
 ### trimRight
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[trimLeft](#trimleft)&nbsp;
+[trim](#trim)&nbsp;
 
 
 
@@ -4976,6 +5350,8 @@ trimRight: <T extends string>(val: T) => TrimRight<T>
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | input string |
+
+<code class="returns">=></code> The result of  `val.trimRight()`
 
 </details>
 
@@ -5033,15 +5409,20 @@ Deno.test('types', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/trimRight.ts)
 
+---
+
 ### upperCase
 
 <small>Added from [1.0.1](./1.0.1/)</small>
 {.my-1}
 
+:link:&nbsp;
+[lowerCase](#lowercase)&nbsp;
 
 
 
-Return uppercase string
+
+Return uppercase string.
 {.desc}
 
 
@@ -5058,7 +5439,9 @@ upperCase: <T extends string>(val: T) => Uppercase<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input string value |
+| `val` | Input string value |
+
+<code class="returns">=></code> Uppercase string
 
 </details>
 
@@ -5094,10 +5477,15 @@ Deno.test('upperCase', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/upperCase.ts)
 
+---
+
 ### values
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[keys](#keys)&nbsp;
 
 
 
@@ -5120,6 +5508,8 @@ values: <T extends unknown>(val: Record<PropertyKey, T> | ArrayLike<T>) => T[]
 | Parameter | Description |
 | --------- | ----------- |
 | `val` | `Object`  that contains the properties and methods |
+
+<code class="returns">=></code> The result of  `Object.values(val)`
 
 </details>
 
@@ -5185,10 +5575,16 @@ Deno.test('values', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/values.ts)
 
+---
+
 ### xor
 
 <small>Added from [1.1.0](./1.1.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[and](#and)&nbsp;
+[or](#or)&nbsp;
 
 
 
@@ -5212,6 +5608,8 @@ xor: <T, U>(a: T, b: U) => T extends Falsy ? U extends Falsy ? false : boolean :
 | --------- | ----------- |
 | `a` | The first input any value |
 | `b` | The second input any value |
+
+<code class="returns">=></code> The result of  `!a !== !b`
 
 </details>
 
@@ -5260,6 +5658,8 @@ Deno.test('xor', () => {
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/xor.ts)
 
+---
+
 
 ## Types
 
@@ -5271,7 +5671,8 @@ Deno.test('xor', () => {
 
 
 
-Type of any function
+
+Type of any function.
 {.desc}
 
 
@@ -5289,10 +5690,13 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/AnyFn.ts)
 
+---
+
 ### Empty
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
 
 
 
@@ -5316,6 +5720,8 @@ type Empty = "" | [
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Empty.ts)
 
+---
+
 ### Falsy
 
 <small>Added from [1.3.0](./1.3.0/)</small>
@@ -5324,7 +5730,8 @@ type Empty = "" | [
 
 
 
-Alias for Falsy values
+
+Alias for Falsy values.
 {.desc}
 
 
@@ -5342,10 +5749,15 @@ type Falsy = false | "" | 0 | null | undefined;
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Falsy.ts)
 
+---
+
 ### First
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[Last](#last)&nbsp;
 
 
 
@@ -5364,6 +5776,13 @@ type First<T extends readonly unknown[] | string> = T extends "" ? "" : T extend
 ] ? undefined : T[0];
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> First element of the  `T`
+
+</details>
 
 
 #### Example 1
@@ -5388,10 +5807,13 @@ First<string | number[]> // string | number
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/First.ts)
 
+---
+
 ### FlattenDeep
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
 
 
 
@@ -5419,6 +5841,13 @@ type FlattenDeep<T extends readonly unknown[]> = T extends readonly [
 ];
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> Deep flatted array
+
+</details>
 
 
 #### Example 
@@ -5432,10 +5861,15 @@ FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/FlattenDeep.ts)
 
+---
+
 ### Last
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[First](#first)&nbsp;
 
 
 
@@ -5483,6 +5917,8 @@ Last<string | number[]> // string | number
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Last.ts)
 
+---
+
 ### Ord
 
 <small>Added from [1.1.0](./1.1.0/)</small>
@@ -5491,7 +5927,8 @@ Last<string | number[]> // string | number
 
 
 
-Abbreviation for Ordinal
+
+Abbreviation for Ordinal.
 {.desc}
 
 
@@ -5509,6 +5946,8 @@ type Ord = string | number | bigint | boolean | Date;
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Ord.ts)
 
+---
+
 ### Primitive
 
 <small>Added from [1.0.0](./1.0.0/)</small>
@@ -5517,7 +5956,8 @@ type Ord = string | number | bigint | boolean | Date;
 
 
 
-Alias for Primitive values types
+
+Alias for Primitive values types.
 {.desc}
 
 
@@ -5535,10 +5975,15 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Primitive.ts)
 
+---
+
 ### Replace
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[ReplaceAll](#replaceall)&nbsp;
 
 
 
@@ -5568,10 +6013,15 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Replace.ts)
 
+---
+
 ### ReplaceAll
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[Replace](#replace)&nbsp;
 
 
 
@@ -5601,10 +6051,13 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/ReplaceAll.ts)
 
+---
+
 ### Space
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
 
 
 
@@ -5627,10 +6080,16 @@ type Space = " " | "\n" | "\t";
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Space.ts)
 
+---
+
 ### Trim
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[TrimLeft](#trimleft)&nbsp;
+[TrimRight](#trimright)&nbsp;
 
 
 
@@ -5647,6 +6106,13 @@ Infer the trimmed string.
 type Trim<T extends string> = TrimLeft<TrimRight<T>>;
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> Trimmed string
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -5662,10 +6128,16 @@ Trim<'\t\n hello \t\n'> // 'hello'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/Trim.ts)
 
+---
+
 ### TrimLeft
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[TrimRight](#trimright)&nbsp;
+[Trim](#trim)&nbsp;
 
 
 
@@ -5682,6 +6154,13 @@ Infer the string with the left ends of trimmed.
 type TrimLeft<T extends string> = T extends `${Space}${infer R}` ? TrimLeft<R> : T;
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> String left ends of trimmed
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -5697,10 +6176,16 @@ TrimLeft<' \n\thello'> // 'hello'
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/TrimLeft.ts)
 
+---
+
 ### TrimRight
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
+:link:&nbsp;
+[TrimLeft](#trimleft)&nbsp;
+[Trim](#trim)&nbsp;
 
 
 
@@ -5717,6 +6202,13 @@ Infer the string with the right ends of trimmed.
 type TrimRight<T extends string> = T extends `${infer R}${Space}` ? TrimRight<R> : T;
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> String right ends of trimmed
+
+</details>
 
 ::: tip Remark
 The definition of space - `''` - `\n` - `\t`
@@ -5731,4 +6223,6 @@ TrimRight<'hello \n\t'> // 'hello'
 
 
  [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/TrimRight.ts)
+
+---
 

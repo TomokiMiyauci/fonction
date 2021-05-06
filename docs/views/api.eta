@@ -12,6 +12,13 @@
 <% } %>
 <% } %>
 
+<% it.sees.forEach((see) => { %>
+:link:&nbsp;
+<% see.forEach((link) => { %>
+[<%= link %>](#<%= link.toLowerCase() %>)&nbsp;
+<% }) %>
+<% }) %>
+
 <% it.tagName %>
 
 <% if (it.tagName === '@beta') { %>
@@ -47,14 +54,23 @@ This function will remove next major release.
 
 ```
 
-<% if(!!it.params.length) { %><details class="parameters-detail">
+<% if(!!it.params.length || !!it.returns.length) { %><details class="parameters-detail">
 <summary>Parameters</summary>
 
+<% if(!!it.params.length) { %>
 | Parameter | Description |
 | --------- | ----------- |
 <% it.params.forEach(([parameterName, description]) => { %>
 | <%= parameterName %> | <%= description %> |
 <% }) %>
+<% } %>
+
+<% if(!!it.returns.length) { %>
+<code class="returns">=></code><% it.returns.forEach((_return) => { %>
+<%= _return %>
+<% }) %>
+<% } %>
+
 
 </details>
 <% } %>
@@ -90,3 +106,5 @@ This function will remove next major release.
 
 <% if (it.isLatest) { %> [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/<%= it.name %>.ts)
 <% } %>
+
+---

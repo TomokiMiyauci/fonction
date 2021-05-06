@@ -10,8 +10,8 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
 /**
  * Checks if a string ends with the provided substring.
  *
- * @param val - search string
- * @param target - target string
+ * @param val - Search string
+ * @param target - Target string
  * @returns The result of `target.endsWith(val)`
  *
  * @example
@@ -27,6 +27,8 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
  * const endsWithHtml = endsWith('html')
  * endsWithHtml('index.html') // true
  * ```
+ *
+ * @see Related to {@link startsWith}
  *
  * @public
  */

@@ -13,6 +13,7 @@
  * prepend(['Tom'], ['hello', 'world']) // [['Tom'], 'hello', 'world']
  * ```
  *
+ * @see Related to {@link append}
  *
  * @public
  */

@@ -43,6 +43,8 @@ import { _ } from './constants/index.ts'
  * minus5(20) // 15
  * ```
  *
+ * @see Related to {@link add} {@link multiply} {@link divide}
+ *
  * @public
  */
 export const subtract = _subtract

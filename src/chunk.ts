@@ -7,7 +7,7 @@ import { lte } from './lte.ts'
  *
  * @param size - The length of each chunk
  * @param array - The array to process
- * @returns - Returns the new array of chunks
+ * @returns Returns the new array of chunks
  *
  * @remarks
  * If array can't be split evenly, the final chunk will be the remaining elements.

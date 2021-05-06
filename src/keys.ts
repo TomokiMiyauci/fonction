@@ -15,6 +15,8 @@
  * keys({ 0: 'hello', 1: 'world' }) // ['0', '1']
  * ```
  *
+ * @see Related to {@link values}
+ *
  * @public
  */
 const keys = <T extends PropertyKey>(val: Record<T, unknown>): string[] =>

@@ -1,7 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { Ord } from './types/index.ts'
 /**
- * Returns `true` if the first argument is greater than the second; otherwise `false`
+ * Returns `true` if the first argument is greater than the second; otherwise `false`.
  *
  * @param a - The first input value
  * @param b - The second input value
@@ -44,6 +44,8 @@ import { Ord } from './types/index.ts'
  * gt(new Date('1999/12/31'), new Date('2000/1/1')) // false
  * gt(new Date('2000/1/1'), new Date('2000/1/1')) // false
  * ```
+ *
+ * @see Related to {@link gte} {@link lt} {@link lte}
  *
  * @public
  */
