@@ -1,8 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
- * Symbol or not
+ * Symbol or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  *
  * @public
  */
@@ -11,7 +11,7 @@ type IsSymbol<T extends unknown> = T extends symbol ? true : false
 /**
  * Whatever argument is type of `symbol` or not.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of `typeof val === 'symbol'`
  *
  * @example

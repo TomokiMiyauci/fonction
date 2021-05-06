@@ -156,7 +156,7 @@ Deno.test('and', () => {
 
 
 
-Returns a new list containing the contents of the given list, followed by the given value
+Returns a new list containing the contents of the given list, followed by the given value.
 {.desc}
 
 
@@ -257,7 +257,7 @@ chunk: <T extends number, U extends readonly unknown[]>(size: T, array: U) => T 
 | `size` | The length of each chunk |
 | `array` | The array to process |
 
-<code class="returns">=></code> - Returns the new array of chunks
+<code class="returns">=></code> Returns the new array of chunks
 
 </details>
 
@@ -411,7 +411,7 @@ dec: {
 | --------- | ----------- |
 | `val` | input  `number`  or  `bigint` |
 
-<code class="returns">=></code> decremented  `val`
+<code class="returns">=></code> Decremented  `val`
 
 </details>
 
@@ -803,7 +803,7 @@ first: <T extends string | readonly unknown[]>(val: T) => First<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | string or any array object |
+| `val` | String or any array object |
 
 <code class="returns">=></code> The first element of the  `val`
 
@@ -1026,7 +1026,7 @@ Deno.test('types', () => {
 
 
 
-Returns `true` if the first argument is greater than the second; otherwise `false`
+Returns `true` if the first argument is greater than the second; otherwise `false`.
 {.desc}
 
 
@@ -1143,7 +1143,7 @@ Deno.test('gt', () => {
 
 
 
-Returns `true` if the first argument is greater than or equal to the second; otherwise `false`
+Returns `true` if the first argument is greater than or equal to the second; otherwise `false`.
 {.desc}
 
 
@@ -1416,7 +1416,7 @@ hasPath: <T extends unknown>(path: (string | number)[], obj: Record<PropertyKey,
 
 | Parameter | Description |
 | --------- | ----------- |
-| `props` | The path to use |
+| `path` | The path to use |
 | `obj` | The object to check the path in |
 
 <code class="returns">=></code> Whether the path exists
@@ -1690,9 +1690,9 @@ inc: {
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input  `number`  or  `bigint` |
+| `val` | Input  `number`  or  `bigint` |
 
-<code class="returns">=></code> incremented  `val`
+<code class="returns">=></code> Incremented  `val`
 
 </details>
 
@@ -1764,7 +1764,7 @@ isArray: (val: unknown) => val is any[]
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `Array.isArray(val)`
 
@@ -1973,7 +1973,7 @@ isBoolean: (val: unknown) => val is boolean
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `typeof val === 'boolean'`
 
@@ -2077,7 +2077,7 @@ isEmpty: (val: unknown) => val is Empty
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of empty or not
 
@@ -2188,7 +2188,7 @@ isFunction: (val: unknown) => val is AnyFn<any, unknown>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `typeof val === 'function'`
 
@@ -2293,7 +2293,7 @@ isNaN: (val: unknown) => val is number
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `Number.isNaN(val)`
 
@@ -2403,7 +2403,7 @@ isNill: (val: unknown) => val is null | undefined
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of type of  `val`  is undefined or null
 
@@ -2507,7 +2507,7 @@ isNull: (val: unknown) => val is null
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `val === null`
 
@@ -2611,7 +2611,7 @@ isNumber: (val: unknown) => val is number
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `typeof val === 'number'`
 
@@ -2715,14 +2715,14 @@ isObject: <T extends unknown>(val: T) => val is T
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of object or not
 
 </details>
 
 ::: tip Remark
-Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
+Definition of Primitive - `string` - `number` - `bigint` - `boolean` - `symbol` - `undefined` - `null`
 :::
 
 #### Example 
@@ -2822,14 +2822,14 @@ isPrimitive: (val: unknown) => val is Primitive
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of primitive or not
 
 </details>
 
 ::: tip Remark
-Definition of Primitive - string - number - bigint - boolean - symbol - undefined - null
+Definition of Primitive - `string` - `number` - `bigint` - `boolean` - `symbol` - `undefined` - `null`
 :::
 
 #### Example 
@@ -2929,7 +2929,7 @@ isString: (val: unknown) => val is string
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `typeof val === 'string'`
 
@@ -3033,7 +3033,7 @@ isSymbol: (val: unknown) => val is symbol
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `typeof val === 'symbol'`
 
@@ -3136,7 +3136,7 @@ isUndefined: (val: unknown) => val is undefined
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input any value |
+| `val` | Input any value |
 
 <code class="returns">=></code> The result of  `typeof val === 'undefined'`
 
@@ -3243,7 +3243,7 @@ K: <T extends unknown>(val: T) => () => T
 | --------- | ----------- |
 | `val` | The value to wrap in a function |
 
-<code class="returns">=></code> function wrapped  `val`
+<code class="returns">=></code> Function wrapped  `val`
 
 </details>
 
@@ -3388,7 +3388,7 @@ last: <T extends string | readonly unknown[]>(val: T) => Last<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | string or any array object |
+| `val` | `string`  or any  `array`  object |
 
 <code class="returns">=></code> The last element of the  `val`
 
@@ -3561,7 +3561,7 @@ Deno.test('length', () => {
 
 
 
-Return lowercase string
+Return lowercase string.
 {.desc}
 
 
@@ -3578,9 +3578,9 @@ lowerCase: <T extends string>(val: T) => Lowercase<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input string value |
+| `val` | Input string value |
 
-<code class="returns">=></code> lowercase string
+<code class="returns">=></code> Lowercase string
 
 </details>
 
@@ -3627,7 +3627,7 @@ Deno.test('lowerCase', () => {
 
 
 
-Returns `true` if the first argument is less than the second; otherwise `false`
+Returns `true` if the first argument is less than the second; otherwise `false`.
 {.desc}
 
 
@@ -3744,7 +3744,7 @@ Deno.test('lt', () => {
 
 
 
-Returns `true` if the first argument is less than or equal to the second; otherwise `false`
+Returns `true` if the first argument is less than or equal to the second; otherwise `false`.
 {.desc}
 
 
@@ -4290,7 +4290,7 @@ props: <T extends string | number, U extends Record<PropertyKey, unknown>>(val: 
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input property key |
+| `val` | Input property key |
 | `obj` | The object to query |
 
 <code class="returns">=></code> The result of safety  `obj[val]`  or  `obj[val[0]][val[1]][val[...x]]`
@@ -4865,7 +4865,7 @@ T: AnyFn<unknown, true>
 <summary>Parameters</summary>
 
 
-<code class="returns">=></code> true
+<code class="returns">=></code>  `True`
 
 </details>
 
@@ -5278,7 +5278,7 @@ Deno.test('types', () => {
 
 
 
-Return uppercase string
+Return uppercase string.
 {.desc}
 
 
@@ -5295,9 +5295,9 @@ upperCase: <T extends string>(val: T) => Uppercase<T>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `val` | input string value |
+| `val` | Input string value |
 
-<code class="returns">=></code> uppercase string
+<code class="returns">=></code> Uppercase string
 
 </details>
 
@@ -5619,6 +5619,13 @@ type First<T extends readonly unknown[] | string> = T extends "" ? "" : T extend
 ] ? undefined : T[0];
 ```
 
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+
+<code class="returns">=></code> First element of the  `T`
+
+</details>
 
 
 #### Example 1
@@ -5680,7 +5687,7 @@ type FlattenDeep<T extends readonly unknown[]> = T extends readonly [
 <summary>Parameters</summary>
 
 
-<code class="returns">=></code> deep flatted array
+<code class="returns">=></code> Deep flatted array
 
 </details>
 

@@ -5,8 +5,8 @@ import { isNumber } from './isNumber.ts'
 /**
  * Increments its argument.
  *
- * @param val - input `number` or `bigint`
- * @returns incremented `val`
+ * @param val - Input `number` or `bigint`
+ * @returns Incremented `val`
  *
  * @example
  * ```ts

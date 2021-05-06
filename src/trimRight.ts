@@ -4,7 +4,7 @@ import { Space } from './types/index.ts'
 /**
  * Infer the string with the right ends of trimmed.
  *
- * @typeParam T - any string
+ * @typeParam T - Any string
  * @returns String right ends of trimmed
  *
  * @remarks

@@ -3,9 +3,9 @@ import { IsPrimitive, isPrimitive } from './isPrimitive.ts'
 import { not } from './not.ts'
 
 /**
- * Object or not
+ * Object or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  *
  * @public
  */
@@ -14,7 +14,7 @@ type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
 /**
  * Whatever argument is type of `object` or not.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of object or not
  *
  * @remarks
@@ -24,13 +24,13 @@ type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
  *
  * @remarks
  * Definition of Primitive
- * - string
- * - number
- * - bigint
- * - boolean
- * - symbol
- * - undefined
- * - null
+ * - `string`
+ * - `number`
+ * - `bigint`
+ * - `boolean`
+ * - `symbol`
+ * - `undefined`
+ * - `null`
  *
  *
  * @example

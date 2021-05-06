@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
- * Returns a new list containing the contents of the given list, followed by the given value
+ * Returns a new list containing the contents of the given list, followed by the given value.
  *
  * @param val - The value to add to the end of the new list
  * @param list - The list of elements to add a new item to

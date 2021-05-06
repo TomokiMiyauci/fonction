@@ -5,7 +5,7 @@ import { TrimRight } from './trimRight.ts'
 /**
  * Infer the trimmed string.
  *
- * @typeParam T - any string
+ * @typeParam T - Any string
  * @returns Trimmed string
  *
  * @remarks

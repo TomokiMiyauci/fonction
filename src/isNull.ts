@@ -2,9 +2,9 @@
 import { NULL } from './constants/index.ts'
 
 /**
- * Null or not
+ * Null or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  *
  * @public
  */
@@ -13,7 +13,7 @@ type IsNull<T extends unknown> = T extends null ? true : false
 /**
  * Whatever argument is type of `null` or not.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of `val === null`
  *
  * @example

@@ -2,9 +2,9 @@
 import type { AnyFn } from './types/index.ts'
 
 /**
- * Function or not
+ * Function or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  *
  * @public
  */
@@ -13,7 +13,7 @@ type IsFunction<T extends unknown> = T extends AnyFn ? true : false
 /**
  * Whatever argument is type of `function` or not.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of `typeof val === 'function'`
  *
  * @example

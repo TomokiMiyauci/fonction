@@ -3,8 +3,7 @@
  * K combinator. Returns a function that always returns the given value.
  *
  * @param val - The value to wrap in a function
- *
- * @returns function wrapped `val`
+ * @returns Function wrapped `val`
  *
  * @example
  * ```ts

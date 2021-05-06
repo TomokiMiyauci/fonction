@@ -1,8 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
- * Number or not
+ * Number or not.
  *
- * @typeParam T - any value
+ * @typeParam T - Any value
  *
  * @public
  */
@@ -11,7 +11,7 @@ type IsNumber<T extends unknown> = T extends number ? true : false
 /**
  * Whatever argument is type of `number` or not.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of `typeof val === 'number'`
  *
  * @example

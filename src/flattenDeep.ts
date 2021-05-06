@@ -3,7 +3,7 @@
  * Infer deep flatted array.
  *
  * @typeParam T - input any array
- * @returns deep flatted array
+ * @returns Deep flatted array
  *
  * @example
  * ```ts

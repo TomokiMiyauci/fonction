@@ -2,7 +2,7 @@
 /**
  * Whatever argument is `Array` or not.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of `Array.isArray(val)`
  *
  * @example

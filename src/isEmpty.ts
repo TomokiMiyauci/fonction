@@ -11,7 +11,7 @@ import { Empty } from './types/index.ts'
 /**
  * Returns `true` if the given value is its type's empty value; otherwise `false`.
  *
- * @param val - input any value
+ * @param val - Input any value
  * @returns The result of empty or not
  *
  * @remarks

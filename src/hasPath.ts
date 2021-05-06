@@ -8,7 +8,7 @@ import { hasPath as _hasPath } from './_/hasPath.ts'
  * This function will remove next major release.
  * `hasPath` merged `has` function.
  *
- * @param props - The path to use
+ * @param path - The path to use
  * @param obj - The object to check the path in
  * @returns Whether the path exists
  *

@@ -6,7 +6,7 @@ import { subtract } from './subtract.ts'
  * Decrements its argument.
  *
  * @param val - input `number` or `bigint`
- * @returns decremented `val`
+ * @returns Decremented `val`
  *
  * @example
  * ```ts

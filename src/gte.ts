@@ -2,7 +2,7 @@
 import { Ord } from './types/index.ts'
 
 /**
- * Returns `true` if the first argument is greater than or equal to the second; otherwise `false`
+ * Returns `true` if the first argument is greater than or equal to the second; otherwise `false`.
  *
  * @param a - The first input value
  * @param b - The second input value

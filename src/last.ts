@@ -41,7 +41,7 @@ type Last<T extends string | readonly unknown[]> = T extends ''
 /**
  * Returns the last element of the given list or string.
  *
- * @param val - string or any array object
+ * @param val - `string` or any `array` object
  * @returns The last element of the `val`
  *
  * @example

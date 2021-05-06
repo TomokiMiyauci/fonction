@@ -11,7 +11,7 @@ import { has } from './has.ts'
 /**
  * Returns whether or not a path exists in an object. Only the object's own properties are checked.
  *
- * @param props - The path to use
+ * @param path - The path to use
  * @param obj - The object to check the path in
  * @returns Whether the path exists
  *
