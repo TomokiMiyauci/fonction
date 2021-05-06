@@ -8,6 +8,7 @@ import {
   DocBlock,
   DocCodeSpan,
   DocFencedCode,
+  DocLinkTag,
   DocNode,
   DocParagraph,
   DocParamCollection,
@@ -68,7 +69,8 @@ const isDocCodeSpan = (docNode: DocNode): docNode is DocCodeSpan =>
   docNode instanceof DocCodeSpan
 const isDocFencedCode = (docNode: DocNode): docNode is DocFencedCode =>
   docNode instanceof DocFencedCode
-
+const isDocLinkTag = (docNode: DocNode): docNode is DocLinkTag =>
+  docNode instanceof DocLinkTag
 const getRemarks = (docBlock: DocBlock | undefined) => {
   if (isUndefined(docBlock)) return []
 
@@ -91,11 +93,13 @@ const getDocCodeSpan = (docNode: DocNode): string => {
   return ''
 }
 
-const getDocFencedCode = (docNode: DocNode): string => {
-  if (isDocFencedCode(docNode)) {
-    return `\`${docNode.code}\``
+const getDocLinkTag = (docNode: DocNode) => {
+  if (isDocLinkTag(docNode)) {
+    return docNode.codeDestination?.memberReferences
+      .map(({ memberIdentifier }) => memberIdentifier?.identifier)
+      .filter((_) => !!_)
+      .join('.')
   }
-
   return ''
 }
 
@@ -124,6 +128,28 @@ const render = async (mdArgs: MdVariables): Promise<string> => {
   const md = await renderFile(join('.', 'api'), mdArgs)
 
   return md || ''
+}
+
+const getSees = (docBlocks: readonly DocBlock[]) => {
+  return docBlocks
+    .map((docBlock) => {
+      return docBlock.content.nodes
+        .map((node) => {
+          if (isDocParagraph(node)) {
+            return node.nodes
+              .map((node) => {
+                if (isDocLinkTag(node)) {
+                  return getDocLinkTag(node)
+                }
+                return ''
+              })
+              .filter((_) => !!_)
+          }
+          return []
+        })
+        .filter((_) => !!_)
+    })
+    .flat()
 }
 
 const getParams = ({ blocks }: DocParamCollection) =>
@@ -183,6 +209,7 @@ interface MdVariables {
   version: string | undefined
   params: [string, string][]
   returns: string[]
+  sees: string[]
 }
 
 const generate = (path: string, content: string): void =>
@@ -214,9 +241,11 @@ const mapMember = ({
       deprecatedBlock,
       remarksBlock,
       returnsBlock,
-      params: _params
+      params: _params,
+      seeBlocks
     } = member.tsdocComment
 
+    const sees = getSees(seeBlocks)
     const params = getParams(_params)
     const returns = returnsBlock ? getReturns(returnsBlock) : []
     const remarks = getRemarks(remarksBlock)
@@ -240,7 +269,8 @@ const mapMember = ({
       test,
       version: moduleVersions[name],
       params,
-      returns
+      returns,
+      sees
     })
 
     return {

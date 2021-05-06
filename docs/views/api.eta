@@ -12,6 +12,13 @@
 <% } %>
 <% } %>
 
+<% it.sees.forEach((see) => { %>
+:link:&nbsp;
+<% see.forEach((link) => { %>
+[<%= link %>](#<%= link.toLowerCase() %>)&nbsp;
+<% }) %>
+<% }) %>
+
 <% it.tagName %>
 
 <% if (it.tagName === '@beta') { %>
