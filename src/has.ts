@@ -30,6 +30,8 @@ import { isArray } from './isArray.ts'
  * hasPath(['hi', 'Tom'], { hi: { John: 1 } } ) // false
  * ```
  *
+ * @see Related to {@link props}
+ *
  * @public
  */
 const has = <

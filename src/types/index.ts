@@ -1,16 +1,16 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Type of any function
+ * Type of any function.
  *
  * @public
  *
- * @typeParam T - argument types
+ * @typeParam T - Argument types
  */
 export type AnyFn<T = any, U = unknown> = (...args: T[]) => U
 
 /**
- * Alias for Primitive values types
+ * Alias for Primitive values types.
  *
  * @public
  *
@@ -25,7 +25,7 @@ export type Primitive =
   | null
 
 /**
- * Abbreviation for Ordinal
+ * Abbreviation for Ordinal.
  *
  * @public
  */
@@ -40,7 +40,7 @@ export type Ord = string | number | bigint | boolean | Date
 export type Empty = '' | [] | {}
 
 /**
- * Alias for Falsy values
+ * Alias for Falsy values.
  *
  * @public
  */
@@ -58,8 +58,8 @@ export type InferArray<T> = T extends (infer R)[] ? R : never
 /**
  * Convert `string` to `array` types.
  *
- * @typeParam T - any string
- * @returns string array
+ * @typeParam T - Any string
+ * @returns String array
  *
  * @example
  * ```ts

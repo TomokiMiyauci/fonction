@@ -14,6 +14,8 @@ import { isNumber } from './isNumber.ts'
  * inc(10n) // 11n
  * ```
  *
+ * @see Related to {@link dec}
+ *
  * @public
  */
 const inc: {

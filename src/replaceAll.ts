@@ -12,6 +12,8 @@
  * ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
  * ```
  *
+ * @see Related to {@link Replace}
+ *
  * @public
  */
 type ReplaceAll<
@@ -37,6 +39,8 @@ type ReplaceAll<
  * replaceAll('hello Tom', 'Tom', 'Bob') // 'hello Bob'
  * replaceAll('hogehoge', 'hoge', 'fuga') // 'fugafuga'
  * ```
+ *
+ * @see Related to {@link replace}
  *
  * @public
  */

@@ -14,6 +14,8 @@ import { subtract } from './subtract.ts'
  * dec(10n) // 9n
  * ```
  *
+ * @see Related to {@link inc}
+ *
  * @public
  */
 const dec: {

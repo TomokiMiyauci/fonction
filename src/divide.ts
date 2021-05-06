@@ -42,6 +42,8 @@ import { _ } from './constants/index.ts'
  * half(20) // 10
  * ```
  *
+ * @see Related to {@link add} {@link subtract} {@link multiply}
+ *
  * @public
  */
 export const divide = _divide

@@ -10,6 +10,8 @@
  * toLower('Hello') // hello
  * ```
  *
+ * @see Related to {@link upperCase}
+ *
  * @public
  */
 const lowerCase = <T extends string>(val: T): Lowercase<T> =>

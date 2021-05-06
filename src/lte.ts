@@ -49,6 +49,8 @@ import { Ord } from './types/index.ts'
  * lte(new Date('2000/1/2'), new Date('2000/1/1')) // false
  * ```
  *
+ * @see Related to {@link lt} {@link gt} {@link gte}
+ *
  * @public
  */
 const lte = <T extends Ord>(a: T, b: T): boolean => a <= b

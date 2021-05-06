@@ -21,6 +21,8 @@
  * head([]) // []
  * ```
  *
+ * @see Related to {@link tail}
+ *
  * @public
  */
 const head: {

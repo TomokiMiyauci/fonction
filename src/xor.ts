@@ -17,6 +17,8 @@ import { Falsy } from './types/index.ts'
  * xor(false, false) // false
  * ```
  *
+ * @see Related to {@link and} {@link or}
+ *
  * @public
  */
 const xor = <T, U>(

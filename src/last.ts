@@ -22,6 +22,9 @@ import { String2Array } from './types/index.ts'
  * Last<['hello', 'world']> // 'world'
  * Last<string | number[]> // string | number
  * ```
+ *
+ * @see Related to {@link First}
+ *
  * @public
  */
 type Last<T extends string | readonly unknown[]> = T extends ''
@@ -57,6 +60,8 @@ type Last<T extends string | readonly unknown[]> = T extends ''
  * last([]) // undefined
  * last(['one', 2, 3, 4]) // 4
  * ```
+ *
+ * @see Related to {@link first}
  *
  * @public
  */

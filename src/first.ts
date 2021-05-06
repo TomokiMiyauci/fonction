@@ -25,6 +25,8 @@ import { String2Array } from './types/index.ts'
  * First<string | number[]> // string | number
  * ```
  *
+ * @see Related to {@link Last}
+ *
  * @public
  */
 type First<T extends readonly unknown[] | string> = T extends ''
@@ -57,6 +59,8 @@ type First<T extends readonly unknown[] | string> = T extends ''
  * first([]) // undefined
  * first(['one', 2, 3, 4]) // 'one'
  * ```
+ *
+ * @see Related to {@link last}
  *
  * @public
  */

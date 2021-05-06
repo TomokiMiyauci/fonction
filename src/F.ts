@@ -12,6 +12,8 @@ import { AnyFn } from './types/index.ts'
  * F(1, 'hello', 'world') // false
  * ```
  *
+ * @see Related to {@link T}
+ *
  * @public
  */
 const F: AnyFn<unknown, false> = () => false

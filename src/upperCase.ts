@@ -10,6 +10,8 @@
  * toUpper('Hello') // HELLO
  * ```
  *
+ * @see Related to {@link lowerCase}
+ *
  * @public
  */
 const upperCase = <T extends string>(val: T): Uppercase<T> =>
