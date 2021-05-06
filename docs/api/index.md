@@ -1437,6 +1437,8 @@ Deno.test('has', () => {
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
 
+:link:&nbsp;
+[has](#has)&nbsp;
 
 
 

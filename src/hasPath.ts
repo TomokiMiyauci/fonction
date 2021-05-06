@@ -22,6 +22,8 @@ import { hasPath as _hasPath } from './_/hasPath.ts'
  * hasPath(['hi', 'Tom'], { hi: { John: 1 } } ) // false
  * ```
  *
+ * @see Related to {@link has}
+ *
  * @public
  */
 const hasPath = _hasPath
