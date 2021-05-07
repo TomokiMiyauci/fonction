@@ -103,7 +103,7 @@ Version: `Latest`
 
 ### add
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#add)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -179,7 +179,7 @@ plus2(-3) // -1
 
 ### and
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#and)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -262,7 +262,7 @@ Deno.test('and', () => {
 
 ### append
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#append)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -350,7 +350,7 @@ Deno.test('append', () => {
 
 ### chunk
 
-<small>Added from [1.4.0](./1.4.0/)</small>
+<small>Added from [1.4.0](./1.4.0/#chunk)</small>
 {.my-1}
 
 
@@ -509,7 +509,7 @@ Deno.test('chunk', () => {
 
 ### dec
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#dec)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -592,7 +592,7 @@ Deno.test('dec', () => {
 
 ### defaultTo
 
-<small>Added from [1.4.0](./1.4.0/)</small>
+<small>Added from [1.4.0](./1.4.0/#defaultto)</small>
 {.my-1}
 
 
@@ -684,7 +684,7 @@ Deno.test('defaultTo', () => {
 
 ### divide
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#divide)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -775,7 +775,7 @@ half(20) // 10
 
 ### endsWith
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#endswith)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -865,7 +865,7 @@ Deno.test('endsWith', () => {
 
 ### F
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#f)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -936,7 +936,7 @@ Deno.test('F', () => {
 
 ### first
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#first)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -1066,7 +1066,7 @@ Deno.test('First', () => {
 
 ### flattenDeep
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#flattendeep)</small>
 {.my-1}
 
 
@@ -1188,7 +1188,7 @@ Deno.test('types', () => {
 
 ### gt
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#gt)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -1312,7 +1312,7 @@ Deno.test('gt', () => {
 
 ### gte
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#gte)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -1440,7 +1440,7 @@ Deno.test('gte', () => {
 
 ### has
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#has)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -1579,7 +1579,7 @@ Deno.test('has', () => {
 
 ### hasPath
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#haspath)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -1689,7 +1689,7 @@ Deno.test('hasPath', () => {
 
 ### head
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#head)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -1803,7 +1803,7 @@ Deno.test('head', () => {
 
 ### identity
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#identity)</small>
 {.my-1}
 
 
@@ -1874,7 +1874,7 @@ Deno.test('identity', () => {
 
 ### inc
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#inc)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -1956,7 +1956,7 @@ Deno.test('inc', () => {
 
 ### isArray
 
-<small>Added from [1.3.0](./1.3.0/)</small>
+<small>Added from [1.3.0](./1.3.0/#isarray)</small>
 {.my-1}
 
 
@@ -2064,7 +2064,7 @@ Deno.test('isArray', () => {
 
 ### isBigint
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isbigint)</small>
 {.my-1}
 
 
@@ -2171,7 +2171,7 @@ Deno.test('isBigint', () => {
 
 ### isBoolean
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isboolean)</small>
 {.my-1}
 
 
@@ -2278,7 +2278,7 @@ Deno.test('isBoolean', () => {
 
 ### isEmpty
 
-<small>Added from [1.3.0](./1.3.0/)</small>
+<small>Added from [1.3.0](./1.3.0/#isempty)</small>
 {.my-1}
 
 
@@ -2392,7 +2392,7 @@ Deno.test('isEmpty', () => {
 
 ### isFunction
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isfunction)</small>
 {.my-1}
 
 
@@ -2500,7 +2500,7 @@ Deno.test('isFunction', () => {
 
 ### isNaN
 
-<small>Added from [1.4.0](./1.4.0/)</small>
+<small>Added from [1.4.0](./1.4.0/#isnan)</small>
 {.my-1}
 
 
@@ -2718,7 +2718,7 @@ Deno.test('isNil', () => {
 
 ### isNill
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isnill)</small>
 {.my-1}
 
 
@@ -2829,7 +2829,7 @@ Deno.test('isNill', () => {
 
 ### isNull
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isnull)</small>
 {.my-1}
 
 
@@ -2936,7 +2936,7 @@ Deno.test('isNull', () => {
 
 ### isNumber
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isnumber)</small>
 {.my-1}
 
 
@@ -3043,7 +3043,7 @@ Deno.test('isNumber', () => {
 
 ### isObject
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isobject)</small>
 {.my-1}
 
 
@@ -3153,7 +3153,7 @@ Deno.test('isObject', () => {
 
 ### isPrimitive
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isprimitive)</small>
 {.my-1}
 
 
@@ -3263,7 +3263,7 @@ Deno.test('isPrimitive', () => {
 
 ### isString
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isstring)</small>
 {.my-1}
 
 
@@ -3370,7 +3370,7 @@ Deno.test('isString', () => {
 
 ### isSymbol
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#issymbol)</small>
 {.my-1}
 
 
@@ -3476,7 +3476,7 @@ Deno.test('isSymbol', () => {
 
 ### isUndefined
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#isundefined)</small>
 {.my-1}
 
 
@@ -3584,7 +3584,7 @@ Deno.test('isUndefined', () => {
 
 ### K
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#k)</small>
 {.my-1}
 
 
@@ -3657,7 +3657,7 @@ Deno.test('K', () => {
 
 ### keys
 
-<small>Added from [1.3.0](./1.3.0/)</small>
+<small>Added from [1.3.0](./1.3.0/#keys)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -3742,7 +3742,7 @@ Deno.test('keys', () => {
 
 ### last
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#last)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -3864,7 +3864,7 @@ Deno.test('Last', () => {
 
 ### length
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#length)</small>
 {.my-1}
 
 
@@ -3944,7 +3944,7 @@ Deno.test('length', () => {
 
 ### lowerCase
 
-<small>Added from [1.0.1](./1.0.1/)</small>
+<small>Added from [1.0.1](./1.0.1/#lowercase)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4018,7 +4018,7 @@ Deno.test('lowerCase', () => {
 
 ### lt
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#lt)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4142,7 +4142,7 @@ Deno.test('lt', () => {
 
 ### lte
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#lte)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4269,7 +4269,7 @@ Deno.test('lte', () => {
 
 ### multiply
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#multiply)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4345,7 +4345,7 @@ double(4) // 8
 
 ### not
 
-<small>Added from [1.3.0](./1.3.0/)</small>
+<small>Added from [1.3.0](./1.3.0/#not)</small>
 {.my-1}
 
 
@@ -4448,7 +4448,7 @@ Deno.test('not', () => {
 
 ### or
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#or)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4533,7 +4533,7 @@ Deno.test('or', () => {
 
 ### prepend
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#prepend)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4620,7 +4620,7 @@ Deno.test('prepend', () => {
 
 ### product
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#product)</small>
 {.my-1}
 
 
@@ -4711,7 +4711,7 @@ Deno.test('product', () => {
 
 ### props
 
-<small>Added from [1.4.0](./1.4.0/)</small>
+<small>Added from [1.4.0](./1.4.0/#props)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4803,7 +4803,7 @@ Deno.test('props', () => {
 
 ### replace
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#replace)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4897,7 +4897,7 @@ Deno.test('types', () => {
 
 ### replaceAll
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#replaceall)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -4991,7 +4991,7 @@ Deno.test('types', () => {
 
 ### reverse
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#reverse)</small>
 {.my-1}
 
 
@@ -5097,7 +5097,7 @@ Deno.test('reverse', () => {
 
 ### startsWith
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#startswith)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5160,7 +5160,7 @@ startWithSlash('/path/to') // true
 
 ### subtract
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#subtract)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5251,7 +5251,7 @@ minus5(20) // 15
 
 ### sum
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#sum)</small>
 {.my-1}
 
 
@@ -5341,7 +5341,7 @@ Deno.test('sum', () => {
 
 ### T
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#t)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5412,7 +5412,7 @@ Deno.test('T', () => {
 
 ### tail
 
-<small>Added from [1.2.0](./1.2.0/)</small>
+<small>Added from [1.2.0](./1.2.0/#tail)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5526,7 +5526,7 @@ Deno.test('tail', () => {
 
 ### trim
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#trim)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5618,7 +5618,7 @@ Deno.test('types', () => {
 
 ### trimLeft
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#trimleft)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5714,7 +5714,7 @@ Deno.test('types', () => {
 
 ### trimRight
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#trimright)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5810,7 +5810,7 @@ Deno.test('types', () => {
 
 ### upperCase
 
-<small>Added from [1.0.1](./1.0.1/)</small>
+<small>Added from [1.0.1](./1.0.1/#uppercase)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5883,7 +5883,7 @@ Deno.test('upperCase', () => {
 
 ### values
 
-<small>Added from [1.3.0](./1.3.0/)</small>
+<small>Added from [1.3.0](./1.3.0/#values)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -5987,7 +5987,7 @@ Deno.test('values', () => {
 
 ### xor
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#xor)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6075,7 +6075,7 @@ Deno.test('xor', () => {
 
 ### AnyFn
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#anyfn)</small>
 {.my-1}
 
 
@@ -6105,7 +6105,7 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 
 ### Empty
 
-<small>Added from [1.3.0](./1.3.0/)</small>
+<small>Added from [1.3.0](./1.3.0/#empty)</small>
 {.my-1}
 
 
@@ -6139,7 +6139,7 @@ type Empty = "" | [
 
 ### Falsy
 
-<small>Added from [1.3.0](./1.3.0/)</small>
+<small>Added from [1.3.0](./1.3.0/#falsy)</small>
 {.my-1}
 
 
@@ -6172,7 +6172,7 @@ type Falsy = false | "" | 0 | null | undefined;
 
 ### First
 
-<small>Added from [1.4.0](./1.4.0/)</small>
+<small>Added from [1.4.0](./1.4.0/#first)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6235,7 +6235,7 @@ First<string | number[]> // string | number
 
 ### FlattenDeep
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#flattendeep)</small>
 {.my-1}
 
 
@@ -6293,7 +6293,7 @@ FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 
 ### Last
 
-<small>Added from [1.4.0](./1.4.0/)</small>
+<small>Added from [1.4.0](./1.4.0/#last)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6354,7 +6354,7 @@ Last<string | number[]> // string | number
 
 ### Ord
 
-<small>Added from [1.1.0](./1.1.0/)</small>
+<small>Added from [1.1.0](./1.1.0/#ord)</small>
 {.my-1}
 
 
@@ -6387,7 +6387,7 @@ type Ord = string | number | bigint | boolean | Date;
 
 ### Primitive
 
-<small>Added from [1.0.0](./1.0.0/)</small>
+<small>Added from [1.0.0](./1.0.0/#primitive)</small>
 {.my-1}
 
 
@@ -6420,7 +6420,7 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 
 ### Replace
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#replace)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6462,7 +6462,7 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 
 ### ReplaceAll
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#replaceall)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6504,7 +6504,7 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 
 ### Space
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#space)</small>
 {.my-1}
 
 
@@ -6537,7 +6537,7 @@ type Space = " " | "\n" | "\t";
 
 ### Trim
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#trim)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6589,7 +6589,7 @@ Trim<'\t\n hello \t\n'> // 'hello'
 
 ### TrimLeft
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#trimleft)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6641,7 +6641,7 @@ TrimLeft<' \n\thello'> // 'hello'
 
 ### TrimRight
 
-<small>Added from [1.5.0](./1.5.0/)</small>
+<small>Added from [1.5.0](./1.5.0/#trimright)</small>
 {.my-1}
 
 :link:&nbsp;
@@ -6691,3 +6691,7 @@ TrimRight<'hello \n\t'> // 'hello'
 
 ---
 
+
+<span class="tag version latest fixed bottom-10 right-10">
+Latest
+</span>

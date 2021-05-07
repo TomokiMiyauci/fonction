@@ -363,6 +363,12 @@ ${merged}
 ## Types
 
 ${mergedTypesMd}
+
+<span class="tag version ${
+        isLatest ? 'latest' : 'past'
+      } fixed bottom-10 right-10">
+${isLatest ? 'Latest' : version}
+</span>
 `
     )
   })
