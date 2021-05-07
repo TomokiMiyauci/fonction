@@ -20,6 +20,7 @@ import { isUndefined, replace } from 'fonction'
 import { outputFileSync, pathExistsSync, readFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
+import { getApiListTable } from './gen-api-list.ts'
 import { getModuleStarts } from './gen-relations'
 const apiModel = new ApiModel()
 const copyright =
@@ -270,7 +271,6 @@ const mapMember = ({
     } = member.tsdocComment
 
     const categories = getCategories(customBlocks)
-    console.log(categories)
     const sees = getSees(seeBlocks)
     const params = getParams(_params)
     const returns = returnsBlock ? getReturns(returnsBlock) : []
@@ -311,13 +311,15 @@ const run = async ({
   apiJsonPath,
   editLink = true,
   isLatest,
-  moduleVersions
+  moduleVersions,
+  apiTable
 }: {
   version: string
   apiJsonPath: string
   editLink?: boolean
   isLatest: boolean
   moduleVersions: Record<string, string | undefined>
+  apiTable?: string
 }): Promise<void> => {
   const apiPackage = apiModel.loadPackage(apiJsonPath)
 
@@ -352,6 +354,8 @@ editLink: false
 Version: \`${isLatest ? 'Latest' : version}\`
 {.my-1}
 
+${apiTable}
+
 ## Functions
 
 ${merged}
@@ -366,11 +370,13 @@ ${mergedTypesMd}
 
 const main = async () => {
   const moduleStarts = await getModuleStarts()
+  const apiTable = getApiListTable()
   run({
     version: '',
     apiJsonPath: resolve(__dirname, '..', 'temp', 'fonction.api.json'),
     isLatest: true,
-    moduleVersions: moduleStarts
+    moduleVersions: moduleStarts,
+    apiTable
   })
 }
 
