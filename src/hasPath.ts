@@ -22,7 +22,10 @@ import { hasPath as _hasPath } from './_/hasPath.ts'
  * hasPath(['hi', 'Tom'], { hi: { John: 1 } } ) // false
  * ```
  *
+ * @category `Object`
+ *
  * @see Related to {@link has}
+ *
  *
  * @public
  */

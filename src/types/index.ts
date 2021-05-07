@@ -12,6 +12,8 @@ export type AnyFn<T = any, U = unknown> = (...args: T[]) => U
 /**
  * Alias for Primitive values types.
  *
+ * @category `Alias`
+ *
  * @public
  *
  */
@@ -27,12 +29,16 @@ export type Primitive =
 /**
  * Abbreviation for Ordinal.
  *
+ * @category `Alias`
+ *
  * @public
  */
 export type Ord = string | number | bigint | boolean | Date
 
 /**
  * Alias for Empty values
+ *
+ * @category `Alias`
  *
  * @public
  */
@@ -42,12 +48,16 @@ export type Empty = '' | [] | {}
 /**
  * Alias for Falsy values.
  *
+ * @category `Alias`
+ *
  * @public
  */
 export type Falsy = false | '' | 0 | null | undefined
 
 /**
  * Alias for Space values.
+ *
+ * @category `Alias`
  *
  * @public
  */

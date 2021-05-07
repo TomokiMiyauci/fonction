@@ -23,6 +23,8 @@
  * values(['hello', 'world']) // ['hello', 'world']
  * ```
  *
+ * @category `Array` `Object`
+ *
  * @see Related to {@link keys}
  *
  * @public

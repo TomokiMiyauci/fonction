@@ -20,6 +20,8 @@ import { isString } from './isString.ts'
  * reverse([0, {}, []]) // [[], {}, 0]
  * ```
  *
+ * @category `Array`
+ *
  * @public
  */
 const reverse: {

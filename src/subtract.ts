@@ -43,6 +43,8 @@ import { _ } from './constants/index.ts'
  * minus5(20) // 15
  * ```
  *
+ * @category `Math`
+ *
  * @see Related to {@link add} {@link multiply} {@link divide}
  *
  * @public

@@ -49,9 +49,33 @@
   background-color: #c00;
 }
 
+.tag.math {
+  background-color: rgba(11, 105, 228, 0.9);
+}
+
+.tag.array {
+  background-color: rgba(76, 11, 228, 0.8);
+}
+
+.tag.string {
+  background-color: #e7c100;
+}
+
+.tag.object {
+  background-color: #e77000;
+}
+
+.tag.alias {
+  background-color: #00e7a2;
+}
+
 .my-1 {
   margin-top: 0.1rem;
   margin-bottom: 0;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .desc {

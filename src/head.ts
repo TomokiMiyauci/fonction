@@ -21,6 +21,8 @@
  * head([]) // []
  * ```
  *
+ * @category `Array` `String`
+ *
  * @see Related to {@link tail}
  *
  * @public

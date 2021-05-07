@@ -23,6 +23,8 @@ import { String2Array } from './types/index.ts'
  * Last<string | number[]> // string | number
  * ```
  *
+ * @category `Array` `String`
+ *
  * @see Related to {@link First}
  *
  * @public

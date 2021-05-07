@@ -15,6 +15,8 @@ import { prop } from './_/prop.ts'
  * props('x', {}) // undefined
  * ```
  *
+ * @category `Object`
+ *
  * @see Related to {@link has}
  *
  * @public

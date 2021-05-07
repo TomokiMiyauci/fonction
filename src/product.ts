@@ -17,6 +17,8 @@ import { multiply } from './multiply.ts'
  * product([]) // 0
  * ```
  *
+ * @category `Math`
+ *
  * @public
  */
 const product: {

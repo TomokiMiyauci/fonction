@@ -10,6 +10,8 @@
  * toLower('Hello') // hello
  * ```
  *
+ * @category `String`
+ *
  * @see Related to {@link upperCase}
  *
  * @public

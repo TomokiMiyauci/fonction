@@ -17,6 +17,8 @@ import { isUndefined } from './isUndefined.ts'
  * sum([]) // 0
  * ```
  *
+ * @category `Math`
+ *
  * @public
  */
 const sum: {

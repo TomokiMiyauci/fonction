@@ -28,6 +28,8 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
  * endsWithHtml('index.html') // true
  * ```
  *
+ * @category `String`
+ *
  * @see Related to {@link startsWith}
  *
  * @public

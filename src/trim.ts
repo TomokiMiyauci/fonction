@@ -19,6 +19,8 @@ import { TrimRight } from './trimRight.ts'
  * Trim<'\t\n hello \t\n'> // 'hello'
  * ```
  *
+ * @category `String`
+ *
  * @see Related to {@link TrimLeft} {@link TrimRight}
  *
  * @public
@@ -35,6 +37,8 @@ type Trim<T extends string> = TrimLeft<TrimRight<T>>
  * ```ts
  * trim('   hello   ') // 'hello'
  * ```
+ *
+ * @category `String`
  *
  * @see Related to {@link trimLeft} {@link trimRight}
  *

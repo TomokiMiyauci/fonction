@@ -28,6 +28,8 @@ import { lte } from './lte.ts'
  * chunk(5, []) // []
  * ```
  *
+ * @category `Array`
+ *
  * @public
  */
 const chunk = <T extends number, U extends readonly unknown[]>(
