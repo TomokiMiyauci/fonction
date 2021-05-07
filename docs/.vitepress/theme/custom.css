@@ -105,7 +105,7 @@
   margin: 1rem 0 1rem 0;
 }
 
-th:nth-child(2) {
+.table > thead > tr > th:nth-child(2) {
   width: 100%;
 }
 
