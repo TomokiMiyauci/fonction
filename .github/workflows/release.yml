@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Audit
-        run: yarn audit
+        run: yarn audit --level critical
 
   setup:
     needs: [audit]
