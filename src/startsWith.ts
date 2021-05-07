@@ -34,6 +34,8 @@ type StartsWith<T extends string | undefined = undefined> = StringWith<
  * startWithSlash('/path/to') // true
  * ```
  *
+ * @category `String`
+ *
  * @see Related to {@link endsWith}
  *
  * @public

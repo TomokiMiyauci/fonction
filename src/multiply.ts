@@ -29,6 +29,8 @@ import { multiply as _multiply } from '../deps.ts'
  * double(4) // 8
  * ```
  *
+ * @category `Math`
+ *
  * @see Related to {@link add} {@link subtract} {@link divide}
  *
  * @public

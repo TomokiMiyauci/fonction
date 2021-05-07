@@ -13,6 +13,8 @@
  * prepend(['Tom'], ['hello', 'world']) // [['Tom'], 'hello', 'world']
  * ```
  *
+ * @category `Array`
+ *
  * @see Related to {@link append}
  *
  * @public

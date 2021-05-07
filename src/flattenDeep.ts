@@ -11,6 +11,8 @@
  * FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
  * ```
  *
+ * @category `Array`
+ *
  * @public
  */
 type FlattenDeep<T extends readonly unknown[]> = T extends readonly [

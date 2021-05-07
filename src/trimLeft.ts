@@ -17,6 +17,8 @@ import { Space } from './types/index.ts'
  * TrimLeft<' \n\thello'> // 'hello'
  * ```
  *
+ * @category `String`
+ *
  * @see Related to {@link TrimRight} {@link Trim}
  *
  * @public
@@ -42,6 +44,8 @@ type TrimLeft<T extends string> = T extends `${Space}${infer R}`
  * trimLeft('   hello') // 'hello'
  * trimLeft(' \n\thello') // 'hello'
  * ```
+ *
+ * @category `String`
  *
  * @see Related to {@link trimRight} {@link trim}
  *

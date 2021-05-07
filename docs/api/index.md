@@ -15,6 +15,10 @@ Version: `Latest`
 [multiply](#multiply)&nbsp;
 [divide](#divide)&nbsp;
 
+<p>
+<span class="tag math mr-2">Math</span>
+</p>
+
 
 
 
@@ -84,6 +88,7 @@ plus2(-3) // -1
 :link:&nbsp;
 [or](#or)&nbsp;
 [xor](#xor)&nbsp;
+
 
 
 
@@ -165,6 +170,10 @@ Deno.test('and', () => {
 :link:&nbsp;
 [prepend](#prepend)&nbsp;
 
+<p>
+<span class="tag array mr-2">Array</span>
+</p>
+
 
 
 
@@ -245,6 +254,10 @@ Deno.test('append', () => {
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
 
+
+<p>
+<span class="tag array mr-2">Array</span>
+</p>
 
 
 
@@ -405,6 +418,7 @@ Deno.test('chunk', () => {
 
 
 
+
 Decrements its argument.
 {.desc}
 
@@ -479,6 +493,7 @@ Deno.test('dec', () => {
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
 
 
 
@@ -575,6 +590,10 @@ Deno.test('defaultTo', () => {
 [subtract](#subtract)&nbsp;
 [multiply](#multiply)&nbsp;
 
+<p>
+<span class="tag math mr-2">Math</span>
+</p>
+
 
 
 
@@ -658,6 +677,10 @@ half(20) // 10
 
 :link:&nbsp;
 [startsWith](#startswith)&nbsp;
+
+<p>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -747,6 +770,7 @@ Deno.test('endsWith', () => {
 
 
 
+
 A function that always returns `false`. Any passed in parameters are ignored.
 {.desc}
 
@@ -813,6 +837,11 @@ Deno.test('F', () => {
 
 :link:&nbsp;
 [last](#last)&nbsp;
+
+<p>
+<span class="tag array mr-2">Array</span>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -934,6 +963,7 @@ Deno.test('First', () => {
 
 <small>Added from [1.5.0](./1.5.0/)</small>
 {.my-1}
+
 
 
 
@@ -1063,6 +1093,7 @@ Deno.test('types', () => {
 
 
 
+
 Returns `true` if the first argument is greater than the second; otherwise `false`.
 {.desc}
 
@@ -1181,6 +1212,7 @@ Deno.test('gt', () => {
 [gt](#gt)&nbsp;
 [lt](#lt)&nbsp;
 [lte](#lte)&nbsp;
+
 
 
 
@@ -1305,6 +1337,10 @@ Deno.test('gte', () => {
 
 :link:&nbsp;
 [props](#props)&nbsp;
+
+<p>
+<span class="tag object mr-2">Object</span>
+</p>
 
 
 
@@ -1440,6 +1476,10 @@ Deno.test('has', () => {
 :link:&nbsp;
 [has](#has)&nbsp;
 
+<p>
+<span class="tag object mr-2">Object</span>
+</p>
+
 
 
 <span class="tag deprecated">deprecate</span>
@@ -1544,6 +1584,11 @@ Deno.test('hasPath', () => {
 
 :link:&nbsp;
 [tail](#tail)&nbsp;
+
+<p>
+<span class="tag array mr-2">Array</span>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -1654,6 +1699,7 @@ Deno.test('head', () => {
 
 
 
+
 Return the parameter supplied to it.
 {.desc}
 
@@ -1721,6 +1767,7 @@ Deno.test('identity', () => {
 
 :link:&nbsp;
 [dec](#dec)&nbsp;
+
 
 
 
@@ -1798,6 +1845,7 @@ Deno.test('inc', () => {
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
 
 
 
@@ -1909,6 +1957,7 @@ Deno.test('isArray', () => {
 
 
 
+
 Whatever argument is type of `bigint` or not.
 {.desc}
 
@@ -2014,6 +2063,7 @@ Deno.test('isBigint', () => {
 
 
 
+
 Whatever argument is type of `boolean` or not.
 {.desc}
 
@@ -2114,6 +2164,7 @@ Deno.test('isBoolean', () => {
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
 
 
 
@@ -2231,6 +2282,7 @@ Deno.test('isEmpty', () => {
 
 
 
+
 Whatever argument is type of `function` or not.
 {.desc}
 
@@ -2332,6 +2384,7 @@ Deno.test('isFunction', () => {
 
 <small>Added from [1.4.0](./1.4.0/)</small>
 {.my-1}
+
 
 
 
@@ -2448,6 +2501,7 @@ Deno.test('isNaN', () => {
 
 
 
+
 Whatever argument is type of `undefined` or `null`.
 {.desc}
 
@@ -2548,6 +2602,7 @@ Deno.test('isNill', () => {
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2658,6 +2713,7 @@ Deno.test('isNull', () => {
 
 
 
+
 Whatever argument is type of `number` or not.
 {.desc}
 
@@ -2758,6 +2814,7 @@ Deno.test('isNumber', () => {
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -2871,6 +2928,7 @@ Deno.test('isObject', () => {
 
 
 
+
 Whatever argument is `primitive` or not.
 {.desc}
 
@@ -2974,6 +3032,7 @@ Deno.test('isPrimitive', () => {
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -3084,6 +3143,7 @@ Deno.test('isString', () => {
 
 
 
+
 Whatever argument is type of `symbol` or not.
 {.desc}
 
@@ -3183,6 +3243,7 @@ Deno.test('isSymbol', () => {
 
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
+
 
 
 
@@ -3294,6 +3355,7 @@ Deno.test('isUndefined', () => {
 
 
 
+
 K combinator. Returns a function that always returns the given value.
 {.desc}
 
@@ -3363,6 +3425,10 @@ Deno.test('K', () => {
 
 :link:&nbsp;
 [values](#values)&nbsp;
+
+<p>
+<span class="tag object mr-2">Object</span>
+</p>
 
 
 
@@ -3443,6 +3509,7 @@ Deno.test('keys', () => {
 
 :link:&nbsp;
 [first](#first)&nbsp;
+
 
 
 
@@ -3562,6 +3629,11 @@ Deno.test('Last', () => {
 {.my-1}
 
 
+<p>
+<span class="tag array mr-2">Array</span>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -3638,6 +3710,10 @@ Deno.test('length', () => {
 :link:&nbsp;
 [upperCase](#uppercase)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -3708,6 +3784,7 @@ Deno.test('lowerCase', () => {
 [lte](#lte)&nbsp;
 [gt](#gt)&nbsp;
 [gte](#gte)&nbsp;
+
 
 
 
@@ -3834,6 +3911,7 @@ Deno.test('lt', () => {
 
 
 
+
 Returns `true` if the first argument is less than or equal to the second; otherwise `false`.
 {.desc}
 
@@ -3956,6 +4034,10 @@ Deno.test('lte', () => {
 [subtract](#subtract)&nbsp;
 [divide](#divide)&nbsp;
 
+<p>
+<span class="tag math mr-2">Math</span>
+</p>
+
 
 
 
@@ -4021,6 +4103,7 @@ double(4) // 8
 
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
+
 
 
 
@@ -4130,6 +4213,7 @@ Deno.test('not', () => {
 
 
 
+
 Returns true if one or both of its arguments are true; otherwise false.
 {.desc}
 
@@ -4208,6 +4292,10 @@ Deno.test('or', () => {
 
 :link:&nbsp;
 [append](#append)&nbsp;
+
+<p>
+<span class="tag array mr-2">Array</span>
+</p>
 
 
 
@@ -4288,6 +4376,10 @@ Deno.test('prepend', () => {
 <small>Added from [1.2.0](./1.2.0/)</small>
 {.my-1}
 
+
+<p>
+<span class="tag math mr-2">Math</span>
+</p>
 
 
 
@@ -4377,6 +4469,10 @@ Deno.test('product', () => {
 :link:&nbsp;
 [has](#has)&nbsp;
 
+<p>
+<span class="tag object mr-2">Object</span>
+</p>
+
 
 
 
@@ -4463,6 +4559,10 @@ Deno.test('props', () => {
 
 :link:&nbsp;
 [replaceAll](#replaceall)&nbsp;
+
+<p>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -4553,6 +4653,10 @@ Deno.test('types', () => {
 :link:&nbsp;
 [replace](#replace)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -4639,6 +4743,10 @@ Deno.test('types', () => {
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
 
+
+<p>
+<span class="tag array mr-2">Array</span>
+</p>
 
 
 
@@ -4743,6 +4851,10 @@ Deno.test('reverse', () => {
 :link:&nbsp;
 [endsWith](#endswith)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -4802,6 +4914,10 @@ startWithSlash('/path/to') // true
 [add](#add)&nbsp;
 [multiply](#multiply)&nbsp;
 [divide](#divide)&nbsp;
+
+<p>
+<span class="tag math mr-2">Math</span>
+</p>
 
 
 
@@ -4884,6 +5000,10 @@ minus5(20) // 15
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
 
+
+<p>
+<span class="tag math mr-2">Math</span>
+</p>
 
 
 
@@ -4975,6 +5095,7 @@ Deno.test('sum', () => {
 
 
 
+
 A function that always returns `true`. Any passed in parameters are ignored.
 {.desc}
 
@@ -5041,6 +5162,11 @@ Deno.test('T', () => {
 
 :link:&nbsp;
 [head](#head)&nbsp;
+
+<p>
+<span class="tag array mr-2">Array</span>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -5151,6 +5277,10 @@ Deno.test('tail', () => {
 [trimLeft](#trimleft)&nbsp;
 [trimRight](#trimright)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -5237,6 +5367,10 @@ Deno.test('types', () => {
 :link:&nbsp;
 [trimRight](#trimright)&nbsp;
 [trim](#trim)&nbsp;
+
+<p>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -5329,6 +5463,10 @@ Deno.test('types', () => {
 [trimLeft](#trimleft)&nbsp;
 [trim](#trim)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -5419,6 +5557,10 @@ Deno.test('types', () => {
 :link:&nbsp;
 [lowerCase](#lowercase)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -5486,6 +5628,11 @@ Deno.test('upperCase', () => {
 
 :link:&nbsp;
 [keys](#keys)&nbsp;
+
+<p>
+<span class="tag array mr-2">Array</span>
+<span class="tag object mr-2">Object</span>
+</p>
 
 
 
@@ -5589,6 +5736,7 @@ Deno.test('values', () => {
 
 
 
+
 Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
 {.desc}
 
@@ -5672,6 +5820,7 @@ Deno.test('xor', () => {
 
 
 
+
 Type of any function.
 {.desc}
 
@@ -5697,6 +5846,10 @@ type AnyFn<T = any, U = unknown> = (...args: T[]) => U;
 <small>Added from [1.3.0](./1.3.0/)</small>
 {.my-1}
 
+
+<p>
+<span class="tag alias mr-2">Alias</span>
+</p>
 
 
 
@@ -5728,6 +5881,10 @@ type Empty = "" | [
 {.my-1}
 
 
+<p>
+<span class="tag alias mr-2">Alias</span>
+</p>
+
 
 
 
@@ -5758,6 +5915,11 @@ type Falsy = false | "" | 0 | null | undefined;
 
 :link:&nbsp;
 [Last](#last)&nbsp;
+
+<p>
+<span class="tag array mr-2">Array</span>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -5815,6 +5977,10 @@ First<string | number[]> // string | number
 {.my-1}
 
 
+<p>
+<span class="tag array mr-2">Array</span>
+</p>
+
 
 
 
@@ -5871,6 +6037,11 @@ FlattenDeep<[[1, [2, [3, [4]], 5]]> // [1, 2, 3, 4, 5]
 :link:&nbsp;
 [First](#first)&nbsp;
 
+<p>
+<span class="tag array mr-2">Array</span>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -5925,6 +6096,10 @@ Last<string | number[]> // string | number
 {.my-1}
 
 
+<p>
+<span class="tag alias mr-2">Alias</span>
+</p>
+
 
 
 
@@ -5953,6 +6128,10 @@ type Ord = string | number | bigint | boolean | Date;
 <small>Added from [1.0.0](./1.0.0/)</small>
 {.my-1}
 
+
+<p>
+<span class="tag alias mr-2">Alias</span>
+</p>
 
 
 
@@ -5984,6 +6163,10 @@ type Primitive = string | number | bigint | boolean | symbol | undefined | null;
 
 :link:&nbsp;
 [ReplaceAll](#replaceall)&nbsp;
+
+<p>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -6023,6 +6206,10 @@ Replace<'hogehoge', 'hoge', 'fuga'> // 'fugahoge'
 :link:&nbsp;
 [Replace](#replace)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -6059,6 +6246,10 @@ ReplaceAll<'hogehoge', 'hoge', 'fuga'> // 'fugafuga'
 {.my-1}
 
 
+<p>
+<span class="tag alias mr-2">Alias</span>
+</p>
+
 
 
 
@@ -6090,6 +6281,10 @@ type Space = " " | "\n" | "\t";
 :link:&nbsp;
 [TrimLeft](#trimleft)&nbsp;
 [TrimRight](#trimright)&nbsp;
+
+<p>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 
@@ -6139,6 +6334,10 @@ Trim<'\t\n hello \t\n'> // 'hello'
 [TrimRight](#trimright)&nbsp;
 [Trim](#trim)&nbsp;
 
+<p>
+<span class="tag string mr-2">String</span>
+</p>
+
 
 
 
@@ -6186,6 +6385,10 @@ TrimLeft<' \n\thello'> // 'hello'
 :link:&nbsp;
 [TrimLeft](#trimleft)&nbsp;
 [Trim](#trim)&nbsp;
+
+<p>
+<span class="tag string mr-2">String</span>
+</p>
 
 
 

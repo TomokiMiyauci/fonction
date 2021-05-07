@@ -15,6 +15,7 @@
  *
  * @see Related to {@link prepend}
  *
+ * @category `Array`
  *
  * @public
  */

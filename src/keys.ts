@@ -15,6 +15,8 @@
  * keys({ 0: 'hello', 1: 'world' }) // ['0', '1']
  * ```
  *
+ * @category `Object`
+ *
  * @see Related to {@link values}
  *
  * @public

@@ -19,6 +19,14 @@
 <% }) %>
 <% }) %>
 
+<% if(!!it.categories.length) { %>
+<p>
+<% it.categories.forEach((category) => { %>
+<span class="tag <%= category.toLowerCase() %> mr-2"><%= category %></span>
+<% }) %>
+</p>
+<% } %>
+
 <% it.tagName %>
 
 <% if (it.tagName === '@beta') { %>
