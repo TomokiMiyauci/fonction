@@ -59,6 +59,10 @@ module.exports = {
   },
 
   themeConfig: {
+    algolia: {
+      apiKey: '2649f37ae80f40be1c843a4d7b775533',
+      indexName: 'fonction'
+    },
     locales: {
       '/': {
         label: 'English',
