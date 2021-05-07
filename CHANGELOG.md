@@ -1,3 +1,8 @@
+# [v1.5.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0...v1.5.1-beta.1) (2021-05-07)
+
+## 🐛 Bug Fixes
+- [`7885d81`](https://github.com/TomokiMiyauci/fonction/commit/7885d81)   Fix name of isNill to isNil
+
 # [v1.5.0](https://github.com/TomokiMiyauci/fonction/compare/v1.4.0...v1.5.0) (2021-05-04)
 
 ## ✨ New Features
