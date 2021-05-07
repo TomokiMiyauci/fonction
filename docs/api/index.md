@@ -8,12 +8,34 @@ Version: `Latest`
 
   | Name | Fonction | Rambda | Ramda | Lodash |
   | ------ | -------- | ------ | ------ | ------ |
-  | add | ✅ | ✅ | ✅ | ✅ |
+  | F | ✅ | ✅ | ✅ |  |
+| K | ✅ |  |  |  |
+| T | ✅ | ✅ | ✅ | stubTrue |
+| add | ✅ | ✅ | ✅ | ✅ |
+| adjust |  | ✅ | ✅ |  |
+| all |  | ✅ | ✅ |  |
+| allPass |  | ✅ | ✅ |  |
 | and | ✅ | ✅ | ✅ |  |
+| any |  | ✅ | ✅ |  |
+| anyPass |  | ✅ | ✅ |  |
+| append | ✅ | ✅ | ✅ |  |
+| applySpec |  | ✅ | ✅ |  |
+| assoc |  | ✅ | ✅ |  |
 | chunk | ✅ |  |  | ✅ |
+| clone |  | ✅ | ✅ | cloneDeep |
+| compose |  | ✅ | ✅ |  |
+| converge |  | ✅ | ✅ |  |
+| curry |  | ✅ | ✅ |  |
 | dec | ✅ | ✅ | ✅ |  |
+| defaultTo | ✅ | ✅ | ✅ |  |
+| divide | ✅ | ✅ | ✅ | ✅ |
+| drop |  | ✅ | ✅ | ✅ |
+| dropLast |  | ✅ | ✅ | dropRight |
 | endsWith | ✅ | ✅ | ✅ | ✅ |
-| F | ✅ | ✅ | ✅ |  |
+| equals |  | ✅ | ✅ | isEqual |
+| filter |  | ✅ | ✅ | ✅ |
+| find |  | ✅ | ✅ | ✅ |
+| findIndex |  | ✅ | ✅ | ✅ |
 | first | ✅ | head | head | ✅ |
 | flattenDeep | ✅ | flatten | flatten | ✅ |
 | gt | ✅ |  |  | ✅ |
@@ -21,10 +43,15 @@ Version: `Latest`
 | has | ✅ | ✅ | ✅ | ✅ |
 | head | ✅ | init | init | initial |
 | identity | ✅ | ✅ | ✅ | ✅ |
+| ifElse |  | ✅ | ✅ |  |
 | inc | ✅ | ✅ | ✅ |  |
+| includes |  | ✅ | ✅ | ✅ |
+| indexOf |  | ✅ | ✅ | ✅ |
+| is |  | ✅ | ✅ |  |
 | isArray | ✅ |  |  | ✅ |
 | isBigint | ✅ |  |  |  |
 | isBoolean | ✅ |  |  | ✅ |
+| isEmpty | ✅ | ✅ | ✅ | ✅ |
 | isFunction | ✅ |  |  | ✅ |
 | isNaN | ✅ |  |  | ✅ |
 | isNil | ✅ | ✅ | ✅ | ✅ |
@@ -35,22 +62,32 @@ Version: `Latest`
 | isString | ✅ |  |  | ✅ |
 | isSymbol | ✅ |  |  | ✅ |
 | isUndefined | ✅ |  |  | ✅ |
-| K | ✅ |  |  |  |
 | keys | ✅ | ✅ | ✅ | ✅ |
+| last | ✅ | ✅ | ✅ | ✅ |
+| lastIndexOf |  | ✅ | ✅ | ✅ |
 | length | ✅ | ✅ | ✅ |  |
 | lowerCase | ✅ | toLower | toLower | toLower |
 | lt | ✅ |  |  | ✅ |
 | lte | ✅ |  |  | ✅ |
+| map |  | ✅ | ✅ | ✅ |
+| match |  | ✅ | ✅ |  |
+| merge |  | ✅ | ✅ | ✅ |
+| multiply | ✅ | ✅ | ✅ | ✅ |
+| none |  | ✅ | ✅ |  |
 | not | ✅ | ✅ | ✅ |  |
+| omit |  | ✅ | ✅ | ✅ |
 | or | ✅ | ✅ | ✅ |  |
+| over |  | ✅ | ✅ |  |
+| path | props | ✅ | ✅ | get |
 | prepend | ✅ | ✅ | ✅ |  |
 | product | ✅ | ✅ | ✅ |  |
 | props | ✅ | prop | prop | get |
+| replace | ✅ | ✅ | ✅ | ✅ |
 | replaceAll | ✅ |  |  |  |
 | reverse | ✅ | ✅ | ✅ | ✅ |
 | startsWith | ✅ | ✅ | ✅ | ✅ |
+| subtract | ✅ | ✅ | ✅ | ✅ |
 | sum | ✅ | ✅ | ✅ | ✅ |
-| T | ✅ | ✅ | ✅ | stubTrue |
 | tail | ✅ | ✅ | ✅ | ✅ |
 | trim | ✅ | ✅ | ✅ | ✅ |
 | trimLeft | ✅ |  |  | trimStart |
@@ -58,43 +95,6 @@ Version: `Latest`
 | upperCase | ✅ | toUpper | toUpper | toUpper |
 | values | ✅ | ✅ | ✅ | ✅ |
 | xor | ✅ | ✅ | ✅ |  |
-| subtract | ✅ | ✅ | ✅ | ✅ |
-| multiply | ✅ | ✅ | ✅ | ✅ |
-| divide | ✅ | ✅ | ✅ | ✅ |
-| adjust |  | ✅ | ✅ |  |
-| all |  | ✅ | ✅ |  |
-| allPass |  | ✅ | ✅ |  |
-| any |  | ✅ | ✅ |  |
-| anyPass |  | ✅ | ✅ |  |
-| append | ✅ | ✅ | ✅ |  |
-| applySpec |  | ✅ | ✅ |  |
-| assoc |  | ✅ | ✅ |  |
-| clone |  | ✅ | ✅ | cloneDeep |
-| compose |  | ✅ | ✅ |  |
-| converge |  | ✅ | ✅ |  |
-| curry |  | ✅ | ✅ |  |
-| defaultTo | ✅ | ✅ | ✅ |  |
-| drop |  | ✅ | ✅ | ✅ |
-| dropLast |  | ✅ | ✅ | dropRight |
-| equals |  | ✅ | ✅ | isEqual |
-| filter |  | ✅ | ✅ | ✅ |
-| find |  | ✅ | ✅ | ✅ |
-| findIndex |  | ✅ | ✅ | ✅ |
-| ifElse |  | ✅ | ✅ |  |
-| includes |  | ✅ | ✅ | ✅ |
-| indexOf |  | ✅ | ✅ | ✅ |
-| is |  | ✅ | ✅ |  |
-| isEmpty | ✅ | ✅ | ✅ | ✅ |
-| last | ✅ | ✅ | ✅ | ✅ |
-| lastIndexOf |  | ✅ | ✅ | ✅ |
-| map |  | ✅ | ✅ | ✅ |
-| match |  | ✅ | ✅ |  |
-| merge |  | ✅ | ✅ | ✅ |
-| none |  | ✅ | ✅ |  |
-| omit |  | ✅ | ✅ | ✅ |
-| over |  | ✅ | ✅ |  |
-| path | props | ✅ | ✅ | get |
-| replace | ✅ | ✅ | ✅ | ✅ |
 
   </details>
   
@@ -2611,10 +2611,7 @@ Deno.test('isNaN', () => {
 
 ---
 
-### isNill
-
-<small>Added from [1.0.0](./1.0.0/)</small>
-{.my-1}
+### isNil
 
 
 
@@ -2625,6 +2622,118 @@ Whatever argument is type of `undefined` or `null`.
 {.desc}
 
 
+
+
+**Signature:**
+
+```ts
+isNil: (val: unknown) => val is null | undefined
+```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | Input any value |
+{.table}
+
+<code class="returns">=></code> The result of type of  `val`  is  `undefined`  or  `null`
+
+</details>
+
+
+#### Example 
+
+```ts
+isNil(undefined) // true
+isNil(null) // true
+isNil([]) // false
+```
+
+
+<details>
+<summary>Tests</summary>
+
+```ts
+import { assertEquals } from '../deps.ts'
+import { isNil } from '../src/isNil.ts'
+import { isSymbol } from '../src/isSymbol.ts'
+import {
+  BIG1,
+  DATE,
+  EMPTY_ARRAY,
+  EMPTY_OBJECT,
+  EMPTY_STRING,
+  MAP,
+  ONE,
+  SET,
+  SYMBOL,
+  VOID_FN,
+  VOID_PROMISE,
+  WEAK_MAP,
+  WEAK_SET,
+  ZERO
+} from './index.ts'
+
+Deno.test('isNil', () => {
+  const table: [unknown, boolean][] = [
+    [null, true],
+    [undefined, true],
+    [ZERO, false],
+    [ONE, false],
+    [EMPTY_STRING, false],
+    ['test', false],
+    [false, false],
+    [true, false],
+    [BIG1, false],
+    [SYMBOL, false],
+    [EMPTY_OBJECT, false],
+    [{ nest: {} }, false],
+    [EMPTY_ARRAY, false],
+    [[[]], false],
+    [MAP, false],
+    [SET, false],
+    [WEAK_MAP, false],
+    [WEAK_SET, false],
+    [VOID_FN, false],
+    [VOID_PROMISE, false],
+    [DATE, false]
+  ]
+  table.forEach(([val, expected]) => {
+    assertEquals(
+      isNil(val),
+      expected,
+      `isNil(${isSymbol(val) ? 'symbol' : val}) -> ${expected}`
+    )
+  })
+})
+```
+
+</details>
+
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/isNil.ts)
+
+---
+
+### isNill
+
+<small>Added from [1.0.0](./1.0.0/)</small>
+{.my-1}
+
+
+
+
+
+<span class="tag deprecated">deprecate</span>
+
+Whatever argument is type of `undefined` or `null`.
+{.desc}
+
+
+::: danger
+This function will remove next major release.
+:::
 
 
 **Signature:**
