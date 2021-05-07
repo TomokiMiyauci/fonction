@@ -196,6 +196,29 @@ const getReturns = ({ content }: DocBlock) =>
     })
     .filter((_) => !!_)
 
+const getCategories = (docBlocks: readonly DocBlock[]): string[] =>
+  docBlocks
+    .filter((docBlock) => docBlock.blockTag.tagName === '@category')
+    .map(({ content }) =>
+      content.nodes
+        .map((node) => {
+          if (isDocParagraph(node)) {
+            return node.nodes
+              .map((node) => {
+                if (isDocCodeSpan(node)) {
+                  return node.code
+                }
+                return ''
+              })
+              .filter((_) => !!_)
+          }
+          return []
+        })
+
+        .flat()
+    )
+    .flat()
+
 interface MdVariables {
   name: string
   description: string
@@ -210,6 +233,7 @@ interface MdVariables {
   params: [string, string][]
   returns: string[]
   sees: string[]
+  categories: string[]
 }
 
 const generate = (path: string, content: string): void =>
@@ -245,6 +269,8 @@ const mapMember = ({
       seeBlocks
     } = member.tsdocComment
 
+    const categories = getCategories(customBlocks)
+    console.log(categories)
     const sees = getSees(seeBlocks)
     const params = getParams(_params)
     const returns = returnsBlock ? getReturns(returnsBlock) : []
@@ -270,7 +296,8 @@ const mapMember = ({
       version: moduleVersions[name],
       params,
       returns,
-      sees
+      sees,
+      categories
     })
 
     return {
