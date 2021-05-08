@@ -1,3 +1,8 @@
+# [v1.6.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.5.1-beta.1...v1.6.0-beta.1) (2021-05-08)
+
+## ✨ New Features
+- [`e34bd23`](https://github.com/TomokiMiyauci/fonction/commit/e34bd23)   Add entries function
+
 # [v1.5.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0...v1.5.1-beta.1) (2021-05-07)
 
 ## 🐛 Bug Fixes
