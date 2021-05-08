@@ -345,11 +345,17 @@ const run = async ({
 editLink: false
 ---
 
+::: tip Info
+This page is automatically generated from source code comments, tests, etc.
+If there are any mistakes on this page, need to correct them.
+If you find any mistakes, please report them as an [issue](https://github.com/TomokiMiyauci/fonction/issues).
+:::
+
 `
 
     generate(
       resolve(__dirname, '..', 'docs', 'api', version, 'index.md'),
-      `${editLink ? '' : frontmatter}# API
+      `${frontmatter}# API
 
 Version: \`${isLatest ? 'Latest' : version}\`
 {.my-1}
