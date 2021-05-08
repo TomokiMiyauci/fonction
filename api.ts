@@ -18,6 +18,9 @@ const api: Api = {
   },
   dec: LAMBDAS,
   endsWith: ALL_MODULES,
+  entries: {
+    lodash: 'entries'
+  },
   F: LAMBDAS,
   first: {
     ramda: 'head',

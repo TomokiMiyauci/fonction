@@ -863,6 +863,115 @@ Deno.test('endsWith', () => {
 
 ---
 
+### entries
+
+:link:&nbsp;
+[keys](#keys)&nbsp;
+[values](#values)&nbsp;
+
+<p>
+<span class="tag object mr-2">Object</span>
+<span class="tag array mr-2">Array</span>
+</p>
+
+
+<span class="tag beta">beta</span>
+
+
+Returns an array of key/values of the enumerable properties of an object.
+{.desc}
+
+::: warning
+This API is provided as a preview for developers and may change based on feedback that we receive.
+Do not use this API in a production environment.
+:::
+
+
+
+**Signature:**
+
+```ts
+entries$0: {
+    <T>(val: {
+        [key: string]: T;
+    } | ArrayLike<T>): [string, T][];
+    (val: Record<string, unknown>): [string, unknown][];
+}
+```
+
+<details class="parameters-detail">
+<summary>Parameters</summary>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `val` | `Object`  that contains the properties and methods |
+{.table}
+
+<code class="returns">=></code> The result of  `Object.entries(val)`
+
+</details>
+
+::: tip Remark
+The order of the output array is not guaranteed to be consistent across different JS platforms.
+:::
+
+#### Example 
+
+```ts
+entries({ a: 'b' }) // [['a', 'b']]
+entries(['a', 'b', 'c']) // [['0', 'a'], ['1', 'b'], ['2', 'c']]
+entries({}) // []
+entries([]) // []
+```
+
+
+<details>
+<summary>Tests</summary>
+
+```ts
+import { assertEquals } from '../deps.ts'
+import { entries } from '../src/entries.ts'
+
+Deno.test('entries', () => {
+  const table: [Record<PropertyKey, unknown> | ArrayLike<any>, any[]][] = [
+    [[], []],
+    [{}, []],
+    [[''], [['0', '']]],
+    [{ a: 1 }, [['a', 1]]],
+    [{ [Symbol('key')]: 1 }, []],
+    [{ [Symbol('key')]: 1, key: 'value' }, [['key', 'value']]],
+    [{ a: 'b' }, [['a', 'b']]],
+    [
+      { a: 'b', c: 'd', e: 'f' },
+      [
+        ['a', 'b'],
+        ['c', 'd'],
+        ['e', 'f']
+      ]
+    ],
+    [
+      { a: 'b', 1: 'z', 0: 10, z: 1 },
+      [
+        ['0', 10],
+        ['1', 'z'],
+        ['a', 'b'],
+        ['z', 1]
+      ]
+    ],
+    [{ 1: 1 }, [['1', 1]]]
+  ]
+  table.forEach(([val, expected]) => {
+    assertEquals(entries(val), expected, `entries(${val}) -> ${expected}`)
+  })
+})
+```
+
+</details>
+
+ [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/entries.ts)
+
+---
+
 ### F
 
 <small>Added from [1.1.0](./1.1.0/#f)</small>
@@ -3679,7 +3788,7 @@ Returns the names of the enumerable string properties and methods of an object.
 **Signature:**
 
 ```ts
-keys: <T extends PropertyKey>(val: Record<T, unknown>) => string[]
+keys$0: <T extends PropertyKey>(val: Record<T, unknown>) => string[]
 ```
 
 <details class="parameters-detail">
@@ -5906,7 +6015,7 @@ Returns an array of values of the enumerable properties of an object.
 **Signature:**
 
 ```ts
-values: <T extends unknown>(val: Record<PropertyKey, T> | ArrayLike<T>) => T[]
+values$0: <T extends unknown>(val: Record<PropertyKey, T> | ArrayLike<T>) => T[]
 ```
 
 <details class="parameters-detail">
