@@ -117,4 +117,3 @@ dist
 
 temp
 docs/api/*
-!docs/api/index.md
