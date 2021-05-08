@@ -18,7 +18,7 @@ import { keys as _keys } from './constants/index.ts'
  *
  * @category `Object`
  *
- * @see Related to {@link values}
+ * @see Related to {@link values} {@link entries}
  *
  * @public
  */

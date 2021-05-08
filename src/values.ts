@@ -27,7 +27,7 @@ import { values as _values } from './constants/index.ts'
  *
  * @category `Array` `Object`
  *
- * @see Related to {@link keys}
+ * @see Related to {@link keys} {@link entries}
  *
  * @public
  */
