@@ -66,6 +66,11 @@ const api: Api = {
   lt: ['ramda', 'lodash'],
   lte: ['ramda', 'lodash'],
   not: LAMBDAS,
+  N: {
+    lodash: 'not',
+    rambda: 'not',
+    ramda: 'not'
+  },
   NN: {},
   or: LAMBDAS,
   prepend: LAMBDAS,

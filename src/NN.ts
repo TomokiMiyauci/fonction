@@ -28,6 +28,10 @@ import { Falsy } from './types/index.ts'
  * NN([]) // true
  * ```
  *
+ * @category `Logic`
+ *
+ * @see Related to {@link N}
+ *
  * @beta
  */
 const NN = <T>(val: T): T extends Falsy ? false : boolean =>

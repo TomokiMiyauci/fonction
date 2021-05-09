@@ -17,24 +17,23 @@ import { Falsy } from './types/index.ts'
  *
  * @example
  * ```ts
- * not('') // true
- * not(false) // true
- * not(0) // true
- * not(NaN) // true
- * not(undefined) // true
- * not(null) // true
+ * N('') // true
+ * N(false) // true
+ * N(0) // true
+ * N(NaN) // true
+ * N(undefined) // true
+ * N(null) // true
  *
- * not({}) // false
+ * N({}) // false
+ * N([]) // false
  * ```
  *
  * @category `Logic`
  *
- * @see Related to {@link N} {@link NN}
+ * @see Related to {@link NN}
  *
- * @public
- * @deprecated
- * Rename to `NN`
+ * @beta
  */
-const not = <T>(val: T): T extends Falsy ? true : boolean =>
+const N = <T>(val: T): T extends Falsy ? true : boolean =>
   !val as T extends Falsy ? true : boolean
-export { not }
+export { N }
