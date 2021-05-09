@@ -28,7 +28,7 @@ import { Falsy } from './types/index.ts'
  * NN([]) // true
  * ```
  *
- * @public
+ * @beta
  */
 const NN = <T>(val: T): T extends Falsy ? false : boolean =>
   !!val as T extends Falsy ? false : boolean
