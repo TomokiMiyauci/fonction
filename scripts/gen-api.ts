@@ -360,7 +360,7 @@ If you find any mistakes, please report them as an [issue](https://github.com/To
 Version: \`${isLatest ? 'Latest' : version}\`
 {.my-1}
 
-${apiTable}
+${apiTable ? apiTable : ''}
 
 ## Functions
 
