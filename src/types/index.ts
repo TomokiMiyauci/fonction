@@ -66,7 +66,7 @@ export type Falsy = false | '' | 0 | null | undefined
  *
  * @beta
  */
-export type FalsyLike = false | '' | 0 | null | undefined
+export type FalsyLike = false | '' | 0 | 0n | null | undefined
 
 /**
  * Alias for Space values.
