@@ -15,7 +15,7 @@ import { isArray } from './isArray.ts'
  * ```ts
  * const triple = (val: number):number => val * 3
  * map(triple, [1, 2, 3]) // [3, 6, 9]
- * mapObject(triple, { tom: 1, john: 2, bob: 3 }) // { tom: 3, john: 6, bob: 9}
+ * map(triple, { tom: 1, john: 2, bob: 3 }) // { tom: 3, john: 6, bob: 9}
  * ```
  *
  * @category `Array` `Object`
