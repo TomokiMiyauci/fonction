@@ -117,8 +117,11 @@ jobs:
           name: dist
           path: dist
 
-      - name: Build
+      - name: Prepare
         run: yarn prepare:docs
+
+      - name: Build
+        run: yarn build:docs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
