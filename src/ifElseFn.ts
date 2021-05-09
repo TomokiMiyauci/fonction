@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { isFunction } from './isFunction.ts'
-import { Falsy } from './types/index.ts'
+import { FalsyLike } from './types/index.ts'
 /**
  * Creates a function that will process either the `onTrue` or the `onFalse` function depending upon the result of the condition predicate.
  *
@@ -27,7 +27,7 @@ const ifElseFn = <V, R, T, F>(
   condition: (val: V) => R,
   onTrue: T | ((val: V) => T),
   onFalse: F | ((val: V) => F)
-) => (val: V): R extends true ? T : R extends Falsy ? F : T | F => {
+) => (val: V): R extends true ? T : R extends FalsyLike ? F : T | F => {
   if (condition(val)) {
     return isFunction(onTrue)
       ? (onTrue as (val: V) => T)(val)

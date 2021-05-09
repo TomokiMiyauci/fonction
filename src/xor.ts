@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { not } from './not.ts'
-import { Falsy } from './types/index.ts'
+import { FalsyLike } from './types/index.ts'
 
 /**
  * Returns true if one of the arguments is truthy and the other is falsy; otherwise false.
@@ -24,9 +24,9 @@ import { Falsy } from './types/index.ts'
 const xor = <T, U>(
   a: T,
   b: U
-): T extends Falsy ? (U extends Falsy ? false : boolean) : boolean =>
-  (not(a) !== (not(b) as unknown)) as T extends Falsy
-    ? U extends Falsy
+): T extends FalsyLike ? (U extends FalsyLike ? false : boolean) : boolean =>
+  (not(a) !== (not(b) as unknown)) as T extends FalsyLike
+    ? U extends FalsyLike
       ? false
       : boolean
     : boolean

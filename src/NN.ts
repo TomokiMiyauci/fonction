@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { Falsy } from './types/index.ts'
+import { FalsyLike } from './types/index.ts'
 /**
  * Abbreviation for Not Not. Returns the `!!` of its argument.
  *
@@ -34,6 +34,6 @@ import { Falsy } from './types/index.ts'
  *
  * @beta
  */
-const NN = <T>(val: T): T extends Falsy ? false : boolean =>
-  !!val as T extends Falsy ? false : boolean
+const NN = <T>(val: T): T extends FalsyLike ? false : boolean =>
+  !!val as T extends FalsyLike ? false : boolean
 export { NN }

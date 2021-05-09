@@ -74,6 +74,7 @@ export type {
   AnyFn,
   Empty,
   Falsy,
+  FalsyLike,
   Ord,
   Primitive,
   Space

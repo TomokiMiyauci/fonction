@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { NN } from './NN.ts'
-import { Falsy } from './types/index.ts'
+import { FalsyLike } from './types/index.ts'
 /**
  * Return the `onTrue` or the `onFalse` value depending upon the result of the condition `val`.
  *
@@ -26,8 +26,8 @@ const ifElse = <V, T, F>(
   val: V,
   onTrue: T,
   onFalse: F
-): V extends Falsy ? F : V extends true ? T : T | F =>
-  (NN(val) ? onTrue : onFalse) as V extends Falsy
+): V extends FalsyLike ? F : V extends true ? T : T | F =>
+  (NN(val) ? onTrue : onFalse) as V extends FalsyLike
     ? F
     : V extends true
     ? T

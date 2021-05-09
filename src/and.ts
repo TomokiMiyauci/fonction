@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { NN } from './NN.ts'
-import { Falsy } from './types/index.ts'
+import { FalsyLike } from './types/index.ts'
 /**
  * Returns true if both arguments are true; otherwise false.
  *
@@ -23,10 +23,10 @@ import { Falsy } from './types/index.ts'
 const and = <T, U>(
   a: T,
   b: U
-): T extends Falsy ? false : U extends Falsy ? false : boolean =>
-  (NN(a) && NN(b)) as T extends Falsy
+): T extends FalsyLike ? false : U extends FalsyLike ? false : boolean =>
+  (NN(a) && NN(b)) as T extends FalsyLike
     ? false
-    : U extends Falsy
+    : U extends FalsyLike
     ? false
     : boolean
 export { and }
