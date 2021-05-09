@@ -201,11 +201,10 @@ const api: Api = {
     lodash: 'findIndex',
     fonction: undefined
   },
-
-  ifElse: {
+  ifElse: {},
+  ifElseFn: {
     ramda: 'ifElse',
-    rambda: 'ifElse',
-    fonction: undefined
+    rambda: 'ifElse'
   },
   includes: {
     ramda: 'includes',

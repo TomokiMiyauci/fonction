@@ -1,40 +1,36 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { isFunction } from './isFunction.ts'
-
+import { NN } from './NN.ts'
+import { Falsy } from './types/index.ts'
 /**
- * Creates a function that will process either the `onTrue` or the `onFalse` function depending upon the result of the condition predicate.
+ * Return the `onTrue` or the `onFalse` value depending upon the result of the condition `val`.
  *
- * @param condition - A predicate function
- * @param onTrue - Any value or A function to invoke when the `condition` evaluates to a truthy value
- * @param onFalse - Any value or A function to invoke when the `condition` evaluates to a falsy value
- * @returns A new function that will process either the `onTrue` or the `onFalse` function depending upon the result of the `condition` predicate
+ * @param val - A predicate value
+ * @param onTrue - The `val` evaluates to a truthy value
+ * @param onFalse - The `val` evaluates to a falsy value
+ * @returns The result of `!!val` ? `onTrue` : `onFalse`
  *
  * @example
  * ```ts
- * ifElse((x: number) => x > 10, 'big', 'small')(20) // 'big'
- * const fn = ifElse((x: number) => x > 10, (x) => x + 1, (x) => x - 1)
- * fn(11) // 12
- * fn(9) // 8
+ * ifElse(true, 1, 0) // 1
+ * ifElse(false, 1, 0) // 0
+ * ifElse(undefined, 1, 0) // 0
  * ```
  *
  * @category `Logic`
  *
+ * @see Related to {@link ifElseFn}
+ *
  * @beta
  */
-const ifElse = <V, R extends boolean, T, F>(
-  condition: (val: V) => R,
-  onTrue: T | ((val: V) => T),
-  onFalse: F | ((val: V) => F)
-) => (val: V): R extends true ? T : R extends false ? F : T | F => {
-  if (condition(val)) {
-    return isFunction(onTrue)
-      ? (onTrue as (val: V) => T)(val)
-      : ((onTrue as T) as any)
-  } else {
-    return isFunction(onFalse)
-      ? (onFalse as (val: V) => F)(val)
-      : ((onFalse as F) as any)
-  }
-}
+const ifElse = <V, T, F>(
+  val: V,
+  onTrue: T,
+  onFalse: F
+): V extends Falsy ? F : V extends true ? T : T | F =>
+  (NN(val) ? onTrue : onFalse) as V extends Falsy
+    ? F
+    : V extends true
+    ? T
+    : T | F
 
 export { ifElse }
