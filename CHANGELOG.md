@@ -1,3 +1,11 @@
+# [v1.6.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.3...v1.6.0-beta.4) (2021-05-09)
+
+## ✨ New Features
+- [`28dc49a`](https://github.com/TomokiMiyauci/fonction/commit/28dc49a)   Add NN function 
+
+## 🐛 Bug Fixes
+- [`6733dad`](https://github.com/TomokiMiyauci/fonction/commit/6733dad)   Rename not function to N
+
 # [v1.6.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.2...v1.6.0-beta.3) (2021-05-09)
 
 ## ✨ New Features
