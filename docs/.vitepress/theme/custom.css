@@ -69,6 +69,10 @@
   background-color: #00e7a2;
 }
 
+.tag.logic {
+  background-color: #e7039b;
+}
+
 .tag.version {
   z-index: 3;
   padding-top: 0.3rem;
