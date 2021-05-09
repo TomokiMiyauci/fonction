@@ -226,12 +226,7 @@ const api: Api = {
     lodash: 'lastIndexOf',
     fonction: undefined
   },
-  map: {
-    ramda: 'map',
-    rambda: 'map',
-    lodash: 'map',
-    fonction: undefined
-  },
+  map: ALL_MODULES,
   match: {
     ramda: 'match',
     rambda: 'match',

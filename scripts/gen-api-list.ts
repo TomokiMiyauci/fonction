@@ -1,10 +1,10 @@
 import { render } from 'eta'
-import { has, isArray, props } from 'fonction'
+import { entries, has, isArray, props } from 'fonction'
 
 import api from '../api'
 
 const getApiListTable = (): string => {
-  const _api = Object.entries(api)
+  const _api = entries(api)
   _api.sort((p1, p2) => {
     const p1Key = p1[0],
       p2Key = p2[0]
@@ -41,9 +41,9 @@ const getApiListTable = (): string => {
   const header = `| Name | Fonction | Rambda | Ramda | Lodash |
   | ------ | -------- | ------ | ------ | ------ |
   `
-  const template = `| <%= it.moduleName %> | <%= it.fonction === it.moduleName ? "✅" : it.fonction ?? '' %> | <%= it.rambda === it.moduleName ? "✅" : it.rambda ?? '' %> | <%= it.ramda === it.moduleName ? "✅" : it.ramda ?? '' %> | <%= it.lodash === it.moduleName ? "✅" : it.lodash ?? '' %> |`
+  const template = `| <%= it.moduleName %> | <%= it.fonction === it.moduleName ? '[✅](#' + it.moduleName.toLowerCase() + ')' : it.fonction ? '[' + it.fonction + '](#' + it.fonction.toLowerCase() + ')' : '' %> | <%= it.rambda === it.moduleName ? '[✅](https://selfrefactor.github.io/rambda/#/?id=' + it.moduleName.toLowerCase() + ')' : it.rambda ?? '' %> | <%= it.ramda === it.moduleName ? "✅" : it.ramda ?? '' %> | <%= it.lodash === it.moduleName ? "✅" : it.lodash ?? '' %> |`
 
-  const body = Object.entries(tableList).map(([moduleName, fn]: any) => {
+  const body = entries(tableList).map(([moduleName, fn]: any) => {
     return render(template, {
       moduleName,
       fonction: fn['fonction'],
