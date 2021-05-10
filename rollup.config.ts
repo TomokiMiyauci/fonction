@@ -8,6 +8,7 @@ import { main, module } from './package.json'
 const config = [
   {
     input: 'temp/mod.ts',
+    // eslint-disable-next-line no-sparse-arrays
     plugins: [
       ts({
         tsconfig: (resolvedConfig) => ({
