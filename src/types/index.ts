@@ -64,7 +64,7 @@ export type Falsy = false | '' | 0 | null | undefined
  *
  * @category `Alias`
  *
- * @beta
+ * @public
  */
 export type FalsyLike = false | '' | 0 | 0n | null | undefined
 

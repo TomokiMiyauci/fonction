@@ -27,7 +27,7 @@ import { slice } from './slice.ts'
  *
  * @see Related to {@link slice} {@link takeLast}
  *
- * @beta
+ * @public
  */
 const take = <T extends readonly unknown[] | string>(
   howMany: number,

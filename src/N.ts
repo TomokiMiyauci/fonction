@@ -32,7 +32,7 @@ import { FalsyLike } from './types/index.ts'
  *
  * @see Related to {@link NN}
  *
- * @beta
+ * @public
  */
 const N = <T>(val: T): T extends FalsyLike ? true : boolean =>
   !val as T extends FalsyLike ? true : boolean

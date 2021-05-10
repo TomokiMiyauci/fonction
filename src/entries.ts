@@ -21,7 +21,7 @@ import { entries as _entries } from './constants/index.ts'
  *
  * @see Related to {@link keys} {@link values}
  *
- * @beta
+ * @public
  */
 const entries: {
   <T>(

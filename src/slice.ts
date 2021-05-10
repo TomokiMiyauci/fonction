@@ -22,7 +22,7 @@
  *
  * @category `String` `Array`
  *
- * @beta
+ * @public
  */
 const slice = <T extends readonly unknown[] | string>(
   from: number,

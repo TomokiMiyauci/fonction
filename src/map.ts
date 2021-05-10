@@ -20,7 +20,7 @@ import { isArray } from './isArray.ts'
  *
  * @category `Array` `Object`
  *
- * @beta
+ * @public
  */
 const map: {
   <T extends readonly unknown[], U>(
