@@ -265,6 +265,7 @@ const api: Api = {
     lodash: 'get',
     fonction: 'props'
   },
+  slice: ALL_MODULES,
   // pick: {
   //   fonction: undefined
   // },
