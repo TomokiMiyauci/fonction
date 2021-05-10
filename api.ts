@@ -281,7 +281,7 @@ const api: Api = {
   // repeat: {
   //   fonction: undefined
   // },
-  replace: ALL_MODULES
+  replace: ALL_MODULES,
   // set: {
   //   fonction: undefined
   // },
@@ -297,12 +297,12 @@ const api: Api = {
   // splitEvery: {
   //   fonction: undefined
   // },
-  // take: {
-  //   fonction: undefined
-  // },
-  // takeLast: {
-  //   fonction: undefined
-  // },
+  take: ALL_MODULES,
+  takeLast: {
+    ramda: 'takeLast',
+    rambda: 'takeLast',
+    lodash: 'takeRight'
+  }
   // test: {
   //   fonction: undefined
   // },
