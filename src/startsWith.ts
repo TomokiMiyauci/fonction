@@ -1,4 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { ifElse } from './ifElse.ts'
 import { isString } from './isString.ts'
 
 type StringWith<
@@ -43,12 +44,12 @@ type StartsWith<T extends string | undefined = undefined> = StringWith<
 const startsWith = <T extends string, U extends string | undefined = undefined>(
   val: T,
   target?: U
-): StartsWith<U> => {
-  if (isString(target)) {
-    return target.startsWith(val) as StartsWith<U>
-  }
-  return ((_target: string) => startsWith(val, _target)) as StartsWith<U>
-}
+): StartsWith<U> =>
+  ifElse(
+    isString(target),
+    (target as string).startsWith(val) as StartsWith<U>,
+    ((_target: string) => startsWith(val, _target)) as StartsWith<U>
+  )
 
 export { startsWith }
 export type { StringWith }

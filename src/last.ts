@@ -1,4 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { ifElse } from './ifElse.ts'
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
 import { String2Array } from './types/index.ts'
@@ -67,13 +68,16 @@ type Last<T extends string | readonly unknown[]> = T extends ''
  *
  * @public
  */
-const last = <T extends string | readonly unknown[]>(val: T): Last<T> => {
-  if (isArray(val)) {
-    return length(val) ? (val.slice(-1)[0] as Last<T>) : (undefined as Last<T>)
-  } else {
-    return (val as string).slice(-1) as Last<T>
-  }
-}
+const last = <T extends string | readonly unknown[]>(val: T): Last<T> =>
+  ifElse(
+    isArray(val),
+    ifElse(
+      length((val as unknown) as unknown[]),
+      val.slice(-1)[0] as Last<T>,
+      undefined as Last<T>
+    ),
+    (val as string).slice(-1) as Last<T>
+  )
 
 export { last }
 export type { Last }

@@ -1,9 +1,10 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { first } from './first.ts'
+import { ifElse } from './ifElse.ts'
+import { ifElseFn } from './ifElseFn.ts'
 import { isNumber } from './isNumber.ts'
 import { isUndefined } from './isUndefined.ts'
 import { multiply } from './multiply.ts'
-
 /**
  * Multiplies together all the elements of a list.
  *
@@ -27,11 +28,16 @@ const product: {
   (val: bigint[]): bigint
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } = (val: any) => {
-  const head = first(val) as number | bigint
-  if (isUndefined(head)) return 0
-  const init = isNumber(head) ? 1 : 1n
-
-  return val.reduce(multiply, init)
+  const head = first(val) as number | bigint | undefined
+  const fn = ifElseFn(
+    (head: number | bigint | undefined) => isUndefined(head),
+    0,
+    (head) => {
+      const init = ifElse(isNumber(head), 1, 1n)
+      return val.reduce(multiply, init)
+    }
+  )
+  return fn(head)
 }
 
 export { product }
