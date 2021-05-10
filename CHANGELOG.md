@@ -1,3 +1,9 @@
+# [v1.6.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0...v1.6.1-beta.1) (2021-05-10)
+
+## 🐛 Bug Fixes
+- [`c9decd6`](https://github.com/TomokiMiyauci/fonction/commit/c9decd6)   Fix to resolve internal module on bundling 
+- [`845b49c`](https://github.com/TomokiMiyauci/fonction/commit/845b49c)   Fix type alias importing
+
 # [v1.6.0](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0...v1.6.0) (2021-05-10)
 
 ## ✨ New Features

@@ -1,11 +1,10 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { ifElse } from './ifElse.ts'
 import { isString } from './isString.ts'
-import { StringWith } from './startsWith.ts'
-type endsWith<T extends string | undefined = undefined> = StringWith<
-  'endsWith',
-  T
->
+
+type EndsWith<T extends string | undefined = undefined> = T extends undefined
+  ? (target: string) => ReturnType<string['endsWith']>
+  : ReturnType<string['endsWith']>
 
 /**
  * Checks if a string ends with the provided substring.
@@ -37,11 +36,11 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
 const endsWith = <T extends string, U extends string | undefined = undefined>(
   val: T,
   target?: U
-): endsWith<U> =>
+): EndsWith<U> =>
   ifElse(
     isString(target),
-    (target as string).endsWith(val) as endsWith<U>,
-    ((_target: string) => endsWith(val, _target)) as endsWith<U>
+    (target as string).endsWith(val) as EndsWith<U>,
+    ((_target: string) => endsWith(val, _target)) as EndsWith<U>
   )
 
 export { endsWith }

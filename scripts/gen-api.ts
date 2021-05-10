@@ -372,7 +372,7 @@ ${mergedTypesMd}
 
 <span class="tag version ${
         isLatest ? 'latest' : 'past'
-      } fixed bottom-10 right-10">
+      } fixed bottom-14 right-14">
 ${isLatest ? 'Latest' : version}
 </span>
 `
