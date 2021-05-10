@@ -1,3 +1,9 @@
+# [v1.6.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.5...v1.6.0-beta.6) (2021-05-10)
+
+## ✨ New Features
+- [`129c48b`](https://github.com/TomokiMiyauci/fonction/commit/129c48b)   Add slice function 
+- [`cdd48fb`](https://github.com/TomokiMiyauci/fonction/commit/cdd48fb)   Add take and takeLast functions
+
 # [v1.6.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.4...v1.6.0-beta.5) (2021-05-10)
 
 ## ✨ New Features
