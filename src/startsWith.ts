@@ -2,17 +2,9 @@
 import { ifElse } from './ifElse.ts'
 import { isString } from './isString.ts'
 
-type StringWith<
-  T extends 'startsWith' | 'endsWith',
-  U extends string | undefined = undefined
-> = U extends undefined
-  ? (target: string) => ReturnType<string[T]>
-  : ReturnType<string[T]>
-
-type StartsWith<T extends string | undefined = undefined> = StringWith<
-  'startsWith',
-  T
->
+type StartsWith<T extends string | undefined = undefined> = T extends undefined
+  ? (target: string) => ReturnType<string['startsWith']>
+  : ReturnType<string['startsWith']>
 
 /**
  * Checks if a string starts with the provided substring.
@@ -52,4 +44,3 @@ const startsWith = <T extends string, U extends string | undefined = undefined>(
   )
 
 export { startsWith }
-export type { StringWith }
