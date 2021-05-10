@@ -1,3 +1,19 @@
+# [v1.6.0](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0...v1.6.0) (2021-05-10)
+
+## ✨ New Features
+- [`e34bd23`](https://github.com/TomokiMiyauci/fonction/commit/e34bd23)   Add entries function 
+- [`337a5d8`](https://github.com/TomokiMiyauci/fonction/commit/337a5d8)   Add map function 
+- [`4adeb0e`](https://github.com/TomokiMiyauci/fonction/commit/4adeb0e)   Add map function to feature of object 
+- [`401328c`](https://github.com/TomokiMiyauci/fonction/commit/401328c)   Add isElse function 
+- [`28dc49a`](https://github.com/TomokiMiyauci/fonction/commit/28dc49a)   Add NN function 
+- [`a13525b`](https://github.com/TomokiMiyauci/fonction/commit/a13525b)   Add ifElseFn and change ifElse function 
+- [`129c48b`](https://github.com/TomokiMiyauci/fonction/commit/129c48b)   Add slice function 
+- [`cdd48fb`](https://github.com/TomokiMiyauci/fonction/commit/cdd48fb)   Add take and takeLast functions 
+
+## 🐛 Bug Fixes
+- [`7885d81`](https://github.com/TomokiMiyauci/fonction/commit/7885d81)   Fix name of isNill to isNil 
+- [`6733dad`](https://github.com/TomokiMiyauci/fonction/commit/6733dad)   Rename not function to N
+
 # [v1.6.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.5...v1.6.0-beta.6) (2021-05-10)
 
 ## ✨ New Features
