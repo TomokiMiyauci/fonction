@@ -2,8 +2,8 @@
 import { ifElse } from './ifElse.ts'
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
+import { slice } from './slice.ts'
 import { String2Array } from './types/index.ts'
-
 /**
  * Infer the first types.
  *
@@ -74,10 +74,10 @@ const first = <T extends readonly unknown[] | string>(val: T): First<T> =>
     isArray(val),
     ifElse(
       length(val as T & any[]),
-      val.slice(0, 1)[0] as First<T>,
+      slice(0, 1, val)[0] as First<T>,
       undefined as First<T>
     ),
-    (val as string).slice(0, 1) as First<T>
+    slice(0, 1, val) as First<T>
   )
 
 export { first }
