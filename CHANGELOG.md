@@ -1,3 +1,43 @@
+# [v1.6.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.5...v1.6.0-beta.6) (2021-05-10)
+
+## ✨ New Features
+- [`129c48b`](https://github.com/TomokiMiyauci/fonction/commit/129c48b)   Add slice function 
+- [`cdd48fb`](https://github.com/TomokiMiyauci/fonction/commit/cdd48fb)   Add take and takeLast functions
+
+# [v1.6.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.4...v1.6.0-beta.5) (2021-05-10)
+
+## ✨ New Features
+- [`a13525b`](https://github.com/TomokiMiyauci/fonction/commit/a13525b)   Add ifElseFn and change ifElse function
+
+# [v1.6.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.3...v1.6.0-beta.4) (2021-05-09)
+
+## ✨ New Features
+- [`28dc49a`](https://github.com/TomokiMiyauci/fonction/commit/28dc49a)   Add NN function 
+
+## 🐛 Bug Fixes
+- [`6733dad`](https://github.com/TomokiMiyauci/fonction/commit/6733dad)   Rename not function to N
+
+# [v1.6.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.2...v1.6.0-beta.3) (2021-05-09)
+
+## ✨ New Features
+- [`401328c`](https://github.com/TomokiMiyauci/fonction/commit/401328c)   Add isElse function
+
+# [v1.6.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.1...v1.6.0-beta.2) (2021-05-09)
+
+## ✨ New Features
+- [`337a5d8`](https://github.com/TomokiMiyauci/fonction/commit/337a5d8)   Add map function 
+- [`4adeb0e`](https://github.com/TomokiMiyauci/fonction/commit/4adeb0e)   Add map function to feature of object
+
+# [v1.6.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.5.1-beta.1...v1.6.0-beta.1) (2021-05-08)
+
+## ✨ New Features
+- [`e34bd23`](https://github.com/TomokiMiyauci/fonction/commit/e34bd23)   Add entries function
+
+# [v1.5.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.5.0...v1.5.1-beta.1) (2021-05-07)
+
+## 🐛 Bug Fixes
+- [`7885d81`](https://github.com/TomokiMiyauci/fonction/commit/7885d81)   Fix name of isNill to isNil
+
 # [v1.5.0](https://github.com/TomokiMiyauci/fonction/compare/v1.4.0...v1.5.0) (2021-05-04)
 
 ## ✨ New Features

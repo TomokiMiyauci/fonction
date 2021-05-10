@@ -9,10 +9,8 @@ import { or } from './or.ts'
  * @typeParam T - Any value
  *
  * @public
- * @deprecated
- * This is typo. It will rename to `isNil` next major release.
  */
-type IsNill<T extends unknown> = IsUndefined<T> extends true
+type IsNil<T extends unknown> = IsUndefined<T> extends true
   ? true
   : IsNull<T> extends true
   ? true
@@ -22,22 +20,20 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
  * Whatever argument is type of `undefined` or `null`.
  *
  * @param val - Input any value
- * @returns The result of type of `val` is undefined or null
+ * @returns The result of type of `val` is `undefined` or `null`
  *
  * @example
  * ```ts
- * isNumber(0) // true
- * isNumber('hello') // false
+ * isNil(undefined) // true
+ * isNil(null) // true
+ * isNil([]) // false
  * ```
  *
  * @public
  *
- * @deprecated
- * This is typo. It will rename to `isNil` next major release.
- *
  */
-const isNill = (val: unknown): val is null | undefined =>
+const isNil = (val: unknown): val is null | undefined =>
   or(isUndefined(val), isNull(val))
 
-export { isNill }
-export type { IsNill }
+export { isNil }
+export type { IsNil }

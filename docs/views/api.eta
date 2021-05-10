@@ -3,7 +3,7 @@
 <% if (it.version) { %>
 
 <% if ( it.isLatest ) { %>
-<small>Added from [<%= it.version %>](./<%= it.version %>/)</small>
+<small>Added from [<%= it.version %>](./<%= it.version %>/#<%= it.name.toLowerCase() %>)</small>
 {.my-1}
 <% } %>
 <% else { %>
@@ -71,6 +71,7 @@ This function will remove next major release.
 <% it.params.forEach(([parameterName, description]) => { %>
 | <%= parameterName %> | <%= description %> |
 <% }) %>
+{.table}
 <% } %>
 
 <% if(!!it.returns.length) { %>

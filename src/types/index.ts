@@ -51,8 +51,22 @@ export type Empty = '' | [] | {}
  * @category `Alias`
  *
  * @public
+ * @deprecated
+ * Rename to `FalsyLike`
  */
 export type Falsy = false | '' | 0 | null | undefined
+
+/**
+ * Alias for Falsy values.
+ *
+ * @remarks
+ * This is not a strict `Falsy`. TypeScript type system cannot define `NaN`.
+ *
+ * @category `Alias`
+ *
+ * @public
+ */
+export type FalsyLike = false | '' | 0 | 0n | null | undefined
 
 /**
  * Alias for Space values.

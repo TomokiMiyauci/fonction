@@ -1,5 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { Falsy } from './types/index.ts'
+import { NN } from './NN.ts'
+import { FalsyLike } from './types/index.ts'
+
 /**
  * Returns true if one or both of its arguments are true; otherwise false.
  *
@@ -22,9 +24,9 @@ import { Falsy } from './types/index.ts'
 const or = <T, U>(
   a: T,
   b: U
-): T extends Falsy ? (U extends Falsy ? false : boolean) : boolean =>
-  (!!a || !!b) as T extends Falsy
-    ? U extends Falsy
+): T extends FalsyLike ? (U extends FalsyLike ? false : boolean) : boolean =>
+  (NN(a) || NN(b)) as T extends FalsyLike
+    ? U extends FalsyLike
       ? false
       : boolean
     : boolean

@@ -2,5 +2,7 @@
 export { _ } from 'https://x.nest.land/arithmetic4@0.1.1/mod.ts'
 export const NULL = null
 
-const { hasOwnProperty } = Object.prototype
-export { hasOwnProperty }
+const { prototype, entries, keys, values } = Object
+const { hasOwnProperty } = prototype
+
+export { entries, hasOwnProperty, keys, values }

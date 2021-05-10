@@ -82,8 +82,32 @@ module.exports = {
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
         sidebar: {
-          '/guide/': 'auto',
-          '/api/': 'auto'
+          '/api/': 'auto',
+          '/': [
+            {
+              text: 'Guide',
+              children: [
+                {
+                  text: 'Getting Started',
+                  link: '/guide/'
+                }
+              ]
+            },
+            {
+              text: 'API',
+              link: '/api/',
+              children: [
+                {
+                  text: 'functions',
+                  link: '/api/#functions'
+                },
+                {
+                  text: 'types',
+                  link: '/api/#types'
+                }
+              ]
+            }
+          ]
         }
       }
     },

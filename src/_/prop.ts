@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { has } from '../has.ts'
-
+import { ifElse } from '../ifElse.ts'
 /**
  * Returns a function that when supplied an object returns the indicated property of that object, if it exists.
  *
@@ -24,7 +24,7 @@ const prop = <
   val: T,
   obj: U
 ): U extends Record<T, unknown> ? U[T] : undefined =>
-  (has(val, obj) ? obj[val] : undefined) as U extends Record<T, unknown>
+  ifElse(has(val, obj), obj[val], undefined) as U extends Record<T, unknown>
     ? U[T]
     : undefined
 export { prop }

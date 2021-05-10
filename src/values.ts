@@ -1,4 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { values as _values } from './constants/index.ts'
+
 /**
  * Returns an array of values of the enumerable properties of an object.
  *
@@ -25,12 +27,12 @@
  *
  * @category `Array` `Object`
  *
- * @see Related to {@link keys}
+ * @see Related to {@link keys} {@link entries}
  *
  * @public
  */
 const values = <T extends unknown>(
   val: Record<PropertyKey, T> | ArrayLike<T>
-): T[] => Object.values(val)
+): T[] => _values(val)
 
 export { values }

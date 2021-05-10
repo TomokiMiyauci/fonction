@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { isNaN } from './isNaN.ts'
-import { IsNill, isNill } from './isNill.ts'
+import { IsNil, isNil } from './isNil.ts'
 import { IsNumber } from './isNumber.ts'
 import { or } from './or.ts'
 
@@ -25,8 +25,8 @@ import { or } from './or.ts'
  */
 const defaultTo = <T extends unknown>(a: T) => <U extends unknown>(
   b: U
-): IsNill<U> extends true ? T : IsNumber<U> extends false ? U : T | U =>
-  (or(isNill(b), isNaN(b)) ? a : b) as IsNill<U> extends true
+): IsNil<U> extends true ? T : IsNumber<U> extends false ? U : T | U =>
+  (or(isNil(b), isNaN(b)) ? a : b) as IsNil<U> extends true
     ? T
     : IsNumber<U> extends false
     ? U

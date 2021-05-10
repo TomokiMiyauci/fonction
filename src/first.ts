@@ -1,6 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { ifElse } from './ifElse.ts'
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
+import { take } from './take.ts'
 import { String2Array } from './types/index.ts'
 
 /**
@@ -68,15 +70,16 @@ type First<T extends readonly unknown[] | string> = T extends ''
  *
  * @public
  */
-const first = <T extends readonly unknown[] | string>(val: T): First<T> => {
-  if (isArray(val)) {
-    return length(val)
-      ? (val.slice(0, 1)[0] as First<T>)
-      : (undefined as First<T>)
-  } else {
-    return (val as string).slice(0, 1) as First<T>
-  }
-}
+const first = <T extends readonly unknown[] | string>(val: T): First<T> =>
+  ifElse(
+    isArray(val),
+    ifElse(
+      length(val as T & any[]),
+      take(1, val)[0] as First<T>,
+      undefined as First<T>
+    ),
+    take(1, val) as First<T>
+  )
 
 export { first }
 export type { First }

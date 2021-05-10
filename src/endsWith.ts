@@ -1,7 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { ifElse } from './ifElse.ts'
 import { isString } from './isString.ts'
 import { StringWith } from './startsWith.ts'
-
 type endsWith<T extends string | undefined = undefined> = StringWith<
   'endsWith',
   T
@@ -37,11 +37,11 @@ type endsWith<T extends string | undefined = undefined> = StringWith<
 const endsWith = <T extends string, U extends string | undefined = undefined>(
   val: T,
   target?: U
-): endsWith<U> => {
-  if (isString(target)) {
-    return target.endsWith(val) as endsWith<U>
-  }
-  return ((_target: string) => endsWith(val, _target)) as endsWith<U>
-}
+): endsWith<U> =>
+  ifElse(
+    isString(target),
+    (target as string).endsWith(val) as endsWith<U>,
+    ((_target: string) => endsWith(val, _target)) as endsWith<U>
+  )
 
 export { endsWith }

@@ -1,4 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { keys as _keys } from './constants/index.ts'
 /**
  * Returns the names of the enumerable string properties and methods of an object.
  *
@@ -17,11 +18,11 @@
  *
  * @category `Object`
  *
- * @see Related to {@link values}
+ * @see Related to {@link values} {@link entries}
  *
  * @public
  */
 const keys = <T extends PropertyKey>(val: Record<T, unknown>): string[] =>
-  Object.keys(val)
+  _keys(val)
 
 export { keys }

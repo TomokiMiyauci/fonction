@@ -1,7 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { add } from './add.ts'
+import { ifElse } from './ifElse.ts'
 import { lte } from './lte.ts'
-
+import { slice } from './slice.ts'
 /**
  * Return an array of elements split into groups the length of size.
  *
@@ -44,15 +45,18 @@ const chunk = <T extends number, U extends readonly unknown[]>(
   : U extends readonly (infer R)[]
   ? R[][]
   : never =>
-  lte(size, 0 as T)
-    ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (array as any)
-    : array.reduce(
-        (acc, _, index) =>
-          index % size
-            ? acc
-            : [...(acc as never), array.slice(index, add(index, size))],
-        []
-      )
+  ifElse(
+    lte(size, 0 as T),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    array as any,
+    array.reduce(
+      (acc, _, index) =>
+        ifElse(index % size, acc, [
+          ...(acc as never),
+          slice(index, add(index, size), array)
+        ]),
+      []
+    )
+  )
 
 export { chunk }
