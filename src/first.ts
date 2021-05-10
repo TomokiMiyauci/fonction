@@ -2,8 +2,8 @@
 import { ifElse } from './ifElse.ts'
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
-import { NN } from './NN.ts'
 import { String2Array } from './types/index.ts'
+
 /**
  * Infer the first types.
  *
@@ -69,17 +69,16 @@ type First<T extends readonly unknown[] | string> = T extends ''
  *
  * @public
  */
-const first = <T extends readonly unknown[] | string>(val: T): First<T> => {
-  if (isArray(val)) {
-    return ifElse(
-      (val: any[]) => NN(length(val)),
-      (val) => val.slice(0, 1)[0] as First<T>,
+const first = <T extends readonly unknown[] | string>(val: T): First<T> =>
+  ifElse(
+    isArray(val),
+    ifElse(
+      length(val as T & any[]),
+      val.slice(0, 1)[0] as First<T>,
       undefined as First<T>
-    )(val)
-  } else {
-    return (val as string).slice(0, 1) as First<T>
-  }
-}
+    ),
+    (val as string).slice(0, 1) as First<T>
+  )
 
 export { first }
 export type { First }
