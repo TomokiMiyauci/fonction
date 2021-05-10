@@ -1,3 +1,8 @@
+# [v1.6.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.4...v1.6.0-beta.5) (2021-05-10)
+
+## ✨ New Features
+- [`a13525b`](https://github.com/TomokiMiyauci/fonction/commit/a13525b)   Add ifElseFn and change ifElse function
+
 # [v1.6.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0-beta.3...v1.6.0-beta.4) (2021-05-09)
 
 ## ✨ New Features
