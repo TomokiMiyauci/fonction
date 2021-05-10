@@ -2,6 +2,7 @@
 import { ifElse } from './ifElse.ts'
 import { isArray } from './isArray.ts'
 import { length } from './length.ts'
+import { takeLast } from './takeLast.ts'
 import { String2Array } from './types/index.ts'
 /**
  * Infer the last types.
@@ -73,10 +74,10 @@ const last = <T extends string | readonly unknown[]>(val: T): Last<T> =>
     isArray(val),
     ifElse(
       length((val as unknown) as unknown[]),
-      val.slice(-1)[0] as Last<T>,
+      takeLast(1, val)[0] as Last<T>,
       undefined as Last<T>
     ),
-    (val as string).slice(-1) as Last<T>
+    takeLast(1, val) as Last<T>
   )
 
 export { last }
