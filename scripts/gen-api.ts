@@ -16,13 +16,14 @@ import {
   DocSection
 } from '@microsoft/tsdoc'
 import { configure, renderFile } from 'eta'
-import { isUndefined, replace } from 'fonction'
+import { and, ifElse, isUndefined, NN, not, replace } from 'fonction'
 import { outputFileSync, pathExistsSync, readFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
 import { getApiListTable } from './gen-api-list.ts'
 import { getModuleStarts } from './gen-relations'
 const apiModel = new ApiModel()
+const truthy = (val: unknown) => NN(val)
 const copyright =
   '// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.\n'
 const getSummary = ({ nodes }: DocSection): string => {
@@ -321,12 +322,15 @@ const run = async ({
   moduleVersions: Record<string, string | undefined>
   apiTable?: string
 }): Promise<void> => {
+  const constants = ['_']
   const apiPackage = apiModel.loadPackage(apiJsonPath)
 
   apiPackage.members.forEach(async (root) => {
     const functionContents = await Promise.all(
       root.members
-        .filter(({ kind }) => kind === 'Variable')
+        .filter(({ kind, name }) =>
+          and(kind === 'Variable', not(constants.includes(name)))
+        )
         .map(mapMember({ isLatest, type: 'Fn', moduleVersions }))
     )
 
@@ -335,11 +339,19 @@ const run = async ({
         .filter(({ kind }) => kind === 'TypeAlias')
         .map(mapMember({ isLatest, type: 'Type', moduleVersions }))
     )
+    const constansContents = await Promise.all(
+      root.members
+        .filter(({ name }) => constants.includes(name))
+        .map(mapMember({ isLatest, type: 'Type', moduleVersions }))
+    )
 
     const mdFunctions = functionContents.filter((_) => !!_).map(({ md }) => md)
     const mdTypes = typesContents.filter((_) => !!_).map(({ md }) => md)
+    const mdConstants = constansContents.filter(truthy).map(({ md }) => md)
+
     const merged = mdFunctions.join('\n')
     const mergedTypesMd = mdTypes.join('\n')
+    const mergedConstantsMd = mdConstants.join('\n')
 
     const frontmatter = `---
 editLink: false
@@ -369,6 +381,11 @@ ${merged}
 ## Types
 
 ${mergedTypesMd}
+
+
+${ifElse(NN(mergedConstantsMd), '## Constants', '')}
+
+${mergedConstantsMd}
 
 <span class="tag version ${
         isLatest ? 'latest' : 'past'
