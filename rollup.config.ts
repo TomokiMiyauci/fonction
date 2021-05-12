@@ -1,13 +1,20 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import ts from '@wessberg/rollup-plugin-ts'
+import { resolve } from 'path'
 import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 
 import { main, module } from './package.json'
 
+const baseDir = resolve(__dirname)
+const outputDir = resolve(baseDir, 'dist')
+const tempDir = resolve(baseDir, 'temp')
+const inputFilePath = resolve(tempDir, 'mod.ts')
+const declareFilePath = resolve(outputDir, 'index.es.d.ts')
+
 const config = [
   {
-    input: 'temp/mod.ts',
+    input: inputFilePath,
     // eslint-disable-next-line no-sparse-arrays
     plugins: [
       ts({
@@ -29,7 +36,7 @@ const config = [
     }
   },
   {
-    input: 'temp/mod.ts',
+    input: inputFilePath,
     plugins: [ts(), nodeResolve(), terser()],
 
     output: {
@@ -39,8 +46,8 @@ const config = [
     }
   },
   {
-    input: 'dist/index.es.d.ts',
-    output: { dir: 'dist', entryFileNames: 'index.es.d.ts' },
+    input: declareFilePath,
+    output: { file: declareFilePath },
     plugins: [
       dts({
         respectExternal: true,
