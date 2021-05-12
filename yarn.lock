@@ -1169,9 +1169,9 @@
     extend "3.0.2"
 
 "@microsoft/api-documenter@^7.13.6":
-  version "7.13.6"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.6.tgz#a25c9c45f165cea37d10a447bde3f06c67b4ed18"
-  integrity sha512-5l8OaFVPRlcwoT0d/lXYAc5+hRS8ItG+ejmHZP5ny7jTlHj1bMGJUDrP8r0u1L5n2K13siwQRnNGpiuhSWOJfw==
+  version "7.13.7"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.7.tgz#65e7ad25dc7261f932d37db97b2a711ff7861ca9"
+  integrity sha512-i4bYTridiA4uPEazS9hmh9XTASrIid00lHYL8cKrh/BtpYqhwSTz2oPZ6RxNlBK512ElXn76pT2YE2jNN/TwKQ==
   dependencies:
     "@microsoft/api-extractor-model" "7.13.1"
     "@microsoft/tsdoc" "0.13.2"
@@ -4255,7 +4255,14 @@ is-cidr@^4.0.2:
   dependencies:
     cidr-regex "^3.1.1"
 
-is-core-module@^2.1.0, is-core-module@^2.2.0:
+is-core-module@^2.1.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.4.0.tgz#8e9fc8e15027b011418026e98f0e6f4d86305cc1"
+  integrity sha512-6A2fkfq1rfeQZjxrZJGerpLCTHRNEBiSgnu0+obeJpEPZRUooHgsizvzv0ZjJwOz3iWIHdJtVWJ/tmPr3D21/A==
+  dependencies:
+    has "^1.0.3"
+
+is-core-module@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.3.0.tgz#d341652e3408bca69c4671b79a0954a3d349f887"
   integrity sha512-xSphU2KG9867tsYdLD4RWQ1VqdFl4HTO9Thf3I/3dLEfr0dbPTWKsuCKrgqMljg4nPE+Gq0VCnzT3gr0CyBmsw==
