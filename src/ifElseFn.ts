@@ -1,5 +1,4 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { ifElse } from './ifElse.ts'
 import { isFunction } from './isFunction.ts'
 import { FalsyLike } from './types/index.ts'
 /**
@@ -22,22 +21,24 @@ import { FalsyLike } from './types/index.ts'
  *
  * @see Related to {@link ifElse}
  *
- * @public
+ * @beta
  */
-const ifElseFn = <V, R, T, F>(
-  condition: (val: V) => R,
-  onTrue: T | ((val: V) => T),
-  onFalse: F | ((val: V) => F)
-) => (val: V): R extends true ? T : R extends FalsyLike ? F : T | F => {
-  return ifElse(
-    condition(val),
-    isFunction(onTrue)
-      ? (onTrue as (val: V) => T)(val)
-      : ((onTrue as T) as any),
-    isFunction(onFalse)
-      ? (onFalse as (val: V) => F)(val)
-      : ((onFalse as F) as any)
-  )
-}
+const ifElseFn =
+  <V, R, T, F>(
+    condition: (val: V) => R,
+    onTrue: T | ((val: V) => T),
+    onFalse: F | ((val: V) => F)
+  ) =>
+  (val: V): R extends true ? T : R extends FalsyLike ? F : T | F => {
+    if (condition(val)) {
+      return isFunction(onTrue)
+        ? (onTrue as (val: V) => T)(val)
+        : (onTrue as T as any)
+    } else {
+      return isFunction(onFalse)
+        ? (onFalse as (val: V) => F)(val)
+        : (onFalse as F as any)
+    }
+  }
 
 export { ifElseFn }
