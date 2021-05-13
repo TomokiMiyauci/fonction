@@ -23,6 +23,8 @@ Deno.test('isNumber', () => {
   const table: [unknown, boolean][] = [
     [ZERO, true],
     [ONE, true],
+    [NaN, true],
+    [Infinity, true],
     [EMPTY_STRING, false],
     ['test', false],
     [false, false],

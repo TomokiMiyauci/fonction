@@ -1,3 +1,8 @@
+# [v1.6.2-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.6.1...v1.6.2-beta.1) (2021-05-12)
+
+## 🐛 Bug Fixes
+- [`9cc8ee6`](https://github.com/TomokiMiyauci/fonction/commit/9cc8ee6)   Fix ifElseFn function logic
+
 # [v1.6.1](https://github.com/TomokiMiyauci/fonction/compare/v1.6.0...v1.6.1) (2021-05-10)
 
 ## 🐛 Bug Fixes
