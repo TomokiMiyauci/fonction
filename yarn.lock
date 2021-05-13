@@ -1181,9 +1181,9 @@
     extend "3.0.2"
 
 "@microsoft/api-documenter@^7.13.6":
-  version "7.13.7"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.7.tgz#65e7ad25dc7261f932d37db97b2a711ff7861ca9"
-  integrity sha512-i4bYTridiA4uPEazS9hmh9XTASrIid00lHYL8cKrh/BtpYqhwSTz2oPZ6RxNlBK512ElXn76pT2YE2jNN/TwKQ==
+  version "7.13.8"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.8.tgz#6e045c2b5ef6c4f270813bf9f3c81cef274fefa5"
+  integrity sha512-2E8Xrl0ZjsF42wA7EgKvxk/kFq/7tCF7aQpUspmT8Ntki90BRtfUCaZJBOMgHUln+1WndUeRt05fcJ6lhaowNA==
   dependencies:
     "@microsoft/api-extractor-model" "7.13.1"
     "@microsoft/tsdoc" "0.13.2"
