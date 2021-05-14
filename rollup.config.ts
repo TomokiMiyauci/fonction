@@ -17,6 +17,8 @@ const replaceOption = {
   'https://deno.land/x/equal/mod': 'lauqe',
   preventAssignment: true
 }
+const banner =
+  '/*! Copyright (c) 2021-present the Fonction authors. All rights reserved. MIT license. */'
 
 const config = [
   {
@@ -25,6 +27,8 @@ const config = [
     plugins: [
       replace(replaceOption),
       ts({
+        transpiler: 'babel',
+        browserslist: ['defaults', 'node 6', 'supports es6-module'],
         tsconfig: (resolvedConfig) => ({
           ...resolvedConfig,
           declaration: false
@@ -39,17 +43,26 @@ const config = [
       file: main,
       format: 'umd',
       sourcemap: true,
-      name: 'F'
+      name: 'F',
+      banner
     }
   },
   {
     input: inputFilePath,
-    plugins: [replace(replaceOption), ts(), nodeResolve(), terser()],
+    plugins: [
+      replace(replaceOption),
+      ts({
+        transpiler: 'babel'
+      }),
+      nodeResolve(),
+      terser()
+    ],
 
     output: {
       file: module,
       format: 'es',
-      sourcemap: true
+      sourcemap: true,
+      banner
     }
   },
   {

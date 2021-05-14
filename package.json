@@ -88,5 +88,13 @@
   "funding": {
     "type": "patreon",
     "url": "https://www.patreon.com/tomoki_miyauci"
-  }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "Firefox ESR",
+    "last 1 versions",
+    "not dead",
+    "not IE 11",
+    "node 14"
+  ]
 }
