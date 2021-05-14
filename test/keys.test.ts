@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { assertEquals } from '../deps.ts'
+import { assertEquals } from '../dev_deps.ts'
 import { keys } from '../src/keys.ts'
 
 Deno.test('keys', () => {

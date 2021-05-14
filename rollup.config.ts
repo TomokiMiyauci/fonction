@@ -1,4 +1,5 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
+import replace from '@rollup/plugin-replace'
 import ts from '@wessberg/rollup-plugin-ts'
 import { resolve } from 'path'
 import dts from 'rollup-plugin-dts'
@@ -8,15 +9,21 @@ import { main, module } from './package.json'
 
 const baseDir = resolve(__dirname)
 const outputDir = resolve(baseDir, 'dist')
-const tempDir = resolve(baseDir, 'temp')
-const inputFilePath = resolve(tempDir, 'mod.ts')
+const inputFilePath = resolve(baseDir, 'mod.ts')
 const declareFilePath = resolve(outputDir, 'index.es.d.ts')
+const replaceOption = {
+  '.ts': '',
+  'https://x.nest.land/arithmetic4@0.1.1/mod': 'arithmetic4',
+  'https://deno.land/x/equal/mod': 'lauqe',
+  preventAssignment: true
+}
 
 const config = [
   {
     input: inputFilePath,
     // eslint-disable-next-line no-sparse-arrays
     plugins: [
+      replace(replaceOption),
       ts({
         tsconfig: (resolvedConfig) => ({
           ...resolvedConfig,
@@ -37,7 +44,7 @@ const config = [
   },
   {
     input: inputFilePath,
-    plugins: [ts(), nodeResolve(), terser()],
+    plugins: [replace(replaceOption), ts(), nodeResolve(), terser()],
 
     output: {
       file: module,

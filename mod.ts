@@ -1,3 +1,4 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 export { add } from './src/add.ts'
 export { and } from './src/and.ts'
 export { append } from './src/append.ts'

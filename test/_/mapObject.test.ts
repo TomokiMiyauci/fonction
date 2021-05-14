@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @typescript-eslint/ban-types */
-import { assertEquals } from '../../deps.ts'
+import { assertEquals } from '../../dev_deps.ts'
 import { MapObject, mapObject } from '../../src/_/mapObject.ts'
 import { AnyFn } from '../../src/types/index.ts'
 import { assertEqual } from '../asserts.ts'

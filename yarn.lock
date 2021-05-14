@@ -1534,6 +1534,14 @@
     is-module "^1.0.0"
     resolve "^1.19.0"
 
+"@rollup/plugin-replace@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-replace/-/plugin-replace-2.4.2.tgz#a2d539314fbc77c244858faa523012825068510a"
+  integrity sha512-IGcu+cydlUMZ5En85jxHH4qj2hta/11BHq95iHEyb2sbgiN0eCdzvUcHw5gt9pBL5lTi4JDYJ1acCoMGpTvEZg==
+  dependencies:
+    "@rollup/pluginutils" "^3.1.0"
+    magic-string "^0.25.7"
+
 "@rollup/pluginutils@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.1.0.tgz#706b4524ee6dc8b103b3c995533e5ad680c02b9b"
@@ -4593,9 +4601,9 @@ kind-of@^6.0.0, kind-of@^6.0.2, kind-of@^6.0.3:
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
 lauqe@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/lauqe/-/lauqe-1.0.1.tgz#853cd90eec5e7e424fea6c7a5c36f89db4784b8e"
-  integrity sha512-9QXnWcEGqsp7W3DE083xpeIbqyxNzzMcL5sde8OaXo0VpPs8CbsVe+qvNKZy1wCpVuBh2RP9MsdAFOJirxohwQ==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/lauqe/-/lauqe-1.0.2.tgz#436a41d536258993d396910cce5701115dab063c"
+  integrity sha512-c9Yw9Vi+pxF62Olw7B4OpwxkzyNMR/yMlUwaQKQWk+zeCIW6ZVeDfa2TUarFJzNgCCUJYwXto6Q3JNYV2XwmNw==
 
 leven@^3.1.0:
   version "3.1.0"
@@ -6136,13 +6144,6 @@ readdir-scoped-modules@^1.1.0:
     dezalgo "^1.0.0"
     graceful-fs "^4.1.2"
     once "^1.3.0"
-
-readdirp@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.6.0.tgz#74a370bd857116e245b29cc97340cd431a02a6c7"
-  integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
-  dependencies:
-    picomatch "^2.2.1"
 
 redent@^3.0.0:
   version "3.0.0"

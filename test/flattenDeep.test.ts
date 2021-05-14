@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { assertEquals } from '../deps.ts'
+import { assertEquals } from '../dev_deps.ts'
 import { FlattenDeep as Flat, flattenDeep } from '../src/flattenDeep.ts'
 import { assertEqual } from './asserts.ts'
 Deno.test('flattenDeep', () => {
