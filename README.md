@@ -1,11 +1,23 @@
+<p align="center">
+  <img alt="logo image" src="docs/public/icon.gif"  />
+  <h1 align="center">fonction</h1>
+</p>
+
+<p align="center">
+ A modern practical functional library
+</p>
+
 <div align="center">
 
-![logo image](docs/public/icon.gif)
-![npm version](https://img.shields.io/npm/v/fonction.svg?style=flat)
-![bundle size](https://img.shields.io/bundlephobia/min/fonction)
-![npm download](https://img.shields.io/npm/dw/fonction?color=blue)
+[![test](https://github.com/TomokiMiyauci/fonction/actions/workflows/test.yml/badge.svg)](https://github.com/TomokiMiyauci/fonction/actions/workflows/test.yml)
+[![GitHub release](https://img.shields.io/github/release/TomokiMiyauci/fonction.svg)](https://github.com/TomokiMiyauci/fonction/releases)
 [![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black)](https://deno.land/x/fonction)
 [![nest badge](https://nest.land/badge.svg)](https://nest.land/package/fonction)
+[![deno version](https://img.shields.io/badge/deno-^1.6.0-lightgrey?logo=deno)](https://github.com/denoland/deno)
+![node support version](https://img.shields.io/badge/node-%5E14.16.0-yellow)
+![bundle size](https://img.shields.io/bundlephobia/min/fonction)
+![npm download](https://img.shields.io/npm/dw/fonction?color=blue)
+
 [![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/fonction.svg)](https://david-dm.org/TomokiMiyauci/fonction)
 [![codecov](https://codecov.io/gh/TomokiMiyauci/fonction/branch/main/graph/badge.svg?token=SPAi5Pv2wd)](https://codecov.io/gh/TomokiMiyauci/fonction)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f43b1c317e11445399d85ce6efc06504)](https://www.codacy.com/gh/TomokiMiyauci/fonction/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TomokiMiyauci/fonction&utm_campaign=Badge_Grade)
@@ -14,14 +26,13 @@
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)
 ![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 </div>
 
-# fonction
+---
 
-> A modern practical functional library
-
-## :sparkles: Feature
+## :sparkles: Features
 
 - :green_heart: Friendly type definition
 - :earth_americas: Universal functions providing ESM and UMD
@@ -33,26 +44,39 @@
 Fonction (French word for "function", not typo:sweat_smile:) is modern practical functional library.
 Special attention is paid to bundle size and strict type definitions. Therefore, you can take out and use only what you want to use without worrying about the size.
 
-## 📝 Docs
+## :memo: Docs
 
 [Read the Docs to Learn More.](https://tomokimiyauci.github.io/fonction/)
 
-## :truck: Install
+## :green_heart: Supports
 
-```bash
-npm i fonction
-or
-yarn add fonction
-```
+The TypeScript version must be `4.1.0` or higher.
+
+This project provide `ES modules` and `UMD`. The range supported by both is different.
+
+### ES modules
+
+Limit support to the latest environment to reduce the bundle size.
+
+| <img width="30px" height="30px" alt="Deno" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1620998361/logos/deno.svg"></br>Deno | <img width="24px" height="24px" alt="Node.js" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1620998361/logos/nodejs.svg"></br>Node.js | <img width="24px" height="24px" alt="IE / Edge" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /></br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" /></br>iOS Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png" alt="Samsung" width="24px" height="24px" /></br>Samsung | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /></br>Opera |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ^1.6.0                                                                                                                                  | ^14.16.0                                                                                                                                        | last version                                                                                                                                         | last version                                                                                                                                                  | last version                                                                                                                                              | last version                                                                                                                                              | last version                                                                                                                                                              | last version                                                                                                                                                                    | last version                                                                                                                                          |
+
+### UMD
+
+Browser is supporting since IE11.
+
+| <img width="24px" height="24px" alt="Node.js" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1620998361/logos/nodejs.svg"></br>Node.js | <img width="24px" height="24px" alt="IE / Edge" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"></br>IE / Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /></br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" /></br>iOS Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png" alt="Samsung" width="24px" height="24px" /></br>Samsung | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /></br>Opera |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ^6.17.0                                                                                                                                         | IE11 / ^16                                                                                                                                                | ^60                                                                                                                                                           | ^61                                                                                                                                                       | ^10.1                                                                                                                                                     | ^10.3                                                                                                                                                                     | ^8.2                                                                                                                                                                            | ^48                                                                                                                                                   |
+
+Compared to `ES modules`, `UMD` has a bundle size increase of about 2.5x. Recommend using `ES modules` as much as possible.
 
 ## :dizzy: Usage
 
 `fonction` provides multi platform modules.
 
 ### 🦕 Deno
-
-<details>
-<summary>Click to toggle contents of `code` </summary>
 
 #### deno.land
 
@@ -70,12 +94,15 @@ import { add } from 'https://x.nest.land/fonction@1.3.0/mod.ts'
 add(1, 2) // 3
 ```
 
-</details>
+### :package: Node.js
 
-### :package: NPM
+#### Install
 
-<details>
-<summary>Click to toggle contents of `code` </summary>
+```bash
+npm i fonction
+or
+yarn add fonction
+```
 
 #### ESM
 
@@ -93,12 +120,7 @@ const { add } = require('fonction')
 add(1, 2) // 3
 ```
 
-</details>
-
 ### :globe_with_meridians: CDN
-
-<details>
-<summary>Click to toggle contents of `code` </summary>
 
 #### ESM
 
@@ -111,6 +133,8 @@ add(1, 2) // 3
 
 #### UMD
 
+> The global object is `F`.
+
 ```html
 <script src="https://unpkg.com/fonction"></script>
 
@@ -118,8 +142,6 @@ add(1, 2) // 3
   console.log(F.add(1, 2)) // 3
 </script>
 ```
-
-</details>
 
 ## :world_map: Loadmap
 
@@ -144,6 +166,20 @@ import { _ } from 'https://deno.land/x/fonction@VERSION/mod.ts'
 
 `@VERSION` format is like `v1.5.0-beta.1`.
 
+## :handshake: Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues](https://github.com/TomokiMiyauci/fonction/issues).
+
+## :seedling: Show your support
+
+Give a ⭐️ if this project helped you!
+
+<a href="https://www.patreon.com/tomoki_miyauci">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
 ## :bulb: License
 
-[MIT](./LICENSE)
+Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
+
+Released under the [MIT](./LICENSE) license
