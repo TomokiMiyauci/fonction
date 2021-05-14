@@ -1,3 +1,8 @@
+# [v1.7.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.6.2-beta.1...v1.7.0-beta.1) (2021-05-14)
+
+## ✨ New Features
+- [`7eaa4c2`](https://github.com/TomokiMiyauci/fonction/commit/7eaa4c2)   Add equal function
+
 # [v1.6.2-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.6.1...v1.6.2-beta.1) (2021-05-12)
 
 ## 🐛 Bug Fixes
