@@ -177,11 +177,10 @@ const api: Api = {
     lodash: 'dropRight',
     fonction: undefined
   },
-  equals: {
+  equal: {
     ramda: 'equals',
     rambda: 'equals',
-    lodash: 'isEqual',
-    fonction: undefined
+    lodash: 'isEqual'
   },
   filter: {
     ramda: 'filter',

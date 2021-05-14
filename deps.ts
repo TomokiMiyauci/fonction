@@ -1,4 +1,5 @@
 export { assert, assertEquals } from 'https://deno.land/std/testing/asserts.ts'
+export { equal } from 'https://deno.land/x/equal/mod.ts'
 export {
   add,
   divide,
