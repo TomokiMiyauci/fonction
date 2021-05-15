@@ -24,6 +24,8 @@ import { AnyFn } from './types/index.ts'
  * and(() => 1, () => 0) // false
  * ```
  *
+ * @category `Logic`
+ *
  * @see Related to {@link or} {@link xor}
  *
  * @public
