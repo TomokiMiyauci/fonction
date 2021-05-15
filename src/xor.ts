@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { not } from './not.ts'
+import { N } from './N.ts'
 import { FalsyLike } from './types/index.ts'
 
 /**
@@ -25,7 +25,7 @@ const xor = <T, U>(
   a: T,
   b: U
 ): T extends FalsyLike ? (U extends FalsyLike ? false : boolean) : boolean =>
-  (not(a) !== (not(b) as unknown)) as T extends FalsyLike
+  (N(a) !== (N(b) as unknown)) as T extends FalsyLike
     ? U extends FalsyLike
       ? false
       : boolean
