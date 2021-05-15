@@ -1,3 +1,12 @@
+# [v1.7.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.7.0-beta.1...v1.7.0-beta.2) (2021-05-15)
+
+## ✨ New Features
+- [`1090447`](https://github.com/TomokiMiyauci/fonction/commit/1090447)   Add isJSONObject function 
+
+## 🐛 Bug Fixes
+- [`fefe624`](https://github.com/TomokiMiyauci/fonction/commit/fefe624)   Change ifElse function interface to accept any function 
+- [`8ab861e`](https://github.com/TomokiMiyauci/fonction/commit/8ab861e)   Change and function interface to accept function as argument
+
 # [v1.7.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.6.2-beta.1...v1.7.0-beta.1) (2021-05-14)
 
 ## ✨ New Features
