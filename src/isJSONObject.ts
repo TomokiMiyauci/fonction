@@ -19,7 +19,7 @@ import { JSON_OBJECT } from './constants/index.ts'
  * isJSONObject(new Set()) // false
  * ```
  *
- * @beta
+ * @public
  */
 const isJSONObject = (val: unknown): val is Record<PropertyKey, unknown> =>
   constructorName(val) === JSON_OBJECT

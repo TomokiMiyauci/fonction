@@ -15,7 +15,7 @@ import { equal as _equal } from '../deps.ts'
  * equals({ a: { b: [1, 2, 3]}}, { a: { b: [1, 2, 3]}}) // true
  * ```
  *
- * @beta
+ * @public
  */
 const equal = _equal
 

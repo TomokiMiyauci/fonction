@@ -22,7 +22,7 @@ import { FalsyLike } from './types/index.ts'
  *
  * @see Related to {@link ifElse}
  *
- * @beta
+ * @public
  */
 const ifElseFn =
   <V, R, T, F>(

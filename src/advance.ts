@@ -16,7 +16,7 @@ import { AnyFn } from './types/index.ts'
  *
  * @category `Logic`
  *
- * @beta
+ * @public
  */
 const advance = <T>(val: T | AnyFn<any, T>): T =>
   ifElse(isFunction(val), () => (val as AnyFn<any, T>)(), val)
