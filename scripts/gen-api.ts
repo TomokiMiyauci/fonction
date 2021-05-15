@@ -16,12 +16,22 @@ import {
   DocSection
 } from '@microsoft/tsdoc'
 import { configure, renderFile } from 'eta'
-import { and, ifElse, isUndefined, NN, not, replace } from 'fonction'
+import {
+  and,
+  ifElse,
+  isUndefined,
+  NN,
+  not,
+  replace,
+  reverse,
+  take
+} from 'fonction'
 import { outputFileSync, pathExistsSync, readFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
 import { getApiListTable } from './gen-api-list.ts'
-import { getModuleStarts } from './gen-relations'
+import { getVersionList } from './gen-full-docs.ts'
+import { formatModuleStats, getModuleStarts } from './gen-relations.ts'
 const apiModel = new ApiModel()
 const truthy = (val: unknown) => NN(val)
 const copyright =
@@ -35,7 +45,7 @@ const getSummary = ({ nodes }: DocSection): string => {
         return _n.kind === 'PlainText'
           ? _n.text
           : _n.kind === 'CodeSpan'
-          ? `\`${((_n as unknown) as DocCodeSpan).code}\``
+          ? `\`${(_n as unknown as DocCodeSpan).code}\``
           : ''
       }
       return ''
@@ -232,6 +242,7 @@ interface MdVariables {
   isLatest: boolean
   test: string
   version: string | undefined
+  versionLink: boolean
   params: [string, string][]
   returns: string[]
   sees: string[]
@@ -242,71 +253,81 @@ const generate = (path: string, content: string): void =>
   outputFileSync(path, content)
 
 type ExportKind = 'Fn' | 'Type'
-const mapMember = ({
-  isLatest,
-  type,
-  moduleVersions
-}: {
-  isLatest: boolean
-  type: ExportKind
-  moduleVersions: Record<string, string | undefined>
-}) => async (
-  member: ApiItem
-): Promise<{
-  name: string
-  md: string
-}> => {
-  const { displayName: name, excerpt } = member as ApiVariable
-  const signature = excerpt.text
+const mapMember =
+  ({
+    isLatest,
+    type,
+    moduleVersions
+  }: {
+    isLatest: boolean
+    type: ExportKind
+    moduleVersions: Record<
+      string,
+      | {
+          version: string
+          linkable: boolean
+        }
+      | undefined
+    >
+  }) =>
+  async (
+    member: ApiItem
+  ): Promise<{
+    name: string
+    md: string
+  }> => {
+    const { displayName: name, excerpt } = member as ApiVariable
+    const signature = excerpt.text
 
-  if (member instanceof ApiDocumentedItem && member.tsdocComment) {
-    const {
-      summarySection,
-      customBlocks,
-      modifierTagSet,
-      deprecatedBlock,
-      remarksBlock,
-      returnsBlock,
-      params: _params,
-      seeBlocks
-    } = member.tsdocComment
+    if (member instanceof ApiDocumentedItem && member.tsdocComment) {
+      const {
+        summarySection,
+        customBlocks,
+        modifierTagSet,
+        deprecatedBlock,
+        remarksBlock,
+        returnsBlock,
+        params: _params,
+        seeBlocks
+      } = member.tsdocComment
 
-    const categories = getCategories(customBlocks)
-    const sees = getSees(seeBlocks)
-    const params = getParams(_params)
-    const returns = returnsBlock ? getReturns(returnsBlock) : []
-    const remarks = getRemarks(remarksBlock)
-    const isDeprecated = !!deprecatedBlock
-    const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
-    const description = getSummary(summarySection)
-    const examples = getExampleCode(customBlocks)
-    const test =
-      type === 'Fn'
-        ? getTestCase(resolve(__dirname, '..', 'test', `${name}.test.ts`))
-        : ''
-    const md = await render({
-      name,
-      description,
-      examples,
-      signature,
-      tagName,
-      deprecated: isDeprecated,
-      remarks,
-      isLatest,
-      test,
-      version: moduleVersions[name],
-      params,
-      returns,
-      sees,
-      categories
-    })
+      const categories = getCategories(customBlocks)
+      const sees = getSees(seeBlocks)
+      const params = getParams(_params)
+      const returns = returnsBlock ? getReturns(returnsBlock) : []
+      const remarks = getRemarks(remarksBlock)
+      const isDeprecated = !!deprecatedBlock
+      const tagName = modifierTagSet.nodes[0]?.tagName ?? ''
+      const description = getSummary(summarySection)
+      const examples = getExampleCode(customBlocks)
+      const test =
+        type === 'Fn'
+          ? getTestCase(resolve(__dirname, '..', 'test', `${name}.test.ts`))
+          : ''
+      const md = await render({
+        name,
+        description,
+        examples,
+        signature,
+        tagName,
+        deprecated: isDeprecated,
+        remarks,
+        isLatest,
+        test,
+        version: moduleVersions[name]?.version,
+        versionLink: moduleVersions[name]?.linkable ?? false,
+        params,
+        returns,
+        sees,
+        categories
+      })
 
-    return {
-      name,
-      md
+      return {
+        name,
+        md
+      }
     }
   }
-}
 const run = async ({
   version,
   apiJsonPath,
@@ -319,7 +340,14 @@ const run = async ({
   apiJsonPath: string
   editLink?: boolean
   isLatest: boolean
-  moduleVersions: Record<string, string | undefined>
+  moduleVersions: Record<
+    string,
+    | {
+        version: string
+        linkable: boolean
+      }
+    | undefined
+  >
   apiTable?: string
 }): Promise<void> => {
   const constants = ['_']
@@ -398,13 +426,19 @@ ${isLatest ? 'Latest' : version}
 }
 
 const main = async () => {
-  const moduleStarts = await getModuleStarts()
+  const versions = reverse(getVersionList())
+  const moduleStarts = await getModuleStarts(versions)
+  const formattedModuleVersions = formatModuleStats(
+    moduleStarts,
+    take(10, versions)
+  )
+  console.log(formattedModuleVersions, moduleStarts, versions)
   const apiTable = getApiListTable()
   run({
     version: '',
     apiJsonPath: resolve(__dirname, '..', 'temp', 'fonction.api.json'),
     isLatest: true,
-    moduleVersions: moduleStarts,
+    moduleVersions: formattedModuleVersions,
     apiTable
   })
 }

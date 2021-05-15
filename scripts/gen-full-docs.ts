@@ -4,16 +4,16 @@ import { reverse, take } from 'fonction'
 import { mkdirsSync, outputJSONSync, readJSONSync } from 'fs-extra'
 import { resolve } from 'path'
 
-import { run as _run } from './gen-api'
-import { replace } from './gen-api-model'
-import { getModuleStarts } from './gen-relations'
+import { run as _run } from './gen-api.ts'
+import { replace } from './gen-api-model.ts'
+import { formatModuleStats, getModuleStarts } from './gen-relations.ts'
 const getVersionList = (): string[] => {
   const log = execSync('npm view fonction versions  --json')
   return JSON.parse(log.toString())
 }
 
 const generateModuleList = (): void => {
-  const versions = take(10, reverse(getVersionList()))
+  const versions = reverse(getVersionList())
   outputJSONSync(resolve(__dirname, '..', 'temp', 'meta.json'), {
     versions
   })
@@ -71,15 +71,19 @@ const run = async () => {
     versions.map((version) => [version, generateApiJson(version)] as const)
   )
 
-  const moduleVersions = await getModuleStarts()
+  const moduleVersions = await getModuleStarts(versions)
+  const formattedModuleVersions = formatModuleStats(
+    moduleVersions,
+    take(10, versions)
+  )
 
-  list.forEach(([version, path]) => {
+  take(10, list).forEach(([version, path]) => {
     _run({
       version,
       apiJsonPath: path,
       editLink: false,
       isLatest: false,
-      moduleVersions
+      moduleVersions: formattedModuleVersions
     })
   })
 }
