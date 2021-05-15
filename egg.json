@@ -15,9 +15,8 @@
     "./CHANGELOG.md"
   ],
   "ignore": [".git"],
-  "checkFormat": "deno fmt --ignore=node_modules",
+  "checkFormat": false,
   "checkTests": false,
-  "checkInstallation": true,
-  "check": false,
-  "unlisted": false
+  "checkInstallation": false,
+  "check": true
 }
