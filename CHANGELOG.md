@@ -1,3 +1,12 @@
+# [v1.7.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.7.0-beta.2...v1.7.0-beta.3) (2021-05-15)
+
+## ✨ New Features
+- [`39e8caf`](https://github.com/TomokiMiyauci/fonction/commit/39e8caf)   Add advance function 
+
+## 🐛 Bug Fixes
+- [`694dee7`](https://github.com/TomokiMiyauci/fonction/commit/694dee7)   Change or function interface to accept function 
+- [`9add577`](https://github.com/TomokiMiyauci/fonction/commit/9add577)   Change xor function interfacve to accept function
+
 # [v1.7.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.7.0-beta.1...v1.7.0-beta.2) (2021-05-15)
 
 ## ✨ New Features
