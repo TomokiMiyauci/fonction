@@ -39,8 +39,8 @@ const endsWith = <T extends string, U extends string | undefined = undefined>(
 ): EndsWith<U> =>
   ifElse(
     isString(target),
-    (target as string).endsWith(val) as EndsWith<U>,
-    ((_target: string) => endsWith(val, _target)) as EndsWith<U>
+    () => (target as string).endsWith(val) as EndsWith<U>,
+    () => ((_target: string) => endsWith(val, _target)) as EndsWith<U>
   )
 
 export { endsWith }

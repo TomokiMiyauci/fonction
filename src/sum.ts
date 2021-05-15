@@ -2,7 +2,6 @@
 import { add } from './add.ts'
 import { first } from './first.ts'
 import { ifElse } from './ifElse.ts'
-import { ifElseFn } from './ifElseFn.ts'
 import { isNumber } from './isNumber.ts'
 import { isUndefined } from './isUndefined.ts'
 /**
@@ -28,16 +27,11 @@ const sum: {
   (val: bigint[]): bigint
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } = (val: any) => {
-  const head = first(val) as number | bigint
-  const fn = ifElseFn(
-    (head: number | bigint | undefined) => isUndefined(head),
-    0,
-    (head) => {
-      const init = ifElse(isNumber(head), 0, 0n)
-      return val.reduce(add, init)
-    }
-  )
-  return fn(head)
+  const head = first(val) as number | bigint | undefined
+  return ifElse(isUndefined(head), 0, () => {
+    const init = ifElse(isNumber(head), 0, 0n)
+    return val.reduce(add, init)
+  })
 }
 
 export { sum }

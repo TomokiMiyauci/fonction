@@ -24,7 +24,10 @@ const prop = <
   val: T,
   obj: U
 ): U extends Record<T, unknown> ? U[T] : undefined =>
-  ifElse(has(val, obj), obj[val], undefined) as U extends Record<T, unknown>
+  ifElse(has(val, obj), () => obj[val], undefined) as U extends Record<
+    T,
+    unknown
+  >
     ? U[T]
     : undefined
 export { prop }

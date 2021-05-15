@@ -49,14 +49,15 @@ const chunk = <T extends number, U extends readonly unknown[]>(
     lte(size, 0 as T),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     array as any,
-    array.reduce(
-      (acc, _, index) =>
-        ifElse(index % size, acc, [
-          ...(acc as never),
-          slice(index, add(index, size), array)
-        ]),
-      []
-    )
+    () =>
+      array.reduce(
+        (acc, _, index) =>
+          ifElse(index % size, acc, [
+            ...(acc as never),
+            slice(index, add(index, size), array)
+          ]),
+        []
+      )
   )
 
 export { chunk }

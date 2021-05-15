@@ -39,8 +39,8 @@ const startsWith = <T extends string, U extends string | undefined = undefined>(
 ): StartsWith<U> =>
   ifElse(
     isString(target),
-    (target as string).startsWith(val) as StartsWith<U>,
-    ((_target: string) => startsWith(val, _target)) as StartsWith<U>
+    () => (target as string).startsWith(val) as StartsWith<U>,
+    () => ((_target: string) => startsWith(val, _target)) as StartsWith<U>
   )
 
 export { startsWith }
