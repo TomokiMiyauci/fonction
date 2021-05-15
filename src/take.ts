@@ -32,6 +32,11 @@ import { slice } from './slice.ts'
 const take = <T extends readonly unknown[] | string>(
   howMany: number,
   val: T
-): T => ifElse(lt(howMany, 0), val.slice(howMany) as T, slice(0, howMany, val))
+): T =>
+  ifElse(
+    lt(howMany, 0),
+    () => val.slice(howMany) as T,
+    () => slice(0, howMany, val)
+  )
 
 export { take }

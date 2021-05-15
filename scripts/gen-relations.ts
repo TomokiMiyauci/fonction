@@ -3,11 +3,11 @@ import { first, has, not, or, tail } from 'fonction'
 import { pathExistsSync } from 'fs-extra'
 import { resolve } from 'path'
 
-import { getVersionList } from './gen-full-docs'
 const apiModel = new ApiModel()
 
-const getModuleStarts = async (): Promise<Record<string, string>> => {
-  const versions = getVersionList()
+const getModuleStarts = async (
+  versions: string[]
+): Promise<Record<string, string>> => {
   const fullModuleVersionList = await Promise.all(
     versions.map((version) => {
       return [
@@ -34,14 +34,32 @@ const getModuleStarts = async (): Promise<Record<string, string>> => {
     const modules = tail(cur)
 
     modules.forEach((module) => {
-      if (not(has(module, acc))) {
-        acc[module] = version
-      }
+      acc[module] = version
     })
 
     return acc
   }, {} as Record<string, string>)
 }
+
+const formatModuleStats = (stats: Record<string, string>, versions: string[]) =>
+  Object.entries(stats).reduce(
+    (acc, [key, version]) => {
+      return {
+        ...acc,
+        [key]: {
+          version,
+          linkable: versions.includes(version as string)
+        }
+      }
+    },
+    {} as Record<
+      string,
+      {
+        version: string
+        linkable: boolean
+      }
+    >
+  )
 
 const getModuleList = (path: string) => {
   if (not(pathExistsSync(path))) return
@@ -55,4 +73,4 @@ const getModuleList = (path: string) => {
   return moduleList as string[]
 }
 
-export { getModuleStarts }
+export { formatModuleStats, getModuleStarts }

@@ -72,12 +72,13 @@ type Last<T extends string | readonly unknown[]> = T extends ''
 const last = <T extends string | readonly unknown[]>(val: T): Last<T> =>
   ifElse(
     isArray(val),
-    ifElse(
-      length((val as unknown) as unknown[]),
-      takeLast(1, val)[0] as Last<T>,
-      undefined as Last<T>
-    ),
-    takeLast(1, val) as Last<T>
+    () =>
+      ifElse(
+        length(val as unknown as unknown[]),
+        () => takeLast(1, val)[0] as Last<T>,
+        undefined as Last<T>
+      ),
+    () => takeLast(1, val) as Last<T>
   )
 
 export { last }

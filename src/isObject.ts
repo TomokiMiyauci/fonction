@@ -1,15 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { IsPrimitive, isPrimitive } from './isPrimitive.ts'
-import { not } from './not.ts'
-
-/**
- * Object or not.
- *
- * @typeParam T - Any value
- *
- * @public
- */
-type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
+import { isPrimitive } from './isPrimitive.ts'
+import { N } from './N.ts'
 
 /**
  * Whatever argument is type of `object` or not.
@@ -41,8 +32,8 @@ type IsObject<T extends unknown> = IsPrimitive<T> extends true ? false : true
  *
  * @public
  */
-const isObject = <T extends unknown>(val: T): val is T =>
-  not(isPrimitive(val) as IsObject<T>)
+// eslint-disable-next-line @typescript-eslint/ban-types
+const isObject = (val: unknown): val is Record<string, unknown> =>
+  N(isPrimitive(val))
 
 export { isObject }
-export type { IsObject }

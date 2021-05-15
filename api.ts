@@ -11,6 +11,7 @@ type Api = {
 const ALL_MODULES: ExcludeModules[] = ['rambda', 'ramda', 'lodash']
 const LAMBDAS: ExcludeModules[] = ['rambda', 'ramda']
 const api: Api = {
+  advance: {},
   add: ALL_MODULES,
   and: LAMBDAS,
   chunk: {
@@ -54,6 +55,7 @@ const api: Api = {
   isPrimitive: {},
   isString: ['lodash'],
   isSymbol: ['lodash'],
+  isJSONObject: {},
   isUndefined: ['lodash'],
   K: {},
   keys: ALL_MODULES,
@@ -177,11 +179,10 @@ const api: Api = {
     lodash: 'dropRight',
     fonction: undefined
   },
-  equals: {
+  equal: {
     ramda: 'equals',
     rambda: 'equals',
-    lodash: 'isEqual',
-    fonction: undefined
+    lodash: 'isEqual'
   },
   filter: {
     ramda: 'filter',

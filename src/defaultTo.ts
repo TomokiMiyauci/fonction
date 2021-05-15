@@ -23,13 +23,15 @@ import { or } from './or.ts'
  *
  * @public
  */
-const defaultTo = <T extends unknown>(a: T) => <U extends unknown>(
-  b: U
-): IsNil<U> extends true ? T : IsNumber<U> extends false ? U : T | U =>
-  (or(isNil(b), isNaN(b)) ? a : b) as IsNil<U> extends true
-    ? T
-    : IsNumber<U> extends false
-    ? U
-    : T | U
+const defaultTo =
+  <T extends unknown>(a: T) =>
+  <U extends unknown>(
+    b: U
+  ): IsNil<U> extends true ? T : IsNumber<U> extends false ? U : T | U =>
+    (or(isNil(b), () => isNaN(b)) ? a : b) as IsNil<U> extends true
+      ? T
+      : IsNumber<U> extends false
+      ? U
+      : T | U
 
 export { defaultTo }

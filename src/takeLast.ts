@@ -35,8 +35,8 @@ const takeLast = <T extends readonly unknown[] | string>(
 ): T =>
   ifElse(
     lte(howMany, 0),
-    slice(0, -howMany, val) as T,
-    val.slice(-howMany) as T
+    () => slice(0, -howMany, val) as T,
+    () => val.slice(-howMany) as T
   )
 
 export { takeLast }

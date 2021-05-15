@@ -1,12 +1,8 @@
 name: release-eggs
 
 on:
-  create:
-    ref_type: tag
-
-    tags:
-      - v**
-      - '!v**-beta.*'
+  release:
+    types: [published]
 
 jobs:
   release:

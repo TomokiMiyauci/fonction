@@ -1,4 +1,5 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
+import replace from '@rollup/plugin-replace'
 import ts from '@wessberg/rollup-plugin-ts'
 import { resolve } from 'path'
 import dts from 'rollup-plugin-dts'
@@ -8,16 +9,26 @@ import { main, module } from './package.json'
 
 const baseDir = resolve(__dirname)
 const outputDir = resolve(baseDir, 'dist')
-const tempDir = resolve(baseDir, 'temp')
-const inputFilePath = resolve(tempDir, 'mod.ts')
+const inputFilePath = resolve(baseDir, 'mod.ts')
 const declareFilePath = resolve(outputDir, 'index.es.d.ts')
+const replaceOption = {
+  '.ts': '',
+  'https://x.nest.land/arithmetic4@0.1.1/mod': 'arithmetic4',
+  'https://deno.land/x/equal/mod': 'lauqe',
+  preventAssignment: true
+}
+const banner =
+  '/*! Copyright (c) 2021-present the Fonction authors. All rights reserved. MIT license. */'
 
 const config = [
   {
     input: inputFilePath,
     // eslint-disable-next-line no-sparse-arrays
     plugins: [
+      replace(replaceOption),
       ts({
+        transpiler: 'babel',
+        browserslist: ['defaults', 'node 6', 'supports es6-module'],
         tsconfig: (resolvedConfig) => ({
           ...resolvedConfig,
           declaration: false
@@ -32,17 +43,26 @@ const config = [
       file: main,
       format: 'umd',
       sourcemap: true,
-      name: 'F'
+      name: 'F',
+      banner
     }
   },
   {
     input: inputFilePath,
-    plugins: [ts(), nodeResolve(), terser()],
+    plugins: [
+      replace(replaceOption),
+      ts({
+        transpiler: 'babel'
+      }),
+      nodeResolve(),
+      terser()
+    ],
 
     output: {
       file: module,
       format: 'es',
-      sourcemap: true
+      sourcemap: true,
+      banner
     }
   },
   {

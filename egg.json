@@ -5,19 +5,18 @@
   "description": "A modern practical functional library",
   "homepage": "https://github.com/TomokiMiyauci/fonction",
   "version": "1.5.0",
-  "releaseType": "patch",
   "files": [
     "./docs/public/icon.gif",
     "./mod.ts",
     "./deps.ts",
     "./src/**/*.ts",
     "./README.md",
-    "./LICENSE"
+    "./LICENSE",
+    "./CHANGELOG.md"
   ],
   "ignore": [".git"],
-  "checkFormat": "deno fmt --ignore=node_modules",
+  "checkFormat": false,
   "checkTests": false,
-  "checkInstallation": true,
-  "check": false,
-  "unlisted": false
+  "checkInstallation": false,
+  "check": true
 }

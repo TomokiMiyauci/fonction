@@ -157,7 +157,6 @@ jobs:
         run: yarn lint
 
   test:
-    needs: [setup]
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -200,9 +199,6 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: coverage
-
-      - name: debug
-        run: ls -a
 
       - uses: codecov/codecov-action@v1
         with:

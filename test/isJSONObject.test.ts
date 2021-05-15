@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { assertEquals } from '../dev_deps.ts'
-import { isNaN } from '../src/isNaN.ts'
+import { isJSONObject } from '../src/isJSONObject.ts'
 import { isSymbol } from '../src/isSymbol.ts'
 import {
   BIG1,
@@ -19,9 +19,16 @@ import {
   ZERO
 } from './index.ts'
 
-Deno.test('isNaN', () => {
+Deno.test('isJSONObject', () => {
   const table: [unknown, boolean][] = [
-    [NaN, true],
+    [EMPTY_OBJECT, true],
+    [Object(), true],
+    [{ nest: {} }, true],
+    [new Object(), true],
+    [new Object({ hoge: 'huga' }), true],
+    [new Object({ hoge: [], huga: {} }), true],
+    [Object, false],
+    [NaN, false],
     [Infinity, false],
     [-Infinity, false],
     [null, false],
@@ -34,8 +41,6 @@ Deno.test('isNaN', () => {
     [true, false],
     [BIG1, false],
     [SYMBOL, false],
-    [EMPTY_OBJECT, false],
-    [{ nest: {} }, false],
     [EMPTY_ARRAY, false],
     [[[]], false],
     [MAP, false],
@@ -48,9 +53,9 @@ Deno.test('isNaN', () => {
   ]
   table.forEach(([val, expected]) => {
     assertEquals(
-      isNaN(val),
+      isJSONObject(val),
       expected,
-      `isNaN(${isSymbol(val) ? 'symbol' : val}) -> ${expected}`
+      `isJSONObject(${isSymbol(val) ? 'symbol' : val}) -> ${expected}`
     )
   })
 })

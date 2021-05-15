@@ -1,8 +1,8 @@
 const { members } = require('../../temp/fonction.api.json')
-const { lowerCase } = require('fonction')
+const { lowerCase, take } = require('fonction')
 const { versions } = require('../../temp/meta.json')
 
-const links = versions.map((version) => ({
+const links = take(10, versions).map((version) => ({
   text: version,
   link: `/api/${version}/`,
   activeMatch: `/api/${version}/`

@@ -73,12 +73,13 @@ type First<T extends readonly unknown[] | string> = T extends ''
 const first = <T extends readonly unknown[] | string>(val: T): First<T> =>
   ifElse(
     isArray(val),
-    ifElse(
-      length(val as T & any[]),
-      take(1, val)[0] as First<T>,
-      undefined as First<T>
-    ),
-    take(1, val) as First<T>
+    () =>
+      ifElse(
+        length(val as T & any[]),
+        () => take(1, val)[0] as First<T>,
+        undefined as First<T>
+      ),
+    () => take(1, val) as First<T>
   )
 
 export { first }

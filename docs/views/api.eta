@@ -3,11 +3,10 @@
 <% if (it.version) { %>
 
 <% if ( it.isLatest ) { %>
-<small>Added from [<%= it.version %>](./<%= it.version %>/#<%= it.name.toLowerCase() %>)</small>
+<small>Added from <% if (it.versionLink) { %>[<%= it.version %>](./<%= it.version %>/#<%= it.name.toLowerCase() %>)<% } else { %>`<%= it.version %>`<% } %></small>
 {.my-1}
-<% } %>
-<% else { %>
-<small>Added from [<%= it.version %>](../<%= it.version %>/)</small>
+<% } else { %>
+<small>Added from <% if (it.versionLink ) { %>[<%= it.version %>](../<%= it.version %>/)<% } else { %>`<%= it.version %>`<% } %></small>
 {.my-1}
 <% } %>
 <% } %>
