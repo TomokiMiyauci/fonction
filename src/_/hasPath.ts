@@ -4,7 +4,7 @@ import { first } from '../first.ts'
 import { isObject } from '../isObject.ts'
 import { isUndefined } from '../isUndefined.ts'
 import { length } from '../length.ts'
-import { not } from '../not.ts'
+import { N } from '../N.ts'
 import { tail } from '../tail.ts'
 import { has } from './has.ts'
 
@@ -36,10 +36,10 @@ const hasPath = <T extends unknown>(
   const key = first(path)
   if (isUndefined(key)) return false
   const rest = tail(path)
-  if (not(length(rest))) {
+  if (N(length(rest))) {
     return has(key, obj)
   }
-  return and(has(key, obj), isObject(obj[key]))
+  return and(has(key, obj), () => isObject(obj[key]))
     ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
       hasPath(rest, obj[key] as any)
     : false
