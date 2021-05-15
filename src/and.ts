@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { advance } from './advance.ts'
 import { ifElse } from './ifElse.ts'
-import { isFunction } from './isFunction.ts'
 import { NN } from './NN.ts'
 import { FalsyLike } from './types/index.ts'
 import { AnyFn } from './types/index.ts'
@@ -35,17 +35,8 @@ const and = <T, U>(
   b: U | AnyFn<any, U>
 ): T extends FalsyLike ? false : U extends FalsyLike ? false : boolean =>
   ifElse(
-    ifElse(
-      isFunction(a),
-      () => NN((a as AnyFn<any, T>)()),
-      () => NN(a)
-    ),
-    () =>
-      ifElse(
-        isFunction(b),
-        () => NN((b as AnyFn<any, U>)()),
-        () => NN(b)
-      ) as any,
+    NN(advance(a as unknown)),
+    () => NN(advance(b as unknown)) as any,
     false
   )
 
