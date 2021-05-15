@@ -76,12 +76,14 @@ Compared to `ES modules`, `UMD` has a bundle size increase of about 2.5x. Recomm
 
 `fonction` provides multi platform modules.
 
+You can see all the functions [here](https://tomokimiyauci.github.io/fonction/api/).
+
 ### 🦕 Deno
 
 #### deno.land
 
 ```ts
-import { add } from 'https://deno.land/x/fonction@v1.3.0/mod.ts'
+import { add } from 'https://deno.land/x/fonction/mod.ts'
 
 add(1, 2) // 3
 ```
@@ -89,7 +91,7 @@ add(1, 2) // 3
 #### nest.land
 
 ```ts
-import { add } from 'https://x.nest.land/fonction@1.3.0/mod.ts'
+import { add } from 'https://x.nest.land/fonction@1.5.0/mod.ts'
 
 add(1, 2) // 3
 ```
