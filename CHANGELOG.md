@@ -1,3 +1,16 @@
+# [v1.7.0](https://github.com/TomokiMiyauci/fonction/compare/v1.6.2...v1.7.0) (2021-05-15)
+
+## ✨ New Features
+- [`7eaa4c2`](https://github.com/TomokiMiyauci/fonction/commit/7eaa4c2)   Add equal function 
+- [`1090447`](https://github.com/TomokiMiyauci/fonction/commit/1090447)   Add isJSONObject function 
+- [`39e8caf`](https://github.com/TomokiMiyauci/fonction/commit/39e8caf)   Add advance function 
+
+## 🐛 Bug Fixes
+- [`fefe624`](https://github.com/TomokiMiyauci/fonction/commit/fefe624)   Change ifElse function interface to accept any function 
+- [`8ab861e`](https://github.com/TomokiMiyauci/fonction/commit/8ab861e)   Change and function interface to accept function as argument 
+- [`694dee7`](https://github.com/TomokiMiyauci/fonction/commit/694dee7)   Change or function interface to accept function 
+- [`9add577`](https://github.com/TomokiMiyauci/fonction/commit/9add577)   Change xor function interfacve to accept function
+
 # [v1.7.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.7.0-beta.2...v1.7.0-beta.3) (2021-05-15)
 
 ## ✨ New Features
