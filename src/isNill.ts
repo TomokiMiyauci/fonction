@@ -37,7 +37,7 @@ type IsNill<T extends unknown> = IsUndefined<T> extends true
  *
  */
 const isNill = (val: unknown): val is null | undefined =>
-  or(isUndefined(val), isNull(val))
+  or(isUndefined(val), () => isNull(val))
 
 export { isNill }
 export type { IsNill }
