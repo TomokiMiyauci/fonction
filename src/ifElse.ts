@@ -9,15 +9,17 @@ import { FalsyLike } from './types/index.ts'
  * @param val - A predicate value
  * @param onTrue - The `val` evaluates to a truthy value
  * @param onFalse - The `val` evaluates to a falsy value
- * @returns The result of `!!val` ? `onTrue` : `onFalse`
+ * @returns The result of `!!val` ? `onTrue` : `onFalse` (if argument is function, return value)
+ *
+ * @remarks
+ * If you pass a function as an argument, return value will evaluate.
  *
  * @example
  * ```ts
  * ifElse(true, 1, 0) // 1
  * ifElse(false, 1, 0) // 0
  * ifElse(undefined, 1, 0) // 0
- * const result = () => true
- * ifElse(result, () => 1, () => 0) // 1
+ * ifElse(() => true, () => 1, () => 0) // 1
  * ```
  *
  * @category `Logic`
