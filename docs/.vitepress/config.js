@@ -2,11 +2,14 @@ const { members } = require('../../temp/fonction.api.json')
 const { lowerCase, take } = require('fonction')
 const { versions } = require('../../temp/meta.json')
 
-const links = take(10, versions).map((version) => ({
-  text: version,
-  link: `/api/${version}/`,
-  activeMatch: `/api/${version}/`
-}))
+const links = [
+  { text: 'Latest', link: '/api/', activeMatch: '/api/$' },
+  ...take(10, versions).map((version) => ({
+    text: version,
+    link: `/api/${version}/`,
+    activeMatch: `/api/${version}/`
+  }))
+]
 
 const title = 'fonction'
 const description = 'A modern practical functional library'
