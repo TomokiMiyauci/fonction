@@ -51,6 +51,7 @@ const api: Api = {
   isNil: ALL_MODULES,
   isNull: ['lodash'],
   isNumber: ['lodash'],
+  isLength0: {},
   isObject: ['lodash'],
   isPrimitive: {},
   isString: ['lodash'],
