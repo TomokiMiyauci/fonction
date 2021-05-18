@@ -1,3 +1,8 @@
+# [v1.8.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.7.0...v1.8.0-beta.1) (2021-05-18)
+
+## ✨ New Features
+- [`56d376c`](https://github.com/TomokiMiyauci/fonction/commit/56d376c)   Add isLength0 function (Issues: [`#63`](https://github.com/TomokiMiyauci/fonction/issues/63))
+
 # [v1.7.0](https://github.com/TomokiMiyauci/fonction/compare/v1.6.2...v1.7.0) (2021-05-15)
 
 ## ✨ New Features
