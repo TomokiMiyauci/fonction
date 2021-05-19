@@ -1,4 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { assertEquals } from '../dev_deps.ts'
 import { isNumber } from '../src/isNumber.ts'
 import { N } from '../src/N.ts'
