@@ -233,6 +233,7 @@ const api: Api = {
     lodash: 'lastIndexOf',
     fonction: undefined
   },
+  pipe: ['rambda', 'ramda'],
   map: ALL_MODULES,
   match: {
     ramda: 'match',
