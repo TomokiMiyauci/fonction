@@ -78,6 +78,7 @@ export type { TrimLeft } from './src/trimLeft.ts'
 export { trimLeft } from './src/trimLeft.ts'
 export type { TrimRight } from './src/trimRight.ts'
 export { trimRight } from './src/trimRight.ts'
+export { tryCatch } from './src/tryCatch.ts'
 export type {
   AnyFn,
   Empty,

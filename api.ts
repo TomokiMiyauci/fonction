@@ -304,7 +304,8 @@ const api: Api = {
     ramda: 'takeLast',
     rambda: 'takeLast',
     lodash: 'takeRight'
-  }
+  },
+  tryCatch: ['rambda', 'ramda']
   // test: {
   //   fonction: undefined
   // },
