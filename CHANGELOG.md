@@ -1,3 +1,8 @@
+# [v1.8.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.1...v1.8.0-beta.2) (2021-05-19)
+
+## ✨ New Features
+- [`4b8ad37`](https://github.com/TomokiMiyauci/fonction/commit/4b8ad37)   Add tryCatch function (Issues: [`#61`](https://github.com/TomokiMiyauci/fonction/issues/61))
+
 # [v1.8.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.7.0...v1.8.0-beta.1) (2021-05-18)
 
 ## ✨ New Features
