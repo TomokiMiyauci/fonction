@@ -1,40 +1,25 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { FalsyLike } from './types/index.ts'
+import { N } from './N.ts'
+import { AnyFn } from './types/index.ts'
 /**
- * Returns the `!` of its argument.
+ * Returns the function as is with return value `!`.
  *
- * @param val - Input any value
- * @returns The result of `!val`
- *
- * @remarks
- * The Definition of Falsy
- * - `''`
- * - `false`
- * - `0`
- * - `NaN`
- * - `undefined`
- * - `null`
+ * @param val - Input any `function`
+ * @returns The result is function what return value with `!`
  *
  * @example
  * ```ts
- * not('') // true
- * not(false) // true
- * not(0) // true
- * not(NaN) // true
- * not(undefined) // true
- * not(null) // true
- *
- * not({}) // false
+ * not(() => true)() // false
+ * const gt10 = (val: number) => val > 10
+ * not(gt10)(11) // false
  * ```
  *
- * @category `Logic`
- *
- * @see Related to {@link N} {@link NN}
- *
- * @public
- * @deprecated
- * Rename to `NN`
+ * @beta
  */
-const not = <T>(val: T): T extends FalsyLike ? true : boolean =>
-  !val as T extends FalsyLike ? true : boolean
+
+const not =
+  <T extends AnyFn>(fn: T) =>
+  (...val: Parameters<T>): boolean =>
+    N(fn(...val))
+
 export { not }
