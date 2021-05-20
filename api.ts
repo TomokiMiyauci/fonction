@@ -306,16 +306,14 @@ const api: Api = {
     rambda: 'takeLast',
     lodash: 'takeRight'
   },
-  tryCatch: ['rambda', 'ramda']
+  tryCatch: ['rambda', 'ramda'],
   // test: {
   //   fonction: undefined
   // },
   // type: {
   //   fonction: undefined
   // },
-  // uniq: {
-  //   fonction: undefined
-  // },
+  uniq: ['ramda', 'rambda', 'lodash']
   // update: {
   //   fonction: undefined
   // },

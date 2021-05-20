@@ -89,6 +89,7 @@ export type {
   Primitive,
   Space
 } from './src/types/index.ts'
+export { uniq } from './src/uniq.ts'
 export { upperCase } from './src/upperCase.ts'
 export { values } from './src/values.ts'
 export { xor } from './src/xor.ts'
