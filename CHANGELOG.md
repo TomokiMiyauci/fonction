@@ -1,3 +1,8 @@
+# [v1.8.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.4...v1.8.0-beta.5) (2021-05-20)
+
+## ✨ New Features
+- [`2bcf021`](https://github.com/TomokiMiyauci/fonction/commit/2bcf021)   Add uniq function (Issues: [`#67`](https://github.com/TomokiMiyauci/fonction/issues/67))
+
 # [v1.8.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.3...v1.8.0-beta.4) (2021-05-20)
 
 ## 🐛 Bug Fixes
