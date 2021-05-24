@@ -4600,7 +4600,7 @@ kind-of@^6.0.0, kind-of@^6.0.2, kind-of@^6.0.3:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-lauqe@^1.0.1:
+lauqe@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/lauqe/-/lauqe-1.0.2.tgz#436a41d536258993d396910cce5701115dab063c"
   integrity sha512-c9Yw9Vi+pxF62Olw7B4OpwxkzyNMR/yMlUwaQKQWk+zeCIW6ZVeDfa2TUarFJzNgCCUJYwXto6Q3JNYV2XwmNw==
