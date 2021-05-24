@@ -1,3 +1,8 @@
+# [v1.8.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.5...v1.8.0-beta.6) (2021-05-24)
+
+## 🐛 Bug Fixes
+- [`bbcd9aa`](https://github.com/TomokiMiyauci/fonction/commit/bbcd9aa)   Fix depencency version
+
 # [v1.8.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.4...v1.8.0-beta.5) (2021-05-20)
 
 ## ✨ New Features
