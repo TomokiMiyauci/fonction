@@ -1,7 +1,7 @@
-import { and } from '../and.ts'
-import { ifElse } from '../ifElse.ts'
-import { isNil } from '../isNil.ts'
-import { N } from '../N.ts'
+import { and } from './and.ts'
+import { ifElse } from './ifElse.ts'
+import { isNil } from './isNil.ts'
+import { N } from './N.ts'
 
 /**
  * Safe getter for `constructor.name`.
@@ -16,7 +16,7 @@ import { N } from '../N.ts'
  * constructorName('') // 'String'
  * ```
  *
- * @internal
+ * @beta
  */
 const constructorName = (val: unknown): string =>
   ifElse(

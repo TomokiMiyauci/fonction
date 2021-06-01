@@ -17,6 +17,7 @@ const api: Api = {
   chunk: {
     lodash: 'chunk'
   },
+  constructorName: [],
   dec: LAMBDAS,
   endsWith: ALL_MODULES,
   entries: {
