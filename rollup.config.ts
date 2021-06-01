@@ -14,7 +14,7 @@ const declareFilePath = resolve(outputDir, 'index.es.d.ts')
 const replaceOption = {
   '.ts': '',
   'https://x.nest.land/arithmetic4@0.1.1/mod': 'arithmetic4',
-  'https://deno.land/x/equal@v1.0.2/mod': 'lauqe',
+  'https://deno.land/x/equal@v1.4.0/mod': 'lauqe',
   preventAssignment: true
 }
 const banner =
