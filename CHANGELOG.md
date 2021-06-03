@@ -1,3 +1,8 @@
+# [v1.8.0-beta.7](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.6...v1.8.0-beta.7) (2021-06-01)
+
+## ✨ New Features
+- [`0613559`](https://github.com/TomokiMiyauci/fonction/commit/0613559)   Add constructorName function (Issues: [`#75`](https://github.com/TomokiMiyauci/fonction/issues/75))
+
 # [v1.8.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.5...v1.8.0-beta.6) (2021-05-24)
 
 ## 🐛 Bug Fixes
