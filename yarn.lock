@@ -1203,9 +1203,9 @@
     extend "3.0.2"
 
 "@microsoft/api-documenter@^7.13.6":
-  version "7.13.12"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.12.tgz#f0b8b0051fccaaca730a5040e0181f8db1fed4e5"
-  integrity sha512-5Awe7ciU6ISfnx9sJxGwtRPypvBOIWE9rK5N/aKFFaHDt+YI7hahntT4d5B1kQMe/x0hceS6FdfB9/9+Adg0Ww==
+  version "7.13.13"
+  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.13.13.tgz#5e7821d929bb5c86822dd49bcacf5c65c131b69a"
+  integrity sha512-40htvFSY7hyJEtmJVoV+yvAz+2Vr6noYkbf0Yu9wMIVKoT5V/XqoubadKYrP8yxtFLaCC0Y/427gbpWEcz8L6A==
   dependencies:
     "@microsoft/api-extractor-model" "7.13.2"
     "@microsoft/tsdoc" "0.13.2"
@@ -3623,9 +3623,9 @@ fonction@^1.3.0:
   integrity sha512-4Nhx2twBidrZD9QRH5r6pJkrsxI/qf6Kp4KfwgwxOonzIPLNKl1zsjAQELAsQujrxDLQWfWWzt7qmqnjhUkpAg==
 
 fonction@^1.8.0-beta.6:
-  version "1.8.0-beta.6"
-  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.8.0-beta.6.tgz#96726962f17a568bdfc25fd10760ecb876970e4a"
-  integrity sha512-bO48VXFJSuGQcG1MsfMaHQDrRog6dYvE4s7cOOSu9SBMA+zOXqY45/wVcr1UU8a0Lp8pLDPIhj/Gjf5Umaz3EQ==
+  version "1.8.0-beta.8"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.8.0-beta.8.tgz#ac2f24ef86c220ebf3658952a63781cbd344618b"
+  integrity sha512-PoBsT4lPx8iTrPlBMOCa719KUqv+ogW3DRFX4HoKPAgDx1UgZGzpbpHFekZYqOc/nXghONI+DFdnNLKezkIzdg==
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -4620,9 +4620,9 @@ kind-of@^6.0.0, kind-of@^6.0.2, kind-of@^6.0.3:
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
 lauqe@^1.0.2:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/lauqe/-/lauqe-1.4.0.tgz#bb9c4998fcd7877e016ad2133fef4511eb069964"
-  integrity sha512-Q+IMoSz2vtKWe6kxUk7H3ffDnUqMZBUoDwSMY+bGWC3Yjo0Jmsd0vCDlHs6eEw51PPQPiEx3fmo/tiVZFeahMQ==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/lauqe/-/lauqe-1.4.1.tgz#840150ab0bbc207655af657df378a9de902975b0"
+  integrity sha512-nRuwxWaOgo8Zi6HeyjxURZ0mipatMDUgI0pV2Qyrey1FuWOQBqzQG/AWFh871cFfajBvkQC/BiVMmPXEs7YPfg==
   dependencies:
     fonction "^1.8.0-beta.6"
 
@@ -6395,9 +6395,9 @@ rollup@^2.38.5:
     fsevents "~2.3.1"
 
 rollup@^2.45.1:
-  version "2.50.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.50.5.tgz#bbee9d6411af3f5fa5c6e7e2c69f7a65b753e568"
-  integrity sha512-Ztz4NurU2LbS3Jn5rlhnYv35z6pkjBUmYKr94fOBIKINKRO6kug9NTFHArT7jqwMP2kqEZ39jJuEtkk91NBltQ==
+  version "2.50.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.50.6.tgz#24e2211caf9031081656e98a5e5e94d3b5e786e2"
+  integrity sha512-6c5CJPLVgo0iNaZWWliNu1Kl43tjP9LZcp6D/tkf2eLH2a9/WeHxg9vfTFl8QV/2SOyaJX37CEm9XuGM0rviUg==
   optionalDependencies:
     fsevents "~2.3.1"
 
