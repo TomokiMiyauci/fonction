@@ -1,3 +1,17 @@
+# [v1.8.0](https://github.com/TomokiMiyauci/fonction/compare/v1.7.0...v1.8.0) (2021-06-03)
+
+## ✨ New Features
+- [`56d376c`](https://github.com/TomokiMiyauci/fonction/commit/56d376c)   Add isLength0 function (Issues: [`#63`](https://github.com/TomokiMiyauci/fonction/issues/63))
+- [`4b8ad37`](https://github.com/TomokiMiyauci/fonction/commit/4b8ad37)   Add tryCatch function (Issues: [`#61`](https://github.com/TomokiMiyauci/fonction/issues/61))
+- [`f482502`](https://github.com/TomokiMiyauci/fonction/commit/f482502)   Add pipe function strict argument 2 
+- [`2bcf021`](https://github.com/TomokiMiyauci/fonction/commit/2bcf021)   Add uniq function (Issues: [`#67`](https://github.com/TomokiMiyauci/fonction/issues/67))
+- [`0613559`](https://github.com/TomokiMiyauci/fonction/commit/0613559)   Add constructorName function (Issues: [`#75`](https://github.com/TomokiMiyauci/fonction/issues/75))
+- [`9c83312`](https://github.com/TomokiMiyauci/fonction/commit/9c83312)   Improve pipe function of type definition (Issues: [`#77`](https://github.com/TomokiMiyauci/fonction/issues/77))
+
+## 🐛 Bug Fixes
+- [`36f3579`](https://github.com/TomokiMiyauci/fonction/commit/36f3579)   Fix not function internal logic 
+- [`bbcd9aa`](https://github.com/TomokiMiyauci/fonction/commit/bbcd9aa)   Fix depencency version
+
 # [v1.8.0-beta.8](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.7...v1.8.0-beta.8) (2021-06-03)
 
 ## ✨ New Features
