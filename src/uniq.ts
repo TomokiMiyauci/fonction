@@ -23,8 +23,8 @@ import { ifElse } from './ifElse.ts'
  */
 const uniq = <T extends unknown>(val: readonly T[]): T[] =>
   Array.from(new Set(val)).reduce((acc, cur) => {
-    const aaa = acc.some((a) => equal(cur, a))
-    return ifElse(aaa, acc, () => [...acc, cur])
+    const result = acc.some((val) => equal(cur, val))
+    return ifElse(result, acc, () => [...acc, cur])
   }, [] as T[])
 
 export { uniq }
