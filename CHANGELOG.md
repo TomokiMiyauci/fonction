@@ -1,3 +1,8 @@
+# [v1.8.0-beta.8](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.7...v1.8.0-beta.8) (2021-06-03)
+
+## ✨ New Features
+- [`9c83312`](https://github.com/TomokiMiyauci/fonction/commit/9c83312)   Improve pipe function of type definition (Issues: [`#77`](https://github.com/TomokiMiyauci/fonction/issues/77))
+
 # [v1.8.0-beta.7](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0-beta.6...v1.8.0-beta.7) (2021-06-01)
 
 ## ✨ New Features
