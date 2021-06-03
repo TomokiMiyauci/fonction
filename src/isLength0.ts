@@ -21,7 +21,7 @@ import { or } from './or.ts'
  *
  * @category `Array` `String`
  *
- * @beta
+ *
  */
 const isLength0 = (val: unknown): val is 0 =>
   ifElse(

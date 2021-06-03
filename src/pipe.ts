@@ -15,7 +15,7 @@ import { AnyFn } from './types/index.ts'
  * fn(1, 1) // 3
  * ```
  *
- * @beta
+ *
  */
 const pipe: Pipe =
   (...args: AnyFn[]) =>
