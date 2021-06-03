@@ -19,8 +19,11 @@ import { AnyFn } from './types/index.ts'
  */
 const pipe: Pipe =
   (...args: AnyFn[]) =>
-  (initialArg: unknown) =>
-    args.reduce((acc, cur) => cur(acc), initialArg)
+  (...initialArg: unknown[]) =>
+    args.reduce(
+      (acc, cur, index) => cur(...(index === 0 ? acc : [acc])) as unknown[],
+      initialArg
+    )
 
 export { pipe }
 
