@@ -1,40 +1,35 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { assertEquals } from '../dev_deps.ts'
+import { isString } from '../src/isString.ts'
 import { not } from '../src/not.ts'
+import { AnyFn } from '../src/types/index.ts'
 import { assertEqual } from './asserts.ts'
 
 Deno.test('not', () => {
-  const table: [unknown, boolean][] = [
-    ['', true],
-    [undefined, true],
-    [null, true],
-    [0, true],
-    [NaN, true],
-    [false, true],
-    [[], false],
-    [{}, false],
-    ['hello', false],
-    [Infinity, false],
-    [1, false],
-    [-1, false],
-    [true, false]
+  const table: [AnyFn, unknown[], boolean][] = [
+    [() => true, [false], false],
+    [() => false, [false], true],
+    [(a: string) => a, [''], true],
+    [(a: string) => a, [''], true],
+    [(a: number, b: number) => a + b, [-1, 1], true],
+    [(a: number, b: number) => a + b, [1, 1], false],
+    [(a: number, b: number) => a + b, [1, 1, 1], false],
+    [isString, [1], true],
+    [isString, [''], false]
   ]
 
-  table.forEach(([val, expected]) => {
-    assertEquals(not(val), expected, `not(${val}) -> ${expected}`)
+  table.forEach(([val, args, expected]) => {
+    assertEquals(
+      not(val)(...args),
+      expected,
+      `not(${val})(${args}) -> ${expected}`
+    )
   })
 
-  assertEqual<true>(not('' as const))
-  assertEqual<true>(not(0 as const))
-  assertEqual<true>(not(false as const))
-  assertEqual<true>(not(undefined))
-  assertEqual<true>(not(null))
-  assertEqual<boolean>(not(String))
-  assertEqual<boolean>(not(Number))
-  assertEqual<boolean>(not(NaN))
-  assertEqual<boolean>(not(BigInt))
-  assertEqual<boolean>(not(Symbol))
-  assertEqual<boolean>(not(Date))
-  assertEqual<boolean>(not(Object))
-  assertEqual<boolean>(not(Array))
+  assertEqual<() => boolean>(not(() => true))
+  assertEqual<(arg: unknown) => boolean>(not(isString))
+  assertEqual<(a: string, b: string) => boolean>(
+    not((a: string, b: string) => a + b)
+  )
+  assertEqual<(...val: unknown[]) => boolean>(not(Array))
 })

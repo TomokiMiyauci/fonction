@@ -1,11 +1,11 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { and } from './and.ts'
 import { isArray } from './isArray.ts'
+import { isLength0 } from './isLength0.ts'
 import { isObject } from './isObject.ts'
 import { isString } from './isString.ts'
 import { keys } from './keys.ts'
-import { length } from './length.ts'
-import { N } from './N.ts'
+import { or } from './or.ts'
 import { Empty } from './types/index.ts'
 
 /**
@@ -33,10 +33,9 @@ import { Empty } from './types/index.ts'
  * @public
  */
 const isEmpty = (val: unknown): val is Empty => {
-  if (isString(val)) return N(length(val))
-  else if (isArray(val)) return N(length(val))
+  if (or(isString(val), () => isArray(val))) return isLength0(val)
   else if (isObject(val))
-    return and(N(length(keys(val))), () => val.constructor === Object)
+    return and(isLength0(keys(val)), () => val.constructor === Object)
   else return false
 }
 

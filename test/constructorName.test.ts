@@ -1,7 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { assertEquals } from '../../dev_deps.ts'
-import { constructorName } from '../../src/_/constructorName.ts'
-import { isSymbol } from '../../src/isSymbol.ts'
+import { assertEquals } from '../dev_deps.ts'
+import { constructorName } from '../src/constructorName.ts'
+import { isSymbol } from '../src/isSymbol.ts'
 
 Deno.test('constructorName', () => {
   function fn() {

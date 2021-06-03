@@ -17,6 +17,7 @@ const api: Api = {
   chunk: {
     lodash: 'chunk'
   },
+  constructorName: [],
   dec: LAMBDAS,
   endsWith: ALL_MODULES,
   entries: {
@@ -51,6 +52,7 @@ const api: Api = {
   isNil: ALL_MODULES,
   isNull: ['lodash'],
   isNumber: ['lodash'],
+  isLength0: {},
   isObject: ['lodash'],
   isPrimitive: {},
   isString: ['lodash'],
@@ -232,6 +234,7 @@ const api: Api = {
     lodash: 'lastIndexOf',
     fonction: undefined
   },
+  pipe: ['rambda', 'ramda'],
   map: ALL_MODULES,
   match: {
     ramda: 'match',
@@ -303,16 +306,15 @@ const api: Api = {
     ramda: 'takeLast',
     rambda: 'takeLast',
     lodash: 'takeRight'
-  }
+  },
+  tryCatch: ['rambda', 'ramda'],
   // test: {
   //   fonction: undefined
   // },
   // type: {
   //   fonction: undefined
   // },
-  // uniq: {
-  //   fonction: undefined
-  // },
+  uniq: ['ramda', 'rambda', 'lodash']
   // update: {
   //   fonction: undefined
   // },

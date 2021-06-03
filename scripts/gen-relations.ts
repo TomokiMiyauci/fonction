@@ -1,5 +1,5 @@
 import { ApiModel } from '@microsoft/api-extractor-model'
-import { first, has, not, or, tail } from 'fonction'
+import { first, N, or, tail } from 'fonction'
 import { pathExistsSync } from 'fs-extra'
 import { resolve } from 'path'
 
@@ -27,7 +27,7 @@ const getModuleStarts = async (
   )
   const publicModuleVersionList = fullModuleVersionList.filter((moduleList) => {
     const version = first(moduleList)
-    return not(version.includes('beta'))
+    return N(version.includes('beta'))
   })
   return publicModuleVersionList.reduce((acc, cur) => {
     const version = first(cur)
@@ -62,14 +62,14 @@ const formatModuleStats = (stats: Record<string, string>, versions: string[]) =>
   )
 
 const getModuleList = (path: string) => {
-  if (not(pathExistsSync(path))) return
+  if (N(pathExistsSync(path))) return
 
   const apiPackage = apiModel.loadPackage(path)
   const moduleList = apiPackage.members[0].members
     .map(({ displayName: name, kind }) =>
       or(kind === 'Variable', kind === 'TypeAlias') ? name : undefined
     )
-    .filter((_) => not(not(_)))
+    .filter((_) => N(N(_)))
   return moduleList as string[]
 }
 

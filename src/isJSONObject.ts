@@ -1,7 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 
-import { constructorName } from './_/constructorName.ts'
 import { JSON_OBJECT } from './constants/index.ts'
+import { constructorName } from './constructorName.ts'
 
 /**
  * Whatever argument is JSON Object or not.

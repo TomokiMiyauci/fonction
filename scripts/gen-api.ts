@@ -20,8 +20,8 @@ import {
   and,
   ifElse,
   isUndefined,
+  N,
   NN,
-  not,
   replace,
   reverse,
   take
@@ -357,7 +357,7 @@ const run = async ({
     const functionContents = await Promise.all(
       root.members
         .filter(({ kind, name }) =>
-          and(kind === 'Variable', not(constants.includes(name)))
+          and(kind === 'Variable', N(constants.includes(name)))
         )
         .map(mapMember({ isLatest, type: 'Fn', moduleVersions }))
     )
