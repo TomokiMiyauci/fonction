@@ -10,6 +10,15 @@
 export type AnyFn<T = any, U = unknown> = (...args: T[]) => U
 
 /**
+ * Type of arity 1 function.
+ *
+ * @beta
+ *
+ * @typeParam T - Argument types
+ */
+export type Arity1Fn<T = any, U = unknown> = (args: T) => U
+
+/**
  * Alias for Primitive values types.
  *
  * @category `Alias`

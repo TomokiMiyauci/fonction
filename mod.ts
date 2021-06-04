@@ -74,6 +74,7 @@ export { T } from './src/T.ts'
 export { tail } from './src/tail.ts'
 export { take } from './src/take.ts'
 export { takeLast } from './src/takeLast.ts'
+export { tap } from './src/tap.ts'
 export type { Trim } from './src/trim.ts'
 export { trim } from './src/trim.ts'
 export type { TrimLeft } from './src/trimLeft.ts'
@@ -83,6 +84,7 @@ export { trimRight } from './src/trimRight.ts'
 export { tryCatch } from './src/tryCatch.ts'
 export type {
   AnyFn,
+  Arity1Fn,
   Empty,
   Falsy,
   FalsyLike,

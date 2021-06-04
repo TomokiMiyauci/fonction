@@ -301,6 +301,7 @@ const api: Api = {
   // splitEvery: {
   //   fonction: undefined
   // },
+  tap: ['lodash', 'rambda', 'ramda'],
   take: ALL_MODULES,
   takeLast: {
     ramda: 'takeLast',
