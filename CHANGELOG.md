@@ -1,3 +1,8 @@
+# [v1.8.1](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0...v1.8.1) (2021-06-03)
+
+## 🐛 Bug Fixes
+- [`f216443`](https://github.com/TomokiMiyauci/fonction/commit/f216443)   Fix pipe function logic
+
 # [v1.8.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0...v1.8.1-beta.1) (2021-06-03)
 
 ## 🐛 Bug Fixes
