@@ -1,3 +1,8 @@
+# [v1.9.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.8.1-beta.1...v1.9.0-beta.1) (2021-06-04)
+
+## ✨ New Features
+- [`d4d7080`](https://github.com/TomokiMiyauci/fonction/commit/d4d7080)   Add tap function and types of Arity1Fn (Issues: [`#80`](https://github.com/TomokiMiyauci/fonction/issues/80))
+
 # [v1.8.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0...v1.8.1-beta.1) (2021-06-03)
 
 ## 🐛 Bug Fixes
