@@ -16,7 +16,7 @@ import { N } from './N.ts'
  * constructorName('') // 'String'
  * ```
  *
- *
+ * @public
  */
 const constructorName = (val: unknown): string =>
   ifElse(
