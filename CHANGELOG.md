@@ -1,3 +1,8 @@
+# [v1.9.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.1...v1.9.0-beta.2) (2021-06-07)
+
+## ✨ New Features
+- [`e4ef6b1`](https://github.com/TomokiMiyauci/fonction/commit/e4ef6b1)   Add test function (Issues: [`#88`](https://github.com/TomokiMiyauci/fonction/issues/88))
+
 # [v1.8.1](https://github.com/TomokiMiyauci/fonction/compare/v1.8.0...v1.8.1) (2021-06-03)
 
 ## 🐛 Bug Fixes
