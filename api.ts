@@ -309,9 +309,7 @@ const api: Api = {
     lodash: 'takeRight'
   },
   tryCatch: ['rambda', 'ramda'],
-  // test: {
-  //   fonction: undefined
-  // },
+  test: ['ramda', 'rambda'],
   // type: {
   //   fonction: undefined
   // },
