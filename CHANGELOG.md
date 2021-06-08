@@ -1,3 +1,8 @@
+# [v1.9.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.3...v1.9.0-beta.4) (2021-06-08)
+
+## ✨ New Features
+- [`d79d510`](https://github.com/TomokiMiyauci/fonction/commit/d79d510)   Add includes function (Issues: [`#91`](https://github.com/TomokiMiyauci/fonction/issues/91))
+
 # [v1.9.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.2...v1.9.0-beta.3) (2021-06-08)
 
 ## ✨ New Features
