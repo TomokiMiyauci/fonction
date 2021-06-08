@@ -209,12 +209,7 @@ const api: Api = {
     ramda: 'ifElse',
     rambda: 'ifElse'
   },
-  includes: {
-    ramda: 'includes',
-    rambda: 'includes',
-    lodash: 'includes',
-    fonction: undefined
-  },
+  includes: ['rambda', 'ramda', 'lodash'],
   indexOf: {
     ramda: 'indexOf',
     rambda: 'indexOf',
