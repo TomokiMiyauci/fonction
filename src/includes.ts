@@ -4,10 +4,10 @@ import { curry2 } from './_/curry2.ts'
 /**
  * @internal
  */
-const _includes: {
-  <T extends unknown[]>(arr: T, val: T[number]): boolean
-  (str: string, val: string): boolean
-} = (collection: any, val: any): boolean => collection.includes(val)
+const _includes = <T extends string | unknown[]>(
+  collection: T,
+  val: T[number]
+): boolean => collection.includes(val as any)
 
 /**
  * Checks if value is in collection.
