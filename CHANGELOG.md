@@ -1,3 +1,8 @@
+# [v1.9.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.2...v1.9.0-beta.3) (2021-06-08)
+
+## ✨ New Features
+- [`96d0b34`](https://github.com/TomokiMiyauci/fonction/commit/96d0b34)   Add curry function limited arity 2
+
 # [v1.9.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.1...v1.9.0-beta.2) (2021-06-07)
 
 ## ✨ New Features
