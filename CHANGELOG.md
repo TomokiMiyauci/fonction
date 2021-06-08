@@ -1,3 +1,8 @@
+# [v1.9.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.4...v1.9.0-beta.5) (2021-06-08)
+
+## 🐛 Bug Fixes
+- [`a9891c5`](https://github.com/TomokiMiyauci/fonction/commit/a9891c5)   Fix types of includes
+
 # [v1.9.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.3...v1.9.0-beta.4) (2021-06-08)
 
 ## ✨ New Features
