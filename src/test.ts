@@ -1,3 +1,6 @@
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { curry2 } from './_/curry2.ts'
+
 /**
  * whether a given `string` matches a given regular expression.
  *
@@ -15,6 +18,8 @@
  *
  * @beta
  */
-const test = (regExp: RegExp, val: string): boolean => regExp.test(val)
+const _test = (regExp: RegExp, val: string): boolean => regExp.test(val)
 
-export { test }
+const test = curry2(_test)
+
+export { _test, test }
