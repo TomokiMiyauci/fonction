@@ -1,3 +1,11 @@
+# [v1.9.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.5...v1.9.0-beta.6) (2021-06-12)
+
+## ✨ New Features
+- [`1091e30`](https://github.com/TomokiMiyauci/fonction/commit/1091e30)   Add curry function (Issues: [`#96`](https://github.com/TomokiMiyauci/fonction/issues/96))
+
+## 🐛 Bug Fixes
+- [`5683d6a`](https://github.com/TomokiMiyauci/fonction/commit/5683d6a)   Fix types of length function
+
 # [v1.9.0-beta.5](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.4...v1.9.0-beta.5) (2021-06-08)
 
 ## 🐛 Bug Fixes
