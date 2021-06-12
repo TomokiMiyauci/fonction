@@ -1,20 +1,19 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 /**
- * Returns the number of elements in the array or string length.
+ * Returns length property.
  *
- * @param val - `string` or any `array`
+ * @param val - Value with length property
  * @returns The result of `val.length`
  *
  * @example
  * ```ts
  * length('hello') // 5
  * length(['hello', 'world', 1]) // 3
+ * length({length: 5, text: 'hello'}) // 5
  * ```
- *
- * @category `Array` `String`
  *
  * @public
  */
-const length = <T extends unknown[] | string>(val: T): T['length'] => val.length
+const length = <T extends { length: number }>(val: T): T['length'] => val.length
 
 export { length }
