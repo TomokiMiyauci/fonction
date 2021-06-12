@@ -163,11 +163,7 @@ const api: Api = {
     rambda: 'converge',
     fonction: undefined
   },
-  curry: {
-    ramda: 'curry',
-    rambda: 'curry',
-    fonction: undefined
-  },
+  curry: ['lodash', 'rambda', 'ramda'],
   defaultTo: ['rambda', 'ramda'],
   drop: {
     ramda: 'drop',
