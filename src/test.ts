@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { curry2 } from './_/curry2.ts'
+import { curry } from './curry.ts'
 
 const _test = (regExp: RegExp, val: string): boolean => regExp.test(val)
 
@@ -20,6 +20,6 @@ const _test = (regExp: RegExp, val: string): boolean => regExp.test(val)
  *
  * @beta
  */
-const test = curry2(_test)
+const test = curry(_test)
 
 export { _test, test }

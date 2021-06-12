@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { curry2 } from './_/curry2.ts'
+import { curry } from './curry.ts'
 
 /**
  * @internal
@@ -26,6 +26,6 @@ const _includes = <T extends string | unknown[]>(
  *
  * @beta
  */
-const includes = curry2(_includes)
+const includes = curry(_includes)
 
 export { _includes, includes }
