@@ -27,6 +27,7 @@
 ![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Ffonction.svg?type=small)](https://app.fossa.com/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Ffonction?ref=badge_small)
 
 </div>
 
@@ -185,3 +186,5 @@ Give a ⭐️ if this project helped you!
 Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
 
 Released under the [MIT](./LICENSE) license
+
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Ffonction.svg?type=large)](https://app.fossa.com/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Ffonction?ref=badge_large)
