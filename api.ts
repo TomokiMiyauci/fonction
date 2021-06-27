@@ -163,11 +163,7 @@ const api: Api = {
     rambda: 'converge',
     fonction: undefined
   },
-  curry: {
-    ramda: 'curry',
-    rambda: 'curry',
-    fonction: undefined
-  },
+  curry: ['lodash', 'rambda', 'ramda'],
   defaultTo: ['rambda', 'ramda'],
   drop: {
     ramda: 'drop',
@@ -209,12 +205,7 @@ const api: Api = {
     ramda: 'ifElse',
     rambda: 'ifElse'
   },
-  includes: {
-    ramda: 'includes',
-    rambda: 'includes',
-    lodash: 'includes',
-    fonction: undefined
-  },
+  includes: ['rambda', 'ramda', 'lodash'],
   indexOf: {
     ramda: 'indexOf',
     rambda: 'indexOf',
@@ -301,6 +292,7 @@ const api: Api = {
   // splitEvery: {
   //   fonction: undefined
   // },
+  tap: ['lodash', 'rambda', 'ramda'],
   take: ALL_MODULES,
   takeLast: {
     ramda: 'takeLast',
@@ -308,9 +300,7 @@ const api: Api = {
     lodash: 'takeRight'
   },
   tryCatch: ['rambda', 'ramda'],
-  // test: {
-  //   fonction: undefined
-  // },
+  test: ['ramda', 'rambda'],
   // type: {
   //   fonction: undefined
   // },

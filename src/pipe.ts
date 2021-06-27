@@ -1,4 +1,5 @@
-import { AnyFn } from './types/index.ts'
+// Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { AnyFn, Arity1Fn } from './types/index.ts'
 
 /**
  * Performs left-to-right function composition.
@@ -15,7 +16,7 @@ import { AnyFn } from './types/index.ts'
  * fn(1, 1) // 3
  * ```
  *
- *
+ * @public
  */
 const pipe: Pipe =
   (...args: AnyFn[]) =>
@@ -26,8 +27,6 @@ const pipe: Pipe =
     )
 
 export { pipe }
-
-type Arity1Fn<T = any, U = unknown> = (args: T) => U
 
 type Pipe = {
   <F1 extends AnyFn>(fn1: F1): (...initialArg: Parameters<F1>) => ReturnType<F1>

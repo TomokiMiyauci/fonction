@@ -19,7 +19,7 @@ import { ifElse } from './ifElse.ts'
  *
  * @see Related to {@link equal}
  *
- *
+ * @public
  */
 const uniq = <T extends unknown>(val: readonly T[]): T[] =>
   Array.from(new Set(val)).reduce((acc, cur) => {

@@ -22,7 +22,7 @@ import { AnyFn } from './types/index.ts'
  *
  * @category `Logic`
  *
- *
+ * @public
  */
 const tryCatch = <R, E, P = unknown>(
   tryer: AnyFn<any, R>,

@@ -1,4 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+export { curry } from './deps.ts'
 export { add } from './src/add.ts'
 export { advance } from './src/advance.ts'
 export { and } from './src/and.ts'
@@ -26,6 +27,7 @@ export { identity } from './src/identity.ts'
 export { ifElse } from './src/ifElse.ts'
 export { ifElseFn } from './src/ifElseFn.ts'
 export { inc } from './src/inc.ts'
+export { includes } from './src/includes.ts'
 export { isArray } from './src/isArray.ts'
 export { isBigint } from './src/isBigint.ts'
 export { isBoolean } from './src/isBoolean.ts'
@@ -74,6 +76,8 @@ export { T } from './src/T.ts'
 export { tail } from './src/tail.ts'
 export { take } from './src/take.ts'
 export { takeLast } from './src/takeLast.ts'
+export { tap } from './src/tap.ts'
+export { test } from './src/test.ts'
 export type { Trim } from './src/trim.ts'
 export { trim } from './src/trim.ts'
 export type { TrimLeft } from './src/trimLeft.ts'
@@ -83,6 +87,7 @@ export { trimRight } from './src/trimRight.ts'
 export { tryCatch } from './src/tryCatch.ts'
 export type {
   AnyFn,
+  Arity1Fn,
   Empty,
   Falsy,
   FalsyLike,

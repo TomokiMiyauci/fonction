@@ -14,7 +14,7 @@ import { AnyFn } from './types/index.ts'
  * not(gt10)(11) // false
  * ```
  *
- *
+ * @public
  */
 
 const not =
