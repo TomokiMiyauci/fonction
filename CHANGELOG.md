@@ -1,3 +1,16 @@
+# [v1.9.0](https://github.com/TomokiMiyauci/fonction/compare/v1.8.1...v1.9.0) (2021-06-27)
+
+## ✨ New Features
+- [`d4d7080`](https://github.com/TomokiMiyauci/fonction/commit/d4d7080)   Add tap function and types of Arity1Fn (Issues: [`#80`](https://github.com/TomokiMiyauci/fonction/issues/80))
+- [`e4ef6b1`](https://github.com/TomokiMiyauci/fonction/commit/e4ef6b1)   Add test function (Issues: [`#88`](https://github.com/TomokiMiyauci/fonction/issues/88))
+- [`96d0b34`](https://github.com/TomokiMiyauci/fonction/commit/96d0b34)   Add curry function limited arity 2 
+- [`d79d510`](https://github.com/TomokiMiyauci/fonction/commit/d79d510)   Add includes function (Issues: [`#91`](https://github.com/TomokiMiyauci/fonction/issues/91))
+- [`1091e30`](https://github.com/TomokiMiyauci/fonction/commit/1091e30)   Add curry function (Issues: [`#96`](https://github.com/TomokiMiyauci/fonction/issues/96))
+
+## 🐛 Bug Fixes
+- [`a9891c5`](https://github.com/TomokiMiyauci/fonction/commit/a9891c5)   Fix types of includes 
+- [`5683d6a`](https://github.com/TomokiMiyauci/fonction/commit/5683d6a)   Fix types of length function
+
 # [v1.9.0-beta.6](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0-beta.5...v1.9.0-beta.6) (2021-06-12)
 
 ## ✨ New Features
