@@ -1,4 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+export { curry } from './deps.ts'
 export { add } from './src/add.ts'
 export { advance } from './src/advance.ts'
 export { and } from './src/and.ts'
@@ -6,7 +7,6 @@ export { append } from './src/append.ts'
 export { chunk } from './src/chunk.ts'
 export { _ } from './src/constants/index.ts'
 export { constructorName } from './src/constructorName.ts'
-export { curry } from './src/curry.ts'
 export { dec } from './src/dec.ts'
 export { defaultTo } from './src/defaultTo.ts'
 export { divide } from './src/divide.ts'

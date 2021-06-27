@@ -13,7 +13,7 @@ import { Arity1Fn } from './types/index.ts'
  * // log: hello
  * ```
  *
- * @beta
+ * @public
  */
 const tap =
   <T>(fn: Arity1Fn<T>) =>

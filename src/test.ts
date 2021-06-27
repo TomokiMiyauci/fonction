@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { curry } from './curry.ts'
+import { curry } from '../deps.ts'
 
 const _test = (regExp: RegExp, val: string): boolean => regExp.test(val)
 
@@ -18,7 +18,7 @@ const _test = (regExp: RegExp, val: string): boolean => regExp.test(val)
  *
  * @category `String`
  *
- * @beta
+ * @public
  */
 const test = curry(_test)
 

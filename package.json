@@ -96,5 +96,8 @@
     "not dead",
     "not IE 11",
     "node 14"
-  ]
+  ],
+  "dependencies": {
+    "curry-rice": "^1.0.0"
+  }
 }

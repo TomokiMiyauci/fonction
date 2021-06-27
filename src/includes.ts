@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { curry } from './curry.ts'
+import { curry } from '../deps.ts'
 
 /**
  * @internal
@@ -24,7 +24,7 @@ const _includes = <T extends string | unknown[]>(
  *
  * @category `String` `Array`
  *
- * @beta
+ * @public
  */
 const includes = curry(_includes)
 

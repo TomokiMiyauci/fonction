@@ -12,7 +12,7 @@ export type AnyFn<T = any, U = unknown> = (...args: T[]) => U
 /**
  * Type of arity 1 function.
  *
- * @beta
+ * @public
  *
  * @typeParam T - Argument types
  */

@@ -2913,6 +2913,11 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.17.tgz#4cf30eb87e1d1a005d8b6510f95292413f6a1c0e"
   integrity sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==
 
+curry-rice@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/curry-rice/-/curry-rice-1.0.0.tgz#ff5daf251141a54931988458ced7c39931fa5b96"
+  integrity sha512-rpXOEtPurOBZGieMQf/wG7YW+zi2N7EWrkaVBFLZYCUyG2LiLLuNup9yIdasuiCmo+O/LTwPDiijotmSlRLYXA==
+
 cz-conventional-changelog@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/cz-conventional-changelog/-/cz-conventional-changelog-3.2.0.tgz#6aef1f892d64113343d7e455529089ac9f20e477"
