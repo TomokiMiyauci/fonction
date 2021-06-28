@@ -48,8 +48,8 @@ Deno.test('last', () => {
 Deno.test('Last', () => {
   assertEqual<undefined, Last<[] | never[] | readonly [] | readonly never[]>>()
   assertEqual<'', Last<[''] | readonly ['']>>()
-  assertEqual<string, Last<string[]>>()
-  assertEqual<string | number, Last<string | number[]>>()
+  assertEqual<string | undefined, Last<string[]>>()
+  assertEqual<string | number | undefined, Last<string | number[]>>()
   assertEqual<[], Last<[100, 200, 'hello', []]>>()
   assertEqual<string, Last<string>>()
   assertEqual<'', Last<''>>()

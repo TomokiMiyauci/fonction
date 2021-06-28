@@ -37,13 +37,11 @@ type Last<T extends string | readonly unknown[]> = T extends ''
   ? String2Array<T> extends []
     ? string
     : [never, ...String2Array<T>][String2Array<T>['length']]
-  : T extends never[] | readonly never[]
+  : T extends never[] | []
   ? undefined
-  : T extends unknown[] | readonly unknown[]
-  ? [never, ...T][T['length']]
-  : T extends string
-  ? string
-  : never
+  : T extends readonly [...infer _, infer L]
+  ? L
+  : T[T['length']] | undefined
 
 /**
  * Returns the last element of the given list or string.
