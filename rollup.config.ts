@@ -1,11 +1,10 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
 import ts from '@wessberg/rollup-plugin-ts'
 import { resolve } from 'path'
 import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 
-import { main, module } from './package.json'
+import { dependencies, main, module } from './package.json'
 
 const baseDir = resolve(__dirname)
 const outputDir = resolve(baseDir, 'dist')
@@ -20,6 +19,7 @@ const replaceOption = {
 }
 const banner =
   '/*! Copyright (c) 2021-present the Fonction authors. All rights reserved. MIT license. */'
+const external = Object.keys(dependencies)
 
 const config = [
   {
@@ -29,22 +29,21 @@ const config = [
       replace(replaceOption),
       ts({
         transpiler: 'babel',
-        browserslist: ['defaults', 'node 6', 'supports es6-module'],
         tsconfig: (resolvedConfig) => ({
           ...resolvedConfig,
           declaration: false
         })
       }),
       ,
-      nodeResolve(),
       terser()
     ],
 
+    external,
+
     output: {
       file: main,
-      format: 'umd',
+      format: 'cjs',
       sourcemap: true,
-      name: 'F',
       banner
     }
   },
@@ -55,9 +54,10 @@ const config = [
       ts({
         transpiler: 'babel'
       }),
-      nodeResolve(),
       terser()
     ],
+
+    external,
 
     output: {
       file: module,
@@ -69,6 +69,7 @@ const config = [
   {
     input: declareFilePath,
     output: { file: declareFilePath },
+
     plugins: [
       dts({
         respectExternal: true,
