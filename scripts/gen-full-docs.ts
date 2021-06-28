@@ -1,6 +1,6 @@
 import { Extractor, ExtractorConfig } from '@microsoft/api-extractor'
 import { execSync } from 'child_process'
-import { reverse, take } from 'fonction'
+import { take } from 'fonction'
 import { mkdirsSync, outputJSONSync, readJSONSync } from 'fs-extra'
 import { resolve } from 'path'
 
@@ -13,7 +13,7 @@ const getVersionList = (): string[] => {
 }
 
 const generateModuleList = (): void => {
-  const versions = reverse(getVersionList())
+  const versions = getVersionList().reverse()
   outputJSONSync(resolve(__dirname, '..', 'temp', 'meta.json'), {
     versions
   })
