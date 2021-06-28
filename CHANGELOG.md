@@ -1,3 +1,12 @@
+# [v1.10.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.9.1-beta.1...v1.10.0-beta.1) (2021-06-28)
+
+## ✨ New Features
+- [`db20f47`](https://github.com/TomokiMiyauci/fonction/commit/db20f47)   Add init function (Issues: [`#112`](https://github.com/TomokiMiyauci/fonction/issues/112))
+
+## 🐛 Bug Fixes
+- [`76387ba`](https://github.com/TomokiMiyauci/fonction/commit/76387ba)   Change heading logic 
+- [`2744d04`](https://github.com/TomokiMiyauci/fonction/commit/2744d04)   Improve type inference (Issues: [`#112`](https://github.com/TomokiMiyauci/fonction/issues/112))
+
 # [v1.9.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0...v1.9.1-beta.1) (2021-06-28)
 
 ## 🐛 Bug Fixes
