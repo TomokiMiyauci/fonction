@@ -24,7 +24,7 @@ const _includes = <T extends string | unknown[]>(
  *
  * @category `String` `Array`
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const includes = curry(_includes)
 
