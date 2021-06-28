@@ -22,7 +22,7 @@ import { isString } from './isString.ts'
  *
  * @category `Array`
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const reverse: {
   (val: string): string

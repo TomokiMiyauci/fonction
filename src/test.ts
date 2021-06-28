@@ -18,7 +18,7 @@ const _test = (regExp: RegExp, val: string): boolean => regExp.test(val)
  *
  * @category `String`
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const test = curry(_test)
 

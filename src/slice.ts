@@ -22,7 +22,7 @@
  *
  * @category `String` `Array`
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const slice = <T extends readonly unknown[] | string>(
   from: number,

@@ -23,7 +23,7 @@ import { TrimRight } from './trimRight.ts'
  *
  * @see Related to {@link TrimLeft} {@link TrimRight}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 type Trim<T extends string> = TrimLeft<TrimRight<T>>
 
@@ -42,7 +42,7 @@ type Trim<T extends string> = TrimLeft<TrimRight<T>>
  *
  * @see Related to {@link trimLeft} {@link trimRight}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const trim = <T extends string>(val: T): Trim<T> => val.trim() as Trim<T>
 
