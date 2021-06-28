@@ -4,7 +4,7 @@
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated Removed
  */
 type IsBoolean<T extends unknown> = T extends boolean ? true : false
 
@@ -20,7 +20,7 @@ type IsBoolean<T extends unknown> = T extends boolean ? true : false
  * isBoolean('hello') // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const isBoolean = (val: unknown): val is boolean => typeof val === 'boolean'
 

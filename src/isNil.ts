@@ -8,7 +8,7 @@ import { or } from './or.ts'
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 type IsNil<T extends unknown> = IsUndefined<T> extends true
   ? true
@@ -29,7 +29,7 @@ type IsNil<T extends unknown> = IsUndefined<T> extends true
  * isNil([]) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  *
  */
 const isNil = (val: unknown): val is null | undefined =>

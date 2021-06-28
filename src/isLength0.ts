@@ -21,7 +21,8 @@ import { or } from './or.ts'
  *
  * @category `Array` `String`
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
+ *
  */
 const isLength0 = (val: unknown): val is 0 =>
   ifElse(

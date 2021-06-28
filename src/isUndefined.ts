@@ -4,7 +4,7 @@
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated Removed
  */
 type IsUndefined<T extends unknown> = T extends undefined ? true : false
 
@@ -20,7 +20,8 @@ type IsUndefined<T extends unknown> = T extends undefined ? true : false
  * isUndefined('hello') // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
+ *
  */
 const isUndefined = (val: unknown): val is undefined =>
   typeof val === 'undefined'

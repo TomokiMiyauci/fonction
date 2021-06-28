@@ -4,7 +4,7 @@
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated Removed
  */
 type IsSymbol<T extends unknown> = T extends symbol ? true : false
 
@@ -20,7 +20,7 @@ type IsSymbol<T extends unknown> = T extends symbol ? true : false
  * isSymbol('hello') // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const isSymbol = (val: unknown): val is symbol => typeof val === 'symbol'
 

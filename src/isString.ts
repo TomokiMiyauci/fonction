@@ -4,7 +4,7 @@
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated Removed
  */
 type IsString<T extends unknown> = T extends string ? true : false
 
@@ -20,7 +20,8 @@ type IsString<T extends unknown> = T extends string ? true : false
  * isString(1000) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
+ *
  */
 const isString = (val: unknown): val is string => typeof val === 'string'
 

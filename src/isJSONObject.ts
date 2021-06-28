@@ -19,7 +19,7 @@ import { constructorName } from './constructorName.ts'
  * isJSONObject(new Set()) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const isJSONObject = (val: unknown): val is Record<PropertyKey, unknown> =>
   constructorName(val) === JSON_OBJECT

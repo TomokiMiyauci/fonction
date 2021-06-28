@@ -12,7 +12,8 @@
  * isArray({}) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
+
  */
 const isArray = (val: unknown): val is any[] => Array.isArray(val)
 

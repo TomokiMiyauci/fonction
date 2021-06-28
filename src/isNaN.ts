@@ -14,7 +14,7 @@
  * isNaN(100) // false
  * ```
  *
- * @public
+ * @deprecated Use built-in functions
  *
  */
 const isNaN = (val: unknown): val is typeof NaN => Number.isNaN(val)

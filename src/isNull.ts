@@ -6,7 +6,7 @@ import { NULL } from './constants/index.ts'
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated Removed
  */
 type IsNull<T extends unknown> = T extends null ? true : false
 
@@ -22,7 +22,8 @@ type IsNull<T extends unknown> = T extends null ? true : false
  * isNull(undefined) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
+ *
  */
 const isNull = (val: unknown): val is null => val === NULL
 
