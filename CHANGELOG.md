@@ -1,3 +1,9 @@
+# [v1.9.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0...v1.9.1-beta.1) (2021-06-28)
+
+## 🐛 Bug Fixes
+- [`2620e0c`](https://github.com/TomokiMiyauci/fonction/commit/2620e0c)   Is functions to be deprecated 
+- [`da10771`](https://github.com/TomokiMiyauci/fonction/commit/da10771)   Deprecate core functions
+
 # [v1.9.0](https://github.com/TomokiMiyauci/fonction/compare/v1.8.1...v1.9.0) (2021-06-27)
 
 ## ✨ New Features
