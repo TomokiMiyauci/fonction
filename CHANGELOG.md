@@ -1,3 +1,8 @@
+# [v2.0.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.10.0-beta.1...v2.0.0-beta.1) (2021-06-28)
+
+## 💥 Breaking Changes
+- [`6b9504b`](https://github.com/TomokiMiyauci/fonction/commit/6b9504b)   Remove deprecated functions (Issues: [`#112`](https://github.com/TomokiMiyauci/fonction/issues/112))
+
 # [v1.10.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.9.1-beta.1...v1.10.0-beta.1) (2021-06-28)
 
 ## ✨ New Features
