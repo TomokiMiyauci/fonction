@@ -53,7 +53,8 @@ export type {
   FalsyLike,
   Ord,
   Primitive,
-  Space
+  Space,
+  TypedArray
 } from './src/types/index.ts'
 export { uniq } from './src/uniq.ts'
 export { xor } from './src/xor.ts'
