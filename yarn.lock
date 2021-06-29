@@ -1269,7 +1269,7 @@
   resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.13.2.tgz#3b0efb6d3903bd49edb073696f60e90df08efb26"
   integrity sha512-WrHvO8PDL8wd8T2+zBGKrMwVL5IyzR3ryWUsl0PXgEV0QHup4mTLi0QcATefGI6Gx9Anu7vthPyyyLpY0EpiQg==
 
-"@miyauci/is-valid@^1.0.0-beta.15":
+"@miyauci/is-valid@1.0.0-beta.15":
   version "1.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@miyauci/is-valid/-/is-valid-1.0.0-beta.15.tgz#7af55c0f0ab5fa41ff784d0eac788782ba143ccd"
   integrity sha512-ZF8du4N3uD02Q5CoHOz53d6FW2U/sl8GUvIUUP0GU94RFCR3ZvQ2VWajB8+gGsa1TGXQBCbLdhO835ajpHeDFA==
@@ -2848,12 +2848,13 @@ convert-source-map@^1.7.0:
   dependencies:
     safe-buffer "~5.1.1"
 
-core-fn@^1.0.0-beta.1:
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.1.tgz#bcd5354d2368fae586323b9f4efc3741aed6ed4f"
-  integrity sha512-3tlSWwdK8+1m9TXD7A/p686qih7aygNlZ5vR2YEolWBXzXGBywMB6ef/jPQSiJ6m5K5UTVkVp3KrhnTmHFbKWg==
+core-fn@1.0.0-beta.8:
+  version "1.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.8.tgz#bf52e118b415e1d5a2373d7c77dc411fa2e93c49"
+  integrity sha512-hW9uppIM7PjV9lXZw6su7808NYTF5GdFbjgOuuWAf0QR4NWbXobcqaIUPLs+U/ajxzDvIyr+74yeZJyjMubEfQ==
   dependencies:
     curry-rice "^1.0.0"
+    fonction "^1.8.1"
 
 core-js-compat@^3.9.0, core-js-compat@^3.9.1:
   version "3.10.1"
@@ -3626,7 +3627,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
-fonction@^1.3.0:
+fonction@^1.3.0, fonction@^1.8.1:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.9.0.tgz#3866621a5d6381c44e559db4a04d043253eecb96"
   integrity sha512-kFt8/QbJdrVukhppuOwuSmNsAxfkl2LH9OygARP7pUfb7aJzJUoF7triyww6YjY40F/m9x+qoJX9zhEk2c6gjA==

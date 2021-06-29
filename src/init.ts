@@ -1,5 +1,4 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { slice } from './slice.ts'
 /**
  * Returns all but the last element of the given list or string.
  *
@@ -32,6 +31,6 @@ const init: {
   (val: string): string
   <T extends unknown[]>(val: T): T
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-} = (val: any) => slice(0, -1, val)
+} = (val: any) => val.slice(0, -1)
 
 export { init }

@@ -2,7 +2,6 @@
 
 import { ifElse } from './ifElse.ts'
 import { lt } from './lt.ts'
-import { slice } from './slice.ts'
 
 /**
  * Return a slice of string or array with `n` elements taken from the beginning.
@@ -36,7 +35,7 @@ const take = <T extends readonly unknown[] | string>(
   ifElse(
     lt(howMany, 0),
     () => val.slice(howMany) as T,
-    () => slice(0, howMany, val)
+    () => val.slice(0, howMany) as T
   )
 
 export { take }

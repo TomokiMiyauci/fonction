@@ -1,5 +1,4 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { slice } from './slice.ts'
 /**
  * Returns all but the first element of the given list or string.
  *
@@ -32,6 +31,6 @@ const tail: {
   (val: string): string
   <T extends unknown[]>(val: T): T
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-} = (val: any) => slice(1, Infinity, val)
+} = (val: any) => val.slice(1, Infinity)
 
 export { tail }

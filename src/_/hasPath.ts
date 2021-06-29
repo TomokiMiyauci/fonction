@@ -1,10 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { isLength0, isObject, isUndefined } from '../../deps.ts'
 import { and } from '../and.ts'
 import { head } from '../head.ts'
 import { ifElse } from '../ifElse.ts'
-import { isLength0 } from '../isLength0.ts'
-import { isObject } from '../isObject.ts'
-import { isUndefined } from '../isUndefined.ts'
 import { tail } from '../tail.ts'
 import { has } from './has.ts'
 

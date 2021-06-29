@@ -1,8 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 
-import { assertEquals, spy } from '../dev_deps.ts'
+import { assertEquals, length, spy } from '../dev_deps.ts'
 import { ifElse } from '../src/ifElse.ts'
-import { length } from '../src/length.ts'
 import { T } from '../src/T.ts'
 import { assertEqual } from './asserts.ts'
 Deno.test('ifElse', () => {

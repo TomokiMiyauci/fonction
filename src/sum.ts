@@ -1,9 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { isNumber, isUndefined } from '../deps.ts'
 import { add } from './add.ts'
 import { head } from './head.ts'
 import { ifElse } from './ifElse.ts'
-import { isNumber } from './isNumber.ts'
-import { isUndefined } from './isUndefined.ts'
 /**
  * Adds together all the elements of a list.
  *

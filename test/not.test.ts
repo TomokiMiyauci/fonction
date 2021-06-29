@@ -1,6 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { assertEquals } from '../dev_deps.ts'
-import { isString } from '../src/isString.ts'
+import { assertEquals, isString } from '../dev_deps.ts'
 import { not } from '../src/not.ts'
 import { AnyFn } from '../src/types/index.ts'
 import { assertEqual } from './asserts.ts'

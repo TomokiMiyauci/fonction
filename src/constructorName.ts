@@ -1,6 +1,6 @@
+import { isNil } from '../deps.ts'
 import { and } from './and.ts'
 import { ifElse } from './ifElse.ts'
-import { isNil } from './isNil.ts'
 import { N } from './N.ts'
 
 /**

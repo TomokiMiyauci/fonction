@@ -1,7 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { isArray, length } from '../deps.ts'
 import { ifElse } from './ifElse.ts'
-import { isArray } from './isArray.ts'
-import { length } from './length.ts'
 import { take } from './take.ts'
 import { String2Array } from './types/index.ts'
 

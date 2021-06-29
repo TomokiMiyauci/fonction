@@ -1,6 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { assertEquals, spy } from '../dev_deps.ts'
-import { length } from '../src/length.ts'
+import { assertEquals, length, spy } from '../dev_deps.ts'
 import { or } from '../src/or.ts'
 import { FalsyLike } from './../src/types/index.ts'
 import { assertEqual } from './asserts.ts'
