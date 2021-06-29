@@ -12,7 +12,7 @@
  * length({length: 5, text: 'hello'}) // 5
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const length = <T extends { length: number }>(val: T): T['length'] => val.length
 

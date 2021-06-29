@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { and } from '../and.ts'
-import { first } from '../first.ts'
+import { head } from '../head.ts'
 import { ifElse } from '../ifElse.ts'
 import { isLength0 } from '../isLength0.ts'
 import { isObject } from '../isObject.ts'
@@ -33,7 +33,7 @@ const hasPath = <T extends unknown>(
   path: (string | number)[],
   obj: Record<PropertyKey, T>
 ): boolean => {
-  const key = first(path)
+  const key = head(path)
   if (isUndefined(key)) return false
   const rest = tail(path)
   if (isLength0(rest)) {

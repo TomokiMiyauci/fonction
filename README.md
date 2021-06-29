@@ -16,8 +16,8 @@
 [![deno version](https://img.shields.io/badge/deno-^1.6.0-lightgrey?logo=deno)](https://github.com/denoland/deno)
 ![node support version](https://img.shields.io/badge/node-%5E14.16.0-yellow)
 ![bundle size](https://img.shields.io/bundlephobia/min/fonction)
-![npm download](https://img.shields.io/npm/dw/fonction?color=blue)
 
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/TomokiMiyauci/fonction)
 [![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/fonction.svg)](https://david-dm.org/TomokiMiyauci/fonction)
 [![codecov](https://codecov.io/gh/TomokiMiyauci/fonction/branch/main/graph/badge.svg?token=SPAi5Pv2wd)](https://codecov.io/gh/TomokiMiyauci/fonction)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f43b1c317e11445399d85ce6efc06504)](https://www.codacy.com/gh/TomokiMiyauci/fonction/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TomokiMiyauci/fonction&utm_campaign=Badge_Grade)
@@ -53,25 +53,23 @@ Special attention is paid to bundle size and strict type definitions. Therefore,
 
 The TypeScript version must be `4.1.0` or higher.
 
-This project provide `ES modules` and `UMD`. The range supported by both is different.
+This project provide `ES modules` and `Commonjs`.
 
-### ES modules
+If you have an opinion about what to support, you can open an [issue](https://github.com/TomokiMiyauci/fonction/issues) to discuss it.
 
-Limit support to the latest environment to reduce the bundle size.
+The `browserslist` has the following settings.
+
+```bash
+> 0.5%
+last 1 version
+not IE <= 11
+not ie_mob <= 11
+node 14
+```
 
 | <img width="30px" height="30px" alt="Deno" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1620998361/logos/deno.svg"></br>Deno | <img width="24px" height="24px" alt="Node.js" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1620998361/logos/nodejs.svg"></br>Node.js | <img width="24px" height="24px" alt="IE / Edge" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /></br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" /></br>iOS Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png" alt="Samsung" width="24px" height="24px" /></br>Samsung | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /></br>Opera |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ^1.6.0                                                                                                                                  | ^14.16.0                                                                                                                                        | last version                                                                                                                                         | last version                                                                                                                                                  | last version                                                                                                                                              | last version                                                                                                                                              | last version                                                                                                                                                              | last version                                                                                                                                                                    | last version                                                                                                                                          |
-
-### UMD
-
-Browser is supporting since IE11.
-
-| <img width="24px" height="24px" alt="Node.js" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1620998361/logos/nodejs.svg"></br>Node.js | <img width="24px" height="24px" alt="IE / Edge" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"></br>IE / Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /></br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" /></br>iOS Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png" alt="Samsung" width="24px" height="24px" /></br>Samsung | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /></br>Opera |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ^6.17.0                                                                                                                                         | IE11 / ^16                                                                                                                                                | ^60                                                                                                                                                           | ^61                                                                                                                                                       | ^10.1                                                                                                                                                     | ^10.3                                                                                                                                                                     | ^8.2                                                                                                                                                                            | ^48                                                                                                                                                   |
-
-Compared to `ES modules`, `UMD` has a bundle size increase of about 2.5x. Recommend using `ES modules` as much as possible.
+| `^1.6.0`                                                                                                                                | `^14.16.0`                                                                                                                                      | `^88`                                                                                                                                                | `^86`                                                                                                                                                         | `^87`                                                                                                                                                     | `^13.1`                                                                                                                                                   | `^13.4`                                                                                                                                                                   | `^13.0`                                                                                                                                                                         | `^73`                                                                                                                                                 |
 
 ## :dizzy: Usage
 
@@ -115,7 +113,7 @@ import { add } from 'fonction'
 add(1, 2) // 3
 ```
 
-#### UMD
+#### Commonjs
 
 ```ts
 const { add } = require('fonction')
@@ -125,24 +123,12 @@ add(1, 2) // 3
 
 ### :globe_with_meridians: CDN
 
-#### ESM
+The module that bundles the dependencies is obtained from [skypack](https://www.skypack.dev/view/fonction).
 
 ```html
 <script type="module">
-  import { add } from 'https://unpkg.com/fonction?module'
+  import { add } from 'https://cdn.skypack.dev/fonction'
   console.log(add(1, 2)) // 3
-</script>
-```
-
-#### UMD
-
-> The global object is `F`.
-
-```html
-<script src="https://unpkg.com/fonction"></script>
-
-<script>
-  console.log(F.add(1, 2)) // 3
 </script>
 ```
 
@@ -168,6 +154,11 @@ import { _ } from 'https://deno.land/x/fonction@VERSION/mod.ts'
 ```
 
 `@VERSION` format is like `v1.5.0-beta.1`.
+
+## :star: Other projects
+
+- [core-fn](https://github.com/TomokiMiyauci/core-fn)
+- [is-valid](https://github.com/TomokiMiyauci/is-valid)
 
 ## :handshake: Contributing
 

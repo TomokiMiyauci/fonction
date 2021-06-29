@@ -21,7 +21,7 @@ import { Space } from './types/index.ts'
  *
  * @see Related to {@link TrimRight} {@link Trim}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 type TrimLeft<T extends string> = T extends `${Space}${infer R}`
   ? TrimLeft<R>
@@ -49,7 +49,7 @@ type TrimLeft<T extends string> = T extends `${Space}${infer R}`
  *
  * @see Related to {@link trimRight} {@link trim}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const trimLeft = <T extends string>(val: T): TrimLeft<T> =>
   val.trimLeft() as TrimLeft<T>

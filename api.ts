@@ -24,7 +24,7 @@ const api: Api = {
     lodash: 'entries'
   },
   F: LAMBDAS,
-  first: {
+  head: {
     ramda: 'head',
     rambda: 'head',
     lodash: 'first'
@@ -37,7 +37,7 @@ const api: Api = {
   gt: ['ramda', 'lodash'],
   gte: ['ramda', 'lodash'],
   has: ALL_MODULES,
-  head: {
+  init: {
     rambda: 'init',
     ramda: 'init',
     lodash: 'initial'

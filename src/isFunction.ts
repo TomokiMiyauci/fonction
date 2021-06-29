@@ -6,7 +6,7 @@ import type { AnyFn } from './types/index.ts'
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated Removed
  */
 type IsFunction<T extends unknown> = T extends AnyFn ? true : false
 
@@ -22,7 +22,7 @@ type IsFunction<T extends unknown> = T extends AnyFn ? true : false
  * isFunction('hello') // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const isFunction = (val: unknown): val is AnyFn => typeof val === 'function'
 

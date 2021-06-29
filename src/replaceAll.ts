@@ -16,7 +16,7 @@
  *
  * @see Related to {@link Replace}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 type ReplaceAll<
   T extends string,
@@ -46,7 +46,7 @@ type ReplaceAll<
  *
  * @see Related to {@link replace}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const replaceAll = <From extends string, To extends string, T extends string>(
   from: From,

@@ -1,3 +1,23 @@
+# [v2.0.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.10.0-beta.1...v2.0.0-beta.1) (2021-06-28)
+
+## 💥 Breaking Changes
+- [`6b9504b`](https://github.com/TomokiMiyauci/fonction/commit/6b9504b)   Remove deprecated functions (Issues: [`#112`](https://github.com/TomokiMiyauci/fonction/issues/112))
+
+# [v1.10.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.9.1-beta.1...v1.10.0-beta.1) (2021-06-28)
+
+## ✨ New Features
+- [`db20f47`](https://github.com/TomokiMiyauci/fonction/commit/db20f47)   Add init function (Issues: [`#112`](https://github.com/TomokiMiyauci/fonction/issues/112))
+
+## 🐛 Bug Fixes
+- [`76387ba`](https://github.com/TomokiMiyauci/fonction/commit/76387ba)   Change heading logic 
+- [`2744d04`](https://github.com/TomokiMiyauci/fonction/commit/2744d04)   Improve type inference (Issues: [`#112`](https://github.com/TomokiMiyauci/fonction/issues/112))
+
+# [v1.9.1-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0...v1.9.1-beta.1) (2021-06-28)
+
+## 🐛 Bug Fixes
+- [`2620e0c`](https://github.com/TomokiMiyauci/fonction/commit/2620e0c)   Is functions to be deprecated 
+- [`da10771`](https://github.com/TomokiMiyauci/fonction/commit/da10771)   Deprecate core functions
+
 # [v1.9.0](https://github.com/TomokiMiyauci/fonction/compare/v1.8.1...v1.9.0) (2021-06-27)
 
 ## ✨ New Features

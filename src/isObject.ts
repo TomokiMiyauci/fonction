@@ -30,7 +30,8 @@ import { N } from './N.ts'
  * isObject('hello') // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
+ *
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
 const isObject = (val: unknown): val is Record<string, unknown> =>

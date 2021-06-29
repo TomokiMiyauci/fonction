@@ -4,7 +4,7 @@
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated Removed
  */
 type IsNumber<T extends unknown> = T extends number ? true : false
 
@@ -20,7 +20,7 @@ type IsNumber<T extends unknown> = T extends number ? true : false
  * isNumber('hello') // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const isNumber = (val: unknown): val is number => typeof val === 'number'
 

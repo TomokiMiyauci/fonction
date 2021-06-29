@@ -20,7 +20,7 @@ import { keys as _keys } from './constants/index.ts'
  *
  * @see Related to {@link values} {@link entries}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const keys = <T extends PropertyKey>(val: Record<T, unknown>): string[] =>
   _keys(val)

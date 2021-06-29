@@ -14,7 +14,7 @@
  *
  * @see Related to {@link upperCase}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const lowerCase = <T extends string>(val: T): Lowercase<T> =>
   val.toLowerCase() as Lowercase<T>

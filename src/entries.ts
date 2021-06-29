@@ -21,7 +21,7 @@ import { entries as _entries } from './constants/index.ts'
  *
  * @see Related to {@link keys} {@link values}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const entries: {
   <T>(

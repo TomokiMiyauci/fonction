@@ -20,7 +20,7 @@ import { isArray } from './isArray.ts'
  *
  * @category `Array` `Object`
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const map: {
   <T extends readonly unknown[], U>(

@@ -15,17 +15,10 @@ import {
   DocPlainText,
   DocSection
 } from '@microsoft/tsdoc'
+import { isUndefined } from '@miyauci/is-valid'
+import { replace } from 'core-fn'
 import { configure, renderFile } from 'eta'
-import {
-  and,
-  ifElse,
-  isUndefined,
-  N,
-  NN,
-  replace,
-  reverse,
-  take
-} from 'fonction'
+import { and, ifElse, N, NN, take } from 'fonction'
 import { outputFileSync, pathExistsSync, readFileSync } from 'fs-extra'
 import { join, resolve } from 'path'
 
@@ -426,7 +419,7 @@ ${isLatest ? 'Latest' : version}
 }
 
 const main = async () => {
-  const versions = reverse(getVersionList())
+  const versions = getVersionList().reverse()
   const moduleStarts = await getModuleStarts(versions)
   const formattedModuleVersions = formatModuleStats(
     moduleStarts,

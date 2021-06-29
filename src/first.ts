@@ -31,7 +31,7 @@ import { String2Array } from './types/index.ts'
  *
  * @see Related to {@link Last}
  *
- * @public
+ * @deprecated Rename to head
  */
 type First<T extends readonly unknown[] | string> = T extends ''
   ? ''
@@ -68,7 +68,7 @@ type First<T extends readonly unknown[] | string> = T extends ''
  *
  * @see Related to {@link last}
  *
- * @public
+ * @deprecated Rename to head
  */
 const first = <T extends readonly unknown[] | string>(val: T): First<T> =>
   ifElse(

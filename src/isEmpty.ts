@@ -30,7 +30,7 @@ import { Empty } from './types/index.ts'
  * isEmpty(1000) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const isEmpty = (val: unknown): val is Empty => {
   if (or(isString(val), () => isArray(val))) return isLength0(val)

@@ -12,7 +12,7 @@ import { Primitive } from './types/index.ts'
  *
  * @typeParam T - Any value
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 type IsPrimitive<T extends unknown> = IsBigint<T> extends true
   ? true
@@ -50,7 +50,8 @@ type IsPrimitive<T extends unknown> = IsBigint<T> extends true
  * isPrimitive([]) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
+ *
  */
 const isPrimitive = (val: unknown): val is Primitive =>
   [isNill, isBoolean, isNumber, isString, isBigint, isSymbol].some((is) =>

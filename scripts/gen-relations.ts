@@ -1,5 +1,5 @@
 import { ApiModel } from '@microsoft/api-extractor-model'
-import { first, N, or, tail } from 'fonction'
+import { head, N, or, tail } from 'fonction'
 import { pathExistsSync } from 'fs-extra'
 import { resolve } from 'path'
 
@@ -26,11 +26,11 @@ const getModuleStarts = async (
     })
   )
   const publicModuleVersionList = fullModuleVersionList.filter((moduleList) => {
-    const version = first(moduleList)
+    const version = head(moduleList)
     return N(version.includes('beta'))
   })
   return publicModuleVersionList.reduce((acc, cur) => {
-    const version = first(cur)
+    const version = head(cur)
     const modules = tail(cur)
 
     modules.forEach((module) => {

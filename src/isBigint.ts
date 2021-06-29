@@ -18,7 +18,7 @@ type IsBigint<T extends unknown> = T extends bigint ? true : false
  * isBigint(1000) // false
  * ```
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/is-valid}.
  */
 const isBigint = (val: unknown): val is bigint => typeof val === 'bigint'
 

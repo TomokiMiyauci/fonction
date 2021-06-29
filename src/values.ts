@@ -29,7 +29,7 @@ import { values as _values } from './constants/index.ts'
  *
  * @see Related to {@link keys} {@link entries}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const values = <T extends unknown>(
   val: Record<PropertyKey, T> | ArrayLike<T>

@@ -31,7 +31,7 @@ type StartsWith<T extends string | undefined = undefined> = T extends undefined
  *
  * @see Related to {@link endsWith}
  *
- * @public
+ * @deprecated The module has moved to {@link https://github.com/TomokiMiyauci/core-fn}.
  */
 const startsWith = <T extends string, U extends string | undefined = undefined>(
   val: T,
