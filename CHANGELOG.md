@@ -1,3 +1,8 @@
+# [v2.1.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v2.0.0...v2.1.0-beta.1) (2021-06-29)
+
+## ✨ New Features
+- [`948e4f4`](https://github.com/TomokiMiyauci/fonction/commit/948e4f4)   Add alias for typed array
+
 # [v2.0.0](https://github.com/TomokiMiyauci/fonction/compare/v1.9.0...v2.0.0) (2021-06-29)
 
 ## ✨ New Features
