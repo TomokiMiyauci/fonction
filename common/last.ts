@@ -39,7 +39,7 @@ type LastString<T extends string> = T extends `${infer L}${infer R}`
  * // Array
  * Last<[] | never[] | readonly [] | readonly never[]> // undefined
  * Last<['hello', 'world']> // 'world'
- * Last<string | number[]> // string | number
+ * Last<string | number[]> // string | number | undefined
  * ```
  *
  * @category `Array` `String`

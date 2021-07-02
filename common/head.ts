@@ -22,7 +22,7 @@ import { take } from '../src/take.ts'
  * // Array
  * Head<[] | never[] | readonly [] | readonly never[]> // undefined
  * Head<['hello', 'world']> // 'hello'
- * Head<string | number[]> // string | number
+ * Head<string | number[]> // string | number | undefined
  * ```
  *
  * @category `Array` `String`
