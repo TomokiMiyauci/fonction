@@ -36,7 +36,8 @@ type InitString<T extends string> = T extends `${infer F}${infer R}`
  * ```ts
  * // Array
  * Init<[] | never[] | readonly [] | readonly never[]> // []
- * Init<['hello', 'world']> // 'hello'
+ * Init<['hello']> // []
+ * Init<['hello', 'world']> // ['hello']
  * ```
  *
  * @category `Array` `String`

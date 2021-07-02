@@ -10,6 +10,7 @@ import { slice } from '../deps.ts'
  * // String
  * Tail<string> // string
  * Tail<''> // ''
+ * Tail<'a'> // ''
  * Tail<'hello'> // 'ello'
  * ```
  *
@@ -17,7 +18,8 @@ import { slice } from '../deps.ts'
  * ```ts
  * // Array
  * Tail<[] | never[] | readonly [] | readonly never[]> // []
- * Tail<['hello', 'world']> // 'world'
+ * Tail<['hello']> // []
+ * Tail<['hello', 'world']> // ['world']
  * ```
  *
  * @category `Array` `String`
