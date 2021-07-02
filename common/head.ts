@@ -1,8 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { isArray, length } from '../deps.ts'
-import { ifElse } from './ifElse.ts'
-import { take } from './take.ts'
-import { String2Array } from './types/index.ts'
+import { isArray } from '../deps.ts'
+import { ifElse } from '../src/ifElse.ts'
+import { take } from '../src/take.ts'
+import { String2Array } from '../src/types/index.ts'
 
 /**
  * Infer the head types.
@@ -35,9 +35,7 @@ import { String2Array } from './types/index.ts'
 type Head<T extends readonly unknown[] | string> = T extends ''
   ? ''
   : T extends string
-  ? String2Array<T> extends []
-    ? string
-    : String2Array<T>[0]
+  ? String2Array<T>[0]
   : T extends readonly never[] | []
   ? undefined
   : T extends readonly [infer U, ...infer _]
@@ -53,17 +51,15 @@ type Head<T extends readonly unknown[] | string> = T extends ''
  * @example
  * ```ts
  * // String
- * Head<string> // string
- * Head<''> // ''
- * Head<'hello'> // 'h'
+ * head<''> // ''
+ * head<'hello'> // 'hello'
  * ```
  *
  * @example
  * ```ts
  * // Array
- * Head<[] | never[] | readonly [] | readonly never[]> // undefined
- * Head<['hello', 'world']> // 'hello'
- * Head<string | number[]> // string | number | undefined
+ * head<[]> // undefined
+ * head<['hello', 'world']> // 'hello'
  * ```
  *
  * @category `Array` `String`
@@ -75,13 +71,9 @@ type Head<T extends readonly unknown[] | string> = T extends ''
 const head = <T extends readonly unknown[] | string>(val: T): Head<T> =>
   ifElse(
     isArray(val),
-    () =>
-      ifElse(
-        length(val as T & any[]),
-        () => take(1, val)[0] as Head<T>,
-        undefined as Head<T>
-      ),
-    () => take(1, val) as Head<T>
-  )
+    () => val[0],
+    () => take(1, val)
+  ) as Head<T>
+
 export { head }
 export type { Head }

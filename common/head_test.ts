@@ -1,10 +1,9 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { assertEquals } from '../dev_deps.ts'
-import { Head, head } from '../src/head.ts'
-import { assertEqual } from './asserts.ts'
+import { assertEqual } from '../test/asserts.ts'
+import { Head, head } from './head.ts'
 Deno.test('head', () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const table: [string | unknown[] | any, unknown][] = [
+  const table: [string | unknown[], string | undefined | unknown][] = [
     ['', ''],
     ['a', 'a'],
     [' ab', ' '],

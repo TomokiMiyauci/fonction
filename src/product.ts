@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { head } from '../common/head.ts'
 import { isNumber, isUndefined } from '../deps.ts'
-import { head } from './head.ts'
 import { ifElse } from './ifElse.ts'
 import { multiply } from './multiply.ts'
 /**
