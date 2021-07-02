@@ -1,9 +1,9 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { head } from '../../common/head.ts'
+import { tail } from '../../common/tail.ts'
 import { isLength0, isObject, isUndefined } from '../../deps.ts'
 import { and } from '../and.ts'
 import { ifElse } from '../ifElse.ts'
-import { tail } from '../tail.ts'
 import { has } from './has.ts'
 
 /**
