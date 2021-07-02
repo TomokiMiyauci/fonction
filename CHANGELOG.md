@@ -1,3 +1,11 @@
+# [v2.1.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v2.1.0-beta.1...v2.1.0-beta.2) (2021-07-02)
+
+## ✨ New Features
+- [`f8458f5`](https://github.com/TomokiMiyauci/fonction/commit/f8458f5)   Add types of Tail 
+
+## 🐛 Bug Fixes
+- [`ed088ba`](https://github.com/TomokiMiyauci/fonction/commit/ed088ba)   Improve type inference
+
 # [v2.1.0-beta.1](https://github.com/TomokiMiyauci/fonction/compare/v2.0.0...v2.1.0-beta.1) (2021-06-29)
 
 ## ✨ New Features
