@@ -47,4 +47,5 @@ Deno.test('init', () => {
   assertEqualsType<'', Init<'a'>>()
   assertEqualsType<'a', Init<'ab'>>()
   assertEqualsType<'abcde', Init<'abcdef'>>()
+  assertEqualsType<'abcdefghijklmno', Init<'abcdefghijklmnop'>>()
 })

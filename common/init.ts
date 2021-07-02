@@ -58,6 +58,9 @@ type Init<T extends string | readonly unknown[]> = T extends string
  * @param val - string or any array object
  * @returns The result of `val.slice(0, -1)`
  *
+ * @remarks
+ * The maximum number of characters for the type system to work properly is 16.
+ *
  * @example
  * ```ts
  * // String
