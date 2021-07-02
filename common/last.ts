@@ -1,8 +1,8 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { isArray, length } from '../deps.ts'
-import { ifElse } from './ifElse.ts'
-import { takeLast } from './takeLast.ts'
-import { String2Array } from './types/index.ts'
+import { isArray } from '../deps.ts'
+import { ifElse } from '../src/ifElse.ts'
+import { takeLast } from '../src/takeLast.ts'
+import { String2Array } from '../src/types/index.ts'
 /**
  * Infer the last types.
  *
@@ -33,9 +33,7 @@ import { String2Array } from './types/index.ts'
 type Last<T extends string | readonly unknown[]> = T extends ''
   ? ''
   : T extends string
-  ? String2Array<T> extends []
-    ? string
-    : [never, ...String2Array<T>][String2Array<T>['length']]
+  ? [never, ...String2Array<T>][String2Array<T>['length']]
   : T extends never[] | []
   ? undefined
   : T extends readonly [...infer _, infer L]
@@ -51,6 +49,7 @@ type Last<T extends string | readonly unknown[]> = T extends ''
  * @example
  * ```ts
  * // String
+ * last('') // ''
  * last('hello') // 'o'
  * ```
  *
@@ -69,14 +68,9 @@ type Last<T extends string | readonly unknown[]> = T extends ''
 const last = <T extends string | readonly unknown[]>(val: T): Last<T> =>
   ifElse(
     isArray(val),
-    () =>
-      ifElse(
-        length(val as unknown as unknown[]),
-        () => takeLast(1, val)[0] as Last<T>,
-        undefined as Last<T>
-      ),
-    () => takeLast(1, val) as Last<T>
-  )
+    () => takeLast(1, val)[0],
+    () => takeLast(1, val)
+  ) as Last<T>
 
 export { last }
 export type { Last }
