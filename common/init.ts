@@ -41,7 +41,7 @@ type InitString<T extends string> = T extends `${infer F}${infer R}`
  *
  * @category `Array` `String`
  *
- * @see Related to {@link First}
+ * @see Related to {@link Tail}
  *
  * @public
  */
