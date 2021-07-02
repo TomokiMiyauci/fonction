@@ -1,6 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { assertEquals } from '../dev_deps.ts'
-import { assertEqual } from '../test/asserts.ts'
+import { assertEquals, assertEqualsType } from '../dev_deps.ts'
 import { Head, head } from './head.ts'
 Deno.test('head', () => {
   const table: [string | unknown[], string | undefined | unknown][] = [
@@ -33,28 +32,33 @@ Deno.test('head', () => {
     assertEquals(head(val), expected, `head(${val}) -> ${expected}`)
   })
 
-  assertEqual<undefined>(head([]))
-  assertEqual<undefined>(head([] as const))
-  assertEqual<undefined>(head([] as []))
-  assertEqual<string>(head(['']))
-  assertEqual<''>(head([''] as const))
-  assertEqual<''>(head([''] as ['']))
-  assertEqual<string | undefined>(head([] as string[]))
-  assertEqual<string | number>(head(['1', 2]))
-  assertEqual<'1'>(head(['1', 2] as const))
-  assertEqual<100>(head([100, 200, 'hello', []] as [100, 200, 'hello', []]))
-  assertEqual<string>(head(''))
-  assertEqual<string>(head('hello'))
-  assertEqual<string>(head('hello' as const))
+  assertEqualsType<undefined>(head([]))
+  assertEqualsType<undefined>(head([] as const))
+  assertEqualsType<undefined>(head([] as []))
+  assertEqualsType<string>(head(['']))
+  assertEqualsType<''>(head([''] as const))
+  assertEqualsType<''>(head([''] as ['']))
+  assertEqualsType<string | undefined>(head([] as string[]))
+  assertEqualsType<string | number>(head(['1', 2]))
+  assertEqualsType<'1'>(head(['1', 2] as const))
+  assertEqualsType<100>(
+    head([100, 200, 'hello', []] as [100, 200, 'hello', []])
+  )
+  assertEqualsType<string>(head(''))
+  assertEqualsType<string>(head('hello'))
+  assertEqualsType<string>(head('hello' as const))
 })
 
-Deno.test('head', () => {
-  assertEqual<undefined, Head<[] | never[] | readonly [] | readonly never[]>>()
-  assertEqual<'', Head<[''] | readonly ['']>>()
-  assertEqual<string | undefined, Head<string[]>>()
-  assertEqual<string | number | undefined, Head<string | number[]>>()
-  assertEqual<100, Head<[100, 200, 'hello', []]>>()
-  assertEqual<string, Head<string>>()
-  assertEqual<'', Head<''>>()
-  assertEqual<'h', Head<'hello'>>()
+Deno.test('Head', () => {
+  assertEqualsType<
+    undefined,
+    Head<[] | never[] | readonly [] | readonly never[]>
+  >()
+  assertEqualsType<'', Head<[''] | readonly ['']>>()
+  assertEqualsType<string | undefined, Head<string[]>>()
+  assertEqualsType<string | number | undefined, Head<string | number[]>>()
+  assertEqualsType<100, Head<[100, 200, 'hello', []]>>()
+  assertEqualsType<string, Head<string>>()
+  assertEqualsType<'', Head<''>>()
+  assertEqualsType<'h', Head<'hello'>>()
 })

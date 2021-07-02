@@ -2,7 +2,6 @@
 import { isArray } from '../deps.ts'
 import { ifElse } from '../src/ifElse.ts'
 import { take } from '../src/take.ts'
-import { String2Array } from '../src/types/index.ts'
 
 /**
  * Infer the head types.
@@ -32,10 +31,12 @@ import { String2Array } from '../src/types/index.ts'
  *
  * @public
  */
-type Head<T extends readonly unknown[] | string> = T extends ''
-  ? ''
-  : T extends string
-  ? String2Array<T>[0]
+type Head<T extends readonly unknown[] | string> = T extends string
+  ? T extends `${infer F}${string}`
+    ? F
+    : T extends ''
+    ? ''
+    : string
   : T extends readonly never[] | []
   ? undefined
   : T extends readonly [infer U, ...infer _]
