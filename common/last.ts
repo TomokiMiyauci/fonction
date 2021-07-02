@@ -2,7 +2,25 @@
 import { isArray } from '../deps.ts'
 import { ifElse } from '../src/ifElse.ts'
 import { takeLast } from '../src/takeLast.ts'
-import { String2Array } from '../src/types/index.ts'
+
+/**
+ * @example
+ * ```ts
+ * LastString<''> // ''
+ * LastString<'a'> // 'a'
+ * LastString<'abcdefghijk'> // 'k'
+ * ```
+ *
+ * @internal
+ */
+type LastString<T extends string> = T extends `${infer L}${infer R}`
+  ? R extends ''
+    ? L
+    : LastString<R>
+  : T extends ''
+  ? ''
+  : string
+
 /**
  * Infer the last types.
  *
@@ -30,10 +48,8 @@ import { String2Array } from '../src/types/index.ts'
  *
  * @public
  */
-type Last<T extends string | readonly unknown[]> = T extends ''
-  ? ''
-  : T extends string
-  ? [never, ...String2Array<T>][String2Array<T>['length']]
+type Last<T extends string | readonly unknown[]> = T extends string
+  ? LastString<T>
   : T extends never[] | []
   ? undefined
   : T extends readonly [...infer _, infer L]
@@ -45,6 +61,9 @@ type Last<T extends string | readonly unknown[]> = T extends ''
  *
  * @param val - `string` or any `array` object
  * @returns The last element of the `val`
+ *
+ * @remarks
+ * The maximum number of characters for the type system to work properly is 24.
  *
  * @example
  * ```ts

@@ -54,4 +54,5 @@ Deno.test('Last', () => {
   assertEqual<string, Last<string>>()
   assertEqual<'', Last<''>>()
   assertEqual<'o', Last<'hello'>>()
+  assertEqual<'x', Last<'abcdefghijklmnopqrstuvwx'>>()
 })
