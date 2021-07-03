@@ -37,8 +37,6 @@ type Head<T extends readonly unknown[] | string> = T extends string
     : T extends ''
     ? ''
     : string
-  : T extends readonly never[] | []
-  ? undefined
   : T extends readonly [infer U, ...infer _]
   ? U
   : T[0] | undefined
