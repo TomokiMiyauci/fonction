@@ -34,8 +34,6 @@ type Tail<T extends string | readonly unknown[]> = T extends string
     : T extends ''
     ? ''
     : string
-  : T extends readonly never[] | []
-  ? []
   : T extends readonly [unknown, ...infer R]
   ? R
   : T

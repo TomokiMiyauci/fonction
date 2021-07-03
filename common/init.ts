@@ -48,8 +48,6 @@ type InitString<T extends string> = T extends `${infer F}${infer R}`
  */
 type Init<T extends string | readonly unknown[]> = T extends string
   ? InitString<T>
-  : T extends readonly never[] | []
-  ? []
   : T extends readonly [...infer I, unknown]
   ? I
   : T

@@ -50,8 +50,6 @@ type LastString<T extends string> = T extends `${infer L}${infer R}`
  */
 type Last<T extends string | readonly unknown[]> = T extends string
   ? LastString<T>
-  : T extends never[] | []
-  ? undefined
   : T extends readonly [...infer _, infer L]
   ? L
   : T[T['length']] | undefined
