@@ -26,7 +26,7 @@ import { slice } from '../deps.ts'
  *
  * @see Related to {@link Init}
  *
- * @beta
+ * @public
  */
 type Tail<T extends string | readonly unknown[]> = T extends string
   ? T extends `${string}${infer R}`
