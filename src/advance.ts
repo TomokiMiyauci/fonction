@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { isFunction } from '../deps.ts'
 import { ifElse } from './ifElse.ts'
-import { isFunction } from './isFunction.ts'
 import { AnyFn } from './types/index.ts'
 /**
  * Returns return value if argument is `function`; otherwise returns the value as it is.

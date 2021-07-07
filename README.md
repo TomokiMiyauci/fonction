@@ -36,7 +36,7 @@
 ## :sparkles: Features
 
 - :green_heart: Friendly type definition
-- :earth_americas: Universal functions providing ESM and UMD
+- :earth_americas: Universal functions providing ESM and Commonjs
 - :package: Optimized, super slim size
 - :page_facing_up: TSDoc-style comments
 - :1234: Bigint support

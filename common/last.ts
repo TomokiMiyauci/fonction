@@ -1,9 +1,26 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { ifElse } from './ifElse.ts'
-import { isArray } from './isArray.ts'
-import { length } from './length.ts'
-import { takeLast } from './takeLast.ts'
-import { String2Array } from './types/index.ts'
+import { isArray } from '../deps.ts'
+import { ifElse } from '../src/ifElse.ts'
+import { takeLast } from '../src/takeLast.ts'
+
+/**
+ * @example
+ * ```ts
+ * LastString<''> // ''
+ * LastString<'a'> // 'a'
+ * LastString<'abcdefghijk'> // 'k'
+ * ```
+ *
+ * @internal
+ */
+type LastString<T extends string> = T extends `${infer L}${infer R}`
+  ? R extends ''
+    ? L
+    : LastString<R>
+  : T extends ''
+  ? ''
+  : string
+
 /**
  * Infer the last types.
  *
@@ -22,7 +39,7 @@ import { String2Array } from './types/index.ts'
  * // Array
  * Last<[] | never[] | readonly [] | readonly never[]> // undefined
  * Last<['hello', 'world']> // 'world'
- * Last<string | number[]> // string | number
+ * Last<string | number[]> // string | number | undefined
  * ```
  *
  * @category `Array` `String`
@@ -31,14 +48,8 @@ import { String2Array } from './types/index.ts'
  *
  * @public
  */
-type Last<T extends string | readonly unknown[]> = T extends ''
-  ? ''
-  : T extends string
-  ? String2Array<T> extends []
-    ? string
-    : [never, ...String2Array<T>][String2Array<T>['length']]
-  : T extends never[] | []
-  ? undefined
+type Last<T extends string | readonly unknown[]> = T extends string
+  ? LastString<T>
   : T extends readonly [...infer _, infer L]
   ? L
   : T[T['length']] | undefined
@@ -49,9 +60,13 @@ type Last<T extends string | readonly unknown[]> = T extends ''
  * @param val - `string` or any `array` object
  * @returns The last element of the `val`
  *
+ * @remarks
+ * The maximum number of characters for the type system to work properly is 24.
+ *
  * @example
  * ```ts
  * // String
+ * last('') // ''
  * last('hello') // 'o'
  * ```
  *
@@ -70,14 +85,9 @@ type Last<T extends string | readonly unknown[]> = T extends ''
 const last = <T extends string | readonly unknown[]>(val: T): Last<T> =>
   ifElse(
     isArray(val),
-    () =>
-      ifElse(
-        length(val as unknown as unknown[]),
-        () => takeLast(1, val)[0] as Last<T>,
-        undefined as Last<T>
-      ),
-    () => takeLast(1, val) as Last<T>
-  )
+    () => takeLast(1, val)[0],
+    () => takeLast(1, val)
+  ) as Last<T>
 
 export { last }
 export type { Last }

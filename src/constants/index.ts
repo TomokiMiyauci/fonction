@@ -3,7 +3,7 @@ export { _ } from 'https://x.nest.land/arithmetic4@0.1.1/mod.ts'
 export const NULL = null
 export const JSON_OBJECT = 'Object'
 
-const { prototype, entries, keys, values } = Object
+const { prototype } = Object
 const { hasOwnProperty } = prototype
 
-export { entries, hasOwnProperty, keys, values }
+export { hasOwnProperty }

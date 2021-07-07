@@ -1,8 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { head } from './head.ts'
+import { head } from '../common/head.ts'
+import { isNumber, isUndefined } from '../deps.ts'
 import { ifElse } from './ifElse.ts'
-import { isNumber } from './isNumber.ts'
-import { isUndefined } from './isUndefined.ts'
 import { multiply } from './multiply.ts'
 /**
  * Multiplies together all the elements of a list.

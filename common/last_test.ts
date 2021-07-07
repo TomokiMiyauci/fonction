@@ -1,7 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
 import { assertEquals } from '../dev_deps.ts'
-import { Last, last } from '../src/last.ts'
-import { assertEqual } from './asserts.ts'
+import { assertEqual } from '../test/asserts.ts'
+import { Last, last } from './last.ts'
 
 Deno.test('last', () => {
   const table: [string | unknown[], unknown][] = [
@@ -54,4 +54,5 @@ Deno.test('Last', () => {
   assertEqual<string, Last<string>>()
   assertEqual<'', Last<''>>()
   assertEqual<'o', Last<'hello'>>()
+  assertEqual<'x', Last<'abcdefghijklmnopqrstuvwx'>>()
 })

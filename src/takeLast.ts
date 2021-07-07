@@ -2,7 +2,6 @@
 
 import { ifElse } from './ifElse.ts'
 import { lte } from './lte.ts'
-import { slice } from './slice.ts'
 
 /**
  * Return a slice of string or array with `n` elements taken from the end.
@@ -25,7 +24,7 @@ import { slice } from './slice.ts'
  *
  * @category `String` `Array`
  *
- * @see Related to {@link slice} {@link take}
+ * @see Related to {@link take}
  *
  * @public
  */
@@ -35,7 +34,7 @@ const takeLast = <T extends readonly unknown[] | string>(
 ): T =>
   ifElse(
     lte(howMany, 0),
-    () => slice(0, -howMany, val) as T,
+    () => val.slice(0, -howMany) as T,
     () => val.slice(-howMany) as T
   )
 

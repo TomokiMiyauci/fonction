@@ -1,6 +1,6 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { isFunction } from '../deps.ts'
 import { ifElse } from './ifElse.ts'
-import { isFunction } from './isFunction.ts'
 import { FalsyLike } from './types/index.ts'
 /**
  * Creates a function that will process either the `onTrue` or the `onFalse` function depending upon the result of the condition predicate.

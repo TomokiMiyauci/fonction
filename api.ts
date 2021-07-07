@@ -19,10 +19,6 @@ const api: Api = {
   },
   constructorName: [],
   dec: LAMBDAS,
-  endsWith: ALL_MODULES,
-  entries: {
-    lodash: 'entries'
-  },
   F: LAMBDAS,
   head: {
     ramda: 'head',
@@ -37,36 +33,10 @@ const api: Api = {
   gt: ['ramda', 'lodash'],
   gte: ['ramda', 'lodash'],
   has: ALL_MODULES,
-  init: {
-    rambda: 'init',
-    ramda: 'init',
-    lodash: 'initial'
-  },
+  init: ALL_MODULES,
   identity: ALL_MODULES,
   inc: LAMBDAS,
-  isArray: ['lodash'],
-  isBigint: {},
-  isBoolean: ['lodash'],
-  isFunction: ['lodash'],
-  isNaN: ['lodash'],
-  isNil: ALL_MODULES,
-  isNull: ['lodash'],
-  isNumber: ['lodash'],
-  isLength0: {},
-  isObject: ['lodash'],
-  isPrimitive: {},
-  isString: ['lodash'],
-  isSymbol: ['lodash'],
-  isJSONObject: {},
-  isUndefined: ['lodash'],
   K: {},
-  keys: ALL_MODULES,
-  length: LAMBDAS,
-  lowerCase: {
-    rambda: 'toLower',
-    ramda: 'toLower',
-    lodash: 'toLower'
-  },
   lt: ['ramda', 'lodash'],
   lte: ['ramda', 'lodash'],
   not: LAMBDAS,
@@ -85,8 +55,6 @@ const api: Api = {
     lodash: 'get'
   },
   replaceAll: {},
-  reverse: ALL_MODULES,
-  startsWith: ALL_MODULES,
   sum: ALL_MODULES,
   T: {
     rambda: 'T',
@@ -94,19 +62,6 @@ const api: Api = {
     lodash: 'stubTrue'
   },
   tail: ALL_MODULES,
-  trim: ALL_MODULES,
-  trimLeft: {
-    lodash: 'trimStart'
-  },
-  trimRight: {
-    lodash: 'trimEnd'
-  },
-  upperCase: {
-    lodash: 'toUpper',
-    rambda: 'toUpper',
-    ramda: 'toUpper'
-  },
-  values: ALL_MODULES,
   xor: LAMBDAS,
   subtract: ALL_MODULES,
   multiply: ALL_MODULES,
@@ -205,7 +160,6 @@ const api: Api = {
     ramda: 'ifElse',
     rambda: 'ifElse'
   },
-  includes: ['rambda', 'ramda', 'lodash'],
   indexOf: {
     ramda: 'indexOf',
     rambda: 'indexOf',
@@ -226,7 +180,6 @@ const api: Api = {
     fonction: undefined
   },
   pipe: ['rambda', 'ramda'],
-  map: ALL_MODULES,
   match: {
     ramda: 'match',
     rambda: 'match',
@@ -260,7 +213,6 @@ const api: Api = {
     lodash: 'get',
     fonction: 'props'
   },
-  slice: ALL_MODULES,
   // pick: {
   //   fonction: undefined
   // },
@@ -276,7 +228,6 @@ const api: Api = {
   // repeat: {
   //   fonction: undefined
   // },
-  replace: ALL_MODULES,
   // set: {
   //   fonction: undefined
   // },
@@ -300,7 +251,6 @@ const api: Api = {
     lodash: 'takeRight'
   },
   tryCatch: ['rambda', 'ramda'],
-  test: ['ramda', 'rambda'],
   // type: {
   //   fonction: undefined
   // },

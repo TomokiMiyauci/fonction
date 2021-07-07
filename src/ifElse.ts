@@ -1,5 +1,5 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
-import { isFunction } from './isFunction.ts'
+import { isFunction } from '../deps.ts'
 import { NN } from './NN.ts'
 import { AnyFn } from './types/index.ts'
 import { FalsyLike } from './types/index.ts'

@@ -1,8 +1,7 @@
 // Copyright 2021-present the Fonction authors. All rights reserved. MIT license.
+import { isFunction, isUndefined } from '../deps.ts'
 import { advance } from './advance.ts'
 import { ifElse } from './ifElse.ts'
-import { isFunction } from './isFunction.ts'
-import { isUndefined } from './isUndefined.ts'
 import { N } from './N.ts'
 import { AnyFn } from './types/index.ts'
 

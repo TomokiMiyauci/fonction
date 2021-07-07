@@ -2,7 +2,6 @@
 import { add } from './add.ts'
 import { ifElse } from './ifElse.ts'
 import { lte } from './lte.ts'
-import { slice } from './slice.ts'
 /**
  * Return an array of elements split into groups the length of size.
  *
@@ -54,7 +53,7 @@ const chunk = <T extends number, U extends readonly unknown[]>(
         (acc, _, index) =>
           ifElse(index % size, acc, [
             ...(acc as never),
-            slice(index, add(index, size), array)
+            array.slice(index, add(index, size))
           ]),
         []
       )
