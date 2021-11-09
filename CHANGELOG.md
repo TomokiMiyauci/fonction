@@ -1,3 +1,8 @@
+# [v2.1.0-beta.4](https://github.com/TomokiMiyauci/fonction/compare/v2.1.0-beta.3...v2.1.0-beta.4) (2021-11-09)
+
+## 🐛 Bug Fixes
+- [`99f5616`](https://github.com/TomokiMiyauci/fonction/commit/99f5616)   Up dependency version what is maybe wrong bundle
+
 # [v2.1.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v2.1.0-beta.2...v2.1.0-beta.3) (2021-11-09)
 
 ## 🐛 Bug Fixes
