@@ -2848,21 +2848,10 @@ convert-source-map@^1.7.0:
   dependencies:
     safe-buffer "~5.1.1"
 
-core-fn@1.0.0-beta.14:
-  version "1.0.0-beta.14"
-  resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.14.tgz#8900bad21615b937a6ef881adb3e951b86ea6a49"
-  integrity sha512-eApPk7GCuobjdaVVVD108kwXqTejxLzlHT2w5vKhI0eqZ2ZorxajbCgyvvEdLXT/hb6Yjie6p4SqvuIjjJM6Kw==
-  dependencies:
-    curry-rice "^1.0.0"
-    fonction "2.1.0-beta.1"
-
-core-fn@1.0.0-beta.8:
-  version "1.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.8.tgz#bf52e118b415e1d5a2373d7c77dc411fa2e93c49"
-  integrity sha512-hW9uppIM7PjV9lXZw6su7808NYTF5GdFbjgOuuWAf0QR4NWbXobcqaIUPLs+U/ajxzDvIyr+74yeZJyjMubEfQ==
-  dependencies:
-    curry-rice "^1.0.0"
-    fonction "^1.8.1"
+core-fn@^1.0.0-beta.16:
+  version "1.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.16.tgz#f91f7039e9a3f3bc991256c9ee2462f33d1471c7"
+  integrity sha512-KF5zjdeisaMCDgHFzsUo/r11Hgb5Bz/Lv0gp9U1IEdCsxbVpMYX+GqG4/ZeHzul70JWWIq9mtQTrIYkItFu/tQ==
 
 core-js-compat@^3.9.0, core-js-compat@^3.9.1:
   version "3.10.1"
@@ -3635,18 +3624,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
-fonction@2.1.0-beta.1:
-  version "2.1.0-beta.1"
-  resolved "https://registry.yarnpkg.com/fonction/-/fonction-2.1.0-beta.1.tgz#f11da546e3f3ff40a2c2a8037733235d0203a2a1"
-  integrity sha512-sAF/NoQDQ2xEuOtfblcF0D1r5UrlCp3Z12i/fST21u70CV9OVc09psopzqj4UAdluFCRL7UQ5VBu8nuKvR7oMg==
-  dependencies:
-    "@miyauci/is-valid" "1.0.0-beta.15"
-    arithmetic4 "^2.0.0"
-    core-fn "1.0.0-beta.8"
-    curry-rice "^1.0.0"
-    lauqe "^1.5.0"
-
-fonction@^1.3.0, fonction@^1.8.1:
+fonction@^1.3.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.9.0.tgz#3866621a5d6381c44e559db4a04d043253eecb96"
   integrity sha512-kFt8/QbJdrVukhppuOwuSmNsAxfkl2LH9OygARP7pUfb7aJzJUoF7triyww6YjY40F/m9x+qoJX9zhEk2c6gjA==

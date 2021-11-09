@@ -96,7 +96,7 @@
   "dependencies": {
     "@miyauci/is-valid": "1.0.0-beta.15",
     "arithmetic4": "^2.0.0",
-    "core-fn": "1.0.0-beta.14",
+    "core-fn": "^1.0.0-beta.16",
     "curry-rice": "^1.0.0",
     "lauqe": "^1.5.0"
   }

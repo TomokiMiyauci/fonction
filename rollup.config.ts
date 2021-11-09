@@ -15,7 +15,7 @@ const replaceOption = {
   'https://x.nest.land/arithmetic4@0.1.1/mod': 'arithmetic4',
   'https://deno.land/x/equal@v1.5.0/mod': 'lauqe',
   'https://deno.land/x/curry@v1.0.0/mod': 'curry-rice',
-  'https://deno.land/x/core_fn@v1.0.0-beta.14/mod': 'core-fn',
+  'https://deno.land/x/core_fn@v1.0.0-beta.16/mod': 'core-fn',
   'https://deno.land/x/core_fn@v1.0.0-beta.14/uncurry/common/slice':
     'core-fn/uncurry',
   'https://deno.land/x/is_valid@v1.0.0-beta.15/mod': '@miyauci/is-valid',
