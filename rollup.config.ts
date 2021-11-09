@@ -18,7 +18,7 @@ const replaceOption = {
   'https://deno.land/x/core_fn@v1.0.0-beta.16/mod': 'core-fn',
   'https://deno.land/x/core_fn@v1.0.0-beta.14/uncurry/common/slice':
     'core-fn/uncurry',
-  'https://deno.land/x/is_valid@v1.0.0-beta.15/mod': '@miyauci/is-valid',
+  'https://deno.land/x/is_valid@v1.0.0-beta.16/mod': '@miyauci/is-valid',
   preventAssignment: true
 }
 const banner =

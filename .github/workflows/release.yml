@@ -171,7 +171,7 @@ jobs:
       - name: Setup Deno
         uses: denolib/setup-deno@v2
         with:
-          deno-version: v1.11.x
+          deno-version: v1.15.x
 
       - name: Test
         run: yarn test --unstable --coverage=coverage

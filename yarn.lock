@@ -1276,6 +1276,14 @@
   dependencies:
     fonction "^1.8.0-beta.6"
 
+"@miyauci/is-valid@^1.0.0-beta.16":
+  version "1.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@miyauci/is-valid/-/is-valid-1.0.0-beta.16.tgz#6b0fbe4afdb4e7a76f7dfcb59fbbb0389f96770d"
+  integrity sha512-zaMb2Xry19vvWNrZA/tfsWnSiO0HD+pNdUrLcARoV3AY6cENlL30bubY2jAuhnmNdpm1pSQrfnsAr8U8rrm2GA==
+  dependencies:
+    core-fn "^1.0.0-beta.16"
+    fonction "^2.1.0-beta.3"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -2848,6 +2856,22 @@ convert-source-map@^1.7.0:
   dependencies:
     safe-buffer "~5.1.1"
 
+core-fn@1.0.0-beta.14:
+  version "1.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.14.tgz#8900bad21615b937a6ef881adb3e951b86ea6a49"
+  integrity sha512-eApPk7GCuobjdaVVVD108kwXqTejxLzlHT2w5vKhI0eqZ2ZorxajbCgyvvEdLXT/hb6Yjie6p4SqvuIjjJM6Kw==
+  dependencies:
+    curry-rice "^1.0.0"
+    fonction "2.1.0-beta.1"
+
+core-fn@1.0.0-beta.8:
+  version "1.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.8.tgz#bf52e118b415e1d5a2373d7c77dc411fa2e93c49"
+  integrity sha512-hW9uppIM7PjV9lXZw6su7808NYTF5GdFbjgOuuWAf0QR4NWbXobcqaIUPLs+U/ajxzDvIyr+74yeZJyjMubEfQ==
+  dependencies:
+    curry-rice "^1.0.0"
+    fonction "^1.8.1"
+
 core-fn@^1.0.0-beta.16:
   version "1.0.0-beta.16"
   resolved "https://registry.yarnpkg.com/core-fn/-/core-fn-1.0.0-beta.16.tgz#f91f7039e9a3f3bc991256c9ee2462f33d1471c7"
@@ -3624,7 +3648,18 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
-fonction@^1.3.0:
+fonction@2.1.0-beta.1:
+  version "2.1.0-beta.1"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-2.1.0-beta.1.tgz#f11da546e3f3ff40a2c2a8037733235d0203a2a1"
+  integrity sha512-sAF/NoQDQ2xEuOtfblcF0D1r5UrlCp3Z12i/fST21u70CV9OVc09psopzqj4UAdluFCRL7UQ5VBu8nuKvR7oMg==
+  dependencies:
+    "@miyauci/is-valid" "1.0.0-beta.15"
+    arithmetic4 "^2.0.0"
+    core-fn "1.0.0-beta.8"
+    curry-rice "^1.0.0"
+    lauqe "^1.5.0"
+
+fonction@^1.3.0, fonction@^1.8.1:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.9.0.tgz#3866621a5d6381c44e559db4a04d043253eecb96"
   integrity sha512-kFt8/QbJdrVukhppuOwuSmNsAxfkl2LH9OygARP7pUfb7aJzJUoF7triyww6YjY40F/m9x+qoJX9zhEk2c6gjA==
@@ -3635,6 +3670,17 @@ fonction@^1.8.0-beta.6:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.8.1.tgz#914b3daa29dcc8d41acfd278d20cddbb33fe8134"
   integrity sha512-CfiQWjwsvbnKetiOg0XPrxTK4rI+xq/+RuNv32cwnt37v66O4WL+vAUe7hrSRXMqavA2KLKSQBE+I7CBXd3yrQ==
+
+fonction@^2.1.0-beta.3:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-2.1.0.tgz#df7b61ea0f8a610e80d9f8bf5768ef98994447a0"
+  integrity sha512-lXT9uBAMZBzNRM9GKCmFN0hijgGeg/wVap24QmgW2hxQE1KqhDIMB8wMaFBMoMvl6kP5gcUPT3V5ErJiZy15Gg==
+  dependencies:
+    "@miyauci/is-valid" "1.0.0-beta.15"
+    arithmetic4 "^2.0.0"
+    core-fn "1.0.0-beta.14"
+    curry-rice "^1.0.0"
+    lauqe "^1.5.0"
 
 forever-agent@~0.6.1:
   version "0.6.1"

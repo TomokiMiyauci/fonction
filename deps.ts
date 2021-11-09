@@ -10,7 +10,7 @@ export {
   isNumber,
   isObject,
   isUndefined
-} from 'https://deno.land/x/is_valid@v1.0.0-beta.15/mod.ts'
+} from 'https://deno.land/x/is_valid@v1.0.0-beta.16/mod.ts'
 export {
   add,
   divide,
