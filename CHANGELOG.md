@@ -1,3 +1,8 @@
+# [v2.1.0-beta.3](https://github.com/TomokiMiyauci/fonction/compare/v2.1.0-beta.2...v2.1.0-beta.3) (2021-11-09)
+
+## 🐛 Bug Fixes
+- [`bd42475`](https://github.com/TomokiMiyauci/fonction/commit/bd42475)   Remove unused import statement
+
 # [v2.1.0-beta.2](https://github.com/TomokiMiyauci/fonction/compare/v2.1.0-beta.1...v2.1.0-beta.2) (2021-07-02)
 
 ## ✨ New Features
