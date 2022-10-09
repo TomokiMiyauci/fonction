@@ -312,7 +312,8 @@ const mapMember =
         params,
         returns,
         sees,
-        categories
+        categories,
+        dir: ['head', 'init', 'last', 'tail'].includes(name) ? 'common' : 'src'
       })
 
       return {

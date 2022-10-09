@@ -112,7 +112,7 @@ This function will remove next major release.
 </details>
 <% } %>
 
-<% if (it.isLatest) { %> [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/src/<%= it.name %>.ts)
+<% if (it.isLatest) { %> [View source on GitHub](https://github.com/TomokiMiyauci/fonction/blob/main/<%= it.dir %>/<%= it.name %>.ts)
 <% } %>
 
 ---
