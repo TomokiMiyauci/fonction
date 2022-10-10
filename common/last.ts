@@ -44,7 +44,7 @@ type LastString<T extends string> = T extends `${infer L}${infer R}`
  *
  * @category `Array` `String`
  *
- * @see Related to {@link First}
+ * @see Related to {@link head}
  *
  * @public
  */
@@ -78,7 +78,7 @@ type Last<T extends string | readonly unknown[]> = T extends string
  * last(['one', 2, 3, 4]) // 4
  * ```
  *
- * @see Related to {@link first}
+ * @see Related to {@link head}
  *
  * @public
  */

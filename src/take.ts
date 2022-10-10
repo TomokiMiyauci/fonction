@@ -24,7 +24,7 @@ import { lt } from './lt.ts'
  *
  * @category `String` `Array`
  *
- * @see Related to {@link slice} {@link takeLast}
+ * @see Related to {@link takeLast}
  *
  * @public
  */
